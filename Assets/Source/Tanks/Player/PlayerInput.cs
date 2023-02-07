@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Input = Tank.Input;
 
 public class PlayerInput : MonoBehaviour, ICharacterInputSource
 {
