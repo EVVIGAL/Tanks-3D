@@ -6,15 +6,21 @@ public class Barrel : MonoBehaviour
     [SerializeField] private float _maxAngle;
     [SerializeField] private float _speed;
 
-    [SerializeField] private MonoBehaviour _inputSourceBehaviour;
-    private ICharacterInputSource _characterInput => (ICharacterInputSource)_inputSourceBehaviour;
+    private float _input;
 
     private void Update()
     {
-        float speed = Mathf.Approximately(_characterInput.MovementInput.y, 0f) ? 0 : _speed * _characterInput.MovementInput.y * -1f * Time.deltaTime;
+        _input = Mathf.Clamp(_input, -1f, 1f);
+        float speed = Mathf.Approximately(_input, 0f) ? 0 : _speed * _input * -1f * Time.deltaTime;
         float angle = ClampAngle(transform.localEulerAngles.x + speed, _minAngle, _maxAngle);
         var targetAngle = new Vector3(angle, 0f, 0f);
-        transform.localEulerAngles = targetAngle;        
+        transform.localEulerAngles = targetAngle;
+        _input = 0f;
+    }
+
+    public void Rotate(float delta)
+    {
+        _input += delta;
     }
 
     private float ClampAngle(float current, float min, float max)
@@ -27,14 +33,5 @@ public class Barrel : MonoBehaviour
         if (offset > 0)
             current = Mathf.MoveTowardsAngle(current, midAngle, offset);
         return current;
-    }
-
-    private void OnValidate()
-    {
-        if (_inputSourceBehaviour && !(_inputSourceBehaviour is ICharacterInputSource))
-        {
-            Debug.LogError(nameof(_inputSourceBehaviour) + " needs to implement " + nameof(ICharacterInputSource));
-            _inputSourceBehaviour = null;
-        }
     }
 }

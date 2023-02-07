@@ -1,38 +1,34 @@
 using UnityEngine;
 
 [RequireComponent (typeof(CharacterController))]
-public class Movement : MonoBehaviour
+public class Movement : MonoBehaviour, IMovement
 {
-    [field: SerializeField] public float _speed;
+    [field: SerializeField] public float MaxSpeed;
     [SerializeField] private float _acceleration;
-    [SerializeField] private MonoBehaviour _inputSourceBehaviour;
-    private ICharacterInputSource _characterInput => (ICharacterInputSource)_inputSourceBehaviour;
 
     private CharacterController _characterController;
     private float _currentSpeed;
+    private float _input;
 
-    public float Speed => _currentSpeed;
+    public float CurrentSpeed => _currentSpeed;
 
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
     }
 
-    private void Update()
+    public void Move(float delta)
     {
-        float targetSpeed = Mathf.Approximately(_characterInput.MovementInput.x, 0f) ? 0 : _speed * _characterInput.MovementInput.x;
-        _currentSpeed = Mathf.MoveTowards(_currentSpeed, targetSpeed, Time.deltaTime * _acceleration);
-
-        Vector3 velocity = transform.forward * _currentSpeed;
-        _characterController.SimpleMove(velocity);
+        _input += delta;
     }
 
-    private void OnValidate()
+    private void Update()
     {
-        if (_inputSourceBehaviour && !(_inputSourceBehaviour is ICharacterInputSource))
-        {
-            Debug.LogError(nameof(_inputSourceBehaviour) + " needs to implement " + nameof(ICharacterInputSource));
-            _inputSourceBehaviour = null;
-        }
+        _input = Mathf.Clamp(_input, -1f, 1f);
+        float targetSpeed = Mathf.Approximately(_input, 0f) ? 0 : MaxSpeed * _input;
+        _currentSpeed = Mathf.MoveTowards(_currentSpeed, targetSpeed, Time.deltaTime * _acceleration);
+        Vector3 velocity = transform.forward * _currentSpeed;
+        _characterController.SimpleMove(velocity);
+        _input = 0f;
     }
 }

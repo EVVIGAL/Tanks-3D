@@ -1,35 +1,33 @@
 using UnityEngine;
 
-public class UIInput : MonoBehaviour, ICharacterInputSource
+public class UIInput : MonoBehaviour
 {
+    [SerializeField] private MonoBehaviour _movementBehaviour;
+    private IMovement _movement => (IMovement)_movementBehaviour;
+
     [SerializeField] private MonoBehaviour _weaponBehaviour;
     private IWeapon _weapon => (IWeapon)_weaponBehaviour;
 
-    public Vector2 MovementInput { get; private set; }
+    [SerializeField] private Barrel _barrel;
 
     public void MoveForward()
     {
-        MovementInput = new Vector2(1f, MovementInput.y);
+        _movement.Move(1f);
     }
 
     public void MoveBackward()
     {
-        MovementInput = new Vector2(-1f, MovementInput.y);
+        _movement.Move(-1f);
     }
 
     public void BarrelUp()
     {
-        MovementInput = new Vector2(MovementInput.x, 1f);
+        _barrel.Rotate(1f);
     }
 
     public void BarrelDown()
     {
-        MovementInput = new Vector2(MovementInput.x, -1f);
-    }
-
-    public void Stop()
-    {
-        MovementInput = Vector2.zero;
+        _barrel.Rotate(-1f);
     }
 
     public void Shoot()
@@ -40,6 +38,12 @@ public class UIInput : MonoBehaviour, ICharacterInputSource
 
     private void OnValidate()
     {
+        if (_movementBehaviour && !(_movementBehaviour is IMovement))
+        {
+            Debug.LogError(nameof(_movementBehaviour) + " needs to implement " + nameof(IMovement));
+            _movementBehaviour = null;
+        }
+
         if (_weaponBehaviour && !(_weaponBehaviour is IWeapon))
         {
             Debug.LogError(nameof(_weaponBehaviour) + " needs to implement " + nameof(IWeapon));
