@@ -5,7 +5,7 @@ public class MissionPanel : MonoBehaviour
 {
     [SerializeField] private TankFarm[] _farms;
 
-    public int TotalIncome { get; private set; }
+    public float TotalIncome { get; private set; }
 
     public event UnityAction IncomeChange;
 
@@ -35,7 +35,8 @@ public class MissionPanel : MonoBehaviour
     {
         foreach (TankFarm farm in _farms)
         {
-            TotalIncome += farm.FarmRate;
+            if (farm.Unit.IsAvailable)
+                TotalIncome += farm.FarmRate;
         }
 
         IncomeChange?.Invoke();

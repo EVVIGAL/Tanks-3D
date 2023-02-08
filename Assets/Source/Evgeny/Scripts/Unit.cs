@@ -63,6 +63,7 @@ public class Unit : MonoBehaviour
         if (_money.TrySpend(Price))
         {
             _isAvailable = true;
+            Refresh();
             PlayerPrefs.SetInt(_availableKey + _name, 1);
         }
     }
