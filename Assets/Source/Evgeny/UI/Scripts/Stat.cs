@@ -46,6 +46,13 @@ public class Stat : MonoBehaviour
         _valueText.text = property.Value.ToString();
         _upgradeText.text = property.UpgradeCost.ToString();
         _cost = property.UpgradeCost;
+
+        if(property.Value >= property.MaximumValue)
+        {
+            _upgradeButton.gameObject.SetActive(false);
+            return;
+        }
+
         UpdateButton();
     }
 

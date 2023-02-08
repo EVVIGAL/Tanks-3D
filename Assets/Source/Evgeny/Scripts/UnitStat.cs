@@ -28,6 +28,8 @@ public class Property
 
     public float Value => _value;
 
+    public int MaximumValue => _maximumValue;
+
     public int UpgradeCost => _upgradeCost;
 
     public void Upgrade(Money money)

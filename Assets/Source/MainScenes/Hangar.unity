@@ -5946,7 +5946,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 72.92989, w: 0}
+  m_margin: {x: 0, y: 0, z: -112.67054, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5972,7 +5972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fafc2ae2075014ab511814d67c61e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _value: 800
+  _value: 8000
 --- !u!1 &1483016802
 GameObject:
   m_ObjectHideFlags: 0
@@ -7312,27 +7312,27 @@ MonoBehaviour:
   _unitStat:
     _health:
       _value: 1200
-      _maximumValue: 0
-      _upgradeCost: 0
-      _upgradeValue: 0
-      _increaseCost: 50
+      _maximumValue: 3000
+      _upgradeCost: 200
+      _upgradeValue: 200
+      _increaseCost: 80
     _damage:
       _value: 80
-      _maximumValue: 0
-      _upgradeCost: 0
-      _upgradeValue: 0
+      _maximumValue: 200
+      _upgradeCost: 150
+      _upgradeValue: 20
       _increaseCost: 50
     _armor:
       _value: 60
-      _maximumValue: 0
-      _upgradeCost: 0
-      _upgradeValue: 0
+      _maximumValue: 120
+      _upgradeCost: 100
+      _upgradeValue: 30
       _increaseCost: 50
     _speed:
       _value: 40
-      _maximumValue: 0
-      _upgradeCost: 0
-      _upgradeValue: 0
+      _maximumValue: 60
+      _upgradeCost: 200
+      _upgradeValue: 10
       _increaseCost: 50
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
