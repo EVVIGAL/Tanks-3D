@@ -25,6 +25,8 @@ public class Unit : MonoBehaviour
 
     public UnitStat UnitStat => _unitStat;
 
+    public string Name => _name;
+
     public int Price => _price;
 
     public bool IsAvailable => _isAvailable;
