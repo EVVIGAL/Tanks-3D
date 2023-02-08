@@ -9,11 +9,12 @@ public class Health : MonoBehaviour, IHealth
     [SerializeField] private MonoBehaviour _healthViewBehaviour;
     private IHealthView _healthView => (IHealthView)_healthViewBehaviour;
 
+    [SerializeField] private MonoBehaviour _deathPolicyBehaviour;
+    private IDeathPolicy _deathPolicy => (IDeathPolicy)_deathPolicyBehaviour;
+
     public uint Value { get; private set; }
 
     public bool IsAlive => Value > 0;
-
-    public event Action Died;
 
     private void Awake()
     {
@@ -40,7 +41,7 @@ public class Health : MonoBehaviour, IHealth
 
     protected virtual void Die()
     {
-        Died?.Invoke();
+        _deathPolicy.Die();
     }
 
     private void OnValidate()
@@ -49,6 +50,12 @@ public class Health : MonoBehaviour, IHealth
         {
             Debug.LogError(nameof(_healthViewBehaviour) + " needs to implement " + nameof(IHealthView));
             _healthViewBehaviour = null;
+        }
+
+        if (_deathPolicyBehaviour && !(_deathPolicyBehaviour is IDeathPolicy))
+        {
+            Debug.LogError(nameof(_deathPolicyBehaviour) + " needs to implement " + nameof(IDeathPolicy));
+            _deathPolicyBehaviour = null;
         }
     }
 }

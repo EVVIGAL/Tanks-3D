@@ -32,7 +32,8 @@ public class Projectile : MonoBehaviour, IProjectile
         }
 
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _raycastDistance))
-            OnHit(hitInfo.transform, hitInfo.point);
+            if (hitInfo.transform != transform)
+                OnHit(hitInfo.transform, hitInfo.point);
     }
 
     public void Init(uint damage, Vector3 position, Quaternion rotation)

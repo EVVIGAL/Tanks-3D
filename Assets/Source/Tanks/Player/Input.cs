@@ -52,7 +52,7 @@ namespace Tank
                 {
                     ""name"": ""2D Vector"",
                     ""id"": ""03dc14bd-9562-49c4-b65f-341cece60bfc"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -107,7 +107,7 @@ namespace Tank
                 {
                     ""name"": ""2D Vector"",
                     ""id"": ""461f5693-836e-45f7-ad08-1817a4470ffa"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
