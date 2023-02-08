@@ -29,10 +29,14 @@ public class Money : MonoBehaviour
         Refresh();
     }
 
-    public void Spend(int value)
+    public bool TrySpend(int value)
     {
+        if (_value < value)
+            return false;
+
         _value -= value;
         Refresh();
+        return true;
     }
 
     private void Refresh()

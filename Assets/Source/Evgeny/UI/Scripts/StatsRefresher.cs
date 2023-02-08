@@ -7,11 +7,11 @@ public class StatsRefresher : MonoBehaviour
     [SerializeField] private Stat _armor;
     [SerializeField] private Stat _speed;
 
-    public void SetUnit(Unit unit)
+    public void SetUnit(UnitStat unit)
     {
-        _health.Set(unit.Health, unit.UpgradeHealth);
-        _damage.Set(unit.Damage, unit.UpgradeDamage);
-        _armor.Set(unit.Armor, unit.UpgradeArmor);
-        _speed.Set(unit.Speed, unit.UpgradeSpeed);
+        _health.Set(unit.Health);
+        _damage.Set(unit.Damage);
+        _armor.Set(unit.Armor);
+        _speed.Set(unit.Speed);
     }
 }

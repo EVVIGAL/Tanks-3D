@@ -6,14 +6,7 @@ using TMPro;
 public class Unit : MonoBehaviour
 {
     [Header("Stats")]
-    [SerializeField] private float _health;
-    [SerializeField] private int _upgradeHealth;
-    [SerializeField] private float _damage;
-    [SerializeField] private int _upgradeDamage;
-    [SerializeField] private float _armor;
-    [SerializeField] private int _upgradeArmor;
-    [SerializeField] private float _speed;
-    [SerializeField] private int _upgradeSpeed;
+    [SerializeField] private UnitStat _unitStat;
     [Header("Texts")]
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _priceText;
@@ -29,22 +22,7 @@ public class Unit : MonoBehaviour
 
     private const string _neededText = "NeededLvl";
 
-    public float Health => _health;
-
-    public float Damage => _damage;
-
-    public float Armor => _armor;
-
-    public float Speed => _speed;
-
-    public int UpgradeHealth => _upgradeHealth;
-
-    public int UpgradeDamage => _upgradeDamage;
-
-    public int UpgradeArmor => _upgradeArmor;
-
-    public int UpgradeSpeed => _upgradeSpeed;
-
+    public UnitStat UnitStat => _unitStat;
 
     public int Price => _price;
 
@@ -53,12 +31,16 @@ public class Unit : MonoBehaviour
     private void Awake()
     {
         _isAvailable = false;
+
+        if(PlayerPrefs.HasKey(_name))
+            _unitStat = SaveManager.Load<UnitStat>(_name);
     }
+
     private void OnEnable()
     {
         _nameText.text = _name;
+        _refresher.SetUnit(_unitStat);
         Refresh();
-        _refresher.SetUnit(this);
         _money.ValueChanged += Refresh;
         _button.onClick.AddListener(Buy);
     }
@@ -67,21 +49,13 @@ public class Unit : MonoBehaviour
     {
         _money.ValueChanged -= Refresh;
         _button.onClick.RemoveListener(Buy);
+        SaveManager.Save(_name, _unitStat);
     }
 
     public void Buy()
     {
-        if (_money.Value < Price)
-            return;
-
-        _money.Spend(Price);
-        _isAvailable = true;
-        Refresh();
-    }
-
-    public void Unlock()
-    {
-        _isAvailable = true;
+        if (_money.TrySpend(Price))
+            _isAvailable = true;
     }
 
     private void Refresh()
@@ -91,6 +65,7 @@ public class Unit : MonoBehaviour
             _priceText.text = string.Empty;
             _button.gameObject.SetActive(false);
             _lockImage.gameObject.SetActive(false);
+            SaveManager.Save(_name, _unitStat);
             return;
         }
 
