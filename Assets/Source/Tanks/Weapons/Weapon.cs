@@ -59,9 +59,3 @@ public class Weapon : MonoBehaviour, IWeapon
         onSuccessCallback?.Invoke();
     }
 }
-
-public interface IWeapon
-{
-    bool CanShoot { get; }
-    void Shoot(Transform target);
-}

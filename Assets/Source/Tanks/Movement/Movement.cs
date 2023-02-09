@@ -31,4 +31,10 @@ public class Movement : MonoBehaviour, IMovement
         _characterController.SimpleMove(velocity);
         _input = 0f;
     }
+
+    public void Disable()
+    {
+        _characterController.enabled = false;
+        enabled = false;
+    }
 }

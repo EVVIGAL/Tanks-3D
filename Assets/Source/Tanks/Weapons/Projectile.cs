@@ -3,9 +3,11 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody), typeof(Collider))]
 public class Projectile : MonoBehaviour, IProjectile
 {
-    [SerializeField] private float _pushForce;
-    [SerializeField] private float _raycastDistance = 1f;
+    [SerializeField] private float _radius;
+    [SerializeField] private float _castDistance = 1f;
+    [SerializeField] private LayerMask _layer;
     [SerializeField] private float _liveTime;
+    [SerializeField] private float _pushForce;
     [SerializeField] private ParticleSystem _hitFX;
 
     private float _runningTime;
@@ -31,7 +33,7 @@ public class Projectile : MonoBehaviour, IProjectile
             return;
         }
 
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _raycastDistance))
+        if (Physics.SphereCast(transform.position, _radius, transform.forward, out RaycastHit hitInfo, _castDistance, _layer))
             if (hitInfo.transform != transform)
                 OnHit(hitInfo.transform, hitInfo.point);
     }
@@ -59,11 +61,6 @@ public class Projectile : MonoBehaviour, IProjectile
         _collider.enabled = false;
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        OnHit(collision.transform, collision.contacts[0].point);
     }
 
     protected virtual void OnHit(Transform hitTransform, Vector3 position)

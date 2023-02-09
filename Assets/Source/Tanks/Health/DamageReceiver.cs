@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class DamageSource : MonoBehaviour, IHealth
+public class DamageReceiver : MonoBehaviour, IHealth
 {
-    [SerializeField] private float _damageReduce;
+    [SerializeField] private float _damageMultiplier = 1f;
 
     [SerializeField] private MonoBehaviour _healthBehaviour;
     private IHealth _health => (IHealth)_healthBehaviour;
@@ -11,7 +11,7 @@ public class DamageSource : MonoBehaviour, IHealth
 
     public void TakeDamage(uint damage)
     {
-        _health.TakeDamage(damage);
+        _health.TakeDamage((uint)(damage * _damageMultiplier));
     }
 
     private void OnValidate()
