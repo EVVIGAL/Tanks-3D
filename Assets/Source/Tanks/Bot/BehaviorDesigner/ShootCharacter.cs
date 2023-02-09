@@ -1,0 +1,1 @@
+public class ShootCharacter : Shoot<Character, SharedCharacter> { }

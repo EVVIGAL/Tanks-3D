@@ -2,7 +2,7 @@ using Cinemachine;
 using UnityEngine;
 
 [RequireComponent (typeof(CinemachineImpulseSource))]
-public class PlayerTankWeapon : TankWeapon
+public class PlayerTankWeapon : DefaultWeapon
 {
     private CinemachineImpulseSource _impulseSource;
 

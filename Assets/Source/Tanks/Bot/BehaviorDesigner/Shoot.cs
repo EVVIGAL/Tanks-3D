@@ -2,19 +2,17 @@ using BehaviorDesigner.Runtime;
 using BehaviorDesigner.Runtime.Tasks;
 using UnityEngine;
 
-public class Shoot : Action
+public class Shoot<TObject, TSharedObject> : Action where TObject : Component where TSharedObject : SharedVariable<TObject>
 {
-    public MonoBehaviour WeaponSource;
-    public SharedTransform Target;
-
-    private IWeapon _weapon => (IWeapon)WeaponSource;
+    public SharedWeapon Weapon;
+    public TSharedObject TargetObject;
 
     public override TaskStatus OnUpdate()
     {
-        if (_weapon.CanShoot == false)
+        if (Weapon.Value.CanShoot == false)
             return TaskStatus.Running;
 
-        _weapon.Shoot(Target.Value);
+        Weapon.Value.Shoot(TargetObject.Value.transform);
         return TaskStatus.Success;
     }
 }

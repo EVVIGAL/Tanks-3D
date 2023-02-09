@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent (typeof(CharacterAnimator))]
-public class CharacterWeapon : TankWeapon
+public class CharacterWeapon : DefaultWeapon
 {
     private CharacterAnimator _characterAnimator;
 

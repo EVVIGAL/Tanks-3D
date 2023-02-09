@@ -3,9 +3,11 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody), typeof(Collider))]
 public class Projectile : MonoBehaviour, IProjectile
 {
-    [SerializeField] private float _pushForce;
-    [SerializeField] private float _raycastDistance = 1f;
+    [SerializeField] private float _radius;
+    [SerializeField] private float _castDistance = 1f;
+    [SerializeField] private LayerMask _layer;
     [SerializeField] private float _liveTime;
+    [SerializeField] private float _pushForce;
     [SerializeField] private ParticleSystem _hitFX;
 
     private float _runningTime;
@@ -31,14 +33,15 @@ public class Projectile : MonoBehaviour, IProjectile
             return;
         }
 
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, _raycastDistance))
+        if (Physics.SphereCast(transform.position, _radius, transform.forward, out RaycastHit hitInfo, _castDistance, _layer))
             if (hitInfo.transform != transform)
                 OnHit(hitInfo.transform, hitInfo.point);
     }
 
-    public void Init(uint damage, Vector3 position, Quaternion rotation)
+    public void Init(uint damage, Vector3 position, Quaternion rotation, Transform parent = null)
     {
         transform.SetPositionAndRotation(position, rotation);
+        transform.parent = parent;
         Damage = damage;
         _runningTime = 0f;
         _collider.enabled = true;
@@ -47,11 +50,30 @@ public class Projectile : MonoBehaviour, IProjectile
     public void Enable()
     {
         gameObject.SetActive(true);
+        enabled = true;
+        _rigidbody.isKinematic = false;
+        _collider.enabled = true;
+    }
+
+    public void Disable()
+    {
+        _rigidbody.isKinematic = true;
+        _collider.enabled = false;
+        enabled = false;
     }
 
     public void Push(float force)
     {
+        transform.parent = null;
+        _rigidbody.isKinematic = false;
         _rigidbody.AddForce(transform.forward * force, ForceMode.Impulse);
+    }
+
+    public void Push(Vector3 force)
+    {
+        transform.parent = null;
+        _rigidbody.isKinematic = false;
+        _rigidbody.AddForce(force, ForceMode.Impulse);
     }
 
     private void OnDisable()

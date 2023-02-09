@@ -1,14 +1,15 @@
 using UnityEngine;
 
-public class ObjectPusher : MonoBehaviour
+public class ÑollisionDamager : MonoBehaviour
 {
     [SerializeField] private uint _damage;
     [SerializeField] private float _radius;
     [SerializeField] private float _maxDistance;
+    [SerializeField] private LayerMask _layer;
 
     private void Update()
     {
-        if (Physics.SphereCast(transform.position, _radius, transform.forward, out RaycastHit hitInfo, _maxDistance))
+        if (Physics.SphereCast(transform.position, _radius, transform.forward, out RaycastHit hitInfo, _maxDistance, _layer))
             if (hitInfo.transform.TryGetComponent(out Soldier soldier))
                 if (soldier.TryGetComponent(out Health health))
                     if (health.IsAlive)
