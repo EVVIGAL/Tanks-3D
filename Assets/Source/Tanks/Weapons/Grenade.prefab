@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8336358380272479604}
   - component: {fileID: 777902348275971651}
   m_Layer: 0
-  m_Name: SphereBullet
+  m_Name: Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 243
   _liveTime: 3
-  _pushForce: 300
+  _pushForce: 100
   _hitFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
 --- !u!1001 &5120040387686376456
 PrefabInstance:
@@ -215,7 +215,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8280622, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
 --- !u!4 &5120040387686536462 stripped
 Transform:

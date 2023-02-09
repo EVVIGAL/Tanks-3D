@@ -38,9 +38,10 @@ public class Projectile : MonoBehaviour, IProjectile
                 OnHit(hitInfo.transform, hitInfo.point);
     }
 
-    public void Init(uint damage, Vector3 position, Quaternion rotation)
+    public void Init(uint damage, Vector3 position, Quaternion rotation, Transform parent = null)
     {
         transform.SetPositionAndRotation(position, rotation);
+        transform.parent = parent;
         Damage = damage;
         _runningTime = 0f;
         _collider.enabled = true;
@@ -49,11 +50,30 @@ public class Projectile : MonoBehaviour, IProjectile
     public void Enable()
     {
         gameObject.SetActive(true);
+        enabled = true;
+        _rigidbody.isKinematic = false;
+        _collider.enabled = true;
+    }
+
+    public void Disable()
+    {
+        _rigidbody.isKinematic = true;
+        _collider.enabled = false;
+        enabled = false;
     }
 
     public void Push(float force)
     {
+        transform.parent = null;
+        _rigidbody.isKinematic = false;
         _rigidbody.AddForce(transform.forward * force, ForceMode.Impulse);
+    }
+
+    public void Push(Vector3 force)
+    {
+        transform.parent = null;
+        _rigidbody.isKinematic = false;
+        _rigidbody.AddForce(force, ForceMode.Impulse);
     }
 
     private void OnDisable()
@@ -61,6 +81,11 @@ public class Projectile : MonoBehaviour, IProjectile
         _collider.enabled = false;
         _rigidbody.velocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        OnHit(collision.transform, collision.contacts[0].point);
     }
 
     protected virtual void OnHit(Transform hitTransform, Vector3 position)

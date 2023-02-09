@@ -21,7 +21,11 @@ public class SoldierDeathPolicy : MonoBehaviour, IDeathPolicy
         _ragdoll.Enable();
         _animator.enabled = false;
         _movement.Disable();
-        _weaponPhysic.Enable();
-        _weaponPhysic.transform.parent = null;
+
+        if (_weaponPhysic != null)
+        {
+            _weaponPhysic.Enable();
+            _weaponPhysic.transform.parent = null;
+        }
     }
 }
