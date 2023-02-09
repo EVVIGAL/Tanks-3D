@@ -21,8 +21,11 @@ public class Unit : MonoBehaviour
     [SerializeField] private bool _isAvailable;
 
     private const string _neededText = "NeededLvl";
+    private const string _availableKey = "Available";
 
     public UnitStat UnitStat => _unitStat;
+
+    public string Name => _name;
 
     public int Price => _price;
 
@@ -30,7 +33,10 @@ public class Unit : MonoBehaviour
 
     private void Awake()
     {
-        _isAvailable = false;
+        if(PlayerPrefs.HasKey(_availableKey + _name))
+            _isAvailable = PlayerPrefs.GetInt(_availableKey + _name) == 1;
+        else
+            _isAvailable = false;
 
         if(PlayerPrefs.HasKey(_name))
             _unitStat = SaveManager.Load<UnitStat>(_name);
@@ -55,7 +61,11 @@ public class Unit : MonoBehaviour
     public void Buy()
     {
         if (_money.TrySpend(Price))
+        {
             _isAvailable = true;
+            Refresh();
+            PlayerPrefs.SetInt(_availableKey + _name, 1);
+        }
     }
 
     private void Refresh()

@@ -9,6 +9,8 @@ public class Money : MonoBehaviour
 
     private TextMeshProUGUI _valueText;
 
+    private const string _saveKey = "Money";
+
     public int Value => _value;
 
     public event UnityAction ValueChanged;
@@ -16,6 +18,9 @@ public class Money : MonoBehaviour
     private void Awake()
     {
         _valueText = GetComponent<TextMeshProUGUI>();
+
+        if(PlayerPrefs.HasKey(_saveKey))
+            _value = PlayerPrefs.GetInt(_saveKey);
     }
 
     private void OnEnable()
@@ -27,6 +32,8 @@ public class Money : MonoBehaviour
     {
         _value += value;
         Refresh();
+        PlayerPrefs.SetInt(_saveKey, _value);
+        PlayerPrefs.Save();
     }
 
     public bool TrySpend(int value)
@@ -36,12 +43,16 @@ public class Money : MonoBehaviour
 
         _value -= value;
         Refresh();
+        PlayerPrefs.SetInt(_saveKey, _value);
+        PlayerPrefs.Save();
         return true;
     }
 
     private void Refresh()
     {
         ValueChanged?.Invoke();
-        _valueText.text = _value.ToString();
+
+        if(_valueText != null)
+            _valueText.text = _value.ToString();
     }
 }
