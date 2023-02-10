@@ -5,9 +5,9 @@ public class MissionPanel : MonoBehaviour
 {
     [SerializeField] private TankFarm[] _farms;
 
-    public float TotalIncome { get; private set; }
-
     public event UnityAction IncomeChange;
+
+    public float TotalIncome { get; private set; }
 
     private void OnEnable()
     {

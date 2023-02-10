@@ -17,12 +17,12 @@ public class TakeButton : MonoBehaviour
     [SerializeField] private int _upgradeCost;
     [SerializeField] private int _upgradeCostIncrease;
 
-    private const string _lastSaveKey = "LastSaveTime";
-
     private Color _upgradeColor;
     private Button _button;
     private float _currentValue;
     private float _income;
+
+    public float Income => _income;
 
     private void Awake()
     {
@@ -57,6 +57,12 @@ public class TakeButton : MonoBehaviour
         _upgradeButton.onClick.RemoveListener(Upgrade);
         _missionPanel.IncomeChange -= OnIncomeChange;
         _money.ValueChanged += UpdateButton;
+    }
+
+    public void Add(int value)
+    {
+        _currentValue += value;
+        _currentValue = Mathf.Clamp(_currentValue, _currentValue, _maximumValue);
     }
 
     private void TakeReward()

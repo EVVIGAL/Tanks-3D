@@ -9,7 +9,7 @@ public class DailyReward : MonoBehaviour
     [SerializeField] private int _rewardValue;
 
     private const string _lastSaveKey = "LastSaveTime";
-    private const int _secondsInDay = 86400;
+    private const int _secondsInDay = 15;
 
     private void Start()
     {
