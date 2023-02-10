@@ -4606,13 +4606,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1033821520}
         m_TargetAssemblyTypeName: CameraMove, Assembly-CSharp
         m_MethodName: Activate
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ToTable
+          m_StringArgument: ToTank
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1141511079}
@@ -5848,6 +5848,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _missions: {fileID: 2087713304}
+  _tankRefresher: {fileID: 667585740}
+  _objectsToUnhide:
+  - {fileID: 1572062145}
+  - {fileID: 1426541023}
+  - {fileID: 590459314}
+  - {fileID: 917525579}
+  - {fileID: 849353032}
 --- !u!1 &1056734530
 GameObject:
   m_ObjectHideFlags: 0
@@ -6552,7 +6559,6 @@ GameObject:
   - component: {fileID: 1141511083}
   - component: {fileID: 1141511082}
   - component: {fileID: 1141511081}
-  - component: {fileID: 1141511084}
   - component: {fileID: 1141511086}
   - component: {fileID: 1141511085}
   m_Layer: 5
@@ -6626,42 +6632,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1033821519}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ToTable
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 849353032}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1141511079}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2087713304}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -6672,6 +6642,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1033821520}
+        m_TargetAssemblyTypeName: CameraMove, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ToTable
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1141511082
@@ -6712,29 +6694,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141511079}
   m_CullTransparentMesh: 1
---- !u!114 &1141511084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1141511079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b7b1f344a77e6144940a9c5ac1bc13b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hideType: 1
-  _delayTime: 1
-  _objectsToHide:
-  - {fileID: 1572062145}
-  - {fileID: 1426541023}
-  - {fileID: 590459314}
-  - {fileID: 1439092057}
-  - {fileID: 1431003294}
-  - {fileID: 917525579}
-  - {fileID: 1089925136}
-  - {fileID: 1409909254}
 --- !u!114 &1141511085
 MonoBehaviour:
   m_ObjectHideFlags: 0

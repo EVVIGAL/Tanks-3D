@@ -31,7 +31,7 @@ public class HideButton : MonoBehaviour
         _button.onClick.RemoveListener(Hide);
     }
 
-    private void Hide()
+    public void Hide()
     {
         Invoke(nameof(SetActive), _delayTime);
     }
