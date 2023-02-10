@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TankFarm (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7032400792789348717, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _unit
       value: 
@@ -228,15 +232,19 @@ PrefabInstance:
       objectReference: {fileID: 1482989044}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _farmRate
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _upgradeCost
-      value: 200
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
+      propertyPath: _maximumFarmRate
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _farmRateIncrease
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
@@ -1974,6 +1982,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482001054}
   m_CullTransparentMesh: 1
+--- !u!1001 &499803423
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1601161656}
+    m_Modifications:
+    - target: {fileID: 199316, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_Name
+      value: SmokeDarkSoft
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.596
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.341
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.645
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19915392, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
 --- !u!1001 &508583325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6546,6 +6615,67 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1128385587
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1784706406}
+    m_Modifications:
+    - target: {fileID: 199316, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_Name
+      value: SmokeDarkSoft
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.596
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.341
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.645
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 415084, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19915392, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a2198d165c0270848aa01adeb1d27577, type: 3}
 --- !u!1 &1141511079
 GameObject:
   m_ObjectHideFlags: 0
@@ -11508,7 +11638,7 @@ MonoBehaviour:
   _name: Sherman
   _price: 100
   _neededLevel: 0
-  _isAvailable: 0
+  _isAvailable: 1
 --- !u!82 &1601161659
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11520,9 +11650,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ff47983a2ddb6454a8f3a28477e7f3c3, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.4
-  m_Pitch: 0.8
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 0.4
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -11605,6 +11735,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1601161660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601161657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562813f3033edb148be9538392f83bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _endVolume: 0.4
+  _endPitch: 0.8
+  _speed: 0.5
 --- !u!1 &1698115293
 GameObject:
   m_ObjectHideFlags: 0
@@ -11908,7 +12053,7 @@ MonoBehaviour:
   _name: Tiger
   _price: 220
   _neededLevel: 3
-  _isAvailable: 1
+  _isAvailable: 0
 --- !u!4 &1784706406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9f8ff89320a2df2499316a13f2f7d8c9, type: 3}
@@ -11926,9 +12071,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ff47983a2ddb6454a8f3a28477e7f3c3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
-  m_Pitch: 0.8
-  Loop: 0
+  m_Volume: 0
+  m_Pitch: 0.4
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -12010,6 +12155,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1784706408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784706404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562813f3033edb148be9538392f83bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _endVolume: 0.45
+  _endPitch: 0.85
+  _speed: 0.6
 --- !u!1 &1834224206
 GameObject:
   m_ObjectHideFlags: 0
@@ -13631,6 +13791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TankFarm
       objectReference: {fileID: 0}
+    - target: {fileID: 7032400792789348717, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _unit
       value: 
@@ -13639,6 +13803,22 @@ PrefabInstance:
       propertyPath: _money
       value: 
       objectReference: {fileID: 1482989044}
+    - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
+      propertyPath: _farmRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
+      propertyPath: _upgradeCost
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
+      propertyPath: _maximumFarmRate
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
+      propertyPath: _farmRateIncrease
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
 --- !u!1001 &7236429904106987502

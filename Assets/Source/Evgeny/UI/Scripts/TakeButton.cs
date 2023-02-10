@@ -12,6 +12,7 @@ public class TakeButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private TextMeshProUGUI _upgradeText;
     [Space]
+    [SerializeField] private int _edgeValue;
     [SerializeField] private int _maximumValue;
     [SerializeField] private int _increaseMaxValue;
     [SerializeField] private int _upgradeCost;
@@ -77,11 +78,15 @@ public class TakeButton : MonoBehaviour
         {
             _maximumValue += _increaseMaxValue;
             _upgradeCost += _upgradeCostIncrease;
+            UpdateButton();
         }
     }
 
     private void UpdateButton()
     {
+        if (_maximumValue >= _edgeValue)
+            _upgradeButton.gameObject.SetActive(false);
+
         _upgradeText.text = _upgradeCost.ToString();
 
         if (_upgradeCost <= _money.Value)

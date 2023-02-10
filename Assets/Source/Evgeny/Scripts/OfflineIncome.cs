@@ -22,7 +22,7 @@ public class OfflineIncome : MonoBehaviour
         if (secondPassed == 0)
             return;
 
-        _income.Add((int)_income.Income * secondPassed);
+        _income.Add((int)(_income.Income * secondPassed));
     }
 
     private void OnDisable()
