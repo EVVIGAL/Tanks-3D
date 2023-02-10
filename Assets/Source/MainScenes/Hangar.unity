@@ -5848,13 +5848,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _missions: {fileID: 2087713304}
-  _tankRefresher: {fileID: 667585740}
-  _objectsToUnhide:
-  - {fileID: 1572062145}
-  - {fileID: 1426541023}
-  - {fileID: 590459314}
-  - {fileID: 917525579}
-  - {fileID: 849353032}
 --- !u!1 &1056734530
 GameObject:
   m_ObjectHideFlags: 0
@@ -13481,6 +13474,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Target
       value: 
       objectReference: {fileID: 926674959}
+    - target: {fileID: 2113191194848265327, guid: 87a59af710f2abb42b122c547b7ac355, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cb9265d119929af4383695263e041bf8, type: 3}
+    - target: {fileID: 7236429903773180842, guid: 87a59af710f2abb42b122c547b7ac355, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 87d526806b66ba746bb3c44949a2a930, type: 3}
+    - target: {fileID: 7236429904303105770, guid: 87a59af710f2abb42b122c547b7ac355, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5de9542aae04e044985cf7d253a2fa05, type: 3}
     - target: {fileID: 7236429904303105772, guid: 87a59af710f2abb42b122c547b7ac355, type: 3}
       propertyPath: m_Pivot.x
       value: 1
