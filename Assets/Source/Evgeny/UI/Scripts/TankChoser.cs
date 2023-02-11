@@ -24,9 +24,7 @@ public class TankChoser : MonoBehaviour
 
     private void Start()
     {
-        HideAll();
-        _tanks[_visibleTankIndex].gameObject.SetActive(true);
-        HideButtons();
+        Refresh();
     }
 
     private void OnEnable()
@@ -39,6 +37,13 @@ public class TankChoser : MonoBehaviour
     {
         _leftButton.onClick.RemoveListener(PreviousTank);
         _rightButton.onClick.RemoveListener(NextTank);
+    }
+
+    public void Refresh()
+    {
+        HideAll();
+        _tanks[_visibleTankIndex].gameObject.SetActive(true);
+        HideButtons();
     }
 
     private void NextTank()

@@ -5,14 +5,13 @@ public class MissionPanel : MonoBehaviour
 {
     [SerializeField] private TankFarm[] _farms;
 
-    public float TotalIncome { get; private set; }
-
     public event UnityAction IncomeChange;
+
+    public float TotalIncome { get; private set; }
 
     private void OnEnable()
     {
         TotalIncome = 0;
-        SetTotalIncome();
 
         foreach (TankFarm farm in _farms)
         {
@@ -23,6 +22,8 @@ public class MissionPanel : MonoBehaviour
             else
                 farm.gameObject.SetActive(false);
         }
+
+        SetTotalIncome();
     }
 
     private void OnDisable()
@@ -33,9 +34,11 @@ public class MissionPanel : MonoBehaviour
 
     public void SetTotalIncome()
     {
+        TotalIncome = 0;
+
         foreach (TankFarm farm in _farms)
         {
-            if (farm.Unit.IsAvailable)
+            if (farm.gameObject.activeSelf)
                 TotalIncome += farm.FarmRate;
         }
 

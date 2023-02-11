@@ -12,17 +12,18 @@ public class TakeButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private TextMeshProUGUI _upgradeText;
     [Space]
+    [SerializeField] private int _edgeValue;
     [SerializeField] private int _maximumValue;
     [SerializeField] private int _increaseMaxValue;
     [SerializeField] private int _upgradeCost;
     [SerializeField] private int _upgradeCostIncrease;
 
-    private const string _lastSaveKey = "LastSaveTime";
-
     private Color _upgradeColor;
     private Button _button;
     private float _currentValue;
     private float _income;
+
+    public float Income => _income;
 
     private void Awake()
     {
@@ -59,6 +60,12 @@ public class TakeButton : MonoBehaviour
         _money.ValueChanged += UpdateButton;
     }
 
+    public void Add(int value)
+    {
+        _currentValue += value;
+        _currentValue = Mathf.Clamp(_currentValue, _currentValue, _maximumValue);
+    }
+
     private void TakeReward()
     {
         _money.Add((int)_currentValue);
@@ -71,11 +78,15 @@ public class TakeButton : MonoBehaviour
         {
             _maximumValue += _increaseMaxValue;
             _upgradeCost += _upgradeCostIncrease;
+            UpdateButton();
         }
     }
 
     private void UpdateButton()
     {
+        if (_maximumValue >= _edgeValue)
+            _upgradeButton.gameObject.SetActive(false);
+
         _upgradeText.text = _upgradeCost.ToString();
 
         if (_upgradeCost <= _money.Value)

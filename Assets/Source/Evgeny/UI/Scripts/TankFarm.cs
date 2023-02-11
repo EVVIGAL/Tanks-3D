@@ -13,6 +13,7 @@ public class TankFarm : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _upgradeText;
     [Space]
     [SerializeField] private int _farmRate;
+    [SerializeField] private int _maximumFarmRate;
     [SerializeField] private int _farmRateIncrease;
     [SerializeField] private int _upgradeCost;
 
@@ -53,6 +54,7 @@ public class TankFarm : MonoBehaviour
         if (_money.TrySpend(_upgradeCost))
         {
             _farmRate += _farmRateIncrease;
+            _farmRate = Mathf.Clamp(_farmRate, 0, _maximumFarmRate);
             UpdateFarm();
             RateChanged?.Invoke();
             PlayerPrefs.SetInt(_saveKey + _unit.Name, _farmRate);
@@ -62,6 +64,9 @@ public class TankFarm : MonoBehaviour
 
     private void UpdateFarm()
     {
+        if(_farmRate >= _maximumFarmRate)
+            _upgradeButton.gameObject.SetActive(false);
+
         string leanText = LeanLocalization.GetTranslationText(_localizationKey);
         _mainText.text = $"{_unit.Name} {_farmRate}/{leanText}";
         _upgradeText.text = _upgradeCost.ToString();

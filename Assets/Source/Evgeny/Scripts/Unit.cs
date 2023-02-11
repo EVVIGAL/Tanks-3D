@@ -35,8 +35,6 @@ public class Unit : MonoBehaviour
     {
         if(PlayerPrefs.HasKey(_availableKey + _name))
             _isAvailable = PlayerPrefs.GetInt(_availableKey + _name) == 1;
-        else
-            _isAvailable = false;
 
         if(PlayerPrefs.HasKey(_name))
             _unitStat = SaveManager.Load<UnitStat>(_name);
