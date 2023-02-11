@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[RequireComponent (typeof(CharacterAnimator))]
-public class CharacterWeapon : MonoBehaviour, IWeaponComposite
+[RequireComponent(typeof(CharacterAnimator))]
+public class CharacterComposite : WeaponComposite
 {
     private CharacterAnimator _characterAnimator;
 
@@ -10,12 +10,12 @@ public class CharacterWeapon : MonoBehaviour, IWeaponComposite
         _characterAnimator = GetComponent<CharacterAnimator>();
     }
 
-    public void Shoot(Transform target)
+    protected override void OnShoot(Transform target)
     {
         _characterAnimator.Shoot();
     }
 
-    public void Reload()
+    protected override void OnReload()
     {
         _characterAnimator.Reload();
     }

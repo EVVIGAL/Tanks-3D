@@ -1516,7 +1516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c656e2725b0e6324e8b95fc8e5b7c633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageMultiplier: 0
+  _damageMultiplier: 1
   _healthBehaviour: {fileID: 7652703296218330222}
 --- !u!1 &7652703297449410990
 GameObject:
@@ -2212,7 +2212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c656e2725b0e6324e8b95fc8e5b7c633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageMultiplier: 0
+  _damageMultiplier: 1
   _healthBehaviour: {fileID: 7652703296218330222}
 --- !u!54 &7652703297448254917
 Rigidbody:

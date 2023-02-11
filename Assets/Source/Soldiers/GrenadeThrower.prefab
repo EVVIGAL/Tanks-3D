@@ -1110,14 +1110,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2413555369635994246}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.104, y: -0.001, z: -0.122}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8958795947021445776}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2502909501872239131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,8 +2427,11 @@ GameObject:
   - component: {fileID: 4637389807414689921}
   - component: {fileID: 1238987822954935803}
   - component: {fileID: 5519786571723633983}
+  - component: {fileID: 916032073210416648}
+  - component: {fileID: 8381818515518103787}
+  - component: {fileID: 916032073210416655}
   m_Layer: 2
-  m_Name: SoldierStandWithGrenade
+  m_Name: GrenadeThrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2491,9 +2494,9 @@ MonoBehaviour:
         dataPosition: 
         unityObjects:
         - {fileID: 4637389807414689926}
-        - {fileID: 5519786571723633983}
+        - {fileID: 916032073210416648}
         - {fileID: 4637389807339948137}
-        - {fileID: 5519786571723633983}
+        - {fileID: 916032073210416648}
         byteData: 
         byteDataArray: 
       Version: 1.7.2
@@ -2667,14 +2670,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 422b2ef3e9238a941986d69b0ca561a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _angle: 55
+--- !u!114 &916032073210416648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519786571723633980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd175ff7e69cd1f488c804a16e6ee111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RateOfFire>k__BackingField: 3
+  <ReloadSpeed>k__BackingField: 1
+  <MagazineSize>k__BackingField: 3
+  _weaponCompositeBehaviour: {fileID: 916032073210416655}
+--- !u!114 &8381818515518103787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519786571723633980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267a942b1eb214f499ac08b6a2f28ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   <Damage>k__BackingField: 100
-  <RateOfFire>k__BackingField: 1
-  _reloadSpeed: 4
-  _magazineSize: 1
-  _shootPoint: {fileID: 4232334420511605274}
-  _bulletPushForce: 10
-  _startSpeed: 20
+  <BulletPushForce>k__BackingField: 30
+  <ShootPoint>k__BackingField: {fileID: 4232334420511605274}
   _projectileFactoryBehaviour: {fileID: 4637389807339948135}
+  _shootFX: {fileID: 0}
+--- !u!114 &916032073210416655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5519786571723633980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7d946baebc902478e049b49579511c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5591788863936091747
 GameObject:
   m_ObjectHideFlags: 0

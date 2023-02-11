@@ -10,6 +10,9 @@ public class UIInput : MonoBehaviour
 
     [SerializeField] private Barrel _barrel;
 
+    private Vector2 _moveInput;
+    private Vector2 _barrelRotateInput;
+
     public void MoveForward()
     {
         _movement.Move(1f);
@@ -34,6 +37,22 @@ public class UIInput : MonoBehaviour
     {
         if (_weapon.CanShoot)
             _weapon.Shoot(null);
+    }
+
+    public void MoveInput(Vector2 delta)
+    {
+        _moveInput = delta;
+    }
+
+    public void BarrelRotate(Vector2 delta)
+    {
+        _barrelRotateInput = delta;
+    }
+
+    private void Update()
+    {
+        _movement.Move(_moveInput.x);
+        _barrel.Rotate(_barrelRotateInput.y);
     }
 
     private void OnValidate()
