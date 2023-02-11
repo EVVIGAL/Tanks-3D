@@ -2,7 +2,7 @@ using Cinemachine;
 using UnityEngine;
 
 [RequireComponent (typeof(CinemachineImpulseSource))]
-public class PlayerTankWeapon : DefaultWeapon
+public class PlayerWeaponComposite : WeaponComposite
 {
     private CinemachineImpulseSource _impulseSource;
 
@@ -11,9 +11,8 @@ public class PlayerTankWeapon : DefaultWeapon
         _impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
-    protected override void OnShoot(Transform target = null)
+    protected override void OnShoot(Transform target)
     {
-        base.OnShoot(target);
         _impulseSource.GenerateImpulse();
     }
 }

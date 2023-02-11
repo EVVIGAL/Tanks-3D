@@ -1,25 +1,33 @@
 using UnityEngine;
 
-public class DefaultWeapon : Weapon
+public class DefaultWeapon : MonoBehaviour
 {
-    [SerializeField] private Transform _shootPoint;
-    [SerializeField] private float _bulletPushForce;
+    [field: SerializeField] public uint Damage { get; private set; }
+    [field: SerializeField] public float BulletPushForce { get; private set; }
+    [field: SerializeField] public Transform ShootPoint { get; private set; }
+
     [SerializeField] private MonoBehaviour _projectileFactoryBehaviour;
     private IProjectileFactory _projectileFactory => (IProjectileFactory)_projectileFactoryBehaviour;
 
     [SerializeField] private ParticleSystem _shootFX;
 
-    protected override void OnShoot(Transform target = null)
-    {
-        IProjectile projectile = _projectileFactory.Create();
-        if (projectile == null)
-            return;
+    public IProjectile Projectile { get; private set; }
 
-        projectile.Init(Damage, _shootPoint.position, _shootPoint.rotation);
-        projectile.Push(_bulletPushForce);
+    public void Shoot(Transform target = null, Vector3 force = new Vector3())
+    {
+        if (force == new Vector3())
+            Projectile.Push(BulletPushForce);
+        else
+            Projectile.Push(force);
 
         if (_shootFX != null)
-            Instantiate(_shootFX, _shootPoint.position, _shootPoint.rotation);
+            Instantiate(_shootFX, ShootPoint.position, ShootPoint.rotation);
+    }
+
+    public void Reload()
+    {
+        Projectile = _projectileFactory.Create();
+        Projectile.Init(Damage, ShootPoint.position, ShootPoint.rotation, ShootPoint);
     }
 
     private void OnValidate()

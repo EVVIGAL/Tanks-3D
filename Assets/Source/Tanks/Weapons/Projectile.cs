@@ -44,7 +44,6 @@ public class Projectile : MonoBehaviour, IProjectile
         transform.parent = parent;
         Damage = damage;
         _runningTime = 0f;
-        _collider.enabled = true;
     }
 
     public void Enable()

@@ -1,78 +1,54 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterAnimator))]
-public class GrenadeThrower : Weapon
+[RequireComponent(typeof(DefaultWeapon))]
+public class GrenadeThrower : MonoBehaviour
 {
-    [SerializeField] private Transform _shootPoint;
-    [SerializeField] private float _bulletPushForce;
-    [SerializeField] private int _startSpeed;
-    [SerializeField] private MonoBehaviour _projectileFactoryBehaviour;
-    private IProjectileFactory _projectileFactory => (IProjectileFactory)_projectileFactoryBehaviour;
+    [SerializeField] private float _angle;
 
-    private CharacterAnimator _characterAnimator;
-    private IProjectile _projectile;
     private Transform _target;
+    private DefaultWeapon _defaultWeapon;
 
-    private void Start()
+    private void Awake()
     {
-        _characterAnimator = GetComponent<CharacterAnimator>();
+        _defaultWeapon = GetComponent<DefaultWeapon>();
     }
 
-    protected override void OnShoot(Transform target = null)
+    public void Shoot(Transform target)
     {
-        _characterAnimator.Shoot();
         _target = target;
     }
 
     public void TakeUp()
     {
-        _projectile = _projectileFactory.Create();
-        if (_projectile == null)
-            return;
-
-        _projectile.Init(Damage, _shootPoint.position, Quaternion.identity, _shootPoint);
-        _projectile.Disable();
+        _defaultWeapon.Reload();
+        _defaultWeapon.Projectile.Disable();
     }
 
     public void Throw()
     {
-        if (_projectile == null)
-            return;
-
-        _projectile.Push(CalculateTrajectory(transform, _target.position));
+        _defaultWeapon.Shoot(_target, CalculatePushForce(_defaultWeapon.ShootPoint, _target.position));
         StartCoroutine(EnableProjectile());
     }
 
     private IEnumerator EnableProjectile()
     {
         yield return new WaitForSeconds(0.25f);
-        _projectile.Enable();
+        _defaultWeapon.Projectile.Enable();
     }
 
-    private Vector3 CalculateTrajectory(Transform startPoint, Vector3 target)
+    private Vector3 CalculatePushForce(Transform startPoint, Vector3 target)
     {
-        float v2 = _startSpeed * _startSpeed;
-        float gravity = Physics.gravity.y;
-        float angle;
+        Vector3 fromTo = target - startPoint.position;
+        var fromToXZ = new Vector3(fromTo.x, 0f, fromTo.z);
+        float x = fromToXZ.magnitude;
+        float y = fromTo.y;
+        startPoint.LookAt(fromToXZ);
+        startPoint.Rotate(-_angle, 0f, 0f);
 
-        float height = startPoint.position.y - target.y;
+        float v2 = (Physics.gravity.y * x * x) / (2 * (y - Mathf.Tan(_angle * Mathf.Deg2Rad) * x) * Mathf.Pow(Mathf.Cos(_angle * Mathf.Deg2Rad), 2));
+        float v = Mathf.Sqrt(Mathf.Abs(v2));
 
-        float xx = target.x - startPoint.position.x;
-        float xz = target.z - startPoint.position.z;
-        float x = Mathf.Sqrt(xx * xx + xz * xz);
-
-        float sqrt = (v2 * v2) - (gravity * (gravity * (x * x) + 2 * height * v2));
-
-        if (sqrt < 0)
-            return Vector3.zero;
-
-        sqrt = Mathf.Sqrt(sqrt);
-
-        angle = Mathf.Atan((v2 - sqrt) / (gravity * x));
-
-        Quaternion q = Quaternion.Euler(angle * Mathf.Rad2Deg, startPoint.eulerAngles.y, startPoint.eulerAngles.z);
-
-        return (q * Vector3.forward * _startSpeed);
+        return startPoint.forward * v;
     }
 }

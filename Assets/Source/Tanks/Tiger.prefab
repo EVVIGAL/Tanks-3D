@@ -3121,7 +3121,6 @@ GameObject:
   - component: {fileID: 6409969308676115695}
   - component: {fileID: 6409969308676115601}
   - component: {fileID: 6409969308676115602}
-  - component: {fileID: 6409969308676115603}
   - component: {fileID: 6409969308676115693}
   - component: {fileID: 6409969308676115687}
   - component: {fileID: 6409969308676115686}
@@ -3129,6 +3128,8 @@ GameObject:
   - component: {fileID: 6409969308676115684}
   - component: {fileID: 6409969308676115692}
   - component: {fileID: 6409969308676115685}
+  - component: {fileID: 964525878}
+  - component: {fileID: 964525891}
   m_Layer: 0
   m_Name: Tiger
   m_TagString: Untagged
@@ -3197,10 +3198,10 @@ MonoBehaviour:
         dataPosition: 
         unityObjects:
         - {fileID: 6409969308676115683}
-        - {fileID: 6409969308676115693}
+        - {fileID: 964525878}
         - {fileID: 6409969308676115601}
         - {fileID: 6409969308676115601}
-        - {fileID: 6409969308676115693}
+        - {fileID: 964525878}
         byteData: 
         byteDataArray: 
       Version: 1.7.2
@@ -3252,24 +3253,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectile: {fileID: 777902348275971651, guid: 869665f648fc4f24e866e6622e263798, type: 3}
   _poolCapacity: 2
---- !u!114 &6409969308676115603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6409969308676115608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ad3a9454d91fce4fae7cf211a1871f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 0
-  _radius: 0
-  _maxDistance: 0
-  _layer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &6409969308676115693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3283,11 +3266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Damage>k__BackingField: 100
-  <RateOfFire>k__BackingField: 1
-  _reloadSpeed: 2
-  _magazineSize: 1
-  _shootPoint: {fileID: 6409969307255326662}
-  _bulletPushForce: 25
+  <BulletPushForce>k__BackingField: 50
+  <ShootPoint>k__BackingField: {fileID: 6409969307255326662}
   _projectileFactoryBehaviour: {fileID: 6409969308676115602}
   _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
 --- !u!114 &6409969308676115687
@@ -3377,6 +3357,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turretExplosion: {fileID: 6409969307223673611}
+--- !u!114 &964525878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6409969308676115608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd175ff7e69cd1f488c804a16e6ee111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RateOfFire>k__BackingField: 2
+  <ReloadSpeed>k__BackingField: 2
+  <MagazineSize>k__BackingField: 2
+  _weaponCompositeBehaviour: {fileID: 964525891}
+--- !u!114 &964525891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6409969308676115608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5749f8fcacdc7940a89940eb8762f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6409969308851297010
 GameObject:
   m_ObjectHideFlags: 0
