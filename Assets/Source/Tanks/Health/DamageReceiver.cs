@@ -9,6 +9,8 @@ public class DamageReceiver : MonoBehaviour, IHealth
 
     public bool IsAlive => _health.IsAlive;
 
+    public void Heal(uint health) => _health.Heal(health);
+
     public void TakeDamage(uint damage)
     {
         _health.TakeDamage((uint)(damage * _damageMultiplier));
