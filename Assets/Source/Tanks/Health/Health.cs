@@ -21,7 +21,7 @@ public class Health : MonoBehaviour, IHealth
         Value = MaxValue;
     }
 
-    public void TakeDamage(uint damage)
+    public uint TakeDamage(uint damage)
     {
         if (IsAlive == false)
             throw new InvalidOperationException();
@@ -32,6 +32,8 @@ public class Health : MonoBehaviour, IHealth
 
         if (Value == 0)
             Die();
+
+        return targetDamage;
     }
 
     public void Heal(uint health)
