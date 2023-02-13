@@ -12,8 +12,12 @@ public class OfflineIncome : MonoBehaviour
     {
         _income = GetComponent<TakeButton>();
     }
+    private void OnDisable()
+    {
+        SaveManager.SetDate(_lastSaveKey, DateTime.UtcNow);
+    }
 
-    private void OnEnable()
+    public void Calculate()
     {
         DateTime lastSaveTime = SaveManager.GetDate(_lastSaveKey, DateTime.UtcNow);
         TimeSpan timePassed = DateTime.UtcNow - lastSaveTime;
@@ -23,10 +27,5 @@ public class OfflineIncome : MonoBehaviour
             return;
 
         _income.Add((int)(_income.Income * secondPassed));
-    }
-
-    private void OnDisable()
-    {
-        SaveManager.SetDate(_lastSaveKey, DateTime.UtcNow);
     }
 }

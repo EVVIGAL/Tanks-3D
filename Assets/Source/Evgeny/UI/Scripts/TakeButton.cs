@@ -20,6 +20,7 @@ public class TakeButton : MonoBehaviour
 
     private Color _upgradeColor;
     private Button _button;
+    private OfflineIncome _offlineIncome;
     private float _currentValue;
     private float _income;
 
@@ -28,6 +29,7 @@ public class TakeButton : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
+        _offlineIncome = GetComponent<OfflineIncome>();
         _currentValue = 0;
         _upgradeColor = _upgradeButton.GetComponent<Image>().color;
     }
@@ -36,6 +38,7 @@ public class TakeButton : MonoBehaviour
     {
         OnIncomeChange();
         UpdateButton();
+        _offlineIncome.Calculate();
         _text.text = _currentValue.ToString("f0") + " / " + _maximumValue;
         _button.onClick.AddListener(TakeReward);
         _upgradeButton.onClick.AddListener(Upgrade);

@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: {fileID: 0}
+  _levelToLoad: 0
 --- !u!1001 &82006631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1614,16 +1614,16 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _isAvailable: 1
+    _name: Stuart
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _name: Stuart
   _price: 700
   _neededLevel: 2
-  _isAvailable: 1
 --- !u!1 &237506954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3359,16 +3359,16 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _isAvailable: 0
+    _name: KV-2
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _name: KV-2
   _price: 2500
   _neededLevel: 11
-  _isAvailable: 0
 --- !u!1 &517652682
 GameObject:
   m_ObjectHideFlags: 0
@@ -4004,7 +4004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: {fileID: 102900000, guid: 4f7feb8b27db35e419a474e12737a641, type: 3}
+  _levelToLoad: 0
 --- !u!1 &622295656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6409299901828371514, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
@@ -5211,7 +5211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: {fileID: 0}
+  _levelToLoad: 0
 --- !u!224 &708970785 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927104939822465786, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
@@ -7003,7 +7003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: {fileID: 0}
+  _levelToLoad: 0
 --- !u!224 &877639938 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7236429904303105772, guid: 87a59af710f2abb42b122c547b7ac355, type: 3}
@@ -8536,16 +8536,16 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _isAvailable: 0
+    _name: T-34-76
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _name: T-34-76
   _price: 2100
   _neededLevel: 5
-  _isAvailable: 0
 --- !u!114 &1066890449 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3927104939822465791, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
@@ -10636,16 +10636,16 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _isAvailable: 0
+    _name: Sherman
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _name: Sherman
   _price: 2000
   _neededLevel: 7
-  _isAvailable: 0
 --- !u!224 &1317286589 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7032400792789348716, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
@@ -11710,8 +11710,8 @@ GameObject:
   - component: {fileID: 1437453353}
   - component: {fileID: 1437453352}
   - component: {fileID: 1437453351}
-  - component: {fileID: 1437453354}
   - component: {fileID: 1437453357}
+  - component: {fileID: 1437453354}
   - component: {fileID: 1437453356}
   - component: {fileID: 1437453355}
   m_Layer: 5
@@ -14122,16 +14122,16 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _isAvailable: 0
+    _name: Matilda
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _name: Matilda
   _price: 1500
   _neededLevel: 4
-  _isAvailable: 0
 --- !u!1 &1601608949
 GameObject:
   m_ObjectHideFlags: 0
@@ -16668,7 +16668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: {fileID: 0}
+  _levelToLoad: 0
 --- !u!1 &2105461837
 GameObject:
   m_ObjectHideFlags: 0

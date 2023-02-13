@@ -9,7 +9,7 @@ public class MissionPanel : MonoBehaviour
 
     public float TotalIncome { get; private set; }
 
-    private void OnEnable()
+    private void Awake()
     {
         TotalIncome = 0;
 
@@ -23,7 +23,7 @@ public class MissionPanel : MonoBehaviour
                 farm.gameObject.SetActive(false);
         }
 
-        SetTotalIncome();
+        SetTotalIncome();       
     }
 
     private void OnDisable()
@@ -38,6 +38,7 @@ public class MissionPanel : MonoBehaviour
 
         foreach (TankFarm farm in _farms)
         {
+            Debug.Log(farm.FarmRate);
             if (farm.gameObject.activeSelf)
                 TotalIncome += farm.FarmRate;
         }
