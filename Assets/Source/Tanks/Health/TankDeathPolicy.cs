@@ -1,14 +1,25 @@
 using UnityEngine;
 
-public class TankDeathPolicy : MonoBehaviour, IDeathPolicy
+[RequireComponent(typeof(GetOutFromWay))]
+public class TankDeathPolicy : EnemyDeathPolicy
 {
     [SerializeField] private TurretExplosion _turretExplosion;
+    [SerializeField] private int _deathLayer;
+    [SerializeField] private GameObject[] _physicObjects;
 
-    public void Die()
+    private GetOutFromWay _getOutFromWay;
+
+    private void Awake()
     {
-        _turretExplosion.Explose();
-        OnDie();
+        _getOutFromWay = GetComponent<GetOutFromWay>();
     }
 
-    protected virtual void OnDie() { }
+    protected override void OnDie()
+    {
+        _turretExplosion.Explose();
+        _getOutFromWay.GetOut();
+
+        foreach (GameObject @object in _physicObjects)
+            @object.layer = _deathLayer;
+    }
 }

@@ -1,1 +1,1 @@
-public class CharacterInRadius : ObjectInRadius<Character, SharedCharacter> { }
+public class CharacterInRadius : ObjectInRadius<PlayerTank, SharedCharacter> { }

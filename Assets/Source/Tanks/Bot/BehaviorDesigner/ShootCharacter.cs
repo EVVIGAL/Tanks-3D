@@ -1,1 +1,1 @@
-public class ShootCharacter : Shoot<Character, SharedCharacter> { }
+public class ShootCharacter : Shoot<PlayerTank, SharedCharacter> { }

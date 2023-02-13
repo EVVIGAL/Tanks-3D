@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ArtBlowSkill : MonoBehaviour, ISkill
+public class ArtBlowSkill : Skill
 {
     [SerializeField] private uint _damage;
     [SerializeField] private Bomb _artBlowTemplate;
@@ -8,7 +8,7 @@ public class ArtBlowSkill : MonoBehaviour, ISkill
     [SerializeField] private Camera _camera;
     [SerializeField] private float _xOffset;
 
-    public void Use()
+    protected override void OnUse()
     {
         Vector3 centerOfScreen = _camera.transform.position;
         centerOfScreen.z = 0f;

@@ -1,11 +1,9 @@
 using UnityEngine;
 
-public class Skill : MonoBehaviour
+public abstract class Skill : MonoBehaviour, ISkill
 {
     [SerializeField] private int _maxAmount;
     [SerializeField] private SkillView _view;
-    [SerializeField] private MonoBehaviour _skillBehaviour;
-    private ISkill _skill => (ISkill)_skillBehaviour;
 
     private int _currentAmount;
 
@@ -17,8 +15,8 @@ public class Skill : MonoBehaviour
 
     public void Init(int maxAmount)
     {
-        _maxAmount = maxAmount;
         _currentAmount = maxAmount;
+        _view.Show(_currentAmount);
     }
 
     public void Use()
@@ -26,17 +24,10 @@ public class Skill : MonoBehaviour
         if (_currentAmount <= 0)
             return;
 
-        _skill.Use();
+        OnUse();
         _currentAmount--;
         _view.Show(_currentAmount);
     }
 
-    private void OnValidate()
-    {
-        if (_skillBehaviour && !(_skillBehaviour is ISkill))
-        {
-            Debug.LogError(nameof(_skillBehaviour) + " needs to implement " + nameof(ISkill));
-            _skillBehaviour = null;
-        }
-    }
+    protected abstract void OnUse();
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent (typeof(Ragdoll), typeof(Animator), typeof(Movement))]
-public class SoldierDeathPolicy : MonoBehaviour, IDeathPolicy
+public class SoldierDeathPolicy : EnemyDeathPolicy
 {
     [SerializeField] private ObjectPhysic _weaponPhysic;
 
@@ -16,7 +16,7 @@ public class SoldierDeathPolicy : MonoBehaviour, IDeathPolicy
         _movement = GetComponent<Movement>();
     }
 
-    public void Die()
+    protected override void OnDie()
     {
         _ragdoll.Enable();
         _animator.enabled = false;
