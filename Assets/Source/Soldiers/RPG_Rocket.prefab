@@ -86,6 +86,7 @@ MonoBehaviour:
   _liveTime: 3
   _pushForce: 100
   _hitFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+  _damageViewTemplate: {fileID: 3314810528623754479, guid: 2c43280f33348e94d8ddf6fc204767c8, type: 3}
 --- !u!1 &5489217225590819776
 GameObject:
   m_ObjectHideFlags: 0

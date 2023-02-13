@@ -11,9 +11,9 @@ public class DamageReceiver : MonoBehaviour, IHealth
 
     public void Heal(uint health) => _health.Heal(health);
 
-    public void TakeDamage(uint damage)
+    public uint TakeDamage(uint damage)
     {
-        _health.TakeDamage((uint)(damage * _damageMultiplier));
+        return _health.TakeDamage((uint)(damage * _damageMultiplier));
     }
 
     private void OnValidate()
