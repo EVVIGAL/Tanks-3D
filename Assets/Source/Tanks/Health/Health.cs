@@ -28,13 +28,22 @@ public class Health : MonoBehaviour, IHealth
 
         uint targetDamage = damage - (damage * Armor / 100);
         Value = (uint)Math.Clamp((int)Value - targetDamage, 0, MaxValue);
-        OnTakeDamage();
+        OnHealthChanged();
 
         if (Value == 0)
             Die();
     }
 
-    protected virtual void OnTakeDamage()
+    public void Heal(uint health)
+    {
+        if (IsAlive == false)
+            throw new InvalidOperationException();
+
+        Value = Math.Clamp(Value + health, 0, MaxValue);
+        OnHealthChanged();
+    }
+
+    protected virtual void OnHealthChanged()
     {
         _healthView.Show(Value, MaxValue);
     }

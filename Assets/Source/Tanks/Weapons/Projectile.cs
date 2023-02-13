@@ -87,10 +87,10 @@ public class Projectile : MonoBehaviour, IProjectile
         OnHit(collision.transform, collision.contacts[0].point);
     }
 
-    protected virtual void OnHit(Transform hitTransform, Vector3 position)
+    protected virtual void OnHit(Transform hitTransform, Vector3 hitPosition)
     {
         if (_hitFX != null)
-            Instantiate(_hitFX, position, Quaternion.identity);
+            Instantiate(_hitFX, hitPosition, Quaternion.identity);
 
         if (hitTransform.TryGetComponent(out Rigidbody rigidbody))
             rigidbody.AddForce(transform.forward * _pushForce, ForceMode.Impulse);

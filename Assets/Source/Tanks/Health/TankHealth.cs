@@ -9,9 +9,9 @@ public class TankHealth : Health
 
     [SerializeField] private GetOutFromWay _getOutFromWay;
 
-    protected override void OnTakeDamage()
+    protected override void OnHealthChanged()
     {
-        base.OnTakeDamage();
+        base.OnHealthChanged();
         _smokeView.Show(Value, MaxValue);
     }
 

@@ -12,7 +12,7 @@ public class ChaseObject<TObject, TSharedObject> : Action where TObject : Compon
         Vector3 positionDifference = TargetObject.Value.transform.position - transform.position;
         positionDifference.y = 0f;
         Vector3 chaseDirection = Vector3.Normalize(positionDifference);
-        SelfMovement.Value.Move(-chaseDirection.z);
+        SelfMovement.Value.Move(-chaseDirection.x);
         return TaskStatus.Running;
     }
 }
