@@ -1,1 +1,1 @@
-public class ChaseCharacter : ChaseObject<Character, SharedCharacter> { }
+public class ChaseCharacter : ChaseObject<PlayerTank, SharedCharacter> { }

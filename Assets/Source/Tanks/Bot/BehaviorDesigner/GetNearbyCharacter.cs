@@ -1,1 +1,1 @@
-public class GetNearbyCharacter : GetNearbyObject<Character, SharedCharacter> { }
+public class GetNearbyCharacter : GetNearbyObject<PlayerTank, SharedCharacter> { }

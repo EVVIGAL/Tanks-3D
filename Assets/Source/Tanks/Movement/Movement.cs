@@ -17,6 +17,11 @@ public class Movement : MonoBehaviour, IMovement
         _characterController = GetComponent<CharacterController>();
     }
 
+    public void Init(float maxSpeed)
+    {
+        MaxSpeed = maxSpeed;
+    }
+
     public void Move(float delta)
     {
         _input += delta;

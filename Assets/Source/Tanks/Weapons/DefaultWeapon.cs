@@ -13,6 +13,11 @@ public class DefaultWeapon : MonoBehaviour
 
     public IProjectile Projectile { get; private set; }
 
+    public void Init(uint damage)
+    {
+        Damage = damage;
+    }
+
     public void Shoot(Transform target = null, Vector3 force = new Vector3())
     {
         if (force == new Vector3())

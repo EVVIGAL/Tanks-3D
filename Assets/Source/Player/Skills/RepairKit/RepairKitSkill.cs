@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class RepairKitSkill : MonoBehaviour, ISkill
+public class RepairKitSkill : Skill
 {
     [SerializeField] private RepairKit _repairKitTemplate;
     [SerializeField] private float _spawnHeight;
     [SerializeField] private Camera _camera;
 
-    public void Use()
+    protected override void OnUse()
     {
         Vector3 centerOfScreen = _camera.transform.position;
         centerOfScreen.z = 0f;

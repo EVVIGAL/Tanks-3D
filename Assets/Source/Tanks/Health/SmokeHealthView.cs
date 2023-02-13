@@ -13,6 +13,11 @@ public class SmokeHealthView : MonoBehaviour, IHealthView
         _smokeDamageView = GetComponent<SmokeDamageView>();
     }
 
+    public void Init(MonoBehaviour healthViewBehaviour)
+    {
+        _healthViewBehaviour = healthViewBehaviour;
+    }
+
     public void Show(float health, float maxHealth)
     {
         _healthView.Show(health, maxHealth);

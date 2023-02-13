@@ -3555,7 +3555,9 @@ GameObject:
   - component: {fileID: 8734242093041060669}
   - component: {fileID: 8734242093041060665}
   - component: {fileID: 2908436136470855235}
-  - component: {fileID: 2908436136470855234}
+  - component: {fileID: 2111609294973209899}
+  - component: {fileID: 2111609294973209896}
+  - component: {fileID: 2111609294973209897}
   m_Layer: 2
   m_Name: SoldierWithRPG
   m_TagString: Untagged
@@ -3570,8 +3572,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8500310348477021828}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 30.55}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 86.76215, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3579,7 +3581,7 @@ Transform:
   - {fileID: 1751258775133099268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!114 &8734242093041060666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3621,10 +3623,10 @@ MonoBehaviour:
         dataPosition: 
         unityObjects:
         - {fileID: 8734242093041060670}
-        - {fileID: 2908436136470855234}
+        - {fileID: 2111609294973209897}
         - {fileID: 8734242092966052817}
         - {fileID: 8734242092966052817}
-        - {fileID: 2908436136470855234}
+        - {fileID: 2111609294973209897}
         byteData: 
         byteDataArray: 
       Version: 1.7.2
@@ -3786,7 +3788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea468eb4f731c040a58e5f5c55edd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2908436136470855234
+--- !u!114 &2111609294973209899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3795,17 +3797,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 8500310348477021828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87253b4b4161c1e48bf1a336b3d76ed0, type: 3}
+  m_Script: {fileID: 11500000, guid: 267a942b1eb214f499ac08b6a2f28ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 100
-  <RateOfFire>k__BackingField: 1
-  _reloadSpeed: 4
-  _magazineSize: 1
-  _shootPoint: {fileID: 8734242092899501479}
-  _bulletPushForce: 100
+  <Damage>k__BackingField: 200
+  <BulletPushForce>k__BackingField: 40
+  <ShootPoint>k__BackingField: {fileID: 8734242092899501479}
   _projectileFactoryBehaviour: {fileID: 8734242092966052831}
-  _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
+  _shootFX: {fileID: 19891528, guid: d786954ea58ae6f45b3de29c31ec67f9, type: 3}
+--- !u!114 &2111609294973209896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500310348477021828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3706eeded5aa0b47b9d334dfe1fb7fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2111609294973209897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500310348477021828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd175ff7e69cd1f488c804a16e6ee111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RateOfFire>k__BackingField: 1
+  <ReloadSpeed>k__BackingField: 4
+  <MagazineSize>k__BackingField: 1
+  _weaponCompositeBehaviour: {fileID: 2111609294973209896}
 --- !u!1 &8587725372805767168
 GameObject:
   m_ObjectHideFlags: 0

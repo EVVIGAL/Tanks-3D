@@ -21,6 +21,12 @@ public class Health : MonoBehaviour, IHealth
         Value = MaxValue;
     }
 
+    public void Init(uint maxHealth, uint armor)
+    {
+        MaxValue = maxHealth;
+        Armor = armor;
+    }
+
     public uint TakeDamage(uint damage)
     {
         if (IsAlive == false)

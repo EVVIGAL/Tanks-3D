@@ -2,7 +2,7 @@ using BehaviorDesigner.Runtime;
 using System;
 
 [Serializable]
-public class SharedCharacter : SharedVariable<Character>
+public class SharedCharacter : SharedVariable<PlayerTank>
 {
-    public static implicit operator SharedCharacter(Character value) => new SharedCharacter { Value = value };
+    public static implicit operator SharedCharacter(PlayerTank value) => new SharedCharacter { Value = value };
 }
