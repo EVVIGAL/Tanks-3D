@@ -82,7 +82,14 @@ public class TankChoser : MonoBehaviour
 
     private void HideButtons()
     {
-        if(_visibleTankIndex == 0)
+        if (_visibleTankIndex > 0 && _visibleTankIndex + 1 < _tanks.Length)
+        {
+            _leftButton.gameObject.SetActive(true);
+            _rightButton.gameObject.SetActive(true);
+            return;
+        }
+
+        if (_visibleTankIndex == 0)
         {
             _leftButton.gameObject.SetActive(false);
             _rightButton.gameObject.SetActive(true);
