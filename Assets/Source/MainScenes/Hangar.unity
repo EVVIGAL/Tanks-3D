@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7981125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2137436948269042770, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
+  m_PrefabInstance: {fileID: 4217148499982636411}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &52141981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -624,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelToLoad: 0
+  _levelToLoad: 4
 --- !u!1001 &82006631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1614,6 +1619,12 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _farm:
+      _value: 0
+      _maximumValue: 50
+      _upgradeCost: 100
+      _upgradeValue: 5
+      _increaseCost: 100
     _isAvailable: 1
     _name: Stuart
   _nameText: {fileID: 917525581}
@@ -3359,6 +3370,12 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _farm:
+      _value: 0
+      _maximumValue: 0
+      _upgradeCost: 0
+      _upgradeValue: 0
+      _increaseCost: 0
     _isAvailable: 0
     _name: KV-2
   _nameText: {fileID: 917525581}
@@ -4004,7 +4021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelToLoad: 0
+  _levelToLoad: 1
 --- !u!1 &622295656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6409299901828371514, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
@@ -5211,7 +5228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelToLoad: 0
+  _levelToLoad: 5
 --- !u!224 &708970785 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3927104939822465786, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
@@ -6285,6 +6302,7 @@ GameObject:
   - component: {fileID: 820633387}
   - component: {fileID: 820633386}
   - component: {fileID: 820633385}
+  - component: {fileID: 820633389}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6390,6 +6408,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &820633389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820633384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc9805401ef384478aaf99da627c321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    Money: 2500
+    TotalIncome: 100
+    CurrentLevel: 2
+    ArtilleryAmount: 2
+    ToolsAmount: 3
 --- !u!1 &846653831
 GameObject:
   m_ObjectHideFlags: 0
@@ -7003,7 +7039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelToLoad: 0
+  _levelToLoad: 3
 --- !u!224 &877639938 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7236429904303105772, guid: 87a59af710f2abb42b122c547b7ac355, type: 3}
@@ -8536,6 +8572,12 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _farm:
+      _value: 0
+      _maximumValue: 0
+      _upgradeCost: 0
+      _upgradeValue: 0
+      _increaseCost: 0
     _isAvailable: 0
     _name: T-34-76
   _nameText: {fileID: 917525581}
@@ -9271,7 +9313,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4549777195823093700, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
 --- !u!224 &1120246028 stripped
 RectTransform:
@@ -10636,6 +10679,12 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _farm:
+      _value: 0
+      _maximumValue: 0
+      _upgradeCost: 0
+      _upgradeValue: 0
+      _increaseCost: 0
     _isAvailable: 0
     _name: Sherman
   _nameText: {fileID: 917525581}
@@ -11710,7 +11759,6 @@ GameObject:
   - component: {fileID: 1437453353}
   - component: {fileID: 1437453352}
   - component: {fileID: 1437453351}
-  - component: {fileID: 1437453357}
   - component: {fileID: 1437453354}
   - component: {fileID: 1437453356}
   - component: {fileID: 1437453355}
@@ -11955,18 +12003,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1437453357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1437453349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4595ed5a0f8f6714ab2a7948a00a2d8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1439092057
 GameObject:
   m_ObjectHideFlags: 0
@@ -12842,7 +12878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fafc2ae2075014ab511814d67c61e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _value: 15000
+  _saveData: {fileID: 820633389}
 --- !u!1 &1483016802
 GameObject:
   m_ObjectHideFlags: 0
@@ -14122,6 +14158,12 @@ MonoBehaviour:
       _upgradeCost: 20
       _upgradeValue: 20
       _increaseCost: 50
+    _farm:
+      _value: 0
+      _maximumValue: 0
+      _upgradeCost: 0
+      _upgradeValue: 0
+      _increaseCost: 0
     _isAvailable: 0
     _name: Matilda
   _nameText: {fileID: 917525581}
@@ -16199,6 +16241,7 @@ GameObject:
   - component: {fileID: 2087713308}
   - component: {fileID: 2087713307}
   - component: {fileID: 2087713309}
+  - component: {fileID: 2087713310}
   m_Layer: 5
   m_Name: MissionsPanel
   m_TagString: Untagged
@@ -16280,12 +16323,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1051b78eea3fd9f42b22ecc8f992b600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _saveData: {fileID: 820633389}
   _farms:
   - {fileID: 1317286590}
   - {fileID: 1774144882}
   - {fileID: 484613023}
   - {fileID: 2046122215}
   - {fileID: 942385350}
+--- !u!114 &2087713310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087713304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4595ed5a0f8f6714ab2a7948a00a2d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _income: {fileID: 1437453354}
+--- !u!1 &2092027338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2137436948269042770, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
+  m_PrefabInstance: {fileID: 4512927734205149787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2095595467
 GameObject:
   m_ObjectHideFlags: 0
@@ -16668,7 +16730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelToLoad: 0
+  _levelToLoad: 2
 --- !u!1 &2105461837
 GameObject:
   m_ObjectHideFlags: 0
@@ -17147,13 +17209,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4549777195823093700, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
+      propertyPath: _saveData
+      value: 
+      objectReference: {fileID: 820633389}
+    - target: {fileID: 4549777195823093700, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
+      propertyPath: _skillType
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4549777195823093700, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
 --- !u!224 &4217148499982636412 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3387407040090934819, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
   m_PrefabInstance: {fileID: 4217148499982636411}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4217148499982636415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7981125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ded5e6e695e0c42bb38787992ae963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _saveData: {fileID: 820633389}
 --- !u!1001 &4512927734205149787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17249,13 +17333,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4549777195823093700, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
+      propertyPath: _saveData
+      value: 
+      objectReference: {fileID: 820633389}
+    m_RemovedComponents:
+    - {fileID: 4549777195823093700, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
 --- !u!224 &4512927734205149788 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3387407040090934819, guid: 16d8e5ae0481c3c4fbb9ea897d6c11f8, type: 3}
   m_PrefabInstance: {fileID: 4512927734205149787}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4512927734205149791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092027338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17aef548524c064186ef8dfb1b5627c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _saveData: {fileID: 820633389}
 --- !u!1001 &7032400793972392913
 PrefabInstance:
   m_ObjectHideFlags: 0

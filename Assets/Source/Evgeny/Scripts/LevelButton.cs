@@ -12,9 +12,9 @@ public class LevelButton : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
-        _levelToLoad = Mathf.Clamp(_levelToLoad, 1, SceneManager.sceneCountInBuildSettings - 1);
+        //_levelToLoad = Mathf.Clamp(_levelToLoad, 1, SceneManager.sceneCountInBuildSettings - 1);
 
-        if (_levelToLoad >= LevelHolder.CurrentLevel + 1)
+        if (_levelToLoad > LevelHolder.CurrentLevel + 1)
             _button.gameObject.SetActive(false);
     }
 

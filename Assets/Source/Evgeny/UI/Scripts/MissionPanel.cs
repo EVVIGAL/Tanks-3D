@@ -1,9 +1,13 @@
 using UnityEngine.Events;
 using UnityEngine;
 
+[RequireComponent(typeof(OfflineIncome))]
 public class MissionPanel : MonoBehaviour
 {
+    [SerializeField] private SaveData _saveData;
     [SerializeField] private TankFarm[] _farms;
+
+    private OfflineIncome _offlineIncome;
 
     public event UnityAction IncomeChange;
 
@@ -11,7 +15,8 @@ public class MissionPanel : MonoBehaviour
 
     private void Awake()
     {
-        TotalIncome = 0;
+        _offlineIncome = GetComponent<OfflineIncome>();
+        _offlineIncome.Calculate(_saveData.Data.TotalIncome);
 
         foreach (TankFarm farm in _farms)
         {
@@ -23,7 +28,11 @@ public class MissionPanel : MonoBehaviour
                 farm.gameObject.SetActive(false);
         }
 
-        SetTotalIncome();       
+    }
+
+    private void OnEnable()
+    {
+        SetTotalIncome();
     }
 
     private void OnDisable()
@@ -38,11 +47,12 @@ public class MissionPanel : MonoBehaviour
 
         foreach (TankFarm farm in _farms)
         {
-            Debug.Log(farm.FarmRate);
             if (farm.gameObject.activeSelf)
                 TotalIncome += farm.FarmRate;
         }
 
+        _saveData.Data.TotalIncome = (int)TotalIncome;
+        _saveData.Save();
         IncomeChange?.Invoke();
     }
 }
