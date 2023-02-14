@@ -17,7 +17,7 @@ public class RepairKitPickUp : MonoBehaviour
 
     private void Update()
     {
-        int overlapCount = Physics.OverlapBoxNonAlloc(transform.position + _boxCollider.center, _boxCollider.bounds.extents, _overlapColliders, Quaternion.identity, _mask);
+        int overlapCount = Physics.OverlapBoxNonAlloc(transform.position + transform.TransformVector(_boxCollider.center), _boxCollider.bounds.extents, _overlapColliders, Quaternion.identity, _mask);
         for (int colliderIterator = 0; colliderIterator < overlapCount; colliderIterator += 1)
         {
             Collider overlapCollider = _overlapColliders[colliderIterator];
@@ -34,7 +34,7 @@ public class RepairKitPickUp : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(transform.position + _boxCollider.center, _boxCollider.bounds.size);
+        Gizmos.DrawWireCube(transform.position + transform.TransformVector(_boxCollider.center), _boxCollider.bounds.size);
     }
 
     private void OnValidate()

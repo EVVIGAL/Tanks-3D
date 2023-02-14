@@ -3,24 +3,11 @@ using UnityEngine;
 public class ÑollisionDamager : MonoBehaviour
 {
     [SerializeField] private uint _damage;
-    [SerializeField] private float _radius;
-    [SerializeField] private float _maxDistance;
-    [SerializeField] private LayerMask _layer;
 
-    private void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (Physics.SphereCast(transform.position, _radius, transform.forward, out RaycastHit hitInfo, _maxDistance, _layer))
-            if (hitInfo.transform.TryGetComponent(out Soldier soldier))
-                if (soldier.TryGetComponent(out Health health))
-                    if (health.IsAlive)
-                        health.TakeDamage(_damage);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, _radius);
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position + transform.forward * _maxDistance, _radius);
+        if (other.TryGetComponent(out IHealth health))
+            if (health.IsAlive)
+                health.TakeDamage(_damage);
     }
 }

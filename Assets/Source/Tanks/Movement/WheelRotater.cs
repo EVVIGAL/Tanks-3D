@@ -9,6 +9,6 @@ public class WheelRotater : MonoBehaviour
     private void Update()
     {
         foreach (Transform wheel in _wheels)
-            wheel.Rotate(wheel.up * (_speed * _movement.CurrentSpeed * Time.deltaTime), Space.World);
+            wheel.Rotate(wheel.right * (_speed * _movement.CurrentSpeed * Time.deltaTime), Space.World);
     }
 }

@@ -13,26 +13,6 @@ public class UIInput : MonoBehaviour
     private Vector2 _moveInput;
     private Vector2 _barrelRotateInput;
 
-    public void MoveForward()
-    {
-        _movement.Move(1f);
-    }
-
-    public void MoveBackward()
-    {
-        _movement.Move(-1f);
-    }
-
-    public void BarrelUp()
-    {
-        _barrel.Rotate(1f);
-    }
-
-    public void BarrelDown()
-    {
-        _barrel.Rotate(-1f);
-    }
-
     public void Shoot()
     {
         if (_weapon.CanShoot)

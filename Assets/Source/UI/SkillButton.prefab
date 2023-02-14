@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _amountText: {fileID: 5896245097089277507}
   _button: {fileID: 2731763826354565071}
+  _reloadProgressBar: {fileID: 0}
 --- !u!1 &5896245097089277517
 GameObject:
   m_ObjectHideFlags: 0

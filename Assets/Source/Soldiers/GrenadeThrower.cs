@@ -27,7 +27,7 @@ public class GrenadeThrower : MonoBehaviour
 
     public void Throw()
     {
-        _defaultWeapon.Shoot(_target, CalculatePushForce(_defaultWeapon.ShootPoint, _target.position));
+        _defaultWeapon.Shoot(_target, CalculatePushForce(_defaultWeapon.ShootPoint, _target.position, _angle));
         StartCoroutine(EnableProjectile());
     }
 
@@ -37,16 +37,16 @@ public class GrenadeThrower : MonoBehaviour
         _defaultWeapon.Projectile.Enable();
     }
 
-    private Vector3 CalculatePushForce(Transform startPoint, Vector3 target)
+    public static Vector3 CalculatePushForce(Transform startPoint, Vector3 target, float angle)
     {
         Vector3 fromTo = target - startPoint.position;
         var fromToXZ = new Vector3(fromTo.x, 0f, fromTo.z);
         float x = fromToXZ.magnitude;
         float y = fromTo.y;
         startPoint.LookAt(fromToXZ);
-        startPoint.Rotate(-_angle, 0f, 0f);
+        startPoint.Rotate(-angle, 0f, 0f);
 
-        float v2 = (Physics.gravity.y * x * x) / (2 * (y - Mathf.Tan(_angle * Mathf.Deg2Rad) * x) * Mathf.Pow(Mathf.Cos(_angle * Mathf.Deg2Rad), 2));
+        float v2 = (Physics.gravity.y * x * x) / (2 * (y - Mathf.Tan(angle * Mathf.Deg2Rad) * x) * Mathf.Pow(Mathf.Cos(angle * Mathf.Deg2Rad), 2));
         float v = Mathf.Sqrt(Mathf.Abs(v2));
 
         return startPoint.forward * v;

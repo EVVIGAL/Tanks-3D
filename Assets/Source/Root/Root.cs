@@ -9,6 +9,7 @@ public class Root : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField] private Skill _artBlowSkill;
     [SerializeField] private Skill _repairKitSkill;
+    [SerializeField] private MobileInputUI _mobileInputUI;
 
     private PlayerTankFactory _playerTankFactory;
 
@@ -26,6 +27,7 @@ public class Root : MonoBehaviour
 
         _virtualCamera.Follow = tank.transform;
         _virtualCamera.LookAt = tank.transform;
+        _mobileInputUI.Init(tank.UIInput);
     }
 
     private void OnValidate()
