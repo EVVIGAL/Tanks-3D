@@ -9,6 +9,11 @@ public class ButtonFX : MonoBehaviour, IPointerDownHandler
 
     private Button _button;
 
+    private void Awake()
+    {
+        _button = GetComponent<Button>();
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         if(_button.interactable)

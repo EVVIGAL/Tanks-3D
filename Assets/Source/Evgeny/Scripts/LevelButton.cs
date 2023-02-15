@@ -43,6 +43,6 @@ public class LevelButton : MonoBehaviour
     private void LoadScene(bool isMute)
     {
         _audioManager.Mute(isMute);
-        SceneManager.LoadScene(_levelToLoad);
+        SceneManager.LoadScene(_levelToLoad + 1);
     }
 }
