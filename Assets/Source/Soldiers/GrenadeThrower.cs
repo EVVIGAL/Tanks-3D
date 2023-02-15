@@ -51,4 +51,17 @@ public class GrenadeThrower : MonoBehaviour
 
         return startPoint.forward * v;
     }
+
+    public static Vector3 CalculatePushForce2(Transform startPoint, Vector3 target, float angle)
+    {
+        Vector3 fromTo = target - startPoint.position;
+        var fromToXZ = new Vector3(fromTo.x, 0f, fromTo.z);
+        float x = fromToXZ.magnitude;
+        float y = fromTo.y;
+
+        float v2 = (Physics.gravity.y * x * x) / (2 * (y - Mathf.Tan(angle * Mathf.Deg2Rad) * x) * Mathf.Pow(Mathf.Cos(angle * Mathf.Deg2Rad), 2));
+        float v = Mathf.Sqrt(Mathf.Abs(v2));
+
+        return startPoint.forward * v;
+    }
 }

@@ -1,0 +1,1 @@
+public class TurnBarrelCharacter : TurnBarrelObject<PlayerTank, SharedCharacter> { }

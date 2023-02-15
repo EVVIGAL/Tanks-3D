@@ -5,9 +5,9 @@ public class Bomb : Projectile
 {
     [SerializeField] private float _blowRadius;
 
-    protected override void OnHit(Transform hitTransform, Vector3 hitPosition)
+    protected override void OnHit(RaycastHit hitInfo)
     {
-        base.OnHit(hitTransform, hitPosition);
+        base.OnHit(hitInfo);
 
         var units = new GetObjectsInRadius<IHealth>(_blowRadius, transform);
         IEnumerable healths = units.Get();
