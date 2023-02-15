@@ -1,10 +1,12 @@
 using UnityEngine.SceneManagement;
+using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
 
 [RequireComponent(typeof(Button))]
 public class LevelButton : MonoBehaviour
 {
+    [SerializeField] private AudioManager _audioManager;
     [SerializeField] private InterAd _ad;
     [SerializeField] private int _levelToLoad;
 
@@ -20,16 +22,27 @@ public class LevelButton : MonoBehaviour
 
     private void OnEnable()
     {
-        _button.onClick.AddListener(LoadScene);
+        _button.onClick.AddListener(ShowAd);
     }
 
     private void OnDisable()
     {
-        _button.onClick.RemoveListener(LoadScene);
+        _button.onClick.RemoveListener(ShowAd);
     }
 
-    private void LoadScene()
+    private void ShowAd()
     {
-        _ad.ShowAD(() => SceneManager.LoadScene(_levelToLoad));
+        bool temp = _audioManager.IsMute;
+#if UNITY_WEBGL && !UNITY_EDITOR
+        InterstitialAd.Show(() => _audioManager.Mute(true), (temp) => LoadScene(temp), (string error) => LoadScene(temp), () => LoadScene(temp));
+#else
+        LoadScene(temp);
+#endif
+    }
+
+    private void LoadScene(bool isMute)
+    {
+        _audioManager.Mute(isMute);
+        SceneManager.LoadScene(_levelToLoad);
     }
 }

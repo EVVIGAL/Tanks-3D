@@ -1020,7 +1020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6606005299345233778, guid: 7aff9190f32585948a8d7838a859933a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7923633883768481121, guid: 7aff9190f32585948a8d7838a859933a, type: 3}
       propertyPath: m_RootOrder
@@ -2717,7 +2717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: 49.99994}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &491483779
@@ -3770,6 +3770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 0}
   _ad: {fileID: 820633391}
   _levelToLoad: 1
 --- !u!1001 &628810182
@@ -10395,6 +10396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d311ef3beb3d5746b7c5c58990c33f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 0}
   _ad: {fileID: 0}
   _missionPanel: {fileID: 2087713309}
   _upgradeButton: {fileID: 629846207}
@@ -11875,6 +11877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 0}
   _ad: {fileID: 820633391}
   _levelToLoad: 2
 --- !u!114 &1567250364
@@ -12867,7 +12870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1698115294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15038,6 +15041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3168137381957ad49aaf775c7f43a23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 0}
   _ad: {fileID: 820633391}
   _levelToLoad: 3
 --- !u!114 &2085037197

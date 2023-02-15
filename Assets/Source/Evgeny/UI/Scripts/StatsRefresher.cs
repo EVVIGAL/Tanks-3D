@@ -9,9 +9,9 @@ public class StatsRefresher : MonoBehaviour
 
     public void SetUnit(UnitStat unit)
     {
-        _health.Set(unit.Health);
-        _damage.Set(unit.Damage);
-        _armor.Set(unit.Armor);
-        _speed.Set(unit.Speed);
+        _health.Set(unit.Health, unit.IsAvailable);
+        _damage.Set(unit.Damage, unit.IsAvailable);
+        _armor.Set(unit.Armor, unit.IsAvailable);
+        _speed.Set(unit.Speed, unit.IsAvailable);
     }
 }

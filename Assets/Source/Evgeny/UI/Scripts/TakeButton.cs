@@ -1,3 +1,4 @@
+using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
@@ -5,6 +6,7 @@ using TMPro;
 [RequireComponent(typeof(Button))]
 public class TakeButton : MonoBehaviour
 {
+    [SerializeField] private AudioManager _audioManager;
     [SerializeField] private InterAd _ad;
     [SerializeField] private MissionPanel _missionPanel;
     [Space]
@@ -37,7 +39,7 @@ public class TakeButton : MonoBehaviour
         OnIncomeChange();
         UpdateButton();
         _text.text = _currentValue.ToString("f0") + " / " + _maximumValue;
-        _button.onClick.AddListener(() => _ad.ShowAD(TakeReward));
+        _button.onClick.AddListener(TakeReward);
         _upgradeButton.onClick.AddListener(Upgrade);
         _missionPanel.IncomeChange += OnIncomeChange;
         _money.ValueChanged += UpdateButton;
@@ -54,7 +56,7 @@ public class TakeButton : MonoBehaviour
 
     private void OnDisable()
     {
-        _button.onClick.RemoveListener(() => _ad.ShowAD(TakeReward));
+        _button.onClick.RemoveListener(TakeReward);
         _upgradeButton.onClick.RemoveListener(Upgrade);
         _missionPanel.IncomeChange -= OnIncomeChange;
         _money.ValueChanged += UpdateButton;
@@ -66,10 +68,19 @@ public class TakeButton : MonoBehaviour
         _currentValue = Mathf.Clamp(_currentValue, _currentValue, _maximumValue);
     }
 
+    private void ShowAD()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        bool temp = _audioManager.IsMute;
+        InterstitialAd.Show(() => _audioManager.Mute(true), (temp) => _audioManager.Mute(temp), null, null);
+#endif
+    }
+
     private void TakeReward()
     {
         _money.Add((int)_currentValue);
         _currentValue = 0;
+        ShowAD();
     }
 
     private void Upgrade()
