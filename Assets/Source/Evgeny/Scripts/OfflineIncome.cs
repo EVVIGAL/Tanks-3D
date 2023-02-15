@@ -1,19 +1,18 @@
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(TakeButton))]
 public class OfflineIncome : MonoBehaviour
 {
+    [SerializeField] private TakeButton _income;
+
     private const string _lastSaveKey = "LastSave";
 
-    private TakeButton _income;
-
-    private void Awake()
+    private void OnDisable()
     {
-        _income = GetComponent<TakeButton>();
+        SaveManager.SetDate(_lastSaveKey, DateTime.UtcNow);
     }
 
-    private void OnEnable()
+    public void Calculate(int income)
     {
         DateTime lastSaveTime = SaveManager.GetDate(_lastSaveKey, DateTime.UtcNow);
         TimeSpan timePassed = DateTime.UtcNow - lastSaveTime;
@@ -22,11 +21,6 @@ public class OfflineIncome : MonoBehaviour
         if (secondPassed == 0)
             return;
 
-        _income.Add((int)(_income.Income * secondPassed));
-    }
-
-    private void OnDisable()
-    {
-        SaveManager.SetDate(_lastSaveKey, DateTime.UtcNow);
+        _income.Add(income * secondPassed);
     }
 }

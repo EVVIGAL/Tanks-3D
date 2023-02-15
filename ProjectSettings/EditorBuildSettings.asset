@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Source/MainScenes/Hangar.unity
     guid: ef8f8fcc1d4d5e24e9b469f8fd0828a5
+  - enabled: 1
+    path: Assets/Source/Scenes/Technical/TankControl.unity
+    guid: 4f7feb8b27db35e419a474e12737a641
   m_configObjects: {}
