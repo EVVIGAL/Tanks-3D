@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Button))]
 public class LevelButton : MonoBehaviour
 {
+    [SerializeField] private InterAd _ad;
     [SerializeField] private int _levelToLoad;
 
     private Button _button;
@@ -12,7 +13,6 @@ public class LevelButton : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
-        //_levelToLoad = Mathf.Clamp(_levelToLoad, 1, SceneManager.sceneCountInBuildSettings - 1);
 
         if (_levelToLoad > LevelHolder.CurrentLevel + 1)
             _button.gameObject.SetActive(false);
@@ -30,6 +30,6 @@ public class LevelButton : MonoBehaviour
 
     private void LoadScene()
     {
-        SceneManager.LoadScene(_levelToLoad);
+        _ad.ShowAD(() => SceneManager.LoadScene(_levelToLoad));
     }
 }

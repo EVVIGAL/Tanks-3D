@@ -5,6 +5,7 @@ using TMPro;
 [RequireComponent(typeof(Button))]
 public class TakeButton : MonoBehaviour
 {
+    [SerializeField] private InterAd _ad;
     [SerializeField] private MissionPanel _missionPanel;
     [Space]
     [SerializeField] private Button _upgradeButton;
@@ -36,7 +37,7 @@ public class TakeButton : MonoBehaviour
         OnIncomeChange();
         UpdateButton();
         _text.text = _currentValue.ToString("f0") + " / " + _maximumValue;
-        _button.onClick.AddListener(TakeReward);
+        _button.onClick.AddListener(() => _ad.ShowAD(TakeReward));
         _upgradeButton.onClick.AddListener(Upgrade);
         _missionPanel.IncomeChange += OnIncomeChange;
         _money.ValueChanged += UpdateButton;
@@ -53,7 +54,7 @@ public class TakeButton : MonoBehaviour
 
     private void OnDisable()
     {
-        _button.onClick.RemoveListener(TakeReward);
+        _button.onClick.RemoveListener(() => _ad.ShowAD(TakeReward));
         _upgradeButton.onClick.RemoveListener(Upgrade);
         _missionPanel.IncomeChange -= OnIncomeChange;
         _money.ValueChanged += UpdateButton;
