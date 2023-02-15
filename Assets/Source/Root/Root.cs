@@ -10,13 +10,15 @@ public class Root : MonoBehaviour
     [SerializeField] private Skill _artBlowSkill;
     [SerializeField] private Skill _repairKitSkill;
     [SerializeField] private MobileInputUI _mobileInputUI;
-    [SerializeField] private GameObject _gameOverWindow;
-    [SerializeField] private GameObject _levelCompletedWindow;
+    [SerializeField] private GameOverWindow _gameOverWindow;
+    [SerializeField] private LevelCompletedWindow _levelCompletedWindow;
     [SerializeField] private GameObject _inputPanel;
     [field: SerializeField] public Wallet PlayerWallet { get; private set; }
 
     private PlayerTankFactory _playerTankFactory;
     private PlayerTank _playerTank;
+
+    private bool _isGameEnd;
 
     private void Awake()
     {
@@ -37,13 +39,19 @@ public class Root : MonoBehaviour
 
     public void LevelCompleted()
     {
-        _levelCompletedWindow.SetActive(true);
+        if (_isGameEnd)
+            return;
+
+        _levelCompletedWindow.gameObject.SetActive(true);
         EndGame();
     }
 
     public void GameOver()
     {
-        _gameOverWindow.SetActive(true);
+        if (_isGameEnd)
+            return;
+
+        _gameOverWindow.gameObject.SetActive(true);
         EndGame();
     }
 
@@ -51,6 +59,7 @@ public class Root : MonoBehaviour
     {
         _playerTank.Stop();
         _inputPanel.SetActive(false);
+        _isGameEnd = true;
     }
 
     private void OnValidate()
