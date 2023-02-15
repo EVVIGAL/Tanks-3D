@@ -3774,6 +3774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69be5472edf2214996917681f1aea8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _reward: 50
   _weaponPhysic: {fileID: 8734242093552532430}
 --- !u!114 &8734242093041060665
 MonoBehaviour:

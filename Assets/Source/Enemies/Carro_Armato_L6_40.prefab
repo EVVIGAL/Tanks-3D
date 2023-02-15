@@ -517,6 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _reward: 100
   _turretExplosion: {fileID: 7559816461262928593}
   _deathLayer: 6
   _physicObjects:

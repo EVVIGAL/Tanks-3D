@@ -12,7 +12,8 @@ public class Root : MonoBehaviour
     [SerializeField] private MobileInputUI _mobileInputUI;
     [SerializeField] private GameObject _gameOverWindow;
     [SerializeField] private GameObject _levelCompletedWindow;
-    [SerializeField] private GameObject _gameMenu;
+    [SerializeField] private GameObject _inputPanel;
+    [field: SerializeField] public Wallet PlayerWallet { get; private set; }
 
     private PlayerTankFactory _playerTankFactory;
     private PlayerTank _playerTank;
@@ -49,7 +50,7 @@ public class Root : MonoBehaviour
     private void EndGame()
     {
         _playerTank.Stop();
-        _gameMenu.SetActive(false);
+        _inputPanel.SetActive(false);
     }
 
     private void OnValidate()

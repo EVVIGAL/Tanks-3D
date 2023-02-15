@@ -14,7 +14,7 @@ public class EnemiesCounter : MonoBehaviour
     {
         _enemies = GetComponentsInChildren<EnemyDeathPolicy>();
         foreach (EnemyDeathPolicy enemy in _enemies)
-            enemy.Init(this);
+            enemy.Init(this, _root.PlayerWallet);
 
         _aliveEnemyCount = _enemies.Length;
         _aliveEnemyCountText.SetText(_aliveEnemyCount.ToString());

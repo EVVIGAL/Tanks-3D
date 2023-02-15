@@ -2,19 +2,23 @@ using UnityEngine;
 
 public class EnemyDeathPolicy : MonoBehaviour, IDeathPolicy
 {
-    private EnemiesCounter _enemiesCounter;
+    [SerializeField] private uint _reward;
 
-    public void Init(EnemiesCounter enemiesCounter)
+    private EnemiesCounter _enemiesCounter;
+    private Wallet _playerWallet;
+
+    public void Init(EnemiesCounter enemiesCounter, Wallet wallet)
     {
         _enemiesCounter = enemiesCounter;
+        _playerWallet = wallet;
     }
 
     public void Die()
     {
         if (_enemiesCounter)
             _enemiesCounter.Decrease();
-
-        // Take rewards
+        if (_playerWallet)
+            _playerWallet.Add(_reward);
         OnDie();
     }
 

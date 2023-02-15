@@ -299,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _reward: 200
   _turretExplosion: {fileID: 3311548777665261335}
   _deathLayer: 6
   _physicObjects:
