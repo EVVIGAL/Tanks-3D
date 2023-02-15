@@ -1627,11 +1627,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 200
-  _radius: 0.5
-  _maxDistance: 1
-  _layer:
-    serializedVersion: 2
-    m_Bits: 4
 --- !u!1 &6746007469774516373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,7 +1822,7 @@ GameObject:
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6746007470255373472
 Transform:
   m_ObjectHideFlags: 0
@@ -1867,7 +1862,7 @@ CharacterController:
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.08, z: 0}
 --- !u!114 &6746007470255373486
 MonoBehaviour:
   m_ObjectHideFlags: 0

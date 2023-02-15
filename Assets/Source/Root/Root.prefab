@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caea107db6beedb40896c8b0d558f067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentTankIndex: 0
+  _currentTankIndex: 1
   _healthViewBehaviour: {fileID: 7097204674790366798}
   _virtualCamera: {fileID: 7097204676563928496}
   _artBlowSkill: {fileID: 8118584032658266048}
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxAmount: 5
-  _reloadTime: 2
+  _reloadTime: 5
   _view: {fileID: 9109395842883437434}
   _repairKitTemplate: {fileID: 2207543473607253420, guid: 1e76a60d351dc414e9d5db96bd175fb7, type: 3}
   _spawnHeight: 16
@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxAmount: 5
-  _reloadTime: 2
+  _reloadTime: 5
   _view: {fileID: 3438701639619280315}
   _damage: 100
   _artBlowTemplate: {fileID: 4732766576837236821, guid: 40318e41da04e124799f679d1eba99c6, type: 3}

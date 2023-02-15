@@ -8,7 +8,11 @@ public class WheelRotater : MonoBehaviour
 
     private void Update()
     {
+        float rotateSpeed = _speed * _movement.CurrentSpeed * Time.deltaTime;
+        if (Mathf.Approximately(rotateSpeed, 0f))
+            return;
+
         foreach (Transform wheel in _wheels)
-            wheel.Rotate(wheel.right * (_speed * _movement.CurrentSpeed * Time.deltaTime), Space.World);
+            wheel.Rotate(wheel.right * rotateSpeed, Space.World);
     }
 }
