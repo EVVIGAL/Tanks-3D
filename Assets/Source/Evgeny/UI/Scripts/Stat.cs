@@ -32,22 +32,23 @@ public class Stat : MonoBehaviour
         _money.ValueChanged -= UpdateButton;
     }
 
-    public void Set(Property property)
+    public void Set(Property property, bool isAvailable)
     {
-        Refresh(property);       
+        Refresh(property, isAvailable);
         _upgradeButton.onClick.RemoveAllListeners();
         _upgradeButton.onClick.AddListener(() => property.Upgrade(_money));
-        _upgradeButton.onClick.AddListener(() => Refresh(property));
+        _upgradeButton.onClick.AddListener(() => Refresh(property, isAvailable));
     }
 
-    private void Refresh(Property property)
+    private void Refresh(Property property, bool isAvailable)
     {
         _slider.value = property.Value / _maxValue;
         _valueText.text = property.Value.ToString();
         _upgradeText.text = property.UpgradeCost.ToString();
         _cost = property.UpgradeCost;
+        _upgradeButton.gameObject.SetActive(isAvailable);
 
-        if(property.Value >= property.MaximumValue)
+        if (property.Value >= property.MaximumValue)
         {
             _upgradeButton.gameObject.SetActive(false);
             return;
@@ -59,8 +60,14 @@ public class Stat : MonoBehaviour
     private void UpdateButton()
     {
         if (_cost <= _money.Value)
+        {
             _upgrade.color = Color.green;
+            _upgradeButton.interactable = true;
+        }
         else
+        {
             _upgrade.color = _upgradeColor;
+            _upgradeButton.interactable = false;
+        }
     }
 }

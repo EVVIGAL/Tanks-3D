@@ -1,3 +1,4 @@
+using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
@@ -5,6 +6,8 @@ using TMPro;
 [RequireComponent(typeof(Button))]
 public class TakeButton : MonoBehaviour
 {
+    [SerializeField] private AudioManager _audioManager;
+    [SerializeField] private InterAd _ad;
     [SerializeField] private MissionPanel _missionPanel;
     [Space]
     [SerializeField] private Button _upgradeButton;
@@ -65,10 +68,19 @@ public class TakeButton : MonoBehaviour
         _currentValue = Mathf.Clamp(_currentValue, _currentValue, _maximumValue);
     }
 
+    private void ShowAD()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        bool temp = _audioManager.IsMute;
+        InterstitialAd.Show(() => _audioManager.Mute(true), (temp) => _audioManager.Mute(temp), null, null);
+#endif
+    }
+
     private void TakeReward()
     {
         _money.Add((int)_currentValue);
         _currentValue = 0;
+        ShowAD();
     }
 
     private void Upgrade()
