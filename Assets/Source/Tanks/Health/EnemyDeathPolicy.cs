@@ -11,7 +11,9 @@ public class EnemyDeathPolicy : MonoBehaviour, IDeathPolicy
 
     public void Die()
     {
-        _enemiesCounter.Decrease();
+        if (_enemiesCounter)
+            _enemiesCounter.Decrease();
+
         // Take rewards
         OnDie();
     }
