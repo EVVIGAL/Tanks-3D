@@ -28,7 +28,6 @@ public class TakeButton : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
-        _currentValue = 0;
         _upgradeColor = _upgradeButton.GetComponent<Image>().color;
     }
 

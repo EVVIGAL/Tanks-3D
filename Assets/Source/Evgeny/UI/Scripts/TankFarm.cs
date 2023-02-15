@@ -11,29 +11,20 @@ public class TankFarm : MonoBehaviour
     [SerializeField] private Button _upgradeButton;
     [SerializeField] private TextMeshProUGUI _mainText;
     [SerializeField] private TextMeshProUGUI _upgradeText;
-    [Space]
-    [SerializeField] private int _farmRate;
-    [SerializeField] private int _maximumFarmRate;
-    [SerializeField] private int _farmRateIncrease;
-    [SerializeField] private int _upgradeCost;
 
-    private const string _saveKey = "FarmRate";
     private const string _localizationKey = "per hour";
 
     private Color _upgradeColor;
 
     public Unit Unit => _unit;
 
-    public int FarmRate => _farmRate;
+    public float FarmRate => _unit.UnitStat.Farm.Value;
 
     public event UnityAction RateChanged;
 
     private void Awake()
     {
         _upgradeColor = _upgradeButton.GetComponent<Image>().color;
-
-        if (PlayerPrefs.HasKey(_saveKey + _unit.Name))
-            _farmRate = PlayerPrefs.GetInt(_saveKey + _unit.Name);
     }
 
     private void OnEnable()
@@ -51,27 +42,21 @@ public class TankFarm : MonoBehaviour
 
     private void Upgrade()
     {
-        if (_money.TrySpend(_upgradeCost))
-        {
-            _farmRate += _farmRateIncrease;
-            _farmRate = Mathf.Clamp(_farmRate, 0, _maximumFarmRate);
-            UpdateFarm();
-            RateChanged?.Invoke();
-            PlayerPrefs.SetInt(_saveKey + _unit.Name, _farmRate);
-            PlayerPrefs.Save();
-        }
+        _unit.UnitStat.Farm.Upgrade(_money);
+        UpdateFarm();
+        RateChanged?.Invoke();
     }
 
     private void UpdateFarm()
     {
-        if(_farmRate >= _maximumFarmRate)
+        if (_unit.UnitStat.Farm.Value >= _unit.UnitStat.Farm.MaximumValue)
             _upgradeButton.gameObject.SetActive(false);
 
         string leanText = LeanLocalization.GetTranslationText(_localizationKey);
-        _mainText.text = $"{_unit.Name} {_farmRate}/{leanText}";
-        _upgradeText.text = _upgradeCost.ToString();
+        _mainText.text = $"{_unit.Name} {_unit.UnitStat.Farm.Value}/{leanText}";
+        _upgradeText.text = _unit.UnitStat.Farm.UpgradeCost.ToString();
 
-        if (_upgradeCost <= _money.Value)
+        if (_unit.UnitStat.Farm.UpgradeCost <= _money.Value)
             _upgradeButton.GetComponent<Image>().color = Color.green;
         else
             _upgradeButton.GetComponent<Image>().color = _upgradeColor;

@@ -5,11 +5,10 @@ using TMPro;
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class Money : MonoBehaviour
 {
-    [SerializeField] private int _value;
+    [SerializeField] private SaveData _saveData;
 
     private TextMeshProUGUI _valueText;
-
-    private const string _saveKey = "Money";
+    private int _value;
 
     public int Value => _value;
 
@@ -18,13 +17,11 @@ public class Money : MonoBehaviour
     private void Awake()
     {
         _valueText = GetComponent<TextMeshProUGUI>();
-
-        if(PlayerPrefs.HasKey(_saveKey))
-            _value = PlayerPrefs.GetInt(_saveKey);
     }
 
     private void OnEnable()
     {
+        _value = _saveData.Data.Money;
         Refresh();
     }
 
@@ -32,8 +29,6 @@ public class Money : MonoBehaviour
     {
         _value += value;
         Refresh();
-        PlayerPrefs.SetInt(_saveKey, _value);
-        PlayerPrefs.Save();
     }
 
     public bool TrySpend(int value)
@@ -43,8 +38,6 @@ public class Money : MonoBehaviour
 
         _value -= value;
         Refresh();
-        PlayerPrefs.SetInt(_saveKey, _value);
-        PlayerPrefs.Save();
         return true;
     }
 
@@ -54,5 +47,8 @@ public class Money : MonoBehaviour
 
         if(_valueText != null)
             _valueText.text = _value.ToString();
+
+        _saveData.Data.Money = _value;
+        _saveData.Save();
     }
 }

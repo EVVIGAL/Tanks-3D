@@ -15,34 +15,28 @@ public class Unit : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private Image _lockImage;
     [SerializeField] private Money _money;
-    [SerializeField] private string _name;
     [SerializeField] private int _price;
     [SerializeField] private int _neededLevel;
-    [SerializeField] private bool _isAvailable;
 
     private const string _neededText = "NeededLvl";
-    private const string _availableKey = "Available";
 
     public UnitStat UnitStat => _unitStat;
 
-    public string Name => _name;
+    public string Name => _unitStat.Name;
 
     public int Price => _price;
 
-    public bool IsAvailable => _isAvailable;
+    public bool IsAvailable => _unitStat.IsAvailable;
 
     private void Awake()
     {
-        if(PlayerPrefs.HasKey(_availableKey + _name))
-            _isAvailable = PlayerPrefs.GetInt(_availableKey + _name) == 1;
-
-        if(PlayerPrefs.HasKey(_name))
-            _unitStat = SaveManager.Load<UnitStat>(_name);
+        if (PlayerPrefs.HasKey(_unitStat.Name))
+            _unitStat = SaveManager.Load<UnitStat>(_unitStat.Name);
     }
 
     private void OnEnable()
     {
-        _nameText.text = _name;
+        _nameText.text = _unitStat.Name;
         _refresher.SetUnit(_unitStat);
         Refresh();
         _money.ValueChanged += Refresh;
@@ -53,27 +47,26 @@ public class Unit : MonoBehaviour
     {
         _money.ValueChanged -= Refresh;
         _button.onClick.RemoveListener(Buy);
-        SaveManager.Save(_name, _unitStat);
+        SaveManager.Save(_unitStat.Name, _unitStat);
     }
 
     public void Buy()
     {
         if (_money.TrySpend(Price))
         {
-            _isAvailable = true;
+            _unitStat.SetAvailable();
             Refresh();
-            PlayerPrefs.SetInt(_availableKey + _name, 1);
         }
     }
 
     private void Refresh()
     {
-        if (_isAvailable)
+        if (_unitStat.IsAvailable)
         {
             _priceText.text = string.Empty;
             _button.gameObject.SetActive(false);
             _lockImage.gameObject.SetActive(false);
-            SaveManager.Save(_name, _unitStat);
+            SaveManager.Save(_unitStat.Name, _unitStat);
             return;
         }
 
