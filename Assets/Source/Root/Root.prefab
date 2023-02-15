@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 175933324}
   - component: {fileID: 175933326}
   - component: {fileID: 175933325}
+  - component: {fileID: 3639204381719509820}
   m_Layer: 5
   m_Name: GameOverWindow
   m_TagString: Untagged
@@ -115,6 +116,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3639204381719509820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175933323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe0896e6b12bcc44969f73fddff6771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &291348461
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +864,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1025475504}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4877649330801389200}
+        m_TargetAssemblyTypeName: LevelCompletedWindow, Assembly-CSharp
+        m_MethodName: OnNextButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1098011444
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,7 +998,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1098011447}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3639204381719509820}
+        m_TargetAssemblyTypeName: GameOverWindow, Assembly-CSharp
+        m_MethodName: OnGoToHangarButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1606228074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,7 +1267,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1662723607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3639204381719509820}
+        m_TargetAssemblyTypeName: GameOverWindow, Assembly-CSharp
+        m_MethodName: OnRestartButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1978705760
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1576,7 @@ GameObject:
   - component: {fileID: 2028258846}
   - component: {fileID: 2028258848}
   - component: {fileID: 2028258847}
+  - component: {fileID: 4877649330801389200}
   m_Layer: 5
   m_Name: LevelCompletedWindow
   m_TagString: Untagged
@@ -1594,6 +1644,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4877649330801389200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028258845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06db5620b2e4cf0488cb0a591bbf9e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &977693558439180961
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1873,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7097204674837805885}
-  m_LocalRotation: {x: 1.222587e-22, y: 0.00000011219699, z: -1.3717058e-29, w: 1}
+  m_LocalRotation: {x: -1.222587e-22, y: 0.00000011219699, z: 1.3717058e-29, w: 1}
   m_LocalPosition: {x: 19.619997, y: 5, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2204,8 +2266,8 @@ MonoBehaviour:
   _artBlowSkill: {fileID: 977693558439180965}
   _repairKitSkill: {fileID: 977693558439180960}
   _mobileInputUI: {fileID: 681693300}
-  _gameOverWindow: {fileID: 175933323}
-  _levelCompletedWindow: {fileID: 2028258845}
+  _gameOverWindow: {fileID: 3639204381719509820}
+  _levelCompletedWindow: {fileID: 4877649330801389200}
   _inputPanel: {fileID: 7097204676055473671}
   <PlayerWallet>k__BackingField: {fileID: 1357086680414000330}
 --- !u!114 &7097204675419378052
@@ -2418,7 +2480,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7097204676563928503}
-  m_LocalRotation: {x: 1.222587e-22, y: 0.00000011219699, z: -1.3717058e-29, w: 1}
+  m_LocalRotation: {x: -1.222587e-22, y: 0.00000011219699, z: 1.3717058e-29, w: 1}
   m_LocalPosition: {x: 19.619997, y: 5, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2821,7 +2883,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9023654773987489730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4877649330801389200}
+        m_TargetAssemblyTypeName: LevelCompletedWindow, Assembly-CSharp
+        m_MethodName: OnGoToHangarButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9023654774021650788
 GameObject:
   m_ObjectHideFlags: 0

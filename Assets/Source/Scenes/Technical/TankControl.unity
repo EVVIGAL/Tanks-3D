@@ -684,6 +684,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 977693558439180960, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _repairKitTemplate
+      value: 
+      objectReference: {fileID: 6178681451762243204, guid: d038c0e32990ce24d9d9f918d9f79839, type: 3}
     - target: {fileID: 1604637283300223870, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -742,11 +746,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7097204674837805880, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -1.222587e-22
+      value: 1.222587e-22
       objectReference: {fileID: 0}
     - target: {fileID: 7097204674837805880, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.3717058e-29
+      value: -1.3717058e-29
       objectReference: {fileID: 0}
     - target: {fileID: 7097204675419378042, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_Name
@@ -796,6 +800,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7097204675419378053, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _currentTankIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7097204676563928496, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_Follow
       value: 
@@ -806,11 +814,11 @@ PrefabInstance:
       objectReference: {fileID: 73748357894512276}
     - target: {fileID: 7097204676563928497, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -1.222587e-22
+      value: 1.222587e-22
       objectReference: {fileID: 0}
     - target: {fileID: 7097204676563928497, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.3717058e-29
+      value: -1.3717058e-29
       objectReference: {fileID: 0}
     - target: {fileID: 8212277179396123282, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_AnchorMax.y
