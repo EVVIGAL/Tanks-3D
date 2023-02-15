@@ -29,11 +29,7 @@ public class SaveData : MonoBehaviour
     private void Load()
     {
         var data = SaveManager.Load<DataHolder>(_saveKey);
-        _data.Money = data.Money;
-        _data.TotalIncome = data.TotalIncome;
-        _data.CurrentLevel = data.CurrentLevel;
-        _data.ArtilleryAmount = data.ArtilleryAmount;
-        _data.ToolsAmount = data.ToolsAmount;
+        _data = data;
     }
 }
 
@@ -45,4 +41,7 @@ public class DataHolder
     public int CurrentLevel;
     public int ArtilleryAmount;
     public int ToolsAmount;
+    public bool IsMute;
+    public float MusicValue;
+    public float EffectsValue;
 }
