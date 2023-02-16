@@ -5,6 +5,7 @@ using UnityEngine;
 public class Root : MonoBehaviour
 {
     [SerializeField] private uint _currentTankIndex;
+    [SerializeField] private SaveData _data;
     [SerializeField] private MonoBehaviour _healthViewBehaviour;
     [SerializeField] private CinemachineVirtualCamera _virtualCamera;
     [SerializeField] private Skill _artBlowSkill;
@@ -29,8 +30,8 @@ public class Root : MonoBehaviour
     {
         _playerTank = _playerTankFactory.CreateTank(_currentTankIndex);
         _playerTank.Init(5, 1000, 20, 100, _healthViewBehaviour, this);
-        _artBlowSkill.Init(5);
-        _repairKitSkill.Init(2);
+        _artBlowSkill.Init(_data.Data.ArtilleryAmount);
+        _repairKitSkill.Init(_data.Data.ToolsAmount);
 
         _virtualCamera.Follow = _playerTank.transform;
         _virtualCamera.LookAt = _playerTank.transform;
