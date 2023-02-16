@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(Slider))]
 public class WinReward : MonoBehaviour
 {
     [SerializeField] private Button _button;
+    [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private float _speed;
     [SerializeField] private float _minX3;
     [SerializeField] private float _maxX3;
@@ -70,6 +72,11 @@ public class WinReward : MonoBehaviour
                 _moveTo = 0;
 
             _slider.value = Mathf.MoveTowards(_slider.value, _moveTo, _speed * Time.deltaTime);
+
+            if (_slider.value >= _minX3 && _slider.value <= _maxX3)
+                _text.text = "X3";
+            else
+                _text.text = "X2";
 
             yield return null;
         }
