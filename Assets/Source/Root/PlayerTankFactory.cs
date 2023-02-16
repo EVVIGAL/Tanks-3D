@@ -10,6 +10,6 @@ public class PlayerTankFactory : MonoBehaviour
         if (index >= _tanks.Length)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-        return Instantiate(_tanks[index]);
+        return Instantiate(_tanks[index], Vector3.zero, Quaternion.LookRotation(Vector3.right));
     }
 }

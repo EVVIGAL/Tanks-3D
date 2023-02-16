@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3709555481873275106}
   - component: {fileID: 1793651286230280267}
   - component: {fileID: 1358883248254553196}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TankBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,13 +99,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a368c4009725a24ab44a22e77bd8e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pushForce: 30
-  _raycastDistance: 1
-  _liveTime: 2
-  _hitFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
-  _ignorLayer:
+  _radius: 0
+  _castDistance: 1
+  _layer:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 0
+  _liveTime: 2
+  _pushForce: 30
+  _hitFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+  _damageViewTemplate: {fileID: 0}
+  _ricochetAngle: 0
+  _ricochetMaterial: {fileID: 0}
+  _onRicocheted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &1793651286230280267
 Rigidbody:
   m_ObjectHideFlags: 0

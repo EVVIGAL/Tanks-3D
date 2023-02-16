@@ -1196,7 +1196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c656e2725b0e6324e8b95fc8e5b7c633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageMultiplier: 1.5
+  _damageMultiplier: 1
   _healthBehaviour: {fileID: 6479027446971307784}
 --- !u!4 &7516087233581611245 stripped
 Transform:
