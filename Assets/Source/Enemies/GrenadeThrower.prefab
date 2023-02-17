@@ -2591,7 +2591,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 0.98, z: 0}
 --- !u!114 &4637389807339948137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2618,7 +2618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31b5e37a96213c40b28c6baa71db577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectile: {fileID: 777902348275971651, guid: 7d9f7a7504a455e44bc5d820d817d6c5, type: 3}
+  _projectile: {fileID: 2602588992222275318, guid: 6c1d9a0bcbcd03d448df453ee2bfbbae, type: 3}
   _poolCapacity: 1
 --- !u!114 &4637389807414689928
 MonoBehaviour:

@@ -101,8 +101,8 @@ public class Projectile : MonoBehaviour, IProjectile
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, _radius);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position + Rigidbody.velocity.normalized * _castDistance, _radius);
+        //Gizmos.DrawWireSphere(transform.position, _radius);
+        //Gizmos.color = Color.yellow;
+        //Gizmos.DrawWireSphere(transform.position + Rigidbody.velocity.normalized * _castDistance, _radius);
     }
 }
