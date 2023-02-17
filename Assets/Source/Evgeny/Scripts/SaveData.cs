@@ -19,10 +19,7 @@ public class SaveData : MonoBehaviour
             _choser.Init(_data.Units, _data.CurrentTankIndex);
 
         if (_root != null)
-        {
-            Debug.Log("Root");
             _root.Init(_data.Units[_data.CurrentTankIndex], (uint)_data.CurrentTankIndex);
-        }
 
         LevelHolder.SetLevel(_data.CurrentLevel);
     }
