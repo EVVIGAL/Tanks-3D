@@ -1,7 +1,9 @@
 using UnityEngine;
+using System;
 
 public class DamageCounter : MonoBehaviour
 {
+    [SerializeField] private SaveData _data;
     [SerializeField] private MedalsView _medalsView;
 
     private const float _excellentPercent = 0.7f;
@@ -10,6 +12,7 @@ public class DamageCounter : MonoBehaviour
     private const uint _goodMedals = 2;
     private const uint _badMedals = 1;
 
+    private uint _level;
     private uint _medals;
     private float _maxHealth;
     private float _health;
@@ -38,8 +41,12 @@ public class DamageCounter : MonoBehaviour
         _medals = _badMedals;
     }
 
-    public void Init(float health)
+    public void Init(float health, uint level)
     {
+        if (level <= 0)
+            throw new InvalidOperationException();
+
+        _level = level;
         _maxHealth = health;
         _health = _maxHealth;
         _excellentHealth = _maxHealth * _excellentPercent;
@@ -49,5 +56,6 @@ public class DamageCounter : MonoBehaviour
     private void OnEnable()
     {
         _medalsView.Show(_medals);
+        _data.Data.Levels[_level - 1].Set(_medals);
     }
 }

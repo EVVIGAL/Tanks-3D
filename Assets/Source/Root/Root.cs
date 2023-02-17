@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerTankFactory))]
 public class Root : MonoBehaviour
 {
+    [SerializeField] private uint _currentLevel;
     [SerializeField] private uint _currentTankIndex;
     [SerializeField] private DamageCounter _damageCounter;
     [SerializeField] private SaveData _data;
@@ -34,7 +35,7 @@ public class Root : MonoBehaviour
         _playerTank.Init((float)_unit.Speed.Value, (uint)_unit.Health.Value, (uint)_unit.Armor.Value, (uint)_unit.Damage.Value, _healthViewBehaviour, this);
         _artBlowSkill.Init(_data.Data.ArtilleryAmount);
         _repairKitSkill.Init(_data.Data.ToolsAmount);
-        _damageCounter.Init(_unit.Health.Value);
+        _damageCounter.Init(_unit.Health.Value, _currentLevel);
 
         _virtualCamera.Follow = _playerTank.transform;
         _virtualCamera.LookAt = _playerTank.transform;

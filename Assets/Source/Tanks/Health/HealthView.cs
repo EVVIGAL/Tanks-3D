@@ -1,5 +1,5 @@
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 
 [RequireComponent (typeof(Slider))]
 public class HealthView : MonoBehaviour, IHealthView

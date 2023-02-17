@@ -1,4 +1,3 @@
-using Agava.YandexGames;
 using UnityEngine;
 
 public class SaveData : MonoBehaviour
@@ -22,6 +21,8 @@ public class SaveData : MonoBehaviour
             _root.Init(_data.Units[_data.CurrentTankIndex], (uint)_data.CurrentTankIndex);
 
         LevelHolder.SetLevel(_data.CurrentLevel);
+        Debug.Log(_data.Levels[0].CurrentMedals);
+        Debug.Log(_data.Levels[1].CurrentMedals);
     }
 
     private void OnDisable()
@@ -48,6 +49,7 @@ public class SaveData : MonoBehaviour
 [System.Serializable]
 public class DataHolder
 {
+    public LevelData[] Levels = new LevelData[10];
     public UnitStat[] Units;
     public int Money;
     public int Medals;
