@@ -25,13 +25,12 @@ public class Root : MonoBehaviour
     private void Awake()
     {
         _playerTankFactory = GetComponent<PlayerTankFactory>();
-        LoadStats();
     }
 
     private void Start()
     {
-        _playerTank = _playerTankFactory.CreateTank((uint)_data.Data.CurrentTankIndex);
-        _playerTank.Init(_unit.Speed.Value, (uint)_unit.Health.Value, (uint)_unit.Armor.Value, (uint)_unit.Damage.Value, _healthViewBehaviour, this);
+        _playerTank = _playerTankFactory.CreateTank(_currentTankIndex);
+        _playerTank.Init((float)_unit.Health.Value, (uint)_unit.Health.Value, (uint)_unit.Armor.Value, (uint)_unit.Damage.Value, _healthViewBehaviour, this);
         _artBlowSkill.Init(_data.Data.ArtilleryAmount);
         _repairKitSkill.Init(_data.Data.ToolsAmount);
 
@@ -58,19 +57,17 @@ public class Root : MonoBehaviour
         EndGame();
     }
 
+    public void Init(UnitStat unit, uint index)
+    {
+        _unit = unit;
+        _currentTankIndex = index;
+    }
+
     private void EndGame()
     {
         _playerTank.Stop();
         _inputPanel.SetActive(false);
         _isGameEnd = true;
-    }
-
-    private void LoadStats()
-    {
-        if (!PlayerPrefs.HasKey(_data.Data.CurrentTankName))
-            return;
-
-        _unit = SaveManager.Load<UnitStat>(_data.Data.CurrentTankName);
     }
 
     private void OnValidate()

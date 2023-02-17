@@ -5,6 +5,7 @@ public class SaveData : MonoBehaviour
 {
     [SerializeField] private DataHolder _data;
     [SerializeField] private TankChoser _choser;
+    [SerializeField] private Root _root;
 
     public DataHolder Data => _data;
 
@@ -13,7 +14,16 @@ public class SaveData : MonoBehaviour
     private void Awake()
     {
         Load();
-        _choser.Init(_data.Units, _data.CurrentTankIndex);
+
+        if(_choser != null)
+            _choser.Init(_data.Units, _data.CurrentTankIndex);
+
+        if (_root != null)
+        {
+            Debug.Log("Root");
+            _root.Init(_data.Units[_data.CurrentTankIndex], (uint)_data.CurrentTankIndex);
+        }
+
         LevelHolder.SetLevel(_data.CurrentLevel);
     }
 
