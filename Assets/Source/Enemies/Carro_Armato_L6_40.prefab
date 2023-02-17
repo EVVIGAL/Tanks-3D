@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxSpeed: 5
-  _acceleration: 2
+  _acceleration: 3
 --- !u!114 &1408639760334905504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775fefb26cc024d4a939e180464ded6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movement: {fileID: 0}
+  _movement: {fileID: 1408639760334905507}
   _speed: 0.05
 --- !u!1 &1740603913412697081
 GameObject:
@@ -1419,14 +1419,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5361077155866543941}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0, y: 4.23, z: 0}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1408639760334905564}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 180}
 --- !u!119 &5361077155866543943
 Projector:
   m_ObjectHideFlags: 0
@@ -1437,11 +1437,11 @@ Projector:
   m_Enabled: 1
   serializedVersion: 2
   m_NearClipPlane: 0.1
-  m_FarClipPlane: 50
-  m_FieldOfView: 80
-  m_AspectRatio: 1
-  m_Orthographic: 0
-  m_OrthographicSize: 2
+  m_FarClipPlane: 20
+  m_FieldOfView: 1
+  m_AspectRatio: 1.5
+  m_Orthographic: 1
+  m_OrthographicSize: 2.5
   m_Material: {fileID: 2100000, guid: e30ff3588e719f34bbf0c66f22d97487, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
@@ -1854,6 +1854,7 @@ GameObject:
   - component: {fileID: 929629556751569607}
   - component: {fileID: 8028938660942195725}
   - component: {fileID: 9002728925558237826}
+  - component: {fileID: 6412678240876244910}
   m_Layer: 0
   m_Name: Carro_Armato_L6_40_Track_R
   m_TagString: Untagged
@@ -1926,6 +1927,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6412678240876244910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568202768354155675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775fefb26cc024d4a939e180464ded6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movement: {fileID: 1408639760334905507}
+  _speed: 0.05
 --- !u!1 &9194328817103872830
 GameObject:
   m_ObjectHideFlags: 0

@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775fefb26cc024d4a939e180464ded6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movement: {fileID: 0}
+  _movement: {fileID: 414494726114176515}
   _speed: 0.05
 --- !u!1 &1390931718802217325
 GameObject:
@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 729331076364200107}
   - component: {fileID: 6398560434543287490}
   - component: {fileID: 767579353801547309}
+  - component: {fileID: 3635693892021305667}
   m_Layer: 0
   m_Name: SOMUA_S35_Track_R
   m_TagString: Untagged
@@ -500,6 +501,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3635693892021305667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429691392683636682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775fefb26cc024d4a939e180464ded6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movement: {fileID: 414494726114176515}
+  _speed: 0.05
 --- !u!1 &2731115886772051931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,14 +1092,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6641320587827153381}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: -0, y: 4.23, z: 0}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: -0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 414494726114176636}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 180}
 --- !u!119 &6641320587827153383
 Projector:
   m_ObjectHideFlags: 0
@@ -1095,11 +1110,11 @@ Projector:
   m_Enabled: 1
   serializedVersion: 2
   m_NearClipPlane: 0.1
-  m_FarClipPlane: 50
-  m_FieldOfView: 80
-  m_AspectRatio: 1
-  m_Orthographic: 0
-  m_OrthographicSize: 2
+  m_FarClipPlane: 20
+  m_FieldOfView: 1
+  m_AspectRatio: 1.5
+  m_Orthographic: 1
+  m_OrthographicSize: 3
   m_Material: {fileID: 2100000, guid: e30ff3588e719f34bbf0c66f22d97487, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2

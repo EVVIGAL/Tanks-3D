@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9138393111483393730}
   - component: {fileID: 9138393111483393729}
   - component: {fileID: 4732766576837236821}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ MonoBehaviour:
   _castDistance: 1
   _layer:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 1015
   _liveTime: 10
   _pushForce: 0
   _hitFX: {fileID: 19849376, guid: 03e2591d3c5c22c45a63a9393f455db1, type: 3}

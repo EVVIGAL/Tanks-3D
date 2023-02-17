@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226371228}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 5.3, z: 0}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6479027446971307781}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 180}
 --- !u!119 &1226371230
 Projector:
   m_ObjectHideFlags: 0
@@ -42,11 +42,11 @@ Projector:
   m_Enabled: 1
   serializedVersion: 2
   m_NearClipPlane: 0.1
-  m_FarClipPlane: 50
-  m_FieldOfView: 80
-  m_AspectRatio: 1
-  m_Orthographic: 0
-  m_OrthographicSize: 2
+  m_FarClipPlane: 20
+  m_FieldOfView: 1
+  m_AspectRatio: 1.5
+  m_Orthographic: 1
+  m_OrthographicSize: 3
   m_Material: {fileID: 2100000, guid: e30ff3588e719f34bbf0c66f22d97487, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
@@ -1021,6 +1021,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8834311317802262302, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
   m_PrefabInstance: {fileID: 8053624676360363782}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1598781825322777070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -435657978978146584, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
+  m_PrefabInstance: {fileID: 8053624676360363782}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4140049885342336223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598781825322777070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 775fefb26cc024d4a939e180464ded6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movement: {fileID: 6479027446971307898}
+  _speed: 0.05
 --- !u!1 &2199021691792792775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8160599949306201025, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
@@ -1083,7 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775fefb26cc024d4a939e180464ded6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movement: {fileID: 0}
+  _movement: {fileID: 6479027446971307898}
   _speed: 0.05
 --- !u!4 &6996267467449904383 stripped
 Transform:
