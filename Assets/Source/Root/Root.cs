@@ -4,7 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerTankFactory))]
 public class Root : MonoBehaviour
 {
+    [SerializeField] private uint _currentLevel;
     [SerializeField] private uint _currentTankIndex;
+    [SerializeField] private DamageCounter _damageCounter;
     [SerializeField] private SaveData _data;
     [SerializeField] private MonoBehaviour _healthViewBehaviour;
     [SerializeField] private CinemachineVirtualCamera _virtualCamera;
@@ -18,6 +20,7 @@ public class Root : MonoBehaviour
 
     private PlayerTankFactory _playerTankFactory;
     private PlayerTank _playerTank;
+    private UnitStat _unit;
 
     private bool _isGameEnd;
 
@@ -29,9 +32,10 @@ public class Root : MonoBehaviour
     private void Start()
     {
         _playerTank = _playerTankFactory.CreateTank(_currentTankIndex);
-        _playerTank.Init(5, 1000, 20, 100, _healthViewBehaviour, this);
+        _playerTank.Init((float)_unit.Speed.Value, (uint)_unit.Health.Value, (uint)_unit.Armor.Value, (uint)_unit.Damage.Value, _healthViewBehaviour, this);
         _artBlowSkill.Init(_data.Data.ArtilleryAmount);
         _repairKitSkill.Init(_data.Data.ToolsAmount);
+        _damageCounter.Init(_unit.Health.Value, _currentLevel);
 
         _virtualCamera.Follow = _playerTank.transform;
         _virtualCamera.LookAt = _playerTank.transform;
@@ -54,6 +58,12 @@ public class Root : MonoBehaviour
 
         _gameOverWindow.gameObject.SetActive(true);
         EndGame();
+    }
+
+    public void Init(UnitStat unit, uint index)
+    {
+        _unit = unit;
+        _currentTankIndex = index;
     }
 
     private void EndGame()

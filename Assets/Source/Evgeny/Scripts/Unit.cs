@@ -5,6 +5,7 @@ using TMPro;
 
 public class Unit : MonoBehaviour
 {
+    [SerializeField] private SaveData _data;
     [Header("Stats")]
     [SerializeField] private UnitStat _unitStat;
     [Header("Texts")]
@@ -20,6 +21,8 @@ public class Unit : MonoBehaviour
 
     private const string _neededText = "NeededLvl";
 
+    private int _index;
+
     public UnitStat UnitStat => _unitStat;
 
     public string Name => _unitStat.Name;
@@ -27,12 +30,6 @@ public class Unit : MonoBehaviour
     public int Price => _price;
 
     public bool IsAvailable => _unitStat.IsAvailable;
-
-    private void Awake()
-    {
-        if (PlayerPrefs.HasKey(_unitStat.Name))
-            _unitStat = SaveManager.Load<UnitStat>(_unitStat.Name);
-    }
 
     private void OnEnable()
     {
@@ -47,7 +44,7 @@ public class Unit : MonoBehaviour
     {
         _money.ValueChanged -= Refresh;
         _button.onClick.RemoveListener(Buy);
-        SaveManager.Save(_unitStat.Name, _unitStat);
+        _data.Data.Units[_index] = _unitStat;
     }
 
     public void Buy()
@@ -59,6 +56,12 @@ public class Unit : MonoBehaviour
         }
     }
 
+    public void Set(UnitStat unitStat, int index)
+    {
+        _unitStat = unitStat;
+        _index = index;
+    }
+
     private void Refresh()
     {
         if (_unitStat.IsAvailable)
@@ -66,7 +69,7 @@ public class Unit : MonoBehaviour
             _priceText.text = string.Empty;
             _button.gameObject.SetActive(false);
             _lockImage.gameObject.SetActive(false);
-            SaveManager.Save(_unitStat.Name, _unitStat);
+            _data.Data.Units[_index] = _unitStat; 
             return;
         }
 

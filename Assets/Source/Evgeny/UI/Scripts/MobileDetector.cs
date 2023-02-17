@@ -1,4 +1,3 @@
-using System.Collections;
 using Agava.YandexGames;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ public class MobileDetector : MonoBehaviour
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
         if (Device.Type == Agava.YandexGames.DeviceType.Desktop)
-            return;
+            _mobileInputUI.gameObject.SetActive(false);
 #endif
         _mobileInputUI.gameObject.SetActive(false);
     }

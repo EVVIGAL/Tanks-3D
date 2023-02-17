@@ -3,17 +3,26 @@ using UnityEngine;
 public class SaveData : MonoBehaviour
 {
     [SerializeField] private DataHolder _data;
+    [SerializeField] private TankChoser _choser;
+    [SerializeField] private Root _root;
 
     public DataHolder Data => _data;
 
-    private string _saveKey = "SaveData";
+    private const string _saveKey = "SaveData";
 
     private void Awake()
     {
-        if (PlayerPrefs.HasKey(_saveKey))
-            Load();
+        Load();
+
+        if(_choser != null)
+            _choser.Init(_data.Units, _data.CurrentTankIndex);
+
+        if (_root != null)
+            _root.Init(_data.Units[_data.CurrentTankIndex], (uint)_data.CurrentTankIndex);
 
         LevelHolder.SetLevel(_data.CurrentLevel);
+        Debug.Log(_data.Levels[0].CurrentMedals);
+        Debug.Log(_data.Levels[1].CurrentMedals);
     }
 
     private void OnDisable()
@@ -26,9 +35,13 @@ public class SaveData : MonoBehaviour
         SaveManager.Save(_saveKey, _data);
     }
 
-    private void Load()
+    public void Load()
     {
         var data = SaveManager.Load<DataHolder>(_saveKey);
+
+        if (data == default)
+            return;
+
         _data = data;
     }
 }
@@ -36,12 +49,17 @@ public class SaveData : MonoBehaviour
 [System.Serializable]
 public class DataHolder
 {
+    public LevelData[] Levels = new LevelData[10];
+    public UnitStat[] Units;
     public int Money;
+    public int Medals;
     public int TotalIncome;
     public int CurrentLevel;
+    public int CurrentTankIndex;
     public int ArtilleryAmount;
     public int ToolsAmount;
-    public bool IsMute;
     public float MusicValue;
     public float EffectsValue;
+    public bool IsMute;
+    public string CurrentTankName;
 }
