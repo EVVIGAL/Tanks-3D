@@ -1,18 +1,19 @@
+using Agava.YandexGames;
 using UnityEngine;
 
 public class SaveData : MonoBehaviour
 {
     [SerializeField] private DataHolder _data;
+    [SerializeField] private TankChoser _choser;
 
     public DataHolder Data => _data;
 
-    private string _saveKey = "SaveData";
+    private const string _saveKey = "SaveData";
 
     private void Awake()
     {
-        if (PlayerPrefs.HasKey(_saveKey))
-            Load();
-
+        Load();
+        _choser.Init(_data.Units, _data.CurrentTankIndex);
         LevelHolder.SetLevel(_data.CurrentLevel);
     }
 
@@ -26,9 +27,13 @@ public class SaveData : MonoBehaviour
         SaveManager.Save(_saveKey, _data);
     }
 
-    private void Load()
+    public void Load()
     {
         var data = SaveManager.Load<DataHolder>(_saveKey);
+
+        if (data == default)
+            return;
+
         _data = data;
     }
 }
@@ -36,12 +41,16 @@ public class SaveData : MonoBehaviour
 [System.Serializable]
 public class DataHolder
 {
+    public UnitStat[] Units;
     public int Money;
+    public int Medals;
     public int TotalIncome;
     public int CurrentLevel;
+    public int CurrentTankIndex;
     public int ArtilleryAmount;
     public int ToolsAmount;
-    public bool IsMute;
     public float MusicValue;
     public float EffectsValue;
+    public bool IsMute;
+    public string CurrentTankName;
 }

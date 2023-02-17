@@ -3,27 +3,17 @@ using UnityEngine;
 
 public class TankChoser : MonoBehaviour
 {
+    [SerializeField] private SaveData _data;
     [SerializeField] private Unit[] _tanks;
     [SerializeField] private Button _leftButton;
     [SerializeField] private Button _rightButton;
 
-    private const string _currentTankIndexTxt = "CurrentTank";
-
     private int _currentTankIndex;
     private int _visibleTankIndex;
 
-    private void Awake()
-    {
-        if(PlayerPrefs.HasKey(_currentTankIndexTxt))
-            _currentTankIndex = PlayerPrefs.GetInt(_currentTankIndexTxt);
-        else
-            _currentTankIndex = 0;
-
-        _visibleTankIndex = _currentTankIndex;
-    }
-
     private void Start()
-    {
+    {    
+        _visibleTankIndex = _currentTankIndex;
         Refresh();
     }
 
@@ -37,7 +27,18 @@ public class TankChoser : MonoBehaviour
     {
         _leftButton.onClick.RemoveListener(PreviousTank);
         _rightButton.onClick.RemoveListener(NextTank);
+        Save();
     }
+
+    public void Init(UnitStat[] unitStats, int index)
+    {
+        _currentTankIndex = index;
+
+        for (int i = 0; i < _tanks.Length; i++)
+        {
+            _tanks[i].Set(unitStats[i], i);
+        }
+    } 
 
     public void Refresh()
     {
@@ -52,9 +53,6 @@ public class TankChoser : MonoBehaviour
         _tanks[_visibleTankIndex + 1].gameObject.SetActive(true);
         _visibleTankIndex++;
         HideButtons();
-
-        if (_tanks[_visibleTankIndex].IsAvailable)
-            Save();
     }
 
     private void PreviousTank()
@@ -63,9 +61,6 @@ public class TankChoser : MonoBehaviour
         _tanks[_visibleTankIndex - 1].gameObject.SetActive(true);
         _visibleTankIndex--;
         HideButtons();
-
-        if (_tanks[_visibleTankIndex].IsAvailable)
-            Save();
     }
 
     private void HideAll()
@@ -75,9 +70,12 @@ public class TankChoser : MonoBehaviour
     }
     private void Save()
     {
-        _currentTankIndex = _visibleTankIndex;
-        PlayerPrefs.SetInt(_currentTankIndexTxt, _currentTankIndex);
-        PlayerPrefs.Save();
+        if (_tanks[_visibleTankIndex].IsAvailable)
+        {
+            _currentTankIndex = _visibleTankIndex;
+            _data.Data.CurrentTankIndex = _currentTankIndex;
+            _data.Data.CurrentTankName = _tanks[_currentTankIndex].Name;
+        }
     }
 
     private void HideButtons()
@@ -95,7 +93,7 @@ public class TankChoser : MonoBehaviour
             _rightButton.gameObject.SetActive(true);
         }
 
-        if(_visibleTankIndex + 1 == _tanks.Length)
+        if (_visibleTankIndex + 1 == _tanks.Length)
         {
             _rightButton.gameObject.SetActive(false);
             _leftButton.gameObject.SetActive(true);

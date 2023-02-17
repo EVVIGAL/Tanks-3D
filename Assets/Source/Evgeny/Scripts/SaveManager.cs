@@ -1,29 +1,47 @@
 using System.Globalization;
+using Agava.YandexGames;
 using UnityEngine;
 using System;
 
 public static class SaveManager
 {
-    private const string _moneySaveKey = "Money";
-
-    public static void AddMoney(int value)
-    {
-        int money = PlayerPrefs.GetInt(_moneySaveKey);
-        money += value;
-        PlayerPrefs.SetInt(_moneySaveKey, money);
-        PlayerPrefs.Save();
-    }
-
     public static void Save<T>(string key, T saveData)
     {
         string jsonDataString = JsonUtility.ToJson(saveData, true);
         PlayerPrefs.SetString(key, jsonDataString);
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+        if (PlayerAccount.IsAuthorized)
+            PlayerAccount.SetPlayerData(jsonDataString);
+#endif
     }
 
     public static T Load<T>(string key)
     {
-        string loadedString = PlayerPrefs.GetString(key);
-        return JsonUtility.FromJson<T>(loadedString);
+        string loadedString = string.Empty;
+
+#if UNITY_WEBGL && !UNITY_EDITOR
+        if (PlayerAccount.IsAuthorized)
+        {
+            PlayerAccount.GetPlayerData((data) => loadedString = data);
+
+            if (string.IsNullOrEmpty(loadedString))
+                return default;
+
+            return JsonUtility.FromJson<T>(loadedString);
+
+        }
+#endif
+
+        if (PlayerPrefs.HasKey(key))
+        {
+            loadedString = PlayerPrefs.GetString(key);
+            return JsonUtility.FromJson<T>(loadedString);
+        }
+        else
+        {
+            return default;
+        }
     }
 
     public static void SetDate(string key, DateTime value)

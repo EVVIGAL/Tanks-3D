@@ -1201,6 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf787e4e52be9f4ab03489e081183c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _data: {fileID: 820633389}
   _unitStat:
     _health:
       _value: 800
@@ -1209,7 +1210,7 @@ MonoBehaviour:
       _upgradeValue: 100
       _increaseCost: 50
     _damage:
-      _value: 60
+      _value: 20
       _maximumValue: 120
       _upgradeCost: 40
       _upgradeValue: 20
@@ -1527,10 +1528,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b2e8cfa271c854093d59fd1993a57e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 0}
-  _damage: {fileID: 0}
-  _armor: {fileID: 0}
-  _speed: {fileID: 0}
+  _health: {fileID: 708970788}
+  _damage: {fileID: 445608171}
+  _armor: {fileID: 1066890449}
+  _speed: {fileID: 1775443833}
 --- !u!1 &291943410
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,6 +3107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf787e4e52be9f4ab03489e081183c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _data: {fileID: 820633389}
   _unitStat:
     _health:
       _value: 800
@@ -4208,6 +4210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1326b0f6e1a69f64cacb2641c4ddd229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _data: {fileID: 820633389}
   _tanks:
   - {fileID: 196487038}
   - {fileID: 1592046328}
@@ -5467,14 +5470,179 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
+    Units:
+    - _health:
+        _value: 256
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 1
+      _name: Stuart
+    - _health:
+        _value: 500
+        _maximumValue: 1000
+        _upgradeCost: 100
+        _upgradeValue: 20
+        _increaseCost: 50
+      _damage:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 1
+      _name: Matilda
+    - _health:
+        _value: 256
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: T-34
+    - _health:
+        _value: 256
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: Sherman
+    - _health:
+        _value: 256
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: KV-2
     Money: 2500
+    Medals: 0
     TotalIncome: 100
     CurrentLevel: 2
+    CurrentTankIndex: 0
     ArtilleryAmount: 2
     ToolsAmount: 3
-    IsMute: 0
     MusicValue: -50
     EffectsValue: -50
+    IsMute: 0
+    CurrentTankName: 
+  _choser: {fileID: 667585740}
 --- !u!82 &820633390
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7385,6 +7553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf787e4e52be9f4ab03489e081183c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _data: {fileID: 820633389}
   _unitStat:
     _health:
       _value: 800
@@ -8809,6 +8978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf787e4e52be9f4ab03489e081183c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _data: {fileID: 820633389}
   _unitStat:
     _health:
       _value: 800
@@ -12152,6 +12322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf787e4e52be9f4ab03489e081183c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _data: {fileID: 820633389}
   _unitStat:
     _health:
       _value: 800
