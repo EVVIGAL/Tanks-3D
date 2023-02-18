@@ -728,6 +728,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7097204674837805880, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1.222587e-22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097204674837805880, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1.3717058e-29
+      objectReference: {fileID: 0}
     - target: {fileID: 7097204675419378042, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_Name
       value: Root
@@ -784,6 +792,14 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 73748357894512276}
+    - target: {fileID: 7097204676563928497, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -1.222587e-22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097204676563928497, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1.3717058e-29
+      objectReference: {fileID: 0}
     - target: {fileID: 8212277179396123282, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -863,6 +879,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1667956567236390396, guid: 9bd342eb4934da94fb1d046d770b7d5d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4684563959436111269, guid: aae58fa53a45bc046bb77c079ff3a30a, type: 2}
     - target: {fileID: 1667956567454966533, guid: 9bd342eb4934da94fb1d046d770b7d5d, type: 3}
       propertyPath: _healthViewBehaviour
       value: 
@@ -950,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1408639760334905514, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
       propertyPath: m_RootOrder
@@ -1015,7 +1035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1615817126581782943, guid: f0860169edd2f3646896608d0494f11b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1615817126581783017, guid: f0860169edd2f3646896608d0494f11b, type: 3}
       propertyPath: m_RootOrder
@@ -1060,6 +1080,10 @@ PrefabInstance:
     - target: {fileID: 1615817126581783017, guid: f0860169edd2f3646896608d0494f11b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615817126581783021, guid: f0860169edd2f3646896608d0494f11b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8780416997820063647, guid: f0860169edd2f3646896608d0494f11b, type: 3}
       propertyPath: _movement
@@ -1141,6 +1165,10 @@ PrefabInstance:
       propertyPath: _healthViewBehaviour
       value: 
       objectReference: {fileID: 1357086680774843138}
+    - target: {fileID: 6746007470339699274, guid: e028db2e9c47ff84e82342d05232c524, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4684563959436111269, guid: aae58fa53a45bc046bb77c079ff3a30a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e028db2e9c47ff84e82342d05232c524, type: 3}
 --- !u!1001 &6965599490047439929
@@ -1150,9 +1178,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 486971183}
     m_Modifications:
+    - target: {fileID: 2111609294973209899, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
+      propertyPath: <Damage>k__BackingField
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 8500310348477021828, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
       propertyPath: m_Name
       value: SoldierWithRPG
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500310348477021828, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734242093041060666, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9132450762494633022, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
       propertyPath: m_RootOrder
@@ -1213,7 +1253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8835184185512359964, guid: ced9bc262d73f094b9bcdab3bad24040, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8835184185512360042, guid: ced9bc262d73f094b9bcdab3bad24040, type: 3}
       propertyPath: m_RootOrder
@@ -1258,6 +1298,10 @@ PrefabInstance:
     - target: {fileID: 8835184185512360042, guid: ced9bc262d73f094b9bcdab3bad24040, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835184185512360046, guid: ced9bc262d73f094b9bcdab3bad24040, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ced9bc262d73f094b9bcdab3bad24040, type: 3}
@@ -1328,6 +1372,10 @@ PrefabInstance:
       propertyPath: _healthViewBehaviour
       value: 
       objectReference: {fileID: 1357086680774843138}
+    - target: {fileID: 5509166443557935330, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4684563959436111269, guid: aae58fa53a45bc046bb77c079ff3a30a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
 --- !u!1001 &8053624677157954133
@@ -1341,6 +1389,10 @@ PrefabInstance:
       propertyPath: _movement
       value: 
       objectReference: {fileID: 1405159686400354774}
+    - target: {fileID: 6479027446971307777, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6479027446971307781, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1391,7 +1443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6479027446971307891, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
@@ -1413,6 +1465,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 486971183}
     m_Modifications:
+    - target: {fileID: 4637389807414689922, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5175172571259121542, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1463,7 +1519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5519786571723633980, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}

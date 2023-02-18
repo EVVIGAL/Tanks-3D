@@ -21,8 +21,6 @@ public class SaveData : MonoBehaviour
             _root.Init(_data.Units[_data.CurrentTankIndex], (uint)_data.CurrentTankIndex);
 
         LevelHolder.SetLevel(_data.CurrentLevel);
-        Debug.Log(_data.Levels[0].CurrentMedals);
-        Debug.Log(_data.Levels[1].CurrentMedals);
     }
 
     private void OnDisable()

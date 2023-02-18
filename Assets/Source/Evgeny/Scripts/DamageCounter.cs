@@ -19,6 +19,11 @@ public class DamageCounter : MonoBehaviour
     private float _excellentHealth;
     private float _goodHealth;
 
+    private void Awake()
+    {
+        _medals = _excellentMedals;
+    }
+
     public void Set(float health)
     {
         if (health > _health)
