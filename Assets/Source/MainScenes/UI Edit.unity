@@ -672,6 +672,10 @@ PrefabInstance:
       propertyPath: _uIInput
       value: 
       objectReference: {fileID: 1799424181}
+    - target: {fileID: 977693558439180960, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _repairKitTemplate
+      value: 
+      objectReference: {fileID: 8160461396859788947, guid: 9857d5dfeb897054fb92db00136fc912, type: 3}
     - target: {fileID: 2252961146632245651, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
