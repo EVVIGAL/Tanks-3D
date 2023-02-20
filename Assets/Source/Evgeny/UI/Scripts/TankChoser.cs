@@ -35,9 +35,7 @@ public class TankChoser : MonoBehaviour
         _currentTankIndex = index;
 
         for (int i = 0; i < _tanks.Length; i++)
-        {
             _tanks[i].Set(unitStats[i], i);
-        }
     } 
 
     public void Refresh()
