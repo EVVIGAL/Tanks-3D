@@ -251,6 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbe0896e6b12bcc44969f73fddff6771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _restart: {fileID: 1662723606}
+  _toHangar: {fileID: 1098011446}
+  _restore: {fileID: 5147225766788741154}
 --- !u!1 &291348461
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +730,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -97}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 580, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605798436
 MonoBehaviour:
@@ -1688,9 +1691,9 @@ RectTransform:
   m_Father: {fileID: 605798434}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 515, y: -65}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1098011448
@@ -3087,9 +3090,9 @@ RectTransform:
   m_Father: {fileID: 605798434}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 65, y: -65}
   m_SizeDelta: {x: 130, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1662723608
@@ -3711,7 +3714,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -78}
-  m_SizeDelta: {x: 1576.32, y: 0}
+  m_SizeDelta: {x: 1576.32, y: 108.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2007223401
 CanvasRenderer:
@@ -7036,7 +7039,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7097204674837805885}
-  m_LocalRotation: {x: -1.222587e-22, y: 0.00000011219699, z: 1.3717058e-29, w: 1}
+  m_LocalRotation: {x: 1.222587e-22, y: 0.00000011219699, z: -1.3717058e-29, w: 1}
   m_LocalPosition: {x: 19.619997, y: 5, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7385,6 +7388,7 @@ GameObject:
   - component: {fileID: 7097204675419378052}
   - component: {fileID: 1357086680414000330}
   - component: {fileID: 4547362579411169480}
+  - component: {fileID: 1357086680414000334}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -7453,6 +7457,9 @@ MonoBehaviour:
   _tanks:
   - {fileID: 5509166443373827613, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
   - {fileID: 1667956567454966531, guid: 9bd342eb4934da94fb1d046d770b7d5d, type: 3}
+  - {fileID: 5402271901920017870, guid: 1bdd7cbfb11c5f143bd209f55503da98, type: 3}
+  - {fileID: 3064823358987014057, guid: 583809a28d8c6bb469f7d4a01778a292, type: 3}
+  - {fileID: 4225526806379090950, guid: 95cccc9570f2e1743b0ad40bb7e620ec, type: 3}
 --- !u!114 &1357086680414000330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7555,6 +7562,102 @@ MonoBehaviour:
         _increaseCost: 0
       _isAvailable: 0
       _name: 
+    - _health:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: 
+    - _health:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: 
+    - _health:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: 
     Money: 0
     Medals: 0
     TotalIncome: 0
@@ -7568,6 +7671,19 @@ MonoBehaviour:
     CurrentTankName: 
   _choser: {fileID: 0}
   _root: {fileID: 7097204675419378053}
+--- !u!114 &1357086680414000334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097204675419378042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e2ebfd5820ce0428b2fa2adda6a946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _environmentSceneName: Forest
 --- !u!1 &7097204676055473671
 GameObject:
   m_ObjectHideFlags: 0
@@ -7751,7 +7867,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7097204676563928503}
-  m_LocalRotation: {x: -1.222587e-22, y: 0.00000011219699, z: 1.3717058e-29, w: 1}
+  m_LocalRotation: {x: 1.222587e-22, y: 0.00000011219699, z: -1.3717058e-29, w: 1}
   m_LocalPosition: {x: 19.619997, y: 5, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7970,9 +8086,9 @@ RectTransform:
   m_Father: {fileID: 605798434}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 290, y: -65}
   m_SizeDelta: {x: 220, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5979241304031156534
