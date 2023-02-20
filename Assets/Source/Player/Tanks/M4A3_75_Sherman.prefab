@@ -14430,13 +14430,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 1
+  m_Height: 1
+  m_Radius: 0.8
   m_SlopeLimit: 60
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.08, z: 0}
+  m_Center: {x: 0, y: 0.88, z: 1.76}
 --- !u!114 &3064823358987014066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33970,7 +33970,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2165579551946672802, guid: 7ad08bc6779ecce479f970cb6166e67c, type: 3}
 --- !u!114 &6464502788023928489
@@ -34065,6 +34065,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 200
+  _pushForce: 0
+  _characterController: {fileID: 0}
 --- !u!114 &8544362108553374024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34117,7 +34119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement: {fileID: 3064823358987014067}
-  _speed: 0.05
+  _speed: -0.05
 --- !u!1 &6920625904201245973 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8197789775101534754, guid: d958c9843b1f4b1439fecd3417ddbead, type: 3}
@@ -34171,4 +34173,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement: {fileID: 3064823358987014067}
-  _speed: 0.05
+  _speed: -0.05

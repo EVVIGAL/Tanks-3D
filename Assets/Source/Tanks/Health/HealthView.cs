@@ -15,6 +15,8 @@ public class HealthView : MonoBehaviour, IHealthView
     public void Show(float health, float maxHealth)
     {
         _healthBar.value = health / maxHealth;
-        _damageCounter.Set(health);
+
+        if (_damageCounter != null)
+            _damageCounter.Set(health);
     }
 }

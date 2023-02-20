@@ -4,6 +4,8 @@ using UnityEngine;
 public class SoldierDeathPolicy : EnemyDeathPolicy
 {
     [SerializeField] private ObjectPhysic _weaponPhysic;
+    [SerializeField] private int _deathLayer;
+    [SerializeField] private GameObject[] _physicObjects;
 
     private Ragdoll _ragdoll;
     private Animator _animator;
@@ -26,6 +28,10 @@ public class SoldierDeathPolicy : EnemyDeathPolicy
         {
             _weaponPhysic.Enable();
             _weaponPhysic.transform.parent = null;
+            _weaponPhysic.gameObject.layer = _deathLayer;
         }
+
+        foreach (GameObject @object in _physicObjects)
+            @object.layer = _deathLayer;
     }
 }

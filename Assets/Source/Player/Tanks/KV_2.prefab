@@ -19348,13 +19348,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 1
+  m_Height: 1
+  m_Radius: 0.7
   m_SlopeLimit: 60
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.08, z: 0}
+  m_Center: {x: 0, y: 0.78, z: 2.3}
 --- !u!114 &4225526806379090973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34068,6 +34068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 200
+  _pushForce: 0
+  _characterController: {fileID: 0}
 --- !u!1 &6061192291490857947 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2839148876347323338, guid: 0a7adf4ea0704074eb4c128e9a9a0bc8, type: 3}
