@@ -9,6 +9,7 @@ public class PauseButton : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
+        Time.timeScale = 1;
     }
 
     private void OnEnable()

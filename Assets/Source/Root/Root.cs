@@ -24,6 +24,8 @@ public class Root : MonoBehaviour
 
     private bool _isGameEnd;
 
+    public uint CurrentLevel => _currentLevel;
+
     private void Awake()
     {
         _playerTankFactory = GetComponent<PlayerTankFactory>();

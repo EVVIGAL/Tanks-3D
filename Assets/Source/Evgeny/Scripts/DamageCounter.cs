@@ -11,6 +11,7 @@ public class DamageCounter : MonoBehaviour
     private const uint _excellentMedals = 3;
     private const uint _goodMedals = 2;
     private const uint _badMedals = 1;
+    private const uint _reduceLevelIndexBy = 2;
 
     private uint _level;
     private uint _medals;
@@ -19,9 +20,12 @@ public class DamageCounter : MonoBehaviour
     private float _excellentHealth;
     private float _goodHealth;
 
-    private void Awake()
+    private void OnEnable()
     {
-        _medals = _excellentMedals;
+        _medalsView.Show(_medals);
+
+        if(_data.Data.Levels[_level - _reduceLevelIndexBy].CurrentMedals < _medals)
+            _data.Data.Levels[_level - _reduceLevelIndexBy].Set(_medals);
     }
 
     public void Set(float health)
@@ -56,11 +60,5 @@ public class DamageCounter : MonoBehaviour
         _health = _maxHealth;
         _excellentHealth = _maxHealth * _excellentPercent;
         _goodHealth = _maxHealth * _goodPercent;
-    }
-
-    private void OnEnable()
-    {
-        _medalsView.Show(_medals);
-        _data.Data.Levels[_level - 1].Set(_medals);
     }
 }
