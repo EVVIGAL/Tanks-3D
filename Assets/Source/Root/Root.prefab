@@ -7430,7 +7430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentLevel: 2
-  _currentTankIndex: 1
+  _currentTankIndex: 0
   _damageCounter: {fileID: 804702016}
   _data: {fileID: 4547362579411169480}
   _healthViewBehaviour: {fileID: 7097204674790366798}
@@ -7505,147 +7505,147 @@ MonoBehaviour:
         _upgradeValue: 0
         _increaseCost: 0
       _damage:
+        _value: 100
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 20
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 6
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: 
+    - _health:
+        _value: 500
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 80
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 50
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 3
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: 
+    - _health:
+        _value: 700
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 120
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 40
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 6
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: 
+    - _health:
+        _value: 900
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 320
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _armor:
+        _value: 50
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _speed:
+        _value: 4
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _farm:
+        _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 0
+      _name: 
+    - _health:
+        _value: 1200
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
         _value: 500
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _armor:
-        _value: 80
+        _value: 70
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _speed:
-        _value: 7
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _farm:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _isAvailable: 0
-      _name: 
-    - _health:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _damage:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _armor:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _speed:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _farm:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _isAvailable: 0
-      _name: 
-    - _health:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _damage:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _armor:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _speed:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _farm:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _isAvailable: 0
-      _name: 
-    - _health:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _damage:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _armor:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _speed:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _farm:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _isAvailable: 0
-      _name: 
-    - _health:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _damage:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _armor:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _speed:
-        _value: 0
+        _value: 2
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
@@ -7662,7 +7662,7 @@ MonoBehaviour:
     Medals: 0
     TotalIncome: 0
     CurrentLevel: 0
-    CurrentTankIndex: 0
+    CurrentTankIndex: 2
     ArtilleryAmount: 5
     ToolsAmount: 7
     MusicValue: 0
