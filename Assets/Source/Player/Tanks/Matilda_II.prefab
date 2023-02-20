@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4347284177052679}
   - component: {fileID: 4347284186720997}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: BlobShadowProjector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19379,13 +19379,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 1
+  m_Height: 1
+  m_Radius: 0.6
   m_SlopeLimit: 60
   m_StepOffset: 0.5
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.08, z: 0}
+  m_Center: {x: 0, y: 0.68, z: 2.05}
 --- !u!114 &1667956567454966552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34006,6 +34006,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 200
+  _pushForce: 30
+  _characterController: {fileID: 1667956567454966551}
 --- !u!114 &1405159686610355422
 MonoBehaviour:
   m_ObjectHideFlags: 0

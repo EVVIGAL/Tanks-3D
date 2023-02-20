@@ -21,7 +21,7 @@ public class Bullet : Projectile
             Rigidbody.velocity = ricochetDirection * Rigidbody.velocity.magnitude;
             DetectCollisions = false;
             _onRicocheted?.Invoke();
-            Debug.DrawRay(hitInfo.point, ricochetDirection, Color.blue);
+            //Debug.DrawRay(hitInfo.point, ricochetDirection, Color.blue);
             return;
         }
 
@@ -37,7 +37,7 @@ public class Bullet : Projectile
 
         base.OnHit(hitInfo);
 
-        Debug.DrawRay(hitInfo.point, direction, Color.red);
-        Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.yellow);
+        //Debug.DrawRay(hitInfo.point, direction, Color.red);
+        //Debug.DrawRay(hitInfo.point, hitInfo.normal, Color.yellow);
     }
 }

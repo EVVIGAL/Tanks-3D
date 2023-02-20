@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using Input = Tank.Input;
 
@@ -36,6 +37,9 @@ public class PlayerInput : MonoBehaviour
 
     private void OnPlayerShoot(InputAction.CallbackContext context)
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         if (_weapon.CanShoot)
             _weapon.Shoot(null);
     }
