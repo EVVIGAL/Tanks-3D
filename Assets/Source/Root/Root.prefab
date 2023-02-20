@@ -4537,7 +4537,7 @@ MonoBehaviour:
   _maxAmount: 5
   _reloadTime: 5
   _view: {fileID: 5012829726583546207}
-  _repairKitTemplate: {fileID: 6178681451762243204, guid: d038c0e32990ce24d9d9f918d9f79839, type: 3}
+  _repairKitTemplate: {fileID: 8160461396859788947, guid: 9857d5dfeb897054fb92db00136fc912, type: 3}
   _spawnHeight: 16
   _camera: {fileID: 7097204674837805887}
 --- !u!114 &977693558439180965

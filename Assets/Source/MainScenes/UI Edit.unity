@@ -672,10 +672,6 @@ PrefabInstance:
       propertyPath: _uIInput
       value: 
       objectReference: {fileID: 1799424181}
-    - target: {fileID: 977693558439180960, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
-      propertyPath: _repairKitTemplate
-      value: 
-      objectReference: {fileID: 8160461396859788947, guid: 9857d5dfeb897054fb92db00136fc912, type: 3}
     - target: {fileID: 2252961146632245651, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -974,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1408639760334905514, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
       propertyPath: m_RootOrder
@@ -1192,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8500310348477021828, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8734242093041060666, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
       propertyPath: m_Enabled
