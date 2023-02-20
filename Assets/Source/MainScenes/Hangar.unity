@@ -291,6 +291,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _ad
+      value: 
+      objectReference: {fileID: 820633391}
+    - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _levelToLoad
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _audioManager
+      value: 
+      objectReference: {fileID: 905694432}
+    - target: {fileID: 7956598748686668826, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 820633390}
     - target: {fileID: 7956598748686668830, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2973,6 +2989,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _ad
+      value: 
+      objectReference: {fileID: 820633391}
+    - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _levelToLoad
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _audioManager
+      value: 
+      objectReference: {fileID: 905694432}
+    - target: {fileID: 7956598748686668826, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 820633390}
     - target: {fileID: 7956598748686668830, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5584,10 +5616,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     Levels:
-    - _currentMedals: 1
-    - _currentMedals: 1
-    - _currentMedals: 2
-    - _currentMedals: 3
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
     - _currentMedals: 0
     - _currentMedals: 0
     - _currentMedals: 0
@@ -5596,29 +5628,29 @@ MonoBehaviour:
     - _currentMedals: 0
     Units:
     - _health:
-        _value: 256
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 400
+        _maximumValue: 600
+        _upgradeCost: 100
+        _upgradeValue: 50
+        _increaseCost: 50
       _damage:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 50
+        _maximumValue: 100
+        _upgradeCost: 50
+        _upgradeValue: 10
+        _increaseCost: 20
       _armor:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 20
+        _maximumValue: 40
+        _upgradeCost: 200
+        _upgradeValue: 5
+        _increaseCost: 20
       _speed:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 6
+        _maximumValue: 8
+        _upgradeCost: 200
+        _upgradeValue: 1
+        _increaseCost: 100
       _farm:
         _value: 0
         _maximumValue: 0
@@ -5628,25 +5660,57 @@ MonoBehaviour:
       _isAvailable: 1
       _name: Stuart
     - _health:
-        _value: 500
-        _maximumValue: 1000
+        _value: 600
+        _maximumValue: 800
         _upgradeCost: 100
-        _upgradeValue: 20
+        _upgradeValue: 50
         _increaseCost: 50
       _damage:
+        _value: 70
+        _maximumValue: 120
+        _upgradeCost: 100
+        _upgradeValue: 10
+        _increaseCost: 50
+      _armor:
+        _value: 50
+        _maximumValue: 60
+        _upgradeCost: 200
+        _upgradeValue: 5
+        _increaseCost: 100
+      _speed:
+        _value: 2
+        _maximumValue: 4
+        _upgradeCost: 100
+        _upgradeValue: 1
+        _increaseCost: 100
+      _farm:
         _value: 0
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _isAvailable: 1
+      _name: Matilda
+    - _health:
+        _value: 500
+        _maximumValue: 0
+        _upgradeCost: 0
+        _upgradeValue: 0
+        _increaseCost: 0
+      _damage:
+        _value: 500
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _armor:
-        _value: 0
+        _value: 90
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _speed:
-        _value: 0
+        _value: 4
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
@@ -5658,59 +5722,27 @@ MonoBehaviour:
         _upgradeValue: 0
         _increaseCost: 0
       _isAvailable: 1
-      _name: Matilda
-    - _health:
-        _value: 256
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _damage:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _armor:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _speed:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _farm:
-        _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
-      _isAvailable: 0
       _name: T-34
     - _health:
-        _value: 256
+        _value: 500
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _damage:
-        _value: 0
+        _value: 500
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _armor:
-        _value: 0
+        _value: 90
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _speed:
-        _value: 0
+        _value: 4
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
@@ -5721,28 +5753,28 @@ MonoBehaviour:
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
-      _isAvailable: 0
+      _isAvailable: 1
       _name: Sherman
     - _health:
-        _value: 256
+        _value: 5000
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _damage:
-        _value: 0
+        _value: 1000
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _armor:
-        _value: 0
+        _value: 95
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
       _speed:
-        _value: 0
+        _value: 4
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
@@ -5753,17 +5785,17 @@ MonoBehaviour:
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
-      _isAvailable: 0
+      _isAvailable: 1
       _name: KV-2
-    Money: 2500
+    Money: 99999
     Medals: 0
     TotalIncome: 100
     CurrentLevel: 4
     CurrentTankIndex: 0
     ArtilleryAmount: 2
     ToolsAmount: 3
-    MusicValue: -50
-    EffectsValue: -50
+    MusicValue: 0
+    EffectsValue: 0
     IsMute: 0
     CurrentTankName: 
   _choser: {fileID: 667585740}
@@ -9554,6 +9586,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _ad
+      value: 
+      objectReference: {fileID: 820633391}
+    - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _levelToLoad
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _audioManager
+      value: 
+      objectReference: {fileID: 905694432}
+    - target: {fileID: 7956598748686668826, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 820633390}
     - target: {fileID: 7956598748686668830, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -16647,70 +16695,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelView
       objectReference: {fileID: 0}
-    - target: {fileID: 7956598747090846533, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747090846533, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747090846533, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 36.666668
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747090846533, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747323083942, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747323083942, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747323083942, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747323083942, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747705743320, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747705743320, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747705743320, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 183.33334
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598747705743320, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -35
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598748276495011, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598748276495011, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598748276495011, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598748276495011, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
-      objectReference: {fileID: 0}
     - target: {fileID: 7956598748686668820, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
       propertyPath: _ad
       value: 
@@ -16723,21 +16707,5 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 820633390}
-    - target: {fileID: 7956598748686668830, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598748686668830, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598748686668830, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956598748686668830, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -135
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfa250a6a19f2514d8c4bb74eaf71f51, type: 3}

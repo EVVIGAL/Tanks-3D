@@ -43,6 +43,7 @@ public class TankChoser : MonoBehaviour
         HideAll();
         _tanks[_visibleTankIndex].gameObject.SetActive(true);
         HideButtons();
+        Save();
     }
 
     private void NextTank()
@@ -51,6 +52,7 @@ public class TankChoser : MonoBehaviour
         _tanks[_visibleTankIndex + 1].gameObject.SetActive(true);
         _visibleTankIndex++;
         HideButtons();
+        Save();
     }
 
     private void PreviousTank()
@@ -59,6 +61,7 @@ public class TankChoser : MonoBehaviour
         _tanks[_visibleTankIndex - 1].gameObject.SetActive(true);
         _visibleTankIndex--;
         HideButtons();
+        Save();
     }
 
     private void HideAll()

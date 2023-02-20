@@ -28,7 +28,7 @@ public class LevelCompletedWindow : MonoBehaviour
 
     public void OnNextButtonClick()
     {
-        SceneManager.LoadScene((int)_root.CurrentLevel + 1);
+        SceneManager.LoadScene((int)_root.CurrentLevelIndex + 1);
     }
 
     public void OnRestartButtonClick()

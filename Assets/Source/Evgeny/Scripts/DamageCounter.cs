@@ -13,8 +13,8 @@ public class DamageCounter : MonoBehaviour
     private const uint _badMedals = 1;
     private const uint _reduceLevelIndexBy = 2;
 
+    private uint _medals = _excellentMedals;
     private uint _level;
-    private uint _medals;
     private float _maxHealth;
     private float _health;
     private float _excellentHealth;

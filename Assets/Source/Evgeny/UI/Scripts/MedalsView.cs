@@ -8,7 +8,6 @@ public class MedalsView : MonoBehaviour
 
     public void Show(uint count)
     {
-        Debug.Log("Here" + count);
         if (count <= 0)
             throw new InvalidOperationException();
 
