@@ -4,16 +4,19 @@ using System;
 
 public class DailyReward : MonoBehaviour
 {
+    [SerializeField] private SaveData _data;
     [SerializeField] private Money _money;
     [SerializeField] private Button _claimButton;
     [SerializeField] private int _rewardValue;
 
-    private const string _lastSaveKey = "LastSaveTime";
     private const int _secondsInDay = 15;
 
     private void Start()
     {
-        DateTime lastSaveTime = SaveManager.GetDate(_lastSaveKey, DateTime.UtcNow);
+        if (string.IsNullOrEmpty(_data.Data.LastDailyReward))
+            return;
+
+        DateTime lastSaveTime = DateTime.Parse(_data.Data.LastDailyReward);
         TimeSpan timePassed = DateTime.UtcNow - lastSaveTime;
         int secondPassed = timePassed.Seconds;
 
@@ -21,10 +24,7 @@ public class DailyReward : MonoBehaviour
             return;
 
         if (secondPassed < _secondsInDay)
-        {
             gameObject.SetActive(false);
-            return;
-        }
     }
 
     private void OnEnable()
@@ -38,7 +38,7 @@ public class DailyReward : MonoBehaviour
     }
     private void Claim()
     {
-        SaveManager.SetDate(_lastSaveKey, DateTime.UtcNow);
+        _data.Data.LastDailyReward = DateTime.UtcNow.ToString();
         _money.Add(_rewardValue);
         gameObject.SetActive(false);
     }
