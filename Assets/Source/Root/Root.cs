@@ -26,6 +26,8 @@ public class Root : MonoBehaviour
 
     private bool _isGameEnd;
 
+    public DamageCounter DamageCounter => _damageCounter;
+
     public uint CurrentLevelIndex => _currentLevelIndex;
 
     private void Awake()
