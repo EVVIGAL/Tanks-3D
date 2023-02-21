@@ -23,7 +23,9 @@ public class PlayerHealth : Health
     {
         _healthView.Show(Value, MaxValue);
         _smokeDamageView.Show(Value, MaxValue);
-        _damageCounter.Set(Value);
+
+        if (_damageCounter)
+            _damageCounter.Set(Value);
     }
 
     protected override void OnHeal()
