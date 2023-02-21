@@ -5649,10 +5649,10 @@ MonoBehaviour:
         _increaseCost: 100
       _farm:
         _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _maximumValue: 15
+        _upgradeCost: 200
+        _upgradeValue: 5
+        _increaseCost: 100
       _isAvailable: 1
       _name: Stuart
     - _health:
@@ -5681,10 +5681,10 @@ MonoBehaviour:
         _increaseCost: 100
       _farm:
         _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _maximumValue: 20
+        _upgradeCost: 300
+        _upgradeValue: 5
+        _increaseCost: 100
       _isAvailable: 1
       _name: Matilda
     - _health:
@@ -5713,10 +5713,10 @@ MonoBehaviour:
         _increaseCost: 0
       _farm:
         _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _maximumValue: 25
+        _upgradeCost: 400
+        _upgradeValue: 5
+        _increaseCost: 100
       _isAvailable: 1
       _name: T-34
     - _health:
@@ -5745,10 +5745,10 @@ MonoBehaviour:
         _increaseCost: 100
       _farm:
         _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _maximumValue: 30
+        _upgradeCost: 500
+        _upgradeValue: 5
+        _increaseCost: 100
       _isAvailable: 0
       _name: Sherman
     - _health:
@@ -5777,15 +5777,16 @@ MonoBehaviour:
         _increaseCost: 200
       _farm:
         _value: 0
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _maximumValue: 35
+        _upgradeCost: 500
+        _upgradeValue: 5
+        _increaseCost: 100
       _isAvailable: 0
       _name: KV-2
     Money: 99999
     Medals: 0
-    TotalIncome: 100
+    TotalIncome: 0
+    LastIncome: 0
     CurrentLevel: 1
     CurrentTankIndex: 0
     ArtilleryAmount: 2
@@ -10800,8 +10801,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d311ef3beb3d5746b7c5c58990c33f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioManager: {fileID: 0}
-  _ad: {fileID: 0}
+  _data: {fileID: 820633389}
+  _audioManager: {fileID: 905694432}
+  _ad: {fileID: 820633391}
   _missionPanel: {fileID: 2087713309}
   _upgradeButton: {fileID: 629846207}
   _money: {fileID: 1482989044}
@@ -15222,6 +15224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _saveData: {fileID: 820633389}
+  _takeButton: {fileID: 1437453354}
   _farms:
   - {fileID: 1317286590}
   - {fileID: 1774144882}
@@ -15240,6 +15243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4595ed5a0f8f6714ab2a7948a00a2d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _data: {fileID: 820633389}
   _income: {fileID: 1437453354}
 --- !u!1 &2092027338 stripped
 GameObject:

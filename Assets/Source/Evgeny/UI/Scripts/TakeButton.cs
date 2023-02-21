@@ -6,6 +6,7 @@ using TMPro;
 [RequireComponent(typeof(Button))]
 public class TakeButton : MonoBehaviour
 {
+    [SerializeField] private SaveData _data;
     [SerializeField] private AudioManager _audioManager;
     [SerializeField] private InterAd _ad;
     [SerializeField] private MissionPanel _missionPanel;
@@ -35,14 +36,18 @@ public class TakeButton : MonoBehaviour
     }
 
     private void OnEnable()
-    {
-        OnIncomeChange();
-        UpdateButton();
+    {       
         _text.text = _currentValue.ToString("f0") + " / " + _maximumValue;
         _button.onClick.AddListener(TakeReward);
         _upgradeButton.onClick.AddListener(Upgrade);
         _missionPanel.IncomeChange += OnIncomeChange;
         _money.ValueChanged += UpdateButton;
+    }
+
+    public void Init()
+    {
+        OnIncomeChange();
+        UpdateButton();
     }
 
     private void Update()
@@ -56,10 +61,11 @@ public class TakeButton : MonoBehaviour
 
     private void OnDisable()
     {
+        _data.Data.LastIncome = (int)_currentValue;
         _button.onClick.RemoveListener(TakeReward);
         _upgradeButton.onClick.RemoveListener(Upgrade);
         _missionPanel.IncomeChange -= OnIncomeChange;
-        _money.ValueChanged += UpdateButton;
+        _money.ValueChanged -= UpdateButton;
     }
 
     public void Add(int value)

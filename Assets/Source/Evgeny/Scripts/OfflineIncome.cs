@@ -3,24 +3,25 @@ using System;
 
 public class OfflineIncome : MonoBehaviour
 {
+    [SerializeField] private SaveData _data;
     [SerializeField] private TakeButton _income;
-
-    private const string _lastSaveKey = "LastSave";
 
     private void OnDisable()
     {
-        SaveManager.SetDate(_lastSaveKey, DateTime.UtcNow);
+        _data.Data.IncomeTaked = DateTime.UtcNow;
+        _data.Save();
     }
 
-    public void Calculate(int income)
+    public void Calculate(int income, int lastIncome)
     {
-        DateTime lastSaveTime = SaveManager.GetDate(_lastSaveKey, DateTime.UtcNow);
+        float incomePerSecond = income / 60;
+        DateTime lastSaveTime = _data.Data.IncomeTaked;
         TimeSpan timePassed = DateTime.UtcNow - lastSaveTime;
-        int secondPassed = timePassed.Seconds;
+        int secondsPassed = timePassed.Seconds;
 
-        if (secondPassed == 0)
+        if (secondsPassed == 0)
             return;
 
-        _income.Add(income * secondPassed);
+        _income.Add((int)incomePerSecond * secondsPassed + lastIncome);
     }
 }

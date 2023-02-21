@@ -46,14 +46,17 @@ public class SaveData : MonoBehaviour
     }
 }
 
-[System.Serializable]
+[Serializable]
 public class DataHolder
 {
     public LevelData[] Levels;
     public UnitStat[] Units;
+    public DateTime IncomeTaked;
+    public DateTime LastVisit;
     public int Money;
     public int Medals;
     public int TotalIncome;
+    public int LastIncome;
     public int CurrentLevel;
     public int CurrentTankIndex;
     public int ArtilleryAmount;

@@ -29,7 +29,6 @@ public class TankFarm : MonoBehaviour
 
     private void OnEnable()
     {
-        UpdateFarm();
         _upgradeButton.onClick.AddListener(Upgrade);
         _money.ValueChanged += UpdateFarm;
     }
@@ -40,14 +39,7 @@ public class TankFarm : MonoBehaviour
         _money.ValueChanged -= UpdateFarm;
     }
 
-    private void Upgrade()
-    {
-        _unit.UnitStat.Farm.Upgrade(_money);
-        UpdateFarm();
-        RateChanged?.Invoke();
-    }
-
-    private void UpdateFarm()
+    public void UpdateFarm()
     {
         if (_unit.UnitStat.Farm.Value >= _unit.UnitStat.Farm.MaximumValue)
             _upgradeButton.gameObject.SetActive(false);
@@ -60,5 +52,12 @@ public class TankFarm : MonoBehaviour
             _upgradeButton.GetComponent<Image>().color = Color.green;
         else
             _upgradeButton.GetComponent<Image>().color = _upgradeColor;
+    }
+
+    private void Upgrade()
+    {
+        _unit.UnitStat.Farm.Upgrade(_money);
+        UpdateFarm();
+        RateChanged?.Invoke();
     }
 }
