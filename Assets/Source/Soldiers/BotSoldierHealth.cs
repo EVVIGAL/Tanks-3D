@@ -1,25 +1,24 @@
 using UnityEngine;
 
 [RequireComponent (typeof(Ragdoll), typeof(Animator), typeof(Movement))]
-public class SoldierDeathPolicy : EnemyDeathPolicy
+public class BotSoldierHealth : BotHealth
 {
     [SerializeField] private ObjectPhysic _weaponPhysic;
-    [SerializeField] private int _deathLayer;
-    [SerializeField] private GameObject[] _physicObjects;
 
     private Ragdoll _ragdoll;
     private Animator _animator;
     private Movement _movement;
 
-    private void Awake()
+    private void Start()
     {
         _ragdoll = GetComponent<Ragdoll>();
         _animator = GetComponent<Animator>();
         _movement = GetComponent<Movement>();
     }
 
-    protected override void OnDie()
+    protected override void Die()
     {
+        base.Die();
         _ragdoll.Enable();
         _animator.enabled = false;
         _movement.Disable();
@@ -28,10 +27,6 @@ public class SoldierDeathPolicy : EnemyDeathPolicy
         {
             _weaponPhysic.Enable();
             _weaponPhysic.transform.parent = null;
-            _weaponPhysic.gameObject.layer = _deathLayer;
         }
-
-        foreach (GameObject @object in _physicObjects)
-            @object.layer = _deathLayer;
     }
 }

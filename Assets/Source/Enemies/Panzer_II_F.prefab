@@ -67,9 +67,6 @@ GameObject:
   - component: {fileID: 6479027446971307782}
   - component: {fileID: 6479027446971307788}
   - component: {fileID: 6479027446971307789}
-  - component: {fileID: 6479027446971307784}
-  - component: {fileID: 6479027446971307791}
-  - component: {fileID: 6479027446971307783}
   - component: {fileID: 80757193960170717}
   - component: {fileID: 4606696708302350245}
   - component: {fileID: 1893253605120792895}
@@ -142,7 +139,7 @@ MonoBehaviour:
         startIndex: 
         dataPosition: 
         unityObjects:
-        - {fileID: 6479027446971307784}
+        - {fileID: 4606696708302350245}
         - {fileID: 3688972714813251772}
         - {fileID: 80757193960170717}
         - {fileID: 6479027446971307898}
@@ -250,47 +247,6 @@ MonoBehaviour:
   _minRotateSpeed: 20
   _maxRotateSpeed: 90
   _movementBehaviour: {fileID: 6479027446971307898}
---- !u!114 &6479027446971307784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6479027446971307891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c575ed7f46f14484db66cbc9d50b2f0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 1000
-  <Armor>k__BackingField: 20
-  _healthViewBehaviour: {fileID: 6479027446971307791}
-  _deathPolicyBehaviour: {fileID: 4606696708302350245}
---- !u!114 &6479027446971307791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6479027446971307891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e343bf41341f7dd4cbeacac294b3b058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthViewBehaviour: {fileID: 6479027446971307783}
---- !u!114 &6479027446971307783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6479027446971307891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfdb32b1a867f14996d3039efa0dcc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &80757193960170717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,14 +275,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <MaxValue>k__BackingField: 600
+  <Armor>k__BackingField: 0
   _reward: 200
-  _turretExplosion: {fileID: 8053624676360363826}
   _deathLayer: 6
   _physicObjects:
   - {fileID: 6479027446971307891}
   - {fileID: 1481275038333905801}
   - {fileID: 7428075997067279214}
   - {fileID: 7058109199454710679}
+  _turretExplosion: {fileID: 8053624676360363826}
 --- !u!114 &1893253605120792895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,7 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 2
-  _healthBehaviour: {fileID: 6479027446971307784}
+  _healthBehaviour: {fileID: 4606696708302350245}
 --- !u!4 &1539667776729677848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8834311317802262302, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
@@ -1161,20 +1119,6 @@ MonoBehaviour:
   - {fileID: 6996267467449904383}
   _movement: {fileID: 6479027446971307898}
   _speed: 30
---- !u!114 &8053624676360363838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7058109199454710679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c656e2725b0e6324e8b95fc8e5b7c633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damageMultiplier: 1
-  _healthBehaviour: {fileID: 6479027446971307784}
 --- !u!4 &7101409798913031034 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 957435412886316156, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
@@ -1216,7 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 6479027446971307784}
+  _healthBehaviour: {fileID: 4606696708302350245}
 --- !u!4 &7516087233581611245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
