@@ -1,23 +1,19 @@
 using UnityEngine;
 
-[RequireComponent (typeof(BoxCollider))]
 public class RepairKitPickUp : MonoBehaviour
 {
     [SerializeField] private MonoBehaviour _healthBehaviour;
     private IHealth _health => (IHealth)_healthBehaviour;
     [SerializeField] private LayerMask _mask;
 
-    [SerializeField] private BoxCollider _boxCollider;
-    private readonly Collider[] _overlapColliders = new Collider[3];
+    [SerializeField] private Vector3 _overlapBoxPosition;
+    [SerializeField] private Vector3 _overlapBoxHalfSize;
 
-    private void Awake()
-    {
-        _boxCollider = GetComponent<BoxCollider>();
-    }
+    private readonly Collider[] _overlapColliders = new Collider[3];
 
     private void Update()
     {
-        int overlapCount = Physics.OverlapBoxNonAlloc(transform.position + transform.TransformVector(_boxCollider.center), _boxCollider.bounds.extents, _overlapColliders, Quaternion.identity, _mask);
+        int overlapCount = Physics.OverlapBoxNonAlloc(transform.position + transform.TransformVector(_overlapBoxPosition), _overlapBoxHalfSize, _overlapColliders, Quaternion.identity, _mask);
         for (int colliderIterator = 0; colliderIterator < overlapCount; colliderIterator += 1)
         {
             Collider overlapCollider = _overlapColliders[colliderIterator];
@@ -34,7 +30,7 @@ public class RepairKitPickUp : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(transform.position + transform.TransformVector(_boxCollider.center), _boxCollider.bounds.size);
+        Gizmos.DrawWireCube(transform.position + transform.TransformVector(_overlapBoxPosition), _overlapBoxHalfSize * 2f);
     }
 
     private void OnValidate()

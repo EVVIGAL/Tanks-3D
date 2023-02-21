@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &193525138514987175
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &556365674771667743
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &895110989107414298
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &2280059186087051541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &2317595179955760052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &2709082906208813524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &3031535658795687836
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &5393545269853101721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,8 +2472,6 @@ GameObject:
   - component: {fileID: 4637389807339948137}
   - component: {fileID: 4637389807339948135}
   - component: {fileID: 4637389807414689928}
-  - component: {fileID: 4637389807414689927}
-  - component: {fileID: 4637389807414689926}
   - component: {fileID: 4637389807414689925}
   - component: {fileID: 4637389807414689921}
   - component: {fileID: 1238987822954935803}
@@ -2545,7 +2543,7 @@ MonoBehaviour:
         startIndex: 
         dataPosition: 
         unityObjects:
-        - {fileID: 4637389807414689926}
+        - {fileID: 4637389807414689925}
         - {fileID: 916032073210416648}
         - {fileID: 4637389807339948137}
         - {fileID: 916032073210416648}
@@ -2656,34 +2654,6 @@ MonoBehaviour:
   - {fileID: 4637389807439415939}
   - {fileID: 4637389807502596515}
   - {fileID: 4637389807980927524}
---- !u!114 &4637389807414689927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5519786571723633980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfdb32b1a867f14996d3039efa0dcc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4637389807414689926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5519786571723633980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c575ed7f46f14484db66cbc9d50b2f0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 100
-  <Armor>k__BackingField: 0
-  _healthViewBehaviour: {fileID: 4637389807414689927}
-  _deathPolicyBehaviour: {fileID: 4637389807414689925}
 --- !u!114 &4637389807414689925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2696,7 +2666,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69be5472edf2214996917681f1aea8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <MaxValue>k__BackingField: 100
+  <Armor>k__BackingField: 0
   _reward: 50
+  _deathLayer: 6
+  _physicObjects:
+  - {fileID: 5519786571723633980}
+  - {fileID: 746088032494442363}
+  - {fileID: 2618045221105666152}
+  - {fileID: 310666447729521641}
+  - {fileID: 2280059186087051541}
+  - {fileID: 5960967990543317806}
+  - {fileID: 2943807317015166942}
+  - {fileID: 5379668755611673090}
+  - {fileID: 37693501665373825}
+  - {fileID: 6173710015271698008}
+  - {fileID: 2183561027598607920}
+  - {fileID: 6974262116116372248}
   _weaponPhysic: {fileID: 0}
 --- !u!114 &4637389807414689921
 MonoBehaviour:
@@ -2968,7 +2954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &5995078057140793986
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,7 +3111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &6359510706517830169
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,7 +3457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4637389807414689926}
+  _healthBehaviour: {fileID: 4637389807414689925}
 --- !u!1 &6997818258708036076
 GameObject:
   m_ObjectHideFlags: 0
