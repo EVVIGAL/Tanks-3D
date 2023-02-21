@@ -14,6 +14,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private Barrel _barrel;
 
     private Input _input;
+    private bool _isPointerOverGameObject;
 
     private void OnEnable()
     {
@@ -33,11 +34,12 @@ public class PlayerInput : MonoBehaviour
         Vector2 input = _input.Player.Move.ReadValue<Vector2>();
         _movement.Move(input.x);
         _barrel.Rotate(input.y);
+        _isPointerOverGameObject = EventSystem.current.IsPointerOverGameObject();
     }
 
     private void OnPlayerShoot(InputAction.CallbackContext context)
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (_isPointerOverGameObject)
             return;
 
         if (_weapon.CanShoot)

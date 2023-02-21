@@ -16,9 +16,6 @@ GameObject:
   - component: {fileID: 414494726114176639}
   - component: {fileID: 414494726114176629}
   - component: {fileID: 414494726114176628}
-  - component: {fileID: 414494726114176625}
-  - component: {fileID: 414494726114176630}
-  - component: {fileID: 414494726114176638}
   - component: {fileID: 6716096152765750692}
   - component: {fileID: 7189139034959470300}
   - component: {fileID: 5074578198038454342}
@@ -92,7 +89,7 @@ MonoBehaviour:
         startIndex: 
         dataPosition: 
         unityObjects:
-        - {fileID: 414494726114176625}
+        - {fileID: 7189139034959470300}
         - {fileID: 7549444536431237377}
         - {fileID: 6716096152765750692}
         - {fileID: 414494726114176515}
@@ -200,47 +197,6 @@ MonoBehaviour:
   _minRotateSpeed: 20
   _maxRotateSpeed: 90
   _movementBehaviour: {fileID: 414494726114176515}
---- !u!114 &414494726114176625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414494726114176522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c575ed7f46f14484db66cbc9d50b2f0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 500
-  <Armor>k__BackingField: 20
-  _healthViewBehaviour: {fileID: 414494726114176630}
-  _deathPolicyBehaviour: {fileID: 7189139034959470300}
---- !u!114 &414494726114176630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414494726114176522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e343bf41341f7dd4cbeacac294b3b058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthViewBehaviour: {fileID: 414494726114176638}
---- !u!114 &414494726114176638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414494726114176522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfdb32b1a867f14996d3039efa0dcc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6716096152765750692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,13 +225,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <MaxValue>k__BackingField: 500
+  <Armor>k__BackingField: 0
   _reward: 100
-  _turretExplosion: {fileID: 7363040101131504655}
   _deathLayer: 6
   _physicObjects:
   - {fileID: 414494726114176522}
   - {fileID: 4513887068012893176}
   - {fileID: 7363040101131504649}
+  _turretExplosion: {fileID: 7363040101131504655}
 --- !u!114 &5074578198038454342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,7 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 414494726114176625}
+  _healthBehaviour: {fileID: 7189139034959470300}
 --- !u!1 &6019523387570135891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,7 +1225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 2
-  _healthBehaviour: {fileID: 414494726114176625}
+  _healthBehaviour: {fileID: 7189139034959470300}
 --- !u!1 &8703434253841768150
 GameObject:
   m_ObjectHideFlags: 0

@@ -19302,12 +19302,10 @@ GameObject:
   - component: {fileID: 4225526806379090948}
   - component: {fileID: 4225526806379090950}
   - component: {fileID: 4225526806379090951}
-  - component: {fileID: 4225526806379090946}
-  - component: {fileID: 4225526806379090945}
-  - component: {fileID: 4225526806379090944}
   - component: {fileID: 4225526806379090983}
   - component: {fileID: 4225526806379090968}
   - component: {fileID: 4225526806379090982}
+  - component: {fileID: 2405123664435457818}
   m_Layer: 0
   m_Name: KV_2
   m_TagString: Untagged
@@ -19494,48 +19492,6 @@ MonoBehaviour:
   _smokeAppearanceHealth: 50
   _fire: {fileID: 4063511649894148832}
   _fireAppearanceHealth: 20
---- !u!114 &4225526806379090946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225526806379090961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c575ed7f46f14484db66cbc9d50b2f0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 2000
-  <Armor>k__BackingField: 0
-  _healthViewBehaviour: {fileID: 4225526806379090944}
-  _deathPolicyBehaviour: {fileID: 4225526806379090945}
---- !u!114 &4225526806379090945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225526806379090961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5e5bdb42c16ec4ca257acabc79a164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _turretExplosion: {fileID: 3970179584561745632}
---- !u!114 &4225526806379090944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4225526806379090961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e343bf41341f7dd4cbeacac294b3b058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _healthViewBehaviour: {fileID: 0}
 --- !u!114 &4225526806379090983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19581,6 +19537,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263f75dd2611c374ea07b3060889141c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2405123664435457818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4225526806379090961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e2233ebaa58cb488bebdde7d820f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <MaxValue>k__BackingField: 2000
+  <Armor>k__BackingField: 0
+  _healthViewBehaviour: {fileID: 0}
+  _turretExplosion: {fileID: 3970179584561745632}
+  _smokeDamageView: {fileID: 4225526806379090951}
 --- !u!1 &4225526807338701895
 GameObject:
   m_ObjectHideFlags: 0
@@ -34036,7 +34009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a83560c95adde94d8a7b132ed015c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthBehaviour: {fileID: 4225526806379090946}
+  _healthBehaviour: {fileID: 2405123664435457818}
   _mask:
     serializedVersion: 2
     m_Bits: 256
@@ -34054,7 +34027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 4225526806379090946}
+  _healthBehaviour: {fileID: 2405123664435457818}
 --- !u!114 &708646391355690621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34068,8 +34041,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 200
-  _pushForce: 0
-  _characterController: {fileID: 0}
+  _pushForce: 30
+  _characterController: {fileID: 4225526806379090962}
 --- !u!1 &6061192291490857947 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2839148876347323338, guid: 0a7adf4ea0704074eb4c128e9a9a0bc8, type: 3}
@@ -34134,7 +34107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 2
-  _healthBehaviour: {fileID: 4225526806379090946}
+  _healthBehaviour: {fileID: 2405123664435457818}
 --- !u!4 &6079916815202862561 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2817903972643304944, guid: 0a7adf4ea0704074eb4c128e9a9a0bc8, type: 3}
