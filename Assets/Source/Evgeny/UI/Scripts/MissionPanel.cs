@@ -5,6 +5,7 @@ using UnityEngine;
 public class MissionPanel : MonoBehaviour
 {
     [SerializeField] private SaveData _saveData;
+    [SerializeField] private TakeButton _takeButton;
     [SerializeField] private TankFarm[] _farms;
 
     private OfflineIncome _offlineIncome;
@@ -16,11 +17,14 @@ public class MissionPanel : MonoBehaviour
     private void Awake()
     {
         _offlineIncome = GetComponent<OfflineIncome>();
-        _offlineIncome.Calculate(_saveData.Data.TotalIncome);
+    }
 
+    private void OnEnable()
+    {
         foreach (TankFarm farm in _farms)
         {
             farm.RateChanged += SetTotalIncome;
+            farm.UpdateFarm();
 
             if(farm.Unit.IsAvailable)
                 farm.gameObject.SetActive(true);
@@ -28,11 +32,9 @@ public class MissionPanel : MonoBehaviour
                 farm.gameObject.SetActive(false);
         }
 
-    }
-
-    private void OnEnable()
-    {
         SetTotalIncome();
+        _offlineIncome.Calculate(_saveData.Data.TotalIncome, _saveData.Data.LastIncome);
+        _takeButton.Init();
     }
 
     private void OnDisable()
