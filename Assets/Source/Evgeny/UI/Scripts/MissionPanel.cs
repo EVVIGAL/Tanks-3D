@@ -33,8 +33,8 @@ public class MissionPanel : MonoBehaviour
         }
 
         SetTotalIncome();
-        _offlineIncome.Calculate(_saveData.Data.TotalIncome, _saveData.Data.LastIncome);
-        _takeButton.Init();
+        _takeButton.Init(_saveData.Data.LastIncome);
+        _offlineIncome.Calculate(_saveData.Data.TotalIncome);
     }
 
     private void OnDisable()

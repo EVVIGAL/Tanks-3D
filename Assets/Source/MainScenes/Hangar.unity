@@ -677,6 +677,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 308740008}
     m_Modifications:
+    - target: {fileID: -113181020801827196, guid: 6ab693db99e1c8a48939c522d49a62ba, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6ab693db99e1c8a48939c522d49a62ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -5783,6 +5787,8 @@ MonoBehaviour:
         _increaseCost: 100
       _isAvailable: 0
       _name: KV-2
+    LastDailyReward: 
+    IncomeTaked: 
     Money: 99999
     Medals: 0
     TotalIncome: 0
@@ -6592,7 +6598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -13147,7 +13153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1698115294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13221,6 +13227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5339a8938a3ba3439d93c2c4e6bc80c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _data: {fileID: 820633389}
   _money: {fileID: 1482989044}
   _claimButton: {fileID: 792962461}
   _rewardValue: 500
