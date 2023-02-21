@@ -33939,19 +33939,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 635547659545568360, guid: e55ef648786757745bba353cbb27beb5, type: 3}
   m_PrefabInstance: {fileID: 1405159686610355499}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1405159686610355417
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968577098282393923}
-  m_Material: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.554626, y: 0.7, z: 5.23}
-  m_Center: {x: 0, y: 0.76453125, z: 0.15}
 --- !u!64 &1405159686610355419
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33997,7 +33984,8 @@ MonoBehaviour:
   _mask:
     serializedVersion: 2
     m_Bits: 256
-  _boxCollider: {fileID: 1405159686610355417}
+  _overlapBoxPosition: {x: 0, y: 0.74, z: 0}
+  _overlapBoxHalfSize: {x: 2.7, y: 0.6, z: 1}
 --- !u!114 &1405159686610355423
 MonoBehaviour:
   m_ObjectHideFlags: 0
