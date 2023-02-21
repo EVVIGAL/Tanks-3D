@@ -44,10 +44,11 @@ public class TakeButton : MonoBehaviour
         _money.ValueChanged += UpdateButton;
     }
 
-    public void Init()
+    public void Init(int value)
     {
         OnIncomeChange();
         UpdateButton();
+        _currentValue = value;
     }
 
     private void Update()
