@@ -3934,6 +3934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _root: {fileID: 7097204675419378053}
+  _data: {fileID: 4547362579411169480}
   _next: {fileID: 1464261629189123437}
   _restart: {fileID: 236661394497134938}
   _toHangar: {fileID: 1369241351664623073}
@@ -7450,7 +7451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caea107db6beedb40896c8b0d558f067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentLevelIndex: 2
   _damageCounter: {fileID: 804702016}
   _data: {fileID: 4547362579411169480}
   _healthViewBehaviour: {fileID: 7097204674790366798}

@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelCompletedWindow : MonoBehaviour
 {
     [SerializeField] private Root _root;
+    [SerializeField] private SaveData _data;
     [SerializeField] private Button _next;
     [SerializeField] private Button _restart;
     [SerializeField] private Button _toHangar;
@@ -17,6 +18,7 @@ public class LevelCompletedWindow : MonoBehaviour
         _next.onClick.AddListener(OnNextButtonClick);
         _restart.onClick.AddListener(OnRestartButtonClick);
         _toHangar.onClick.AddListener(OnGoToHangarButtonClick);
+        SetLevel();
     }
 
     private void OnDisable()
@@ -39,5 +41,11 @@ public class LevelCompletedWindow : MonoBehaviour
     public void OnGoToHangarButtonClick()
     {
         SceneManager.LoadScene(_hubSceneIndex);
+    }
+
+    private void SetLevel()
+    {
+        if (_root.CurrentLevelIndex >= _data.Data.CurrentLevel)
+            _data.Data.CurrentLevel = (int)_root.CurrentLevelIndex;
     }
 }

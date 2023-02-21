@@ -1439,12 +1439,13 @@ MonoBehaviour:
     _name: Stuart
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
   _price: 700
-  _neededLevel: 2
+  _neededLevel: 0
 --- !u!1 &237506954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,7 +2312,7 @@ PrefabInstance:
       objectReference: {fileID: 1482989044}
     - target: {fileID: 3927104939822465791, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
       propertyPath: _maxValue
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3927104939887710329, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
       propertyPath: m_text
@@ -3412,12 +3413,13 @@ MonoBehaviour:
     _name: KV-2
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
   _price: 2500
-  _neededLevel: 11
+  _neededLevel: 3
 --- !u!1 &517652682
 GameObject:
   m_ObjectHideFlags: 0
@@ -5620,12 +5622,6 @@ MonoBehaviour:
     - _currentMedals: 0
     - _currentMedals: 0
     - _currentMedals: 0
-    - _currentMedals: 0
-    - _currentMedals: 0
-    - _currentMedals: 0
-    - _currentMedals: 0
-    - _currentMedals: 0
-    - _currentMedals: 0
     Units:
     - _health:
         _value: 400
@@ -5693,27 +5689,27 @@ MonoBehaviour:
       _name: Matilda
     - _health:
         _value: 500
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _maximumValue: 700
+        _upgradeCost: 100
+        _upgradeValue: 50
+        _increaseCost: 50
       _damage:
-        _value: 500
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 200
+        _maximumValue: 400
+        _upgradeCost: 200
+        _upgradeValue: 50
+        _increaseCost: 100
       _armor:
-        _value: 90
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 50
+        _maximumValue: 65
+        _upgradeCost: 100
+        _upgradeValue: 5
+        _increaseCost: 50
       _speed:
         _value: 4
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
+        _maximumValue: 5
+        _upgradeCost: 500
+        _upgradeValue: 1
         _increaseCost: 0
       _farm:
         _value: 0
@@ -5724,73 +5720,73 @@ MonoBehaviour:
       _isAvailable: 1
       _name: T-34
     - _health:
-        _value: 500
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 600
+        _maximumValue: 800
+        _upgradeCost: 100
+        _upgradeValue: 50
+        _increaseCost: 50
       _damage:
-        _value: 500
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 300
+        _maximumValue: 400
+        _upgradeCost: 100
+        _upgradeValue: 20
+        _increaseCost: 50
       _armor:
-        _value: 90
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 60
+        _maximumValue: 80
+        _upgradeCost: 200
+        _upgradeValue: 5
+        _increaseCost: 50
       _speed:
-        _value: 4
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 3
+        _maximumValue: 4
+        _upgradeCost: 200
+        _upgradeValue: 1
+        _increaseCost: 100
       _farm:
         _value: 0
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
-      _isAvailable: 1
+      _isAvailable: 0
       _name: Sherman
     - _health:
-        _value: 5000
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 1200
+        _maximumValue: 1800
+        _upgradeCost: 200
+        _upgradeValue: 100
+        _increaseCost: 50
       _damage:
-        _value: 1000
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 400
+        _maximumValue: 650
+        _upgradeCost: 200
+        _upgradeValue: 50
+        _increaseCost: 200
       _armor:
-        _value: 95
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 75
+        _maximumValue: 95
+        _upgradeCost: 500
+        _upgradeValue: 5
+        _increaseCost: 100
       _speed:
-        _value: 4
-        _maximumValue: 0
-        _upgradeCost: 0
-        _upgradeValue: 0
-        _increaseCost: 0
+        _value: 2
+        _maximumValue: 3
+        _upgradeCost: 1000
+        _upgradeValue: 1
+        _increaseCost: 200
       _farm:
         _value: 0
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
         _increaseCost: 0
-      _isAvailable: 1
+      _isAvailable: 0
       _name: KV-2
     Money: 99999
     Medals: 0
     TotalIncome: 100
-    CurrentLevel: 4
+    CurrentLevel: 1
     CurrentTankIndex: 0
     ArtilleryAmount: 2
     ToolsAmount: 3
@@ -6976,7 +6972,7 @@ PrefabInstance:
       objectReference: {fileID: 1482989044}
     - target: {fileID: 3927104939822465791, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
       propertyPath: _maxValue
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3927104939883944855, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
       propertyPath: m_Value
@@ -7746,12 +7742,13 @@ MonoBehaviour:
     _name: T-34-76
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
   _price: 2100
-  _neededLevel: 5
+  _neededLevel: 2
 --- !u!114 &1066890449 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3927104939822465791, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
@@ -9171,12 +9168,13 @@ MonoBehaviour:
     _name: Sherman
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
   _price: 2000
-  _neededLevel: 7
+  _neededLevel: 2
 --- !u!1 &1289967176
 GameObject:
   m_ObjectHideFlags: 0
@@ -11995,7 +11993,7 @@ PrefabInstance:
       objectReference: {fileID: 1482989044}
     - target: {fileID: 3927104939822465791, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
       propertyPath: _maxValue
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3927104939883944855, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
       propertyPath: m_Value
@@ -12247,6 +12245,7 @@ GameObject:
   - component: {fileID: 1572062148}
   - component: {fileID: 1572062147}
   - component: {fileID: 1572062150}
+  - component: {fileID: 1572062151}
   m_Layer: 5
   m_Name: Battle
   m_TagString: Untagged
@@ -12371,6 +12370,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 820633390}
+--- !u!114 &1572062151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572062145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f426786bde2049b46b416c300fb8a7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data: {fileID: 820633389}
+  _audioManager: {fileID: 905694432}
+  _ad: {fileID: 820633391}
 --- !u!1 &1583048756
 GameObject:
   m_ObjectHideFlags: 0
@@ -12736,12 +12750,13 @@ MonoBehaviour:
     _name: Matilda
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
   _price: 1500
-  _neededLevel: 4
+  _neededLevel: 0
 --- !u!1 &1601608949
 GameObject:
   m_ObjectHideFlags: 0

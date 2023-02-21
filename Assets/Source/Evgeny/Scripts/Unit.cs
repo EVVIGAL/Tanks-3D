@@ -12,6 +12,7 @@ public class Unit : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _priceText;
     [Space]
+    [SerializeField] private TankChoser _choser;
     [SerializeField] private StatsRefresher _refresher;
     [SerializeField] private Button _button;
     [SerializeField] private Image _lockImage;
@@ -52,6 +53,8 @@ public class Unit : MonoBehaviour
         if (_money.TrySpend(Price))
         {
             _unitStat.SetAvailable();
+            _refresher.SetUnit(_unitStat);
+            _choser.Save();
             Refresh();
         }
     }

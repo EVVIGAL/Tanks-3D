@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class SaveData : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class SaveData : MonoBehaviour
 
     public void Save()
     {
+        _data.SetMedals();
         SaveManager.Save(_saveKey, _data);
     }
 
@@ -47,7 +49,7 @@ public class SaveData : MonoBehaviour
 [System.Serializable]
 public class DataHolder
 {
-    public LevelData[] Levels = new LevelData[10];
+    public LevelData[] Levels;
     public UnitStat[] Units;
     public int Money;
     public int Medals;
@@ -60,4 +62,13 @@ public class DataHolder
     public float EffectsValue;
     public bool IsMute;
     public string CurrentTankName;
+
+    public void SetMedals()
+    {
+        if (Levels.Length <= 0)
+            throw new InvalidOperationException();
+
+        foreach (LevelData level in Levels)
+            Medals += (int)level.CurrentMedals;
+    }
 }

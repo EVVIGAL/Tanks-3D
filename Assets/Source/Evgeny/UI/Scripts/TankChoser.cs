@@ -38,6 +38,16 @@ public class TankChoser : MonoBehaviour
             _tanks[i].Set(unitStats[i], i);
     } 
 
+    public void Save()
+    {
+        if (_tanks[_visibleTankIndex].IsAvailable)
+        {
+            _currentTankIndex = _visibleTankIndex;
+            _data.Data.CurrentTankIndex = _currentTankIndex;
+            _data.Data.CurrentTankName = _tanks[_currentTankIndex].Name;
+        }
+    }
+
     public void Refresh()
     {
         HideAll();
@@ -68,15 +78,6 @@ public class TankChoser : MonoBehaviour
     {
         for (int i = 0; i < _tanks.Length; i++)
             _tanks[i].gameObject.SetActive(false);
-    }
-    private void Save()
-    {
-        if (_tanks[_visibleTankIndex].IsAvailable)
-        {
-            _currentTankIndex = _visibleTankIndex;
-            _data.Data.CurrentTankIndex = _currentTankIndex;
-            _data.Data.CurrentTankName = _tanks[_currentTankIndex].Name;
-        }
     }
 
     private void HideButtons()
