@@ -9,10 +9,12 @@ public class PlayerHealth : Health
     [SerializeField] private SmokeDamageView _smokeDamageView;
 
     private Root _root;
+    private DamageCounter _damageCounter;
 
     public void Init(uint maxHealth, uint armor, Root root, MonoBehaviour healthViewBehaviour)
     {
         _root = root;
+        _damageCounter = _root.DamageCounter;
         _healthViewBehaviour = healthViewBehaviour;
         base.Init(maxHealth, armor);
     }
@@ -21,6 +23,7 @@ public class PlayerHealth : Health
     {
         _healthView.Show(Value, MaxValue);
         _smokeDamageView.Show(Value, MaxValue);
+        _damageCounter.Set(Value);
     }
 
     protected override void OnHeal()
