@@ -10803,7 +10803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data: {fileID: 820633389}
   _audioManager: {fileID: 905694432}
-  _ad: {fileID: 820633391}
+  _ad: {fileID: 0}
   _missionPanel: {fileID: 2087713309}
   _upgradeButton: {fileID: 629846207}
   _money: {fileID: 1482989044}
