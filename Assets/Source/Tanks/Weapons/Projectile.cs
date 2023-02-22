@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent (typeof(Rigidbody), typeof(Collider))]
+[RequireComponent (typeof(Rigidbody))]
 public class Projectile : MonoBehaviour, IProjectile
 {
     [SerializeField] private float _radius;
@@ -11,7 +11,6 @@ public class Projectile : MonoBehaviour, IProjectile
     [SerializeField] private ParticleSystem _hitFX;
 
     private float _runningTime;
-    protected Collider Collider { get; private set; }
     protected Rigidbody Rigidbody { get; private set; }
 
     public uint Damage { get; private set; }
@@ -23,7 +22,6 @@ public class Projectile : MonoBehaviour, IProjectile
     private void Awake()
     {
         Rigidbody = GetComponent<Rigidbody>();
-        Collider = GetComponent<Collider>();
     }
 
     private void Update()
@@ -57,13 +55,11 @@ public class Projectile : MonoBehaviour, IProjectile
         gameObject.SetActive(true);
         enabled = true;
         Rigidbody.isKinematic = false;
-        Collider.enabled = true;
     }
 
     public void Disable()
     {
         Rigidbody.isKinematic = true;
-        Collider.enabled = false;
         enabled = false;
     }
 
@@ -83,7 +79,6 @@ public class Projectile : MonoBehaviour, IProjectile
 
     private void OnDisable()
     {
-        Collider.enabled = false;
         Rigidbody.velocity = Vector3.zero;
         Rigidbody.angularVelocity = Vector3.zero;
     }

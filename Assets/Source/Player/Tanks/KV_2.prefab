@@ -33908,7 +33908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e1865e6c0d26c45862f0ed38106599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minAngle: -40
+  _minAngle: -50
   _maxAngle: 20
   _speed: 70
 --- !u!1 &2449406841648584084 stripped

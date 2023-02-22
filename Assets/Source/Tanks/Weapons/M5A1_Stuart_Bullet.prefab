@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8421696222194702831}
   - component: {fileID: 5071298289207604749}
   - component: {fileID: 6707852147870964945}
-  - component: {fileID: 6910692767234375706}
   - component: {fileID: 8336358380272479604}
   - component: {fileID: 777902348275971651}
   - component: {fileID: 2480649335545716868}
@@ -88,19 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6910692767234375706
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6991472409809941294}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8336358380272479604
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -268,15 +254,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 438534, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.6666667
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 438534, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.6666667
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 438534, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.6666667
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 438534, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,6 +303,34 @@ PrefabInstance:
     - target: {fileID: 438534, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19872520, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19872520, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19872520, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19872520, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19879398, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19898402, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19898402, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19924450, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
       propertyPath: m_Materials.Array.size
