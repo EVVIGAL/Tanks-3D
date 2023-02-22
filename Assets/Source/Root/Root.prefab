@@ -1529,6 +1529,7 @@ GameObject:
   - component: {fileID: 952443116}
   - component: {fileID: 93722027}
   - component: {fileID: 7715395863306242768}
+  - component: {fileID: 8760067895598828043}
   m_Layer: 5
   m_Name: PausePanel
   m_TagString: Untagged
@@ -1612,6 +1613,20 @@ MonoBehaviour:
   _restart: {fileID: 2002815114099652267}
   _toHangar: {fileID: 6871261099058710497}
 --- !u!114 &7715395863306242768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952443114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c37cfa9e42a9d241b786ffcc95ff55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _restart: {fileID: 2002815114099652267}
+  _toHangar: {fileID: 6871261099058710497}
+--- !u!114 &8760067895598828043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3963,6 +3978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06db5620b2e4cf0488cb0a591bbf9e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 1108756729}
   _root: {fileID: 7097204675419378053}
   _data: {fileID: 4547362579411169480}
   _next: {fileID: 1464261629189123437}

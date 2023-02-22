@@ -10,38 +10,27 @@ public static class SaveManager
         string jsonDataString = JsonUtility.ToJson(saveData, true);
         PlayerPrefs.SetString(key, jsonDataString);
 
-#if UNITY_WEBGL && !UNITY_EDITOR
-        if (PlayerAccount.IsAuthorized)
-            PlayerAccount.SetPlayerData(jsonDataString);
-#endif
+        //#if UNITY_WEBGL && !UNITY_EDITOR
+        //        if (PlayerAccount.IsAuthorized)
+        //            PlayerAccount.SetPlayerData(jsonDataString);
+        //#endif
     }
 
     public static T Load<T>(string key)
     {
-        string loadedString = string.Empty;
+        //#if UNITY_WEBGL && !UNITY_EDITOR
+        //        if (PlayerAccount.IsAuthorized)
+        //        {
+        //            PlayerAccount.GetPlayerData((data) => loadedString = data);
 
-#if UNITY_WEBGL && !UNITY_EDITOR
-        if (PlayerAccount.IsAuthorized)
-        {
-            PlayerAccount.GetPlayerData((data) => loadedString = data);
+        //            if (string.IsNullOrEmpty(loadedString))
+        //                return default;
 
-            if (string.IsNullOrEmpty(loadedString))
-                return default;
-
-            return JsonUtility.FromJson<T>(loadedString);
-
-        }
-#endif
-
-        if (PlayerPrefs.HasKey(key))
-        {
-            loadedString = PlayerPrefs.GetString(key);
-            return JsonUtility.FromJson<T>(loadedString);
-        }
-        else
-        {
-            return default;
-        }
+        //            return JsonUtility.FromJson<T>(loadedString);
+        //        }
+        //#endif
+        string loadedString = PlayerPrefs.GetString(key);
+        return JsonUtility.FromJson<T>(loadedString);
     }
 
     public static void SetDate(string key, DateTime value)
