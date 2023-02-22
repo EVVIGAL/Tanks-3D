@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657975, g: 0.49641567, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -440,7 +440,7 @@ PrefabInstance:
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _unit
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1249670175}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _money
       value: 
@@ -4508,7 +4508,7 @@ PrefabInstance:
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _unit
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1629235523}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _money
       value: 
@@ -5517,7 +5517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +20000
+  m_text: +5000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -5700,7 +5700,7 @@ PrefabInstance:
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _unit
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 510200236}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _money
       value: 
@@ -6012,7 +6012,7 @@ MonoBehaviour:
       _name: KV-2
     LastDailyReward: 
     IncomeTaked: 
-    Money: 0
+    Money: 1000
     Medals: 0
     TotalIncome: 0
     LastIncome: 0
@@ -6596,7 +6596,6 @@ MonoBehaviour:
   - {fileID: 590459314}
   - {fileID: 1439092057}
   - {fileID: 1431003294}
-  - {fileID: 917525579}
   - {fileID: 1089925136}
   - {fileID: 1409909254}
 --- !u!114 &849353038
@@ -8108,11 +8107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 733b216898f49b34a92a50b6665b72b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.542086
+      value: -10.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 733b216898f49b34a92a50b6665b72b2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.944292
+      value: 2.14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 733b216898f49b34a92a50b6665b72b2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9237,6 +9236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1201589668}
+  - component: {fileID: 1201589669}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -9277,6 +9277,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1201589669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201589667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e2ebfd5820ce0428b2fa2adda6a946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _environmentSceneName: Forest
 --- !u!1001 &1208739154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10647,7 +10660,7 @@ PrefabInstance:
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _unit
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1842073693}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _money
       value: 
@@ -17449,13 +17462,12 @@ PrefabInstance:
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _unit
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1640279975}
     - target: {fileID: 7032400792789348719, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
       propertyPath: _money
       value: 
       objectReference: {fileID: 1482989044}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c9ffd8563de3e844b90b0f44d892a25, type: 3}
 --- !u!1001 &7236429904106987502
 PrefabInstance:

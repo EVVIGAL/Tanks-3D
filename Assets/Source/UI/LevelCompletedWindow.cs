@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class LevelCompletedWindow : MonoBehaviour
 {
+    [SerializeField] private AudioManager _audioManager;
     [SerializeField] private Root _root;
     [SerializeField] private SaveData _data;
     [SerializeField] private Button _next;
@@ -15,7 +16,7 @@ public class LevelCompletedWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        _next.onClick.AddListener(OnNextButtonClick);
+        _next.onClick.AddListener(ShowAD);
         _restart.onClick.AddListener(OnRestartButtonClick);
         _toHangar.onClick.AddListener(OnGoToHangarButtonClick);
         SetLevel();
@@ -23,7 +24,7 @@ public class LevelCompletedWindow : MonoBehaviour
 
     private void OnDisable()
     {
-        _next.onClick.RemoveListener(OnNextButtonClick);
+        _next.onClick.RemoveListener(ShowAD);
         _restart.onClick.RemoveListener(OnRestartButtonClick);
         _toHangar.onClick.RemoveListener(OnGoToHangarButtonClick);
     }
@@ -47,5 +48,19 @@ public class LevelCompletedWindow : MonoBehaviour
     {
         if (_root.CurrentLevelIndex >= _data.Data.CurrentLevel)
             _data.Data.CurrentLevel = (int)_root.CurrentLevelIndex;
+    }
+
+    private void CloseAd(bool isMute)
+    {
+        _audioManager.Mute(isMute);
+        OnNextButtonClick();
+    }
+
+    private void ShowAD()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        bool temp = _audioManager.IsMute;
+        InterstitialAd.Show(() => _audioManager.Mute(true), (temp) => CloseAd(temp), null, null);
+#endif
     }
 }

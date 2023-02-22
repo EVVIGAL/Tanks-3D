@@ -13,7 +13,10 @@ public class SaveData : MonoBehaviour
 
     private void Awake()
     {
-        Load();
+        Time.timeScale = 1;
+
+        if (PlayerPrefs.HasKey(_saveKey))
+            Load();
 
         if(_choser != null)
             _choser.Init(_data.Units, _data.CurrentTankIndex);
@@ -39,8 +42,8 @@ public class SaveData : MonoBehaviour
     {
         var data = SaveManager.Load<DataHolder>(_saveKey);
 
-        if (data == default)
-            return;
+        //if (data == default)
+        //    return;
 
         _data = data;
     }

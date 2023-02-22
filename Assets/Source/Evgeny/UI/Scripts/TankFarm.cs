@@ -14,18 +14,13 @@ public class TankFarm : MonoBehaviour
 
     private const string _localizationKey = "per hour";
 
-    private Color _upgradeColor;
+    private Color _upgradeColor = new Color(1, 0.5f, 0, 1);
 
     public Unit Unit => _unit;
 
     public float FarmRate => _unit.UnitStat.Farm.Value;
 
     public event UnityAction RateChanged;
-
-    private void Awake()
-    {
-        _upgradeColor = _upgradeButton.GetComponent<Image>().color;
-    }
 
     private void OnEnable()
     {

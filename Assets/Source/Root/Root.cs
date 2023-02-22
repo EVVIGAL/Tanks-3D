@@ -1,6 +1,7 @@
 using UnityEngine.SceneManagement;
 using Cinemachine;
 using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(PlayerTankFactory))]
 public class Root : MonoBehaviour
@@ -16,6 +17,8 @@ public class Root : MonoBehaviour
     [SerializeField] private LevelCompletedWindow _levelCompletedWindow;
     [SerializeField] private GameObject _inputPanel;
     [field: SerializeField] public Wallet PlayerWallet { get; private set; }
+
+    private const float _waitTime = 2.5f;
 
     private PlayerTankFactory _playerTankFactory;
     private PlayerTank _playerTank;
@@ -54,8 +57,7 @@ public class Root : MonoBehaviour
         if (_isGameEnd)
             return;
 
-        _levelCompletedWindow.gameObject.SetActive(true);
-        EndGame();
+        StartCoroutine(CompleteLevel());
     }
 
     public void GameOver()
@@ -78,6 +80,14 @@ public class Root : MonoBehaviour
         _playerTank.Stop();
         _inputPanel.SetActive(false);
         _isGameEnd = true;
+    }
+
+    private IEnumerator CompleteLevel()
+    {
+        yield return new WaitForSeconds(_waitTime);
+        _levelCompletedWindow.gameObject.SetActive(true);
+        EndGame();
+        yield break;
     }
 
     private void OnValidate()
