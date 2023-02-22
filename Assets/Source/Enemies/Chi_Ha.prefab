@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267a942b1eb214f499ac08b6a2f28ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 100
+  <Damage>k__BackingField: 40
   <BulletPushForce>k__BackingField: 20
   <ShootPoint>k__BackingField: {fileID: 3322257705272963697}
   _projectileFactoryBehaviour: {fileID: 1615817126581782933}
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <RateOfFire>k__BackingField: 1
-  <ReloadSpeed>k__BackingField: 2
+  <ReloadSpeed>k__BackingField: 1.5
   <MagazineSize>k__BackingField: 1
   _weaponCompositeBehaviour: {fileID: 6179105953496860627}
 --- !u!114 &8099985616127654217
@@ -255,9 +255,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 500
-  <Armor>k__BackingField: 0
-  _reward: 200
+  <MaxValue>k__BackingField: 400
+  <Armor>k__BackingField: 40
+  _reward: 60
   _deathLayer: 6
   _physicObjects:
   - {fileID: 1615817126581782943}

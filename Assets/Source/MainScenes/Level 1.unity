@@ -179,17 +179,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
   m_PrefabInstance: {fileID: 2300230602029829251}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &891837991293054048 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1408639760334905507, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
-  m_PrefabInstance: {fileID: 2300230602029829251}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d58539889304ca48b74e35439dee43d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &977693558739167273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381,17 +370,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carro_Armato_L6_40
       objectReference: {fileID: 0}
-    - target: {fileID: 1408639760334905514, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.2
+      value: 45.32
       objectReference: {fileID: 0}
     - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -429,10 +414,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7291618622152893167, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
-      propertyPath: _movement
-      value: 
-      objectReference: {fileID: 891837991293054048}
+    - target: {fileID: 5438298284042375940, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: <MagazineSize>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
 --- !u!1001 &2706516914445531384
@@ -445,6 +430,10 @@ PrefabInstance:
     - target: {fileID: 1615817126581782943, guid: f0860169edd2f3646896608d0494f11b, type: 3}
       propertyPath: m_Name
       value: Chi_Ha
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615817126581782943, guid: f0860169edd2f3646896608d0494f11b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1615817126581783017, guid: f0860169edd2f3646896608d0494f11b, type: 3}
       propertyPath: m_RootOrder
@@ -524,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8500310348477021828, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8734242093041060666, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
       propertyPath: m_Enabled
@@ -633,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6479027446971307891, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
@@ -709,7 +698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5519786571723633980, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}

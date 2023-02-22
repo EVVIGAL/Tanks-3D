@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <RateOfFire>k__BackingField: 0.25
   <ReloadSpeed>k__BackingField: 2
-  <MagazineSize>k__BackingField: 10
+  <MagazineSize>k__BackingField: 4
   _weaponCompositeBehaviour: {fileID: 5509166443373827645}
 --- !u!114 &5509166443373827587
 MonoBehaviour:

@@ -2666,7 +2666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69be5472edf2214996917681f1aea8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 100
+  <MaxValue>k__BackingField: 10
   <Armor>k__BackingField: 0
   _reward: 50
   _deathLayer: 6
@@ -2750,7 +2750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 267a942b1eb214f499ac08b6a2f28ebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 100
+  <Damage>k__BackingField: 50
   <BulletPushForce>k__BackingField: 30
   <ShootPoint>k__BackingField: {fileID: 4232334420511605274}
   _projectileFactoryBehaviour: {fileID: 4637389807339948135}

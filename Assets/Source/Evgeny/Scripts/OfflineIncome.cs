@@ -12,12 +12,12 @@ public class OfflineIncome : MonoBehaviour
         _data.Save();
     }
 
-    public void Calculate(int income)
+    public void Calculate(float income)
     {
         if (string.IsNullOrEmpty(_data.Data.IncomeTaked))
             return;
 
-        float incomePerSecond = income / 60;
+        float incomePerSecond = income / 60f;
         DateTime lastSaveTime = DateTime.Parse(_data.Data.IncomeTaked);
         TimeSpan timePassed = DateTime.UtcNow - lastSaveTime;
         int secondPassed = timePassed.Seconds;

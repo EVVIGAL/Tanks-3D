@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <RateOfFire>k__BackingField: 1
-  <ReloadSpeed>k__BackingField: 0.3
+  <ReloadSpeed>k__BackingField: 0.8
   <MagazineSize>k__BackingField: 1
   _weaponCompositeBehaviour: {fileID: 5402271901920017902}
 --- !u!114 &5402271901920017872
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Damage>k__BackingField: 100
-  <BulletPushForce>k__BackingField: 15
+  <BulletPushForce>k__BackingField: 25
   <ShootPoint>k__BackingField: {fileID: 8063021396264197236}
   _projectileFactoryBehaviour: {fileID: 5402271901920017878}
   _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
