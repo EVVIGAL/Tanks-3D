@@ -18,7 +18,7 @@ public class Retreat : Action
 
     public override TaskStatus OnUpdate()
     {
-        if (Vector3.Distance(_startPosition, transform.position) < _distance.Value)
+        if (_startPosition.x > transform.position.x || Vector3.Distance(_startPosition, transform.position) < _distance.Value)
             SelfMovement.Value.Move(_direction);
 
         return TaskStatus.Running;

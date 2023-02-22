@@ -6,6 +6,9 @@ public class Shoot<TObject, TSharedObject> : Action where TObject : Component wh
 {
     public SharedWeapon Weapon;
     public TSharedObject TargetObject;
+    public SharedUInt Amount = 1;
+
+    private uint _currentAmount;
 
     public override TaskStatus OnUpdate()
     {
@@ -13,6 +16,17 @@ public class Shoot<TObject, TSharedObject> : Action where TObject : Component wh
             return TaskStatus.Running;
 
         Weapon.Value.Shoot(TargetObject.Value.transform);
-        return TaskStatus.Success;
+        _currentAmount++;
+
+        if (_currentAmount >= Amount.Value)
+            return TaskStatus.Success;
+
+        return TaskStatus.Running;
+    }
+
+    public override void OnStart()
+    {
+        base.OnStart();
+        _currentAmount = 0;
     }
 }
