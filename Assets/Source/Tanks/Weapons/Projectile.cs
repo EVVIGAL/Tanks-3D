@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent (typeof(Rigidbody))]
-public class Projectile : MonoBehaviour, IProjectile
+public class Projectile : MonoBehaviour
 {
     [SerializeField] private float _radius;
     [SerializeField] private float _castDistance = 1f;
@@ -18,6 +18,13 @@ public class Projectile : MonoBehaviour, IProjectile
     public bool IsActive => gameObject.activeSelf;
 
     protected bool DetectCollisions;
+
+    public void Init(uint damage)
+    {
+        Damage = damage;
+        _runningTime = 0f;
+        DetectCollisions = true;
+    }
 
     private void Awake()
     {
@@ -39,15 +46,6 @@ public class Projectile : MonoBehaviour, IProjectile
         if (Physics.SphereCast(transform.position, _radius, Rigidbody.velocity, out RaycastHit hitInfo, _castDistance, _layer))
             if (hitInfo.transform != transform)
                 OnHit(hitInfo);
-    }
-
-    public void Init(uint damage, Vector3 position, Quaternion rotation, Transform parent = null)
-    {
-        transform.SetPositionAndRotation(position, rotation);
-        transform.parent = parent;
-        Damage = damage;
-        _runningTime = 0f;
-        DetectCollisions = true;
     }
 
     public void Enable()

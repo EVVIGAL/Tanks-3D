@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Shoot<TObject, TSharedObject> : Action where TObject : Component where TSharedObject : SharedVariable<TObject>
 {
-    public SharedWeapon Weapon;
+    public MonoBehaviour WeaponBehaviour;
+    private IWeapon Weapon => (IWeapon)WeaponBehaviour;
+
     public TSharedObject TargetObject;
     public SharedUInt Amount = 1;
 
@@ -12,10 +14,10 @@ public class Shoot<TObject, TSharedObject> : Action where TObject : Component wh
 
     public override TaskStatus OnUpdate()
     {
-        if (Weapon.Value.CanShoot == false)
+        if (Weapon.CanShoot == false)
             return TaskStatus.Running;
 
-        Weapon.Value.Shoot(TargetObject.Value.transform);
+        Weapon.Shoot(TargetObject.Value.transform);
         _currentAmount++;
 
         if (_currentAmount >= Amount.Value)

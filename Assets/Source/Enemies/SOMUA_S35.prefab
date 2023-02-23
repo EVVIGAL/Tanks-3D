@@ -12,13 +12,12 @@ GameObject:
   - component: {fileID: 414494726114176632}
   - component: {fileID: 414494726114176637}
   - component: {fileID: 414494726114176515}
-  - component: {fileID: 414494726114176512}
-  - component: {fileID: 414494726114176639}
   - component: {fileID: 414494726114176629}
   - component: {fileID: 414494726114176628}
-  - component: {fileID: 6716096152765750692}
   - component: {fileID: 7189139034959470300}
   - component: {fileID: 5074578198038454342}
+  - component: {fileID: 3643910778631984893}
+  - component: {fileID: 657644937957297065}
   m_Layer: 0
   m_Name: SOMUA_S35
   m_TagString: Untagged
@@ -79,10 +78,10 @@ MonoBehaviour:
         Alive","Instant":true,"MonoBehaviourHealthSource":0},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(80.5,100)"},"ID":4,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-70.96808,97)"},"ID":5,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"GetNearbyCharacter","NodeData":{"Offset":"(-99.5,110.416664)"},"ID":6,"Name":"Get
         Nearby Character","Instant":true,"SharedFloatRadius":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_viewDistance","IsShared":true,"SinglemValue":40},"SharedCharacterNearbyObjectReturn":{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(159.5,107)"},"ID":7,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.ParallelSelector","NodeData":{"Offset":"(0,120)"},"ID":8,"Name":"Parallel
         Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-160,110)"},"ID":9,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"CharacterInRadius","NodeData":{"Offset":"(-162.797867,108.085266)"},"ID":10,"Name":"Character
-        In Radius","Instant":true,"SharedCharacterTargetObject":{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true},"SharedFloatRadius":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_attackDistance","IsShared":true,"SinglemValue":25}},{"Type":"TurnBarrelCharacter","NodeData":{"Offset":"(-3.5,108)"},"ID":11,"Name":"Turn
+        In Radius","Instant":true,"SharedCharacterTargetObject":{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true},"SharedFloatRadius":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_attackDistance","IsShared":true,"SinglemValue":40}},{"Type":"TurnBarrelCharacter","NodeData":{"Offset":"(-3.5,108)"},"ID":11,"Name":"Turn
         Barrel Character","Instant":true,"SharedBarrelSharedBarrel":{"Type":"SharedBarrel","Name":"_barrel","IsShared":true,"BarrelmValue":1},"SharedCharacterTargetObject":{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true},"SharedAnimationCurveCurve":{"Type":"BehaviorDesigner.Runtime.SharedAnimationCurve","Name":"_barrelAngleTargetDistance","IsShared":true,"AnimationCurvemValue":{"Keys":[[5,0,0,-2.66666675],[20,-40,-2.66666675,-2]],"PreWrapMode":"ClampForever","PostWrapMode":"ClampForever"}},"Single_minAngle":1},{"Type":"ShootCharacter","NodeData":{"Offset":"(146.5,111)"},"ID":12,"Name":"Shoot
-        Character","Instant":true,"SharedWeaponWeapon":{"Type":"SharedWeapon","Name":"_weapon","IsShared":true,"WeaponmValue":2},"SharedCharacterTargetObject":{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(220,110)"},"ID":13,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Self","Children":[{"Type":"CharacterInRadius","NodeData":{"Offset":"(-70,110)"},"ID":14,"Name":"Character
-        In Radius","Instant":true,"SharedCharacterTargetObject":{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true},"SharedFloatRadius":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_characterDistance","IsShared":true,"SinglemValue":20}},{"Type":"Retreat","NodeData":{"Offset":"(82.5,111)"},"ID":15,"Name":"Retreat","Instant":true,"SharedMovementSelfMovement":{"Type":"SharedMovement","Name":null,"MovementmValue":3},"Single_direction":-1,"SharedFloat_distance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_retreatDistance","IsShared":true,"SinglemValue":50}}]}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(84.89364,100)"},"ID":16,"Name":"Idle","Instant":true}]}]}]},"Variables":[{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true},null,{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_attackDistance","IsShared":true,"SinglemValue":25},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_viewDistance","IsShared":true,"SinglemValue":40},{"Type":"SharedMovement","Name":"_movement","IsShared":true,"MovementmValue":4},{"Type":"SharedWeapon","Name":"_weapon","IsShared":true,"WeaponmValue":5},{"Type":"SharedBarrel","Name":"_barrel","IsShared":true,"BarrelmValue":6},{"Type":"BehaviorDesigner.Runtime.SharedAnimationCurve","Name":"_barrelAngleTargetDistance","IsShared":true,"AnimationCurvemValue":{"Keys":[[5,0,0,-2.66666675],[20,-40,-2.66666675,-2]],"PreWrapMode":"ClampForever","PostWrapMode":"ClampForever"}},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_characterDistance","IsShared":true,"SinglemValue":20},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_retreatDistance","IsShared":true,"SinglemValue":50}]}'
+        Character","Instant":true,"MonoBehaviourWeaponBehaviour":2,"SharedCharacterTargetObject":{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true},"SharedUIntAmount":{"Type":"BehaviorDesigner.Runtime.SharedUInt","Name":null,"UInt32mValue":1}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(220,110)"},"ID":13,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Self","Children":[{"Type":"CharacterInRadius","NodeData":{"Offset":"(-70,110)"},"ID":14,"Name":"Character
+        In Radius","Instant":true,"SharedCharacterTargetObject":{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true},"SharedFloatRadius":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_characterDistance","IsShared":true,"SinglemValue":20}},{"Type":"Retreat","NodeData":{"Offset":"(82.5,111)"},"ID":15,"Name":"Retreat","Instant":true,"SharedMovementSelfMovement":{"Type":"SharedMovement","Name":null,"MovementmValue":3},"Single_direction":-1,"SharedFloat_distance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_retreatDistance","IsShared":true,"SinglemValue":50}}]}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(84.89364,100)"},"ID":16,"Name":"Idle","Instant":true}]}]}]},"Variables":[{"Type":"SharedCharacter","Name":"_nearbyCharacter","IsShared":true},null,{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_attackDistance","IsShared":true,"SinglemValue":40},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_viewDistance","IsShared":true,"SinglemValue":40},{"Type":"SharedMovement","Name":"_movement","IsShared":true,"MovementmValue":4},{"Type":"SharedBarrel","Name":"_barrel","IsShared":true,"BarrelmValue":5},{"Type":"BehaviorDesigner.Runtime.SharedAnimationCurve","Name":"_barrelAngleTargetDistance","IsShared":true,"AnimationCurvemValue":{"Keys":[[5,0,0,-2.66666675],[20,-40,-2.66666675,-2]],"PreWrapMode":"ClampForever","PostWrapMode":"ClampForever"}},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_characterDistance","IsShared":true,"SinglemValue":20},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_retreatDistance","IsShared":true,"SinglemValue":50}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -91,10 +90,9 @@ MonoBehaviour:
         unityObjects:
         - {fileID: 7189139034959470300}
         - {fileID: 7549444536431237377}
-        - {fileID: 6716096152765750692}
+        - {fileID: 5074578198038454342}
         - {fileID: 414494726114176515}
         - {fileID: 414494726114176515}
-        - {fileID: 6716096152765750692}
         - {fileID: 7549444536431237377}
         byteData: 
         byteDataArray: 
@@ -133,37 +131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSpeed: 5
   _acceleration: 2
---- !u!114 &414494726114176512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414494726114176522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a31b5e37a96213c40b28c6baa71db577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectile: {fileID: 777902348275971651, guid: 34a39a56e8d84b749af75197790c1c6f, type: 3}
-  _poolCapacity: 2
---- !u!114 &414494726114176639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414494726114176522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 267a942b1eb214f499ac08b6a2f28ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 100
-  <BulletPushForce>k__BackingField: 20
-  <ShootPoint>k__BackingField: {fileID: 1390931718802217330}
-  _projectileFactoryBehaviour: {fileID: 414494726114176512}
-  _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
 --- !u!114 &414494726114176629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,22 +164,6 @@ MonoBehaviour:
   _minRotateSpeed: 20
   _maxRotateSpeed: 90
   _movementBehaviour: {fileID: 414494726114176515}
---- !u!114 &6716096152765750692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414494726114176522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd175ff7e69cd1f488c804a16e6ee111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <RateOfFire>k__BackingField: 1
-  <ReloadSpeed>k__BackingField: 2
-  <MagazineSize>k__BackingField: 1
-  _weaponCompositeBehaviour: {fileID: 5074578198038454342}
 --- !u!114 &7189139034959470300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +198,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _barrel: {fileID: 7549444536431237377}
+  _shootPoint: {fileID: 1390931718802217330}
+  _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
+--- !u!114 &3643910778631984893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414494726114176522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59ebba1a56d81d44a17f82f6c75747b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RateOfFire>k__BackingField: 1
+  <ReloadSpeed>k__BackingField: 1
+  <MagazineSize>k__BackingField: 1
+--- !u!114 &657644937957297065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414494726114176522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _template: {fileID: 777902348275971651, guid: 869665f648fc4f24e866e6622e263798, type: 3}
+  _poolCapacity: 3
+  <Damage>k__BackingField: 100
 --- !u!1 &1356370840226356079
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,8 @@ public class ArtBlowSkill : Skill
         centerOfScreen.z = 0f;
         centerOfScreen.y = _spawnHeight;
         centerOfScreen.x += _xOffset;
-        IProjectile newBomb = Instantiate(_artBlowTemplate);
-        newBomb.Init(_damage, centerOfScreen, Quaternion.LookRotation(Vector3.right));
+        Projectile newBomb = Instantiate(_artBlowTemplate);
+        newBomb.transform.SetPositionAndRotation(centerOfScreen, Quaternion.LookRotation(Vector3.right));
+        newBomb.Init(_damage);
     }
 }

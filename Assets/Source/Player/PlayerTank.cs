@@ -1,12 +1,12 @@
 using UnityEngine;
 
-[RequireComponent (typeof(Movement), typeof(PlayerHealth), typeof(DefaultWeapon))]
+[RequireComponent (typeof(Movement), typeof(PlayerHealth), typeof(ProjectilePool))]
 [RequireComponent (typeof(UIInput), typeof(PlayerInput))]
 public class PlayerTank : MonoBehaviour
 {
     private Movement _movement;
     private PlayerHealth _health;
-    private DefaultWeapon _weapon;
+    private ProjectilePool _projectile;
     private PlayerInput _playerInput;
 
     public UIInput UIInput { get; private set; }
@@ -15,7 +15,7 @@ public class PlayerTank : MonoBehaviour
     {
         _movement = GetComponent<Movement>();
         _health = GetComponent<PlayerHealth>();
-        _weapon = GetComponent<DefaultWeapon>();
+        _projectile = GetComponent<ProjectilePool>();
         UIInput = GetComponent<UIInput>();
         _playerInput = GetComponent<PlayerInput>();
     }
@@ -24,7 +24,7 @@ public class PlayerTank : MonoBehaviour
     {
         _movement.Init(moveSpeed);
         _health.Init(maxHealth, armor, root, healthViewBehaviour);
-        _weapon.Init(damage);
+        _projectile.Init(damage);
     }
 
     public void Stop()

@@ -2,7 +2,7 @@ using Cinemachine;
 using UnityEngine;
 
 [RequireComponent (typeof(CinemachineImpulseSource))]
-public class PlayerWeaponComposite : WeaponComposite
+public class PlayerWeapon : Weapon
 {
     private CinemachineImpulseSource _impulseSource;
 
@@ -11,7 +11,7 @@ public class PlayerWeaponComposite : WeaponComposite
         _impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
-    protected override void OnShoot(Transform target)
+    protected override void OnShoot()
     {
         _impulseSource.GenerateImpulse();
     }

@@ -12,8 +12,11 @@ public class BombShoot : Action
     public override TaskStatus OnUpdate()
     {
         GameObject newBomb = GameObject.Instantiate(_bombTemplate.Value);
-        if (newBomb.TryGetComponent(out IProjectile projectile))
-            projectile.Init(_damage.Value, _shootPoint.Value, _rotation.Value);
+        if (newBomb.TryGetComponent(out Projectile projectile))
+        {
+            projectile.transform.SetPositionAndRotation(_shootPoint.Value, _rotation.Value);
+            projectile.Init(_damage.Value);
+        }
 
         return TaskStatus.Success;
     }
