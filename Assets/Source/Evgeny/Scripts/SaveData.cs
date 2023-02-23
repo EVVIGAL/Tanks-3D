@@ -1,3 +1,4 @@
+using Agava.YandexGames;
 using UnityEngine;
 using System;
 
@@ -18,7 +19,9 @@ public class SaveData : MonoBehaviour
         if (PlayerPrefs.HasKey(_saveKey))
             Load();
 
-        if(_choser != null)
+        LoadYandex();
+
+        if (_choser != null)
             _choser.Init(_data.Units, _data.CurrentTankIndex);
 
         if (_root != null)
@@ -29,6 +32,7 @@ public class SaveData : MonoBehaviour
 
     private void OnDisable()
     {
+        SaveYandex();
         Save();
     }
 
@@ -41,11 +45,36 @@ public class SaveData : MonoBehaviour
     public void Load()
     {
         var data = SaveManager.Load<DataHolder>(_saveKey);
-
-        //if (data == default)
-        //    return;
-
         _data = data;
+    }
+
+    private void SaveYandex()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        string jsonDataString = JsonUtility.ToJson(_data, true);
+
+        if (PlayerAccount.IsAuthorized)
+            PlayerAccount.SetPlayerData(jsonDataString);
+
+        Debug.Log("Saved = " + jsonDataString);
+#endif
+    }
+
+    private void LoadYandex()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        if (PlayerAccount.IsAuthorized)
+        {
+            string loadedString = "";
+            PlayerAccount.GetPlayerData((data) => loadedString = data);
+
+            if (loadedString == "")
+                return;
+
+            _data = JsonUtility.FromJson<DataHolder>(loadedString);
+            Debug.Log("Loaded = " + jsonDataString);
+        }
+#endif
     }
 }
 

@@ -40,6 +40,7 @@ public class DailyReward : MonoBehaviour
     {
         _data.Data.LastDailyReward = DateTime.UtcNow.ToString();
         _money.Add(_rewardValue);
+        _data.Data.ToolsAmount++;
         gameObject.SetActive(false);
     }
 }

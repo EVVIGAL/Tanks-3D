@@ -7,6 +7,7 @@ public class GameOverWindow : MonoBehaviour
     [SerializeField] private Button _restart;
     [SerializeField] private Button _toHangar;
     [SerializeField] private Button _restore;
+    [SerializeField] private LoadPanel _loadPanel;
 
     private const int _hubSceneIndex = 1;
 
@@ -26,12 +27,14 @@ public class GameOverWindow : MonoBehaviour
 
     public void OnRestartButtonClick()
     {
-        SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
+        _loadPanel.gameObject.SetActive(true);
+        _loadPanel.Load(1, () => SceneManager.LoadScene(SceneManager.GetSceneAt(0).name));
     }
 
     public void OnGoToHangarButtonClick()
     {
-        SceneManager.LoadScene(_hubSceneIndex);
+        _loadPanel.gameObject.SetActive(true);
+        _loadPanel.Load(1, () => SceneManager.LoadScene(_hubSceneIndex));
     }
 
     public void OnRestoreButtonClick()
