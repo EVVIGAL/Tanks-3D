@@ -51,7 +51,7 @@ Material:
     - _CelPrimaryMode: 1
     - _Cull: 2
     - _DstBlend: 0
-    - _FlatRimEdgeSmoothness: 0.43
+    - _FlatRimEdgeSmoothness: 1
     - _FlatRimLightAlign: 0
     - _FlatRimSize: 0.124
     - _FlatSpecularEdgeSmoothness: 0
@@ -69,9 +69,9 @@ Material:
     - _OverrideLightmapDir: 0
     - _QueueOffset: 0
     - _RimEnabled: 1
-    - _SelfShadingSize: 0.839
+    - _SelfShadingSize: 0.854
     - _SelfShadingSizeExtra: 0.6
-    - _ShadowEdgeSize: 0.056
+    - _ShadowEdgeSize: 0.072
     - _ShadowEdgeSizeExtra: 0.05
     - _SpecularEnabled: 0
     - _SrcBlend: 1

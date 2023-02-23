@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3407151766272929219}
   - component: {fileID: 624968126611200265}
   - component: {fileID: 9138393111483393730}
-  - component: {fileID: 9138393111483393729}
   - component: {fileID: 4732766576837236821}
   m_Layer: 10
   m_Name: Bomba
@@ -20,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1794537046124388966
 Transform:
   m_ObjectHideFlags: 0
@@ -103,20 +102,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &9138393111483393729
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417694088348940508}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 3.6
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.018113557}
 --- !u!114 &4732766576837236821
 MonoBehaviour:
   m_ObjectHideFlags: 0

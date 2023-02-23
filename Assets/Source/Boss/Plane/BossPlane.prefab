@@ -1351,7 +1351,7 @@ MonoBehaviour:
   _smoke: {fileID: 2786293901495519949}
   _smokeAppearanceHealth: 50
   _fire: {fileID: 2786293901002402650}
-  _fireAppearanceHealth: 20
+  _fireAppearanceHealth: 25
 --- !u!114 &805946084586008670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1367,7 +1367,7 @@ MonoBehaviour:
   _smoke: {fileID: 2786293901000604503}
   _smokeAppearanceHealth: 50
   _fire: {fileID: 2786293899624586522}
-  _fireAppearanceHealth: 20
+  _fireAppearanceHealth: 25
 --- !u!114 &805946084586008668
 MonoBehaviour:
   m_ObjectHideFlags: 0

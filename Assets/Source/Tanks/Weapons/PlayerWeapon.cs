@@ -13,6 +13,7 @@ public class PlayerWeapon : Weapon
 
     protected override void OnShoot()
     {
+        base.OnShoot();
         _impulseSource.GenerateImpulse();
     }
 }
