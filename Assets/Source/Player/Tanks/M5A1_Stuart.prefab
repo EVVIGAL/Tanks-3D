@@ -13,14 +13,13 @@ GameObject:
   - component: {fileID: 5509166443373827590}
   - component: {fileID: 5509166443373827586}
   - component: {fileID: 5509166443373827591}
-  - component: {fileID: 5509166443373827589}
   - component: {fileID: 5509166443373827615}
   - component: {fileID: 5509166443373827613}
   - component: {fileID: 5509166443373827612}
-  - component: {fileID: 5509166443373827644}
-  - component: {fileID: 5509166443373827587}
-  - component: {fileID: 5509166443373827645}
   - component: {fileID: 3860515262313019990}
+  - component: {fileID: 5509166443373827645}
+  - component: {fileID: 5285824235165827440}
+  - component: {fileID: 2379123123887425666}
   m_Layer: 0
   m_Name: M5A1_Stuart
   m_TagString: Untagged
@@ -64,8 +63,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 1
   m_Radius: 0.6
-  m_SlopeLimit: 60
-  m_StepOffset: 0.5
+  m_SlopeLimit: 10
+  m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.68, z: 1.5}
@@ -82,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementBehaviour: {fileID: 5509166443373827591}
-  _weaponBehaviour: {fileID: 5509166443373827644}
+  _weaponBehaviour: {fileID: 5509166443373827645}
   _barrel: {fileID: 7848604149260897897}
 --- !u!114 &5509166443373827586
 MonoBehaviour:
@@ -97,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementBehaviour: {fileID: 5509166443373827591}
-  _weaponBehaviour: {fileID: 5509166443373827644}
+  _weaponBehaviour: {fileID: 5509166443373827645}
   _barrel: {fileID: 7848604149260897897}
 --- !u!114 &5509166443373827591
 MonoBehaviour:
@@ -113,20 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSpeed: 10
   _acceleration: 5
---- !u!114 &5509166443373827589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5509166443373827594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a31b5e37a96213c40b28c6baa71db577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectile: {fileID: 777902348275971651, guid: 34a39a56e8d84b749af75197790c1c6f, type: 3}
-  _poolCapacity: 10
 --- !u!114 &5509166443373827615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,51 +193,6 @@ MonoBehaviour:
   _smokeAppearanceHealth: 50
   _fire: {fileID: 5671181882218998011}
   _fireAppearanceHealth: 20
---- !u!114 &5509166443373827644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5509166443373827594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd175ff7e69cd1f488c804a16e6ee111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <RateOfFire>k__BackingField: 0.25
-  <ReloadSpeed>k__BackingField: 2
-  <MagazineSize>k__BackingField: 10
-  _weaponCompositeBehaviour: {fileID: 5509166443373827645}
---- !u!114 &5509166443373827587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5509166443373827594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 267a942b1eb214f499ac08b6a2f28ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 100
-  <BulletPushForce>k__BackingField: 30
-  <ShootPoint>k__BackingField: {fileID: 7848604149462533230}
-  _projectileFactoryBehaviour: {fileID: 5509166443373827589}
-  _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
---- !u!114 &5509166443373827645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5509166443373827594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 263f75dd2611c374ea07b3060889141c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3860515262313019990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +210,51 @@ MonoBehaviour:
   _healthViewBehaviour: {fileID: 0}
   _turretExplosion: {fileID: 7848604148408786299}
   _smokeDamageView: {fileID: 5509166443373827612}
+--- !u!114 &5509166443373827645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509166443373827594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263f75dd2611c374ea07b3060889141c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootPoint: {fileID: 7848604149462533230}
+  _force: 20
+  _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
+--- !u!114 &5285824235165827440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509166443373827594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _template: {fileID: 777902348275971651, guid: 34a39a56e8d84b749af75197790c1c6f, type: 3}
+  _poolCapacity: 1
+  <Damage>k__BackingField: 1
+--- !u!114 &2379123123887425666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509166443373827594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59ebba1a56d81d44a17f82f6c75747b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RateOfFire>k__BackingField: 1
+  <ReloadSpeed>k__BackingField: 1
+  <MagazineSize>k__BackingField: 1
 --- !u!1 &5509166443557935332
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,26 +1,42 @@
 using UnityEngine;
 
-[RequireComponent(typeof(DefaultWeapon))]
-public class BotTankWeapon : MonoBehaviour, IWeaponComposite
+[RequireComponent(typeof(WeaponReloader), typeof(ProjectilePool))]
+public class BotTankWeapon : MonoBehaviour, IWeapon
 {
     [SerializeField] private Barrel _barrel;
+    [SerializeField] private Transform _shootPoint;
+    [SerializeField] private ParticleSystem _shootFX;
 
-    private DefaultWeapon _defaultWeapon;
+    private WeaponReloader _weaponReloader;
+    private ProjectilePool _projectilePool;
+
+    public bool CanShoot => _weaponReloader.CanShoot;
 
     private void Awake()
     {
-        _defaultWeapon = GetComponent<DefaultWeapon>();
+        _weaponReloader = GetComponent<WeaponReloader>();
+        _projectilePool = GetComponent<ProjectilePool>();
     }
 
     public void Shoot(Transform target)
     {
-        _defaultWeapon.Reload();
+        if (_weaponReloader.TryShoot() == false)
+            return;
+
         float barrelAngle = _barrel.transform.localEulerAngles.x;
         barrelAngle = barrelAngle > 180f ? barrelAngle - 360f : barrelAngle;
         barrelAngle *= -1f;
-        Vector3 pushForce = GrenadeThrower.CalculatePushForce2(_defaultWeapon.ShootPoint, target.position, barrelAngle);
-        _defaultWeapon.Shoot(null, pushForce);
+        Vector3 force = GrenadeThrower.CalculatePushForce2(_shootPoint, target.position, barrelAngle);
+
+        Projectile projectile = _projectilePool.Create(_shootPoint, _shootPoint.position, _shootPoint.rotation);
+        projectile.Push(force);
+
+        OnShoot();
     }
 
-    public void Reload() { }
+    protected virtual void OnShoot()
+    {
+        if (_shootFX != null)
+            Instantiate(_shootFX, _shootPoint.position, _shootPoint.rotation);
+    }
 }

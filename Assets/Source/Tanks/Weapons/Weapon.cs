@@ -1,68 +1,37 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
+[RequireComponent (typeof(WeaponReloader), typeof(ProjectilePool))]
 public class Weapon : MonoBehaviour, IWeapon
 {
-    [field: SerializeField] public float RateOfFire { get; private set; }
-    [field: SerializeField] public float ReloadSpeed { get; private set; }
-    [field: SerializeField] public uint MagazineSize { get; private set; }
+    [SerializeField] private Transform _shootPoint;
+    [SerializeField] private float _force;
+    [SerializeField] private ParticleSystem _shootFX;
 
-    [SerializeField] private MonoBehaviour _weaponCompositeBehaviour;
-    private IWeaponComposite _weaponComposite => (IWeaponComposite)_weaponCompositeBehaviour;
+    private WeaponReloader _weaponReloader;
+    private ProjectilePool _projectilePool;
 
-    public bool CanShoot => IsEmpty == false && _isReloading == false;
-
-    public bool IsEmpty => _ammoInMagazine == 0;
-
-    private uint _ammoInMagazine;
-    private bool _isReloading;
+    public bool CanShoot => _weaponReloader.CanShoot;
 
     private void Awake()
     {
-        _ammoInMagazine = MagazineSize;
+        _weaponReloader = GetComponent<WeaponReloader>();
+        _projectilePool = GetComponent<ProjectilePool>();
     }
 
-    public void Shoot(Transform target = null)
+    public void Shoot(Transform target)
     {
-        if (CanShoot == false)
-            throw new InvalidOperationException();
+        if (_weaponReloader.TryShoot() == false)
+            return;
 
-        _weaponComposite.Shoot(target);
-        _isReloading = true;
-        _ammoInMagazine--;
-        Reload();
+        Projectile projectile = _projectilePool.Create(_shootPoint, _shootPoint.position, _shootPoint.rotation);
+        projectile.Push(_force);
+
+        OnShoot();
     }
 
-    private void Reload()
+    protected virtual void OnShoot()
     {
-        if (IsEmpty)
-        {
-            _weaponComposite.Reload();
-            StartCoroutine(Wait(ReloadSpeed, () =>
-            {
-                _ammoInMagazine = MagazineSize;
-                _isReloading = false;
-            }));
-        }
-        else
-        {
-            StartCoroutine(Wait(RateOfFire, () => _isReloading = false));
-        }
-    }
-
-    private IEnumerator Wait(float time, Action onSuccessCallback)
-    {
-        yield return new WaitForSeconds(time);
-        onSuccessCallback?.Invoke();
-    }
-
-    private void OnValidate()
-    {
-        if (_weaponCompositeBehaviour && !(_weaponCompositeBehaviour is IWeaponComposite))
-        {
-            Debug.LogError(nameof(_weaponCompositeBehaviour) + " needs to implement " + nameof(IWeaponComposite));
-            _weaponCompositeBehaviour = null;
-        }
+        if (_shootFX != null)
+            Instantiate(_shootFX, _shootPoint.position, _shootPoint.rotation);
     }
 }

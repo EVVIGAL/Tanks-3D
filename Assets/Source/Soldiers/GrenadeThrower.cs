@@ -1,40 +1,53 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(DefaultWeapon))]
-public class GrenadeThrower : MonoBehaviour
+[RequireComponent(typeof(WeaponReloader), typeof(ProjectilePool), typeof(CharacterAnimator))]
+public class GrenadeThrower : MonoBehaviour, IWeapon
 {
     [SerializeField] private float _angle;
+    [SerializeField] private Transform _shootPoint;
 
+    private CharacterAnimator _characterAnimator;
+    private WeaponReloader _weaponReloader;
+    private ProjectilePool _projectilePool;
     private Transform _target;
-    private DefaultWeapon _defaultWeapon;
+    private Projectile _projectile;
+
+    public bool CanShoot => _weaponReloader.CanShoot;
 
     private void Awake()
     {
-        _defaultWeapon = GetComponent<DefaultWeapon>();
+        _weaponReloader = GetComponent<WeaponReloader>();
+        _projectilePool = GetComponent<ProjectilePool>();
+        _characterAnimator = GetComponent<CharacterAnimator>();
     }
 
     public void Shoot(Transform target)
     {
+        if (_weaponReloader.TryShoot() == false)
+            return;
+
+        _characterAnimator.Shoot();
         _target = target;
     }
 
     public void TakeUp()
     {
-        _defaultWeapon.Reload();
-        _defaultWeapon.Projectile.Disable();
+        _projectile = _projectilePool.Create(_shootPoint, _shootPoint.position, _shootPoint.rotation);
+        _projectile.Disable();
     }
 
     public void Throw()
     {
-        _defaultWeapon.Shoot(_target, CalculatePushForce(_defaultWeapon.ShootPoint, _target.position, _angle));
+        Vector3 force = CalculatePushForce(_shootPoint, _target.position, _angle);
+        _projectile.Push(force);
         StartCoroutine(EnableProjectile());
     }
 
     private IEnumerator EnableProjectile()
     {
         yield return new WaitForSeconds(0.25f);
-        _defaultWeapon.Projectile.Enable();
+        _projectile.Enable();
     }
 
     public static Vector3 CalculatePushForce(Transform startPoint, Vector3 target, float angle)

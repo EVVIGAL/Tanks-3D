@@ -160,14 +160,13 @@ GameObject:
   - component: {fileID: 5402271901920017877}
   - component: {fileID: 5402271901920017873}
   - component: {fileID: 5402271901920017876}
-  - component: {fileID: 5402271901920017878}
   - component: {fileID: 5402271901920017868}
   - component: {fileID: 5402271901920017870}
   - component: {fileID: 5402271901920017871}
-  - component: {fileID: 5402271901920017903}
-  - component: {fileID: 5402271901920017872}
-  - component: {fileID: 5402271901920017902}
   - component: {fileID: 4539559888642290520}
+  - component: {fileID: 5402271901920017902}
+  - component: {fileID: 5861441059092535898}
+  - component: {fileID: 5033057833727516503}
   m_Layer: 0
   m_Name: T_34_76
   m_TagString: Untagged
@@ -210,8 +209,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 1
   m_Radius: 0.6
-  m_SlopeLimit: 60
-  m_StepOffset: 0.5
+  m_SlopeLimit: 10
+  m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.68, z: 2}
@@ -228,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementBehaviour: {fileID: 5402271901920017876}
-  _weaponBehaviour: {fileID: 5402271901920017903}
+  _weaponBehaviour: {fileID: 5402271901920017902}
   _barrel: {fileID: 4122581807604080634}
 --- !u!114 &5402271901920017873
 MonoBehaviour:
@@ -243,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementBehaviour: {fileID: 5402271901920017876}
-  _weaponBehaviour: {fileID: 5402271901920017903}
+  _weaponBehaviour: {fileID: 5402271901920017902}
   _barrel: {fileID: 4122581807604080634}
 --- !u!114 &5402271901920017876
 MonoBehaviour:
@@ -259,20 +258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSpeed: 10
   _acceleration: 5
---- !u!114 &5402271901920017878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5402271901920017881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a31b5e37a96213c40b28c6baa71db577, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectile: {fileID: 777902348275971651, guid: 34a39a56e8d84b749af75197790c1c6f, type: 3}
-  _poolCapacity: 3
 --- !u!114 &5402271901920017868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,51 +339,6 @@ MonoBehaviour:
   _smokeAppearanceHealth: 50
   _fire: {fileID: 5204140004699521832}
   _fireAppearanceHealth: 20
---- !u!114 &5402271901920017903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5402271901920017881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd175ff7e69cd1f488c804a16e6ee111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <RateOfFire>k__BackingField: 1
-  <ReloadSpeed>k__BackingField: 1
-  <MagazineSize>k__BackingField: 1
-  _weaponCompositeBehaviour: {fileID: 5402271901920017902}
---- !u!114 &5402271901920017872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5402271901920017881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 267a942b1eb214f499ac08b6a2f28ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <Damage>k__BackingField: 100
-  <BulletPushForce>k__BackingField: 15
-  <ShootPoint>k__BackingField: {fileID: 8063021396264197236}
-  _projectileFactoryBehaviour: {fileID: 5402271901920017878}
-  _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
---- !u!114 &5402271901920017902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5402271901920017881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 263f75dd2611c374ea07b3060889141c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4539559888642290520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,6 +356,51 @@ MonoBehaviour:
   _healthViewBehaviour: {fileID: 0}
   _turretExplosion: {fileID: 6341057492339107875}
   _smokeDamageView: {fileID: 5402271901920017871}
+--- !u!114 &5402271901920017902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402271901920017881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263f75dd2611c374ea07b3060889141c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootPoint: {fileID: 8063021396264197236}
+  _force: 20
+  _shootFX: {fileID: 19819752, guid: 8deb1def3de25b04b8371070fbb372fe, type: 3}
+--- !u!114 &5861441059092535898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402271901920017881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _template: {fileID: 777902348275971651, guid: 34a39a56e8d84b749af75197790c1c6f, type: 3}
+  _poolCapacity: 3
+  <Damage>k__BackingField: 100
+--- !u!114 &5033057833727516503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402271901920017881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59ebba1a56d81d44a17f82f6c75747b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RateOfFire>k__BackingField: 1
+  <ReloadSpeed>k__BackingField: 1
+  <MagazineSize>k__BackingField: 1
 --- !u!1 &5402271902780210575
 GameObject:
   m_ObjectHideFlags: 0
