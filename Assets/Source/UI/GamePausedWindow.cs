@@ -6,6 +6,7 @@ public class GamePausedWindow : MonoBehaviour
 {
     [SerializeField] private Button _restart;
     [SerializeField] private Button _toHangar;
+    [SerializeField] private LoadPanel _loadPanel;
 
     private const int _hubSceneIndex = 1;
 
@@ -23,11 +24,13 @@ public class GamePausedWindow : MonoBehaviour
 
     public void OnRestartButtonClick()
     {
-        SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
+        _loadPanel.gameObject.SetActive(true);
+        _loadPanel.Load(1, () => SceneManager.LoadScene(SceneManager.GetSceneAt(0).name));
     }
 
     public void OnGoToHangarButtonClick()
     {
-        SceneManager.LoadScene(_hubSceneIndex);
+        _loadPanel.gameObject.SetActive(true);
+        _loadPanel.Load(1, () => SceneManager.LoadScene(_hubSceneIndex));      
     }
 }

@@ -1,3 +1,4 @@
+using Lean.Localization;
 using UnityEngine;
 using TMPro;
 
@@ -8,14 +9,16 @@ public class FinalReward : MonoBehaviour
     [SerializeField] private SaveData _data;
     [SerializeField] private Wallet _wallet;
 
-    private const string _rewardStr = "Your reward: ";
+    private const string _rewardKey = "Your reward";
 
     private TextMeshProUGUI _text;
     private int _reward;
+    private string _rewardStr;
 
     private void Awake()
     {
         _text = GetComponent<TextMeshProUGUI>();
+        _rewardStr = LeanLocalization.GetTranslationText(_rewardKey);
     }
 
     private void OnEnable()

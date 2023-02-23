@@ -9,6 +9,7 @@ public class LevelButton : MonoBehaviour
 {
     [SerializeField] private AudioManager _audioManager;
     [SerializeField] private InterAd _ad;
+    [SerializeField] private LoadPanel _loadPanel;
     [SerializeField] private int _levelToLoad;
 
     private TextMeshProUGUI _text;
@@ -38,8 +39,14 @@ public class LevelButton : MonoBehaviour
 #if UNITY_WEBGL && !UNITY_EDITOR
         InterstitialAd.Show(() => _audioManager.Mute(true), (temp) => LoadScene(temp), (string error) => LoadScene(temp), () => LoadScene(temp));
 #else
-        LoadScene(temp);
+        ActivateLoadPanel(temp);
 #endif
+    }
+
+    private void ActivateLoadPanel(bool isMute)
+    {
+        _loadPanel.gameObject.SetActive(true);
+        _loadPanel.Load(1, () => LoadScene(isMute));
     }
 
     private void LoadScene(bool isMute)
