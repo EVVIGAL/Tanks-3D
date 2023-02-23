@@ -10,7 +10,7 @@ public class RewardButton : MonoBehaviour
 
     private const int _lvlMultiplier = 20;
 
-    private int _reward = 200;
+    private int _reward = 5000;
     private Button _button;
 
     private void Awake()

@@ -6,7 +6,6 @@ using TMPro;
 [RequireComponent(typeof(Slider))]
 public class WinReward : MonoBehaviour
 {
-    [SerializeField] private Button _button;
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private float _speed;
     [SerializeField] private float _minX3;
@@ -27,8 +26,6 @@ public class WinReward : MonoBehaviour
 
     private void OnEnable()
     {
-        _button.onClick.AddListener(() => Take());
-
         if (_coroutine != null)
         {
             StopCoroutine(_coroutine);
@@ -41,8 +38,6 @@ public class WinReward : MonoBehaviour
 
     private void OnDisable()
     {
-        _button.onClick.RemoveListener(() => Take());
-
         if (_coroutine != null)
             StopCoroutine(_coroutine);
     }
