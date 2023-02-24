@@ -10,7 +10,7 @@ public class SmokeDamageView : MonoBehaviour, IHealthView
     public void Show(float health, float maxHealth)
     {
         float remainderHealthInPercent = health / maxHealth * 100f;
-        _smoke.gameObject.SetActive(remainderHealthInPercent <= _smokeAppearanceHealth);
+        _smoke.gameObject.SetActive(remainderHealthInPercent <= _smokeAppearanceHealth && remainderHealthInPercent > _fireAppearanceHealth);
         _fire.gameObject.SetActive(remainderHealthInPercent <= _fireAppearanceHealth);
     }
 }

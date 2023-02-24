@@ -319,7 +319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3064823358987014076, guid: 583809a28d8c6bb469f7d4a01778a292, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.96
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3064823358987014076, guid: 583809a28d8c6bb469f7d4a01778a292, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1154,7 +1154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ba9fe25b8d6d840801c5fe369cc35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _button: {fileID: 114882525}
   _text: {fileID: 0}
   _speed: 1
   _minX3: 0.4
@@ -1704,7 +1703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402271901920017883, guid: 1bdd7cbfb11c5f143bd209f55503da98, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.38
+      value: 12.39
       objectReference: {fileID: 0}
     - target: {fileID: 5402271901920017883, guid: 1bdd7cbfb11c5f143bd209f55503da98, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2789,7 +2788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ba9fe25b8d6d840801c5fe369cc35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _button: {fileID: 977693558759563252}
   _text: {fileID: 0}
   _speed: 1
   _minX3: 0.4
@@ -3814,6 +3812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06db5620b2e4cf0488cb0a591bbf9e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 0}
   _root: {fileID: 8065701810973243820}
   _data: {fileID: 0}
   _next: {fileID: 114882525}
@@ -4251,13 +4250,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Matilda_II
       objectReference: {fileID: 0}
+    - target: {fileID: 1667956567454966548, guid: 9bd342eb4934da94fb1d046d770b7d5d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1667956567454966550, guid: 9bd342eb4934da94fb1d046d770b7d5d, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1667956567454966550, guid: 9bd342eb4934da94fb1d046d770b7d5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.57
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1667956567454966550, guid: 9bd342eb4934da94fb1d046d770b7d5d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6000,6 +6003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoldierWithRPG
       objectReference: {fileID: 0}
+    - target: {fileID: 8500310348477021828, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9132450762494633022, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6208,7 +6215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5509166443373827592, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20.9
+      value: 9.82
       objectReference: {fileID: 0}
     - target: {fileID: 5509166443373827592, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6465,7 +6472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8065701810350265108}
   m_LocalRotation: {x: -1.222587e-22, y: 0.00000011219699, z: 1.3717058e-29, w: 1}
-  m_LocalPosition: {x: 30.569996, y: 5, z: -17}
+  m_LocalPosition: {x: 12.499997, y: 5, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7795,7 +7802,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8065701812109340062}
   m_LocalRotation: {x: -1.222587e-22, y: 0.00000011219699, z: 1.3717058e-29, w: 1}
-  m_LocalPosition: {x: 30.569996, y: 5, z: -17}
+  m_LocalPosition: {x: 12.499997, y: 5, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
