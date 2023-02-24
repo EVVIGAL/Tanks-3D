@@ -22,7 +22,8 @@ public class TakeButton : MonoBehaviour
     [SerializeField] private int _upgradeCost;
     [SerializeField] private int _upgradeCostIncrease;
 
-    private Color _upgradeColor;
+    private Color _upgradeColor = new Color(1, 0.5f, 0, 1);
+
     private Button _button;
     private float _currentValue;
     private float _income;
@@ -32,7 +33,6 @@ public class TakeButton : MonoBehaviour
     private void Awake()
     {
         _button = GetComponent<Button>();
-        _upgradeColor = _upgradeButton.GetComponent<Image>().color;
     }
 
     private void OnEnable()

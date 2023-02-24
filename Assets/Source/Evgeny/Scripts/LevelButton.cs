@@ -35,23 +35,22 @@ public class LevelButton : MonoBehaviour
 
     private void ShowAd()
     {
-        bool temp = _audioManager.IsMute;
 #if UNITY_WEBGL && !UNITY_EDITOR
-        InterstitialAd.Show(() => _audioManager.Mute(true), (temp) => LoadScene(temp), (string error) => LoadScene(temp), () => LoadScene(temp));
+        InterstitialAd.Show(() => _audioManager.Mute(true), (bool _) => ActivateLoadPanel(), (string error) => ActivateLoadPanel(), () => ActivateLoadPanel());
 #else
-        ActivateLoadPanel(temp);
+        ActivateLoadPanel();
 #endif
     }
 
-    private void ActivateLoadPanel(bool isMute)
+    private void ActivateLoadPanel()
     {
         _loadPanel.gameObject.SetActive(true);
-        _loadPanel.Load(1, () => LoadScene(isMute));
+        _loadPanel.Load(1, () => LoadScene());
     }
 
-    private void LoadScene(bool isMute)
+    private void LoadScene()
     {
-        _audioManager.Mute(isMute);
+        _audioManager.Load();
         SceneManager.LoadScene(_levelToLoad + 1);
     }
 }

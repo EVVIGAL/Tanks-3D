@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <RateOfFire>k__BackingField: 1
-  <ReloadSpeed>k__BackingField: 1
+  <ReloadSpeed>k__BackingField: 0.8
   <MagazineSize>k__BackingField: 1
 --- !u!1 &5402271902780210575
 GameObject:

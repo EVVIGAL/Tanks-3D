@@ -10,8 +10,9 @@ public class MobileDetector : MonoBehaviour
 #if UNITY_WEBGL && !UNITY_EDITOR
         if (Device.Type == Agava.YandexGames.DeviceType.Desktop)
             Deactivate();
-#endif
+#else
         Deactivate();
+#endif
     }
 
     private void Deactivate()

@@ -4,7 +4,6 @@ public class ToolsAmount : SkillAmount
     {
         _saveData.Data.ToolsAmount = _amount;
         _saveData.Save();
-        _text.text = _amount.ToString();
     }
 
     public override void Set()

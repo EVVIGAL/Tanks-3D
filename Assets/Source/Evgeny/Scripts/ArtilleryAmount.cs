@@ -4,7 +4,6 @@ public class ArtilleryAmount : SkillAmount
     {
         _saveData.Data.ArtilleryAmount = _amount;
         _saveData.Save();
-        _text.text = _amount.ToString();
     }
 
     public override void Set()
