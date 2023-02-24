@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d58539889304ca48b74e35439dee43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 5
+  MaxSpeed: 3
   _acceleration: 2
 --- !u!114 &7926409073972466449
 MonoBehaviour:
@@ -257,9 +257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 1000
-  <Armor>k__BackingField: 0
-  _reward: 100
+  <MaxValue>k__BackingField: 500
+  <Armor>k__BackingField: 60
+  _reward: 300
   _deathLayer: 6
   _physicObjects:
   - {fileID: 7926409073972466542}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <RateOfFire>k__BackingField: 1
-  <ReloadSpeed>k__BackingField: 1
+  <ReloadSpeed>k__BackingField: 3
   <MagazineSize>k__BackingField: 1
 --- !u!114 &744965871855842204
 MonoBehaviour:
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _template: {fileID: 777902348275971651, guid: 869665f648fc4f24e866e6622e263798, type: 3}
   _poolCapacity: 3
-  <Damage>k__BackingField: 200
+  <Damage>k__BackingField: 100
 --- !u!1001 &4502601204854524671
 PrefabInstance:
   m_ObjectHideFlags: 0

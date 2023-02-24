@@ -11220,7 +11220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1870099039970575072, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: _fadeSpeed
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1936125594423286407, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_text
@@ -11232,7 +11232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143401242112736183, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8662057173165867739, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_Pivot.x

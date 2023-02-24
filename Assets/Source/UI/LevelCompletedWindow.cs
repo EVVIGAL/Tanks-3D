@@ -54,17 +54,16 @@ public class LevelCompletedWindow : MonoBehaviour
             _data.Data.CurrentLevel = (int)_root.CurrentLevelIndex;
     }
 
-    private void CloseAd(bool isMute)
+    private void CloseAd()
     {
-        _audioManager.Mute(isMute);
+        _audioManager.Load();
         OnNextButtonClick();
     }
 
     private void ShowAD()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        bool temp = _audioManager.IsMute;
-        InterstitialAd.Show(() => _audioManager.Mute(true), (temp) => CloseAd(temp), null, null);
+        InterstitialAd.Show(() => _audioManager.Mute(true), (bool _) => CloseAd(), null, null);
 #endif
     }
 }

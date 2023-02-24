@@ -10,6 +10,7 @@ public class SaveData : MonoBehaviour
 
     public DataHolder Data => _data;
 
+    private const string _leaderboardTxt = "Leaderboard";
     private const string _saveKey = "SaveData";
 
     private void Awake()
@@ -39,6 +40,7 @@ public class SaveData : MonoBehaviour
     public void Save()
     {
         _data.SetMedals();
+        SetLeaderboardScore();
         SaveManager.Save(_saveKey, _data);
     }
 
@@ -67,14 +69,30 @@ public class SaveData : MonoBehaviour
         {
             string loadedString = "";
             PlayerAccount.GetPlayerData((data) => loadedString = data);
-
+            Debug.Log("Loaded1 = " + loadedString);
             if (loadedString == "")
                 return;
 
             _data = JsonUtility.FromJson<DataHolder>(loadedString);
-            Debug.Log("Loaded = " + jsonDataString);
+            Debug.Log("Loaded2 = " + loadedString);
         }
 #endif
+    }
+
+    private void SetLeaderboardScore()
+    {
+        int current = _data.Medals;
+
+        Leaderboard.GetPlayerEntry(_leaderboardTxt, (result) =>
+        {
+            if (current >= result.score)
+                SaveBestScore(current);
+        });
+    }
+
+    private void SaveBestScore(int bestScore)
+    {
+        Leaderboard.SetScore(_leaderboardTxt, bestScore);
     }
 }
 

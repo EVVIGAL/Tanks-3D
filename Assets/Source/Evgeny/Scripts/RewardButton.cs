@@ -31,8 +31,7 @@ public class RewardButton : MonoBehaviour
 
     private void ShowAd()
     {
-        bool temp = _audioManager.IsMute;
-        VideoAd.Show(() => _audioManager.Mute(true), Reward, () => _audioManager.Mute(temp), null);
+        VideoAd.Show(() => _audioManager.Mute(true), Reward, () => _audioManager.Load(), null);
     }
 
     private void Reward()

@@ -17,8 +17,8 @@ public abstract class SkillAmount : MonoBehaviour
     public void Add(int amount)
     {
         _amount += amount;
-        Set();
         Save();
+        Set();
     }
 
     public virtual void Save()

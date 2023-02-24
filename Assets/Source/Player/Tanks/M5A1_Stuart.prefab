@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shootPoint: {fileID: 7848604149462533230}
-  _force: 20
+  _force: 30
   _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
 --- !u!114 &5285824235165827440
 MonoBehaviour:
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _template: {fileID: 777902348275971651, guid: 34a39a56e8d84b749af75197790c1c6f, type: 3}
-  _poolCapacity: 1
+  _poolCapacity: 4
   <Damage>k__BackingField: 1
 --- !u!114 &2379123123887425666
 MonoBehaviour:
@@ -252,9 +252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59ebba1a56d81d44a17f82f6c75747b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <RateOfFire>k__BackingField: 1
-  <ReloadSpeed>k__BackingField: 1
-  <MagazineSize>k__BackingField: 1
+  <RateOfFire>k__BackingField: 0.5
+  <ReloadSpeed>k__BackingField: 2
+  <MagazineSize>k__BackingField: 4
 --- !u!1 &5509166443557935332
 GameObject:
   m_ObjectHideFlags: 0

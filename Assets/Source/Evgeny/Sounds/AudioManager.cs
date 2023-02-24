@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
         _isMute = _data.Data.IsMute;
         _effectsValue = _data.Data.EffectsValue;
         _musicValue = _data.Data.MusicValue;
-        _mixer.SetFloat(_masterStr, _isMute == true ? _zeroVolume : 0);
+        _mixer.SetFloat(_masterStr, _isMute ? _zeroVolume : 0);
         SetMusic(_effectsValue);
         SetEffects(_musicValue);
     }
@@ -36,7 +36,7 @@ public class AudioManager : MonoBehaviour
         _isMute = !_isMute;
         _data.Data.IsMute = _isMute;
         _data.Save();
-        _mixer.SetFloat(_masterStr, _isMute == true ? _zeroVolume : 0);
+        _mixer.SetFloat(_masterStr, _isMute ? _zeroVolume : 0);
     }
 
     public void SetMusic(float value)
@@ -55,6 +55,11 @@ public class AudioManager : MonoBehaviour
 
     public void Mute(bool isMute)
     {
-        _mixer.SetFloat(_masterStr, isMute == true ? _zeroVolume : 0);
+        _mixer.SetFloat(_masterStr, isMute ? _zeroVolume : 0);
+    }
+
+    public void Load()
+    {
+        _mixer.SetFloat(_masterStr, _data.Data.IsMute ? _zeroVolume : 0);
     }
 }
