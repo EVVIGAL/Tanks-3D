@@ -10,7 +10,7 @@ public class InterAd : MonoBehaviour
 
     public void ShowAD(UnityAction action)
     {
-        InterstitialAd.Show(() => _audioManager.Mute(true),(bool _) => OnAdEnd(action), null, () => OnAdEnd(action));
+        InterstitialAd.Show(() => _audioManager.Mute(),(bool _) => OnAdEnd(action), null, () => OnAdEnd(action));
     }
 
     private void OnAdEnd(UnityAction action)

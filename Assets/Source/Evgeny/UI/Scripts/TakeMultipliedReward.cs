@@ -28,7 +28,7 @@ public class TakeMultipliedReward : MonoBehaviour
 
     private void ShowAd(int multiplier)
     {
-        VideoAd.Show(() => _audioManager.Mute(true), () => Reward(multiplier), () => _audioManager.Load(), null);
+        VideoAd.Show(() => _audioManager.Mute(), () => Reward(multiplier), () => _audioManager.Load(), null);
     }
 
     private void Reward(int multiplier)

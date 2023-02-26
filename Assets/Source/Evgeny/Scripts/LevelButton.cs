@@ -36,7 +36,7 @@ public class LevelButton : MonoBehaviour
     private void ShowAd()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        InterstitialAd.Show(() => _audioManager.Mute(true), (bool _) => ActivateLoadPanel(), (string error) => ActivateLoadPanel(), () => ActivateLoadPanel());
+        InterstitialAd.Show(() => _audioManager.Mute(), (bool _) => ActivateLoadPanel(), (string error) => ActivateLoadPanel(), () => ActivateLoadPanel());
 #else
         ActivateLoadPanel();
 #endif

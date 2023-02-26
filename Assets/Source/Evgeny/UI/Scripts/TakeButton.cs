@@ -78,8 +78,7 @@ public class TakeButton : MonoBehaviour
     private void ShowAD()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        bool temp = _audioManager.IsMute;
-        InterstitialAd.Show(() => _audioManager.Mute(true), (temp) => _audioManager.Mute(temp), null, null);
+        InterstitialAd.Show(() => _audioManager.Mute(), (temp) => _audioManager.Load(), null, null);
 #endif
     }
 

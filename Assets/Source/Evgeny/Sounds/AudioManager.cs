@@ -53,9 +53,9 @@ public class AudioManager : MonoBehaviour
         _data.Save();
     }
 
-    public void Mute(bool isMute)
+    public void Mute()
     {
-        _mixer.SetFloat(_masterStr, isMute ? _zeroVolume : 0);
+        _mixer.SetFloat(_masterStr, _zeroVolume);
     }
 
     public void Load()

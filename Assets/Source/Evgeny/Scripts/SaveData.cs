@@ -20,7 +20,7 @@ public class SaveData : MonoBehaviour
         if (PlayerPrefs.HasKey(_saveKey))
             Load();
 
-        LoadYandex();
+        //LoadYandex();
 
         if (_choser != null)
             _choser.Init(_data.Units, _data.CurrentTankIndex);
@@ -40,7 +40,6 @@ public class SaveData : MonoBehaviour
     public void Save()
     {
         _data.SetMedals();
-        SetLeaderboardScore();
         SaveManager.Save(_saveKey, _data);
     }
 
@@ -48,6 +47,17 @@ public class SaveData : MonoBehaviour
     {
         var data = SaveManager.Load<DataHolder>(_saveKey);
         _data = data;
+    }
+
+    public void SetLeaderboardScore()
+    {
+        int current = _data.Medals;
+
+        Leaderboard.GetPlayerEntry(_leaderboardTxt, (result) =>
+        {
+            if (current >= result.score)
+                SaveBestScore(current);
+        });
     }
 
     private void SaveYandex()
@@ -58,7 +68,7 @@ public class SaveData : MonoBehaviour
         if (PlayerAccount.IsAuthorized)
             PlayerAccount.SetPlayerData(jsonDataString);
 
-        Debug.Log("Saved = " + jsonDataString);
+        Debug.Log("Saved");
 #endif
     }
 
@@ -68,26 +78,19 @@ public class SaveData : MonoBehaviour
         if (PlayerAccount.IsAuthorized)
         {
             string loadedString = "";
-            PlayerAccount.GetPlayerData((data) => loadedString = data);
-            Debug.Log("Loaded1 = " + loadedString);
-            if (loadedString == "")
+
+            PlayerAccount.GetPlayerData((data) => 
+            {
+                Debug.Log("Loaded = " + data);
+                loadedString = data;
+
+                if (loadedString == "")
                 return;
 
-            _data = JsonUtility.FromJson<DataHolder>(loadedString);
-            Debug.Log("Loaded2 = " + loadedString);
+                _data = JsonUtility.FromJson<DataHolder>(loadedString);
+            });
         }
 #endif
-    }
-
-    private void SetLeaderboardScore()
-    {
-        int current = _data.Medals;
-
-        Leaderboard.GetPlayerEntry(_leaderboardTxt, (result) =>
-        {
-            if (current >= result.score)
-                SaveBestScore(current);
-        });
     }
 
     private void SaveBestScore(int bestScore)
@@ -120,6 +123,8 @@ public class DataHolder
     {
         if (Levels.Length <= 0)
             throw new InvalidOperationException();
+
+        Medals = 0;
 
         foreach (LevelData level in Levels)
             Medals += (int)level.CurrentMedals;
