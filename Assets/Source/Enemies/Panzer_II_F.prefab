@@ -869,19 +869,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8199005351108037487, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
   m_PrefabInstance: {fileID: 8053624676360363782}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &8053624676360363833
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7058109199454710679}
-  m_Material: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.16, y: 1.1, z: 4.61}
-  m_Center: {x: 0, y: 0.57, z: 0}
 --- !u!114 &8053624676360363827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,19 +913,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 635547659545568360, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
   m_PrefabInstance: {fileID: 8053624676360363782}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &8053624676782753043
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7428075997067279214}
-  m_Material: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1648717, y: 0.33, z: 3.39}
-  m_Center: {x: 0.0000106096295, y: 1.24, z: -0.35}
 --- !u!114 &8053624676782753042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +927,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
   _healthBehaviour: {fileID: 4606696708302350245}
+--- !u!64 &5402045009230865960
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7428075997067279214}
+  m_Material: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2959467708922500008, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
 --- !u!4 &7516087233581611245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}
