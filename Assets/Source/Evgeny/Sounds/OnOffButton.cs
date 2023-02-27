@@ -19,7 +19,6 @@ public class OnOffButton : MonoBehaviour
 
     private void OnEnable()
     {
-
         _button.onClick.AddListener(ChangeValue);
     }
 

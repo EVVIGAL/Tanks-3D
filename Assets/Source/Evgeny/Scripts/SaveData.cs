@@ -10,6 +10,7 @@ public class SaveData : MonoBehaviour
 
     public DataHolder Data => _data;
 
+    private const string _leaderboardTxt = "Leaderboard";
     private const string _saveKey = "SaveData";
 
     private void Awake()
@@ -19,7 +20,7 @@ public class SaveData : MonoBehaviour
         if (PlayerPrefs.HasKey(_saveKey))
             Load();
 
-        LoadYandex();
+        //LoadYandex();
 
         if (_choser != null)
             _choser.Init(_data.Units, _data.CurrentTankIndex);
@@ -48,6 +49,17 @@ public class SaveData : MonoBehaviour
         _data = data;
     }
 
+    public void SetLeaderboardScore()
+    {
+        int current = _data.Medals;
+
+        Leaderboard.GetPlayerEntry(_leaderboardTxt, (result) =>
+        {
+            if (current >= result.score)
+                SaveBestScore(current);
+        });
+    }
+
     private void SaveYandex()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
@@ -56,7 +68,7 @@ public class SaveData : MonoBehaviour
         if (PlayerAccount.IsAuthorized)
             PlayerAccount.SetPlayerData(jsonDataString);
 
-        Debug.Log("Saved = " + jsonDataString);
+        Debug.Log("Saved");
 #endif
     }
 
@@ -66,15 +78,24 @@ public class SaveData : MonoBehaviour
         if (PlayerAccount.IsAuthorized)
         {
             string loadedString = "";
-            PlayerAccount.GetPlayerData((data) => loadedString = data);
 
-            if (loadedString == "")
+            PlayerAccount.GetPlayerData((data) => 
+            {
+                Debug.Log("Loaded = " + data);
+                loadedString = data;
+
+                if (loadedString == "")
                 return;
 
-            _data = JsonUtility.FromJson<DataHolder>(loadedString);
-            Debug.Log("Loaded = " + jsonDataString);
+                _data = JsonUtility.FromJson<DataHolder>(loadedString);
+            });
         }
 #endif
+    }
+
+    private void SaveBestScore(int bestScore)
+    {
+        Leaderboard.SetScore(_leaderboardTxt, bestScore);
     }
 }
 
@@ -102,6 +123,8 @@ public class DataHolder
     {
         if (Levels.Length <= 0)
             throw new InvalidOperationException();
+
+        Medals = 0;
 
         foreach (LevelData level in Levels)
             Medals += (int)level.CurrentMedals;

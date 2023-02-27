@@ -21,10 +21,12 @@ public class LevelCompletedWindow : MonoBehaviour
         _restart.onClick.AddListener(OnRestartButtonClick);
         _toHangar.onClick.AddListener(OnGoToHangarButtonClick);
         SetLevel();
+        _data.Save();
     }
 
     private void OnDisable()
     {
+        _data.SetLeaderboardScore();
         _next.onClick.RemoveListener(ShowAD);
         _restart.onClick.RemoveListener(OnRestartButtonClick);
         _toHangar.onClick.RemoveListener(OnGoToHangarButtonClick);
@@ -54,17 +56,16 @@ public class LevelCompletedWindow : MonoBehaviour
             _data.Data.CurrentLevel = (int)_root.CurrentLevelIndex;
     }
 
-    private void CloseAd(bool isMute)
+    private void CloseAd()
     {
-        _audioManager.Mute(isMute);
+        _audioManager.Load();
         OnNextButtonClick();
     }
 
     private void ShowAD()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        bool temp = _audioManager.IsMute;
-        InterstitialAd.Show(() => _audioManager.Mute(true), (temp) => CloseAd(temp), null, null);
+        InterstitialAd.Show(() => _audioManager.Mute(), (bool _) => CloseAd(), null, null);
 #endif
     }
 }
