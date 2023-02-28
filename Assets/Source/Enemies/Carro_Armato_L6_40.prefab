@@ -385,6 +385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSpeed: 6
   _acceleration: 3
+  _braking: 15
 --- !u!114 &1408639760334905557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement: {fileID: 1408639760334905507}
-  _speed: 0.05
+  _speed: -0.05
 --- !u!1 &1740603913412697081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,7 +1888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement: {fileID: 1408639760334905507}
-  _speed: 0.05
+  _speed: -0.05
 --- !u!1 &9194328817103872830
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,8 +3,9 @@ using UnityEngine;
 [RequireComponent (typeof(CharacterController))]
 public class Movement : MonoBehaviour, IMovement
 {
-    [field: SerializeField] public float MaxSpeed;
-    [SerializeField] private float _acceleration;
+    [field: SerializeField] public float MaxSpeed = 10f;
+    [SerializeField] private float _acceleration = 5f;
+    [SerializeField] private float _braking = 15f;
 
     private CharacterController _characterController;
     private float _currentSpeed;
@@ -30,8 +31,9 @@ public class Movement : MonoBehaviour, IMovement
     private void Update()
     {
         _input = Mathf.Clamp(_input, -1f, 1f);
-        float targetSpeed = Mathf.Approximately(_input, 0f) ? 0 : MaxSpeed * _input;
-        _currentSpeed = Mathf.MoveTowards(_currentSpeed, targetSpeed, Time.deltaTime * _acceleration);
+        float targetSpeed = MaxSpeed * _input;
+        float targetAcceleration = Mathf.Approximately(_input, 0f) || (_input > 0f && _currentSpeed < 0f) || (_input < 0f && _currentSpeed > 0f) ? _braking : _acceleration;
+        _currentSpeed = Mathf.MoveTowards(_currentSpeed, targetSpeed, Time.deltaTime * targetAcceleration);
         Vector3 velocity = transform.forward * _currentSpeed;
         _characterController.SimpleMove(velocity);
         _input = 0f;
