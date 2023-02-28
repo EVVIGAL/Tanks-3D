@@ -83,6 +83,9 @@ public class Projectile : MonoBehaviour
 
     protected virtual void OnHit(RaycastHit hitInfo)
     {
+        if (hitInfo.collider.isTrigger)
+            return;
+
         if (_hitFX != null)
             Instantiate(_hitFX, hitInfo.point, Quaternion.identity);
 
