@@ -341,6 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSpeed: 5
   _acceleration: 5
+  _braking: 15
 --- !u!114 &1667956567454966529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 777902348275971651, guid: 34a39a56e8d84b749af75197790c1c6f, type: 3}
+  _template: {fileID: 3709555481873275106, guid: 5cf9043343ef8b94eb3e43259f38a131, type: 3}
   _poolCapacity: 1
   <Damage>k__BackingField: 50
 --- !u!114 &1354334280637639646
