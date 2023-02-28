@@ -14,13 +14,13 @@ public class EnemyArtBlow : Weapon
 
     private void Update()
     {
-        if (WeaponReloader.CanShoot == false)
+        if (CanShoot == false)
             return;
 
         Shoot();
         _currentShootPoint++;
         if (_currentShootPoint >= _shootPoints.Count)
-            enabled = false;
+            gameObject.SetActive(false);
     }
 
     protected override Transform GetShootPoint()

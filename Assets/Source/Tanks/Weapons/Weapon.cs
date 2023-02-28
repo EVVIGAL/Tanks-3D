@@ -7,21 +7,20 @@ public class Weapon : MonoBehaviour, IWeapon
     [SerializeField] private float _force;
     [SerializeField] private ParticleSystem _shootFX;
 
-    protected WeaponReloader WeaponReloader { get; private set; }
-
+    private WeaponReloader _weaponReloader;
     private ProjectilePool _projectilePool;
 
-    public bool CanShoot => WeaponReloader.CanShoot;
+    public bool CanShoot => _weaponReloader.CanShoot;
 
     private void Awake()
     {
-        WeaponReloader = GetComponent<WeaponReloader>();
+        _weaponReloader = GetComponent<WeaponReloader>();
         _projectilePool = GetComponent<ProjectilePool>();
     }
 
     public void Shoot(Transform target = null)
     {
-        if (WeaponReloader.TryShoot() == false)
+        if (_weaponReloader.TryShoot() == false)
             return;
 
         Transform shootPoint = GetShootPoint();
