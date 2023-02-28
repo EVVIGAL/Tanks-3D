@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float _liveTime;
     [SerializeField] private float _pushForce;
     [SerializeField] private ParticleSystem _hitFX;
+    [SerializeField] private Transform _mesh;
 
     private float _runningTime;
     protected Rigidbody Rigidbody { get; private set; }
@@ -39,6 +40,9 @@ public class Projectile : MonoBehaviour
             gameObject.SetActive(false);
             return;
         }
+
+        if (_mesh && Rigidbody.velocity != Vector3.zero)
+            _mesh.rotation = Quaternion.LookRotation(Rigidbody.velocity);
 
         if (DetectCollisions == false)
             return;
