@@ -258,8 +258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxSpeed: 10
-  _acceleration: 5
-  _braking: 15
+  _acceleration: 8
+  _braking: 12
 --- !u!114 &5402271901920017868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shootPoint: {fileID: 8063021396264197236}
-  _force: 20
+  _force: 30
   _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
 --- !u!114 &5861441059092535898
 MonoBehaviour:
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 777902348275971651, guid: 869665f648fc4f24e866e6622e263798, type: 3}
+  _template: {fileID: 3709555481873275106, guid: 414d13998127d0a40bd76fb93f214d11, type: 3}
   _poolCapacity: 3
   <Damage>k__BackingField: 100
 --- !u!114 &5033057833727516503

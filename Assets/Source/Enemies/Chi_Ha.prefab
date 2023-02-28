@@ -210,7 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MaxValue>k__BackingField: 200
   <Armor>k__BackingField: 40
-  _reward: 20
+  _reward: 50
   _deathLayer: 6
   _physicObjects:
   - {fileID: 1615817126581782943}
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 777902348275971651, guid: 869665f648fc4f24e866e6622e263798, type: 3}
+  _template: {fileID: 3709555481873275106, guid: 5066d87ef86db0042bef8d7a80226bbd, type: 3}
   _poolCapacity: 3
   <Damage>k__BackingField: 30
 --- !u!1 &5730452566161337968

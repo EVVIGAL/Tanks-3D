@@ -17,7 +17,7 @@ public class LevelCompletedWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        _next.onClick.AddListener(ShowAD);
+        _next.onClick.AddListener(OnNextButtonClick);
         _restart.onClick.AddListener(OnRestartButtonClick);
         _toHangar.onClick.AddListener(OnGoToHangarButtonClick);
         SetLevel();
@@ -27,15 +27,18 @@ public class LevelCompletedWindow : MonoBehaviour
     private void OnDisable()
     {
         _data.SetLeaderboardScore();
-        _next.onClick.RemoveListener(ShowAD);
+        _next.onClick.RemoveListener(OnNextButtonClick);
         _restart.onClick.RemoveListener(OnRestartButtonClick);
         _toHangar.onClick.RemoveListener(OnGoToHangarButtonClick);
     }
 
     public void OnNextButtonClick()
     {
-        _loadPanel.gameObject.SetActive(true);
-        _loadPanel.Load(1, () => SceneManager.LoadScene((int)_root.CurrentLevelIndex + 1));
+#if UNITY_WEBGL && !UNITY_EDITOR
+        InterstitialAd.Show(() => _audioManager.Mute(), (bool _) => LoadNext(), null, null);
+#else
+        LoadNext();
+#endif
     }
 
     public void OnRestartButtonClick()
@@ -56,16 +59,10 @@ public class LevelCompletedWindow : MonoBehaviour
             _data.Data.CurrentLevel = (int)_root.CurrentLevelIndex;
     }
 
-    private void CloseAd()
+    private void LoadNext()
     {
         _audioManager.Load();
-        OnNextButtonClick();
-    }
-
-    private void ShowAD()
-    {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        InterstitialAd.Show(() => _audioManager.Mute(), (bool _) => CloseAd(), null, null);
-#endif
+        _loadPanel.gameObject.SetActive(true);
+        _loadPanel.Load(1, () => SceneManager.LoadScene((int)_root.CurrentLevelIndex + 1));
     }
 }

@@ -4925,7 +4925,7 @@ GameObject:
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3064823358987014076
 Transform:
   m_ObjectHideFlags: 0
@@ -5009,8 +5009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxSpeed: 10
-  _acceleration: 5
-  _braking: 15
+  _acceleration: 4
+  _braking: 8
 --- !u!114 &3064823358987014059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5122,7 +5122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shootPoint: {fileID: 4441491535708254406}
-  _force: 15
+  _force: 20
   _shootFX: {fileID: 19891528, guid: d786954ea58ae6f45b3de29c31ec67f9, type: 3}
 --- !u!114 &3060178846339337834
 MonoBehaviour:
@@ -5151,7 +5151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 777902348275971651, guid: 869665f648fc4f24e866e6622e263798, type: 3}
+  _template: {fileID: 3709555481873275106, guid: 9dd5f0ed7e6fb3147ad474691c0b2dd2, type: 3}
   _poolCapacity: 3
   <Damage>k__BackingField: 100
 --- !u!1 &4441328677032596621
