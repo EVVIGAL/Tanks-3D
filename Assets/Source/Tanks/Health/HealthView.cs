@@ -13,6 +13,7 @@ public class HealthView : MonoBehaviour, IHealthView
 
     public void Show(float health, float maxHealth)
     {
+        Debug.Log(health);
         _healthBar.value = health / maxHealth;
     }
 }

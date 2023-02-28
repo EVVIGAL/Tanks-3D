@@ -1,11 +1,13 @@
 using UnityEngine.SceneManagement;
+using System.Collections;
 using Cinemachine;
 using UnityEngine;
-using System.Collections;
+using TMPro;
 
 [RequireComponent(typeof(PlayerTankFactory))]
 public class Root : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI _levelText;
     [SerializeField] private DamageCounter _damageCounter;
     [SerializeField] private SaveData _data;
     [SerializeField] private MonoBehaviour _healthViewBehaviour;
@@ -50,6 +52,7 @@ public class Root : MonoBehaviour
         _virtualCamera.Follow = _playerTank.transform;
         _virtualCamera.LookAt = _playerTank.transform;
         _mobileInputUI.Init(_playerTank.UIInput);
+        _levelText.text = (_currentLevelIndex - 1).ToString();
     }
 
     public void LevelCompleted()
