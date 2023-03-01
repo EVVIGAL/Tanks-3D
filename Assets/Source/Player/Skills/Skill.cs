@@ -10,6 +10,8 @@ public abstract class Skill : MonoBehaviour, ISkill
     private int _currentAmount;
     private bool _reloading;
 
+    public int CurrentAmount => _currentAmount;
+
     private void Awake()
     {
         _currentAmount = _maxAmount;
