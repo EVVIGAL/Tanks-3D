@@ -10,6 +10,7 @@ public class FinalReward : MonoBehaviour
     [SerializeField] private Wallet _wallet;
 
     private const string _rewardKey = "Your reward";
+    private const int _levelRewardMultiplier = 50;
 
     private TextMeshProUGUI _text;
     private int _reward;
@@ -23,7 +24,8 @@ public class FinalReward : MonoBehaviour
 
     private void OnEnable()
     {
-        _reward = (int)_wallet.Money;
+        int levelReward = ((int)_root.CurrentLevelIndex - 1) * _levelRewardMultiplier; 
+        _reward = (int)_wallet.Money + levelReward;
         _text.text = _rewardStr + _reward;
         _data.Data.Money += _reward;
     }

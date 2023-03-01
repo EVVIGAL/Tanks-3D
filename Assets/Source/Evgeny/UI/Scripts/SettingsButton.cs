@@ -6,6 +6,8 @@ public class SettingsButton : MonoBehaviour
 {
     [SerializeField] private GameObject[] _settingsButtons;
 
+    private const string _leaderBoardButtonName = "Leaderboard";
+
     private Button _settings;
 
     private void Awake()
