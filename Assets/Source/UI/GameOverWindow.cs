@@ -63,5 +63,7 @@ public class GameOverWindow : MonoBehaviour
     private void Restore()
     {
         _root.CreatePlayerTank();
+        gameObject.SetActive(false);
+        _restore.gameObject.SetActive(false);
     }
 }

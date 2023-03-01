@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data: {fileID: 4547362579411169480}
   _root: {fileID: 7097204675419378053}
+  _audioManager: {fileID: 1108756729}
   _restart: {fileID: 1662723606}
   _toHangar: {fileID: 1098011446}
   _restore: {fileID: 5147225766788741154}
@@ -5455,7 +5456,7 @@ MonoBehaviour:
   _reloadTime: 5
   _view: {fileID: 9109395842883437434}
   _damage: 100
-  _artBlowTemplate: {fileID: 4732766576837236821, guid: 40318e41da04e124799f679d1eba99c6, type: 3}
+  _artBlowTemplate: {fileID: 6673691774895991505, guid: 40318e41da04e124799f679d1eba99c6, type: 3}
   _spawnHeight: 16
   _camera: {fileID: 7097204674837805887}
   _xOffset: 10
@@ -9351,7 +9352,7 @@ MonoBehaviour:
     - _currentMedals: 0
     Units:
     - _health:
-        _value: 300
+        _value: 10
         _maximumValue: 0
         _upgradeCost: 0
         _upgradeValue: 0
@@ -9517,7 +9518,7 @@ MonoBehaviour:
     TotalIncome: 0
     LastIncome: 0
     CurrentLevel: 0
-    CurrentTankIndex: 2
+    CurrentTankIndex: 0
     ArtilleryAmount: 5
     ToolsAmount: 7
     MusicValue: 0

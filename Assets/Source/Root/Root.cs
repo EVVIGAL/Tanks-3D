@@ -47,7 +47,9 @@ public class Root : MonoBehaviour
 
     private void Start()
     {
-        CreatePlayerTank();
+        if (!_isGameEnd)
+            CreatePlayerTank();
+
         _artBlowSkill.Init(_data.Data.ArtilleryAmount);
         _repairKitSkill.Init(_data.Data.ToolsAmount);
         _damageCounter.Init(_unit.Health.Value, _currentLevelIndex);
@@ -56,9 +58,6 @@ public class Root : MonoBehaviour
 
     public void CreatePlayerTank()
     {
-        if (_isGameEnd)
-            return;
-
         Vector3 instancePosition = Vector3.zero;
 
         if (_playerTank != null)
@@ -72,6 +71,7 @@ public class Root : MonoBehaviour
         _virtualCamera.Follow = _playerTank.transform;
         _virtualCamera.LookAt = _playerTank.transform;
         _mobileInputUI.Init(_playerTank.UIInput);
+        _isGameEnd = false;
     }
 
     public void LevelCompleted()
