@@ -131,21 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a368c4009725a24ab44a22e77bd8e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 0.3
-  _castDistance: 0.5
-  _layer:
-    serializedVersion: 2
-    m_Bits: 243
-  _liveTime: 2
-  _pushForce: 30
-  _hitFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
-  _mesh: {fileID: 839111204325363271}
   _damageViewTemplate: {fileID: 3314810528623754479, guid: 2c43280f33348e94d8ddf6fc204767c8, type: 3}
-  _ricochetAngle: 25
-  _ricochetMaterial: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
-  _onRicocheted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!54 &1793651286230280267
 Rigidbody:
   m_ObjectHideFlags: 0
