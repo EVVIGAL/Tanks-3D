@@ -82,7 +82,10 @@ public class Unit : MonoBehaviour
         {
             _priceText.text = _price.ToString();
             _lockImage.gameObject.SetActive(false);
-            _button.interactable = true;
+            _button.interactable = false;
+
+            if(_money.Value >= Price)
+                _button.interactable = true;
         }
         else
         {

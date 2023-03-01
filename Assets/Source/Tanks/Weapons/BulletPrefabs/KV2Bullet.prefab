@@ -141,7 +141,7 @@ MonoBehaviour:
   _hitFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
   _mesh: {fileID: 839111204325363271}
   _damageViewTemplate: {fileID: 3314810528623754479, guid: 2c43280f33348e94d8ddf6fc204767c8, type: 3}
-  _ricochetAngle: 45
+  _ricochetAngle: 90
   _ricochetMaterial: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
   _onRicocheted:
     m_PersistentCalls:

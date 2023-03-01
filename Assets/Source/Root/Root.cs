@@ -33,6 +33,10 @@ public class Root : MonoBehaviour
 
     public DamageCounter DamageCounter => _damageCounter;
 
+    public Skill RepairSkill => _repairKitSkill;
+
+    public Skill ArtBlowSkill => _artBlowSkill;
+
     public uint CurrentLevelIndex => _currentLevelIndex;
 
     private void Awake()
