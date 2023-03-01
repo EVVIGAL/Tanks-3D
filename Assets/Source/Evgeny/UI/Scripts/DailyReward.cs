@@ -10,7 +10,7 @@ public class DailyReward : MonoBehaviour
     [SerializeField] private Button _claimButton;
     [SerializeField] private int _rewardValue;
 
-    private const int _secondsInDay = 120;
+    private const int _secondsInDay = 86400;
 
     private void OnEnable()
     {
