@@ -1,4 +1,5 @@
 using UnityEngine.SceneManagement;
+using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class GameOverWindow : MonoBehaviour
 {
     [SerializeField] private SaveData _data;
     [SerializeField] private Root _root;
+    [SerializeField] private AudioManager _audioManager;
     [SerializeField] private Button _restart;
     [SerializeField] private Button _toHangar;
     [SerializeField] private Button _restore;
@@ -46,5 +48,20 @@ public class GameOverWindow : MonoBehaviour
 
     public void OnRestoreButtonClick()
     {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        ShowAd();
+#else
+        Restore();
+#endif
+    }
+
+    private void ShowAd()
+    {
+        VideoAd.Show(() => _audioManager.Mute(), () => Restore(), () => _audioManager.Load(), null);
+    }
+
+    private void Restore()
+    {
+        _root.CreatePlayerTank();
     }
 }
