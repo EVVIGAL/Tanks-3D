@@ -453,6 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _barrel: {fileID: 5037246774929221713}
+  _shootPointRange: 5
   _shootPoint: {fileID: 2300230602858556046}
   _shootFX: {fileID: 19819752, guid: 8deb1def3de25b04b8371070fbb372fe, type: 3}
 --- !u!114 &1365393293983228471

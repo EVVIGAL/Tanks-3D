@@ -312,6 +312,8 @@ MonoBehaviour:
   _movementBehaviour: {fileID: 1667956567454966553}
   _weaponBehaviour: {fileID: 1667956567454966563}
   _barrel: {fileID: 1405159687403812662}
+  _skillSlot1: {fileID: 0}
+  _skillSlot2: {fileID: 0}
 --- !u!114 &1667956567454966556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 2529225218931039971, guid: ceca0483fa9c04b40a127f1b7ba1465e, type: 3}
+  _template: {fileID: 2053421144670591252, guid: ceca0483fa9c04b40a127f1b7ba1465e, type: 3}
   _poolCapacity: 1
   <Damage>k__BackingField: 50
 --- !u!114 &1354334280637639646

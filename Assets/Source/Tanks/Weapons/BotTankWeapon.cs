@@ -4,6 +4,8 @@ using UnityEngine;
 public class BotTankWeapon : MonoBehaviour, IWeapon
 {
     [SerializeField] private Barrel _barrel;
+    [Range(0f, 10f)]
+    [SerializeField] private float _shootPointRange;
     [SerializeField] private Transform _shootPoint;
     [SerializeField] private ParticleSystem _shootFX;
 
@@ -26,7 +28,9 @@ public class BotTankWeapon : MonoBehaviour, IWeapon
         float barrelAngle = _barrel.transform.localEulerAngles.x;
         barrelAngle = barrelAngle > 180f ? barrelAngle - 360f : barrelAngle;
         barrelAngle *= -1f;
-        Vector3 force = GrenadeThrower.CalculatePushForce2(_shootPoint, target.position, barrelAngle);
+        float randomOffset = Random.Range(-_shootPointRange, _shootPointRange);
+        Vector3 shootPoint = target.position + Vector3.up + target.forward * randomOffset;
+        Vector3 force = GrenadeThrower.CalculatePushForce2(_shootPoint, shootPoint, barrelAngle);
 
         Projectile projectile = _projectilePool.Create(_shootPoint, _shootPoint.position, _shootPoint.rotation);
         projectile.Push(force);

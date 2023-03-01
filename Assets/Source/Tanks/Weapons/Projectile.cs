@@ -4,22 +4,29 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody), typeof(AudioSource))]
 public class Projectile : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] private uint _damage;
+    [SerializeField] private float _liveTime;
+    [SerializeField] private float _pushForce;
+    [SerializeField] private Transform _mesh;
+    [SerializeField] private ParticleSystem _trailVfx;
+    [SerializeField] private MonoBehaviour _damageBehaviour;
+    private IDamage _damagePolicy => (IDamage)_damageBehaviour;
+
+    [Header("Collision")]
     [SerializeField] private float _castRadius;
     [SerializeField] private float _castDistance = 1f;
     [SerializeField] private LayerMask _hittableLayers = -1;
-    [SerializeField] private float _liveTime;
-    [SerializeField] private float _pushForce;
-    [SerializeField] private ParticleSystem _impactVfx;
-    [SerializeField] private Transform _mesh;
-    [SerializeField] private ParticleSystem _trailVfx;
 
+    [Header("Ricochet")]
     [SerializeField] private float _ricochetAngle;
     [SerializeField] private PhysicMaterial _ricochetMaterial;
     [SerializeField] private AudioClip _ricochetSound;
 
-    [SerializeField] private MonoBehaviour _damageBehaviour;
-    private IDamage _damagePolicy => (IDamage)_damageBehaviour;
+    [Header("Impact Vfx")]
+    [SerializeField] private ParticleSystem _explosionVfx;
+    [SerializeField] private ParticleSystem _dirtVfx;
+    [SerializeField] private PhysicMaterial _dirt;
 
     private bool _detectCollisions;
     private Rigidbody _rigidbody;
@@ -79,21 +86,33 @@ public class Projectile : MonoBehaviour
 
     protected virtual void OnHit(RaycastHit hitInfo)
     {
-        if (hitInfo.collider.isTrigger)
+        if (hitInfo.collider.isTrigger && hitInfo.transform.TryGetComponent(out IHealth health) == false)
             return;
-
-        if (_impactVfx != null)
-            Instantiate(_impactVfx, hitInfo.point, Quaternion.identity);
-
-        if (hitInfo.transform.TryGetComponent(out Rigidbody rigidbody))
-            rigidbody.AddForce(transform.forward * _pushForce, ForceMode.Impulse);
 
         if (TryRicochet(hitInfo))
             return;
 
         _damagePolicy.TakeDamage(hitInfo, _damage);
 
+        CreateImpactVfx(hitInfo);
+
+        if (hitInfo.rigidbody)
+            hitInfo.rigidbody.AddForce(_rigidbody.velocity.normalized * _pushForce, ForceMode.Impulse);
+
         gameObject.SetActive(false);
+    }
+
+    private void CreateImpactVfx(RaycastHit hitInfo)
+    {
+        ParticleSystem impactVfx;
+
+        if (hitInfo.collider.sharedMaterial == _dirt)
+            impactVfx = _dirtVfx;
+        else
+            impactVfx = _explosionVfx;
+
+        if (impactVfx != null)
+            Instantiate(impactVfx, hitInfo.point, Quaternion.LookRotation(hitInfo.normal));
     }
 
     private bool TryRicochet(RaycastHit hitInfo)
