@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d58539889304ca48b74e35439dee43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 5
+  MaxSpeed: 4
   _acceleration: 5
   _braking: 8
 --- !u!114 &1667956567454966529
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 2053421144670591252, guid: ceca0483fa9c04b40a127f1b7ba1465e, type: 3}
+  _template: {fileID: 7605873181685483671, guid: aa0124473348f89448aed3ef025dac0b, type: 3}
   _poolCapacity: 1
   <Damage>k__BackingField: 50
 --- !u!114 &1354334280637639646
