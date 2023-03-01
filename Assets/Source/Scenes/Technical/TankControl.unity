@@ -256,6 +256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carro_Armato_L6_40
       objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905514, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -356,6 +360,10 @@ PrefabInstance:
     - target: {fileID: 3064823358987014078, guid: 583809a28d8c6bb469f7d4a01778a292, type: 3}
       propertyPath: m_Name
       value: M4A3_75_Sherman
+      objectReference: {fileID: 0}
+    - target: {fileID: 3064823358987014078, guid: 583809a28d8c6bb469f7d4a01778a292, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5864684193499839184, guid: 583809a28d8c6bb469f7d4a01778a292, type: 3}
       propertyPath: _healthViewBehaviour
@@ -496,7 +504,7 @@ MonoBehaviour:
   _reloadTime: 5
   _view: {fileID: 8065701810849708935}
   _damage: 100
-  _artBlowTemplate: {fileID: 4732766576837236821, guid: 40318e41da04e124799f679d1eba99c6, type: 3}
+  _artBlowTemplate: {fileID: 6673691774895991505, guid: 40318e41da04e124799f679d1eba99c6, type: 3}
   _spawnHeight: 20
   _camera: {fileID: 8065701810350265110}
   _xOffset: 10
@@ -973,7 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 777902348275971651, guid: 34a39a56e8d84b749af75197790c1c6f, type: 3}
+  _template: {fileID: 0}
   _poolCapacity: 5
   <Damage>k__BackingField: 50
 --- !u!114 &776613361
@@ -2357,7 +2365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5175172571259121542, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.96
+      value: 26.99
       objectReference: {fileID: 0}
     - target: {fileID: 5175172571259121542, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5814,7 +5822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1667956567454966548, guid: 9bd342eb4934da94fb1d046d770b7d5d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1667956567454966550, guid: 9bd342eb4934da94fb1d046d770b7d5d, type: 3}
       propertyPath: m_RootOrder
@@ -6341,13 +6349,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 486971183}
     m_Modifications:
+    - target: {fileID: 744965871855842204, guid: a5f33be8b52627943b77bd58335abd78, type: 3}
+      propertyPath: _template
+      value: 
+      objectReference: {fileID: 7971261265297967276, guid: f15f95723d291134c860e944dfcb5bd0, type: 3}
     - target: {fileID: 7926409073972466456, guid: a5f33be8b52627943b77bd58335abd78, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7926409073972466456, guid: a5f33be8b52627943b77bd58335abd78, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50
+      value: 27.2
       objectReference: {fileID: 0}
     - target: {fileID: 7926409073972466456, guid: a5f33be8b52627943b77bd58335abd78, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6714,10 +6726,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1615817126581783017, guid: f0860169edd2f3646896608d0494f11b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2701201049260945052, guid: f0860169edd2f3646896608d0494f11b, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7935,7 +7943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845433352997786506, guid: 312242b5a3ed4134ca0e9c8e3d502f52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.85
+      value: 27.48
       objectReference: {fileID: 0}
     - target: {fileID: 1845433352997786506, guid: 312242b5a3ed4134ca0e9c8e3d502f52, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8779,7 +8787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9132450762494633022, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.06
+      value: 27.96
       objectReference: {fileID: 0}
     - target: {fileID: 9132450762494633022, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8975,6 +8983,14 @@ PrefabInstance:
       propertyPath: _healthViewBehaviour
       value: 
       objectReference: {fileID: 8065701810260342375}
+    - target: {fileID: 5509166443373827590, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
+      propertyPath: _skillSlot1
+      value: 
+      objectReference: {fileID: 304190092}
+    - target: {fileID: 5509166443373827590, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
+      propertyPath: _skillSlot2
+      value: 
+      objectReference: {fileID: 304190089}
     - target: {fileID: 5509166443373827592, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9023,10 +9039,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: M5A1_Stuart
       objectReference: {fileID: 0}
-    - target: {fileID: 5509166443373827594, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d1c1f2d0c2f854ea86c614c0293a97, type: 3}
 --- !u!222 &7904116421385868678
@@ -9058,7 +9070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6479027446971307781, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.23
+      value: 30.54
       objectReference: {fileID: 0}
     - target: {fileID: 6479027446971307781, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10180,6 +10192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caea107db6beedb40896c8b0d558f067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelText: {fileID: 0}
   _damageCounter: {fileID: 0}
   _data: {fileID: 0}
   _healthViewBehaviour: {fileID: 8065701810260342375}
@@ -10816,7 +10829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 414494726114176636, guid: 4a3822bdf44e9524fab52c66eecba0ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50
+      value: 27.74
       objectReference: {fileID: 0}
     - target: {fileID: 414494726114176636, guid: 4a3822bdf44e9524fab52c66eecba0ea, type: 3}
       propertyPath: m_LocalPosition.y

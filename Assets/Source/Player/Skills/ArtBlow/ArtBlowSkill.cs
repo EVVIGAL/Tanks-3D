@@ -3,7 +3,7 @@ using UnityEngine;
 public class ArtBlowSkill : Skill
 {
     [SerializeField] private uint _damage;
-    [SerializeField] private Bomb _artBlowTemplate;
+    [SerializeField] private Projectile _artBlowTemplate;
     [SerializeField] private float _spawnHeight;
     [SerializeField] private Camera _camera;
     [SerializeField] private float _xOffset;

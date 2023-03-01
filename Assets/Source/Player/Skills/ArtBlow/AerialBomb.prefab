@@ -96,8 +96,9 @@ GameObject:
   - component: {fileID: 4732766576837236821}
   - component: {fileID: 2128054622365435090}
   - component: {fileID: 2355531080998976386}
+  - component: {fileID: 6673691774895991505}
   m_Layer: 0
-  m_Name: Bomba
+  m_Name: AerialBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,14 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec272811adf97a479689df9ffd7c196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 2
-  _castDistance: 1
-  _layer:
-    serializedVersion: 2
-    m_Bits: 3063
-  _liveTime: 10
-  _pushForce: 0
-  _hitFX: {fileID: 19801716, guid: 07bf9ced87963e24299c2c2a22bfeeb6, type: 3}
   _blowRadius: 5
 --- !u!95 &2128054622365435090
 Animator:
@@ -273,6 +266,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6673691774895991505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417694088348940508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152d6de0466dcfb489e75dc8b01c902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 0
+  _castRadius: 0.5
+  _castDistance: 0.5
+  _hittableLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  _liveTime: 6
+  _pushForce: 50
+  _impactVfx: {fileID: 19801716, guid: 07bf9ced87963e24299c2c2a22bfeeb6, type: 3}
+  _mesh: {fileID: 0}
+  _trailVfx: {fileID: 0}
+  _ricochetAngle: 100
+  _ricochetMaterial: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
+  _ricochetSound: {fileID: 8300000, guid: df81f28e29b1ea245adcda6ddd33e9b7, type: 3}
+  _damageBehaviour: {fileID: 4732766576837236821}
 --- !u!1 &2362651133905134425
 GameObject:
   m_ObjectHideFlags: 0

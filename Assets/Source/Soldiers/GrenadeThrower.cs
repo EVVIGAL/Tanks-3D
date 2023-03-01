@@ -34,7 +34,7 @@ public class GrenadeThrower : MonoBehaviour, IWeapon
     public void TakeUp()
     {
         _projectile = _projectilePool.Create(_shootPoint, _shootPoint.position, _shootPoint.rotation);
-        _projectile.Disable();
+        _projectile.DisablePhysic();
     }
 
     public void Throw()
@@ -47,7 +47,7 @@ public class GrenadeThrower : MonoBehaviour, IWeapon
     private IEnumerator EnableProjectile()
     {
         yield return new WaitForSeconds(0.25f);
-        _projectile.Enable();
+        _projectile.EnablePhysic();
     }
 
     public static Vector3 CalculatePushForce(Transform startPoint, Vector3 target, float angle)

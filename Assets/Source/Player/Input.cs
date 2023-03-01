@@ -46,6 +46,24 @@ namespace Tank
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SkillSlot1"",
+                    ""type"": ""Button"",
+                    ""id"": ""096bb43d-3a78-40be-9d28-7077c6570ef1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SkillSlot2"",
+                    ""type"": ""Button"",
+                    ""id"": ""25fde6e0-bf6d-4368-a30d-ebb653615e1a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -191,6 +209,61 @@ namespace Tank
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3a62a088-f43b-4feb-a093-9b6980f6c15c"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4c951e82-7987-4a03-aaf4-7a8ce7e0d55a"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkillSlot1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed9a5c01-bf0b-4d5f-b890-7e2eebc27624"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkillSlot1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e9163aab-28f2-4382-acc9-03d41a073290"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkillSlot2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ba070045-60df-4057-b840-f9ec969900ba"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkillSlot2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -201,6 +274,8 @@ namespace Tank
             m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
             m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
             m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
+            m_Player_SkillSlot1 = m_Player.FindAction("SkillSlot1", throwIfNotFound: true);
+            m_Player_SkillSlot2 = m_Player.FindAction("SkillSlot2", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -262,12 +337,16 @@ namespace Tank
         private IPlayerActions m_PlayerActionsCallbackInterface;
         private readonly InputAction m_Player_Move;
         private readonly InputAction m_Player_Shoot;
+        private readonly InputAction m_Player_SkillSlot1;
+        private readonly InputAction m_Player_SkillSlot2;
         public struct PlayerActions
         {
             private @Input m_Wrapper;
             public PlayerActions(@Input wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move => m_Wrapper.m_Player_Move;
             public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
+            public InputAction @SkillSlot1 => m_Wrapper.m_Player_SkillSlot1;
+            public InputAction @SkillSlot2 => m_Wrapper.m_Player_SkillSlot2;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -283,6 +362,12 @@ namespace Tank
                     @Shoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
                     @Shoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
                     @Shoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
+                    @SkillSlot1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkillSlot1;
+                    @SkillSlot1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkillSlot1;
+                    @SkillSlot1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkillSlot1;
+                    @SkillSlot2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkillSlot2;
+                    @SkillSlot2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkillSlot2;
+                    @SkillSlot2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkillSlot2;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -293,6 +378,12 @@ namespace Tank
                     @Shoot.started += instance.OnShoot;
                     @Shoot.performed += instance.OnShoot;
                     @Shoot.canceled += instance.OnShoot;
+                    @SkillSlot1.started += instance.OnSkillSlot1;
+                    @SkillSlot1.performed += instance.OnSkillSlot1;
+                    @SkillSlot1.canceled += instance.OnSkillSlot1;
+                    @SkillSlot2.started += instance.OnSkillSlot2;
+                    @SkillSlot2.performed += instance.OnSkillSlot2;
+                    @SkillSlot2.canceled += instance.OnSkillSlot2;
                 }
             }
         }
@@ -301,6 +392,8 @@ namespace Tank
         {
             void OnMove(InputAction.CallbackContext context);
             void OnShoot(InputAction.CallbackContext context);
+            void OnSkillSlot1(InputAction.CallbackContext context);
+            void OnSkillSlot2(InputAction.CallbackContext context);
         }
     }
 }

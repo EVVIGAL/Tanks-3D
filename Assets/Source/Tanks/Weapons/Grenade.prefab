@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8643785838549853155}
   - component: {fileID: 4813738250777475324}
   - component: {fileID: 2602588992222275318}
+  - component: {fileID: -8256553352563409902}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Untagged
@@ -116,20 +117,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a368c4009725a24ab44a22e77bd8e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 0.3
-  _castDistance: 1
-  _layer:
-    serializedVersion: 2
-    m_Bits: 243
-  _liveTime: 3
-  _pushForce: 100
-  _hitFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
   _damageViewTemplate: {fileID: 3314810528623754479, guid: 2c43280f33348e94d8ddf6fc204767c8, type: 3}
-  _ricochetAngle: 0
-  _ricochetMaterial: {fileID: 0}
+--- !u!114 &-8256553352563409902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8620567230238155817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152d6de0466dcfb489e75dc8b01c902f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _castRadius: 0.2
+  _castDistance: 0.5
+  _hittableLayers:
+    serializedVersion: 2
+    m_Bits: 1015
+  _liveTime: 6
+  _pushForce: 0
+  _impactVfx: {fileID: 19827778, guid: ec1c5863f61e8ff4a84dbdb8a282a7ac, type: 3}
+  _mesh: {fileID: 0}
+  _ricochetAngle: 40
+  _ricochetMaterial: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
   _onRicocheted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4939679137082257948}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: df81f28e29b1ea245adcda6ddd33e9b7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4939679137084119800}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _damageBehaviour: {fileID: 2602588992222275318}
 --- !u!1 &8621126800817694285
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +402,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8280622, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 19924450, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -375,11 +418,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8280622, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+--- !u!82 &4939679137082257948 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8280622, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+  m_PrefabInstance: {fileID: 4939679137083975730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4939679137083873588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 438534, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
+  m_PrefabInstance: {fileID: 4939679137083975730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4939679137084119800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 193226, guid: ed28e53c93fc7d2449d7c68bb8409223, type: 3}
   m_PrefabInstance: {fileID: 4939679137083975730}
   m_PrefabAsset: {fileID: 0}

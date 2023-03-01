@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 3709555481873275106, guid: 5066d87ef86db0042bef8d7a80226bbd, type: 3}
+  _template: {fileID: 4857635146979268376, guid: 91bfc75024cb4d8448602d87edc8d99c, type: 3}
   _poolCapacity: 3
   <Damage>k__BackingField: 30
 --- !u!1 &5730452566161337968
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minAngle: -40
   _maxAngle: 20
-  _speed: 20
+  _speed: 50
 --- !u!1001 &4224597363036478960
 PrefabInstance:
   m_ObjectHideFlags: 0

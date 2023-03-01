@@ -43,16 +43,31 @@ public class Root : MonoBehaviour
 
     private void Start()
     {
-        _playerTank = _playerTankFactory.CreateTank(_currentTankIndex);
-        _playerTank.Init((float)_unit.Speed.Value, (uint)_unit.Health.Value, (uint)_unit.Armor.Value, (uint)_unit.Damage.Value, _healthViewBehaviour, this);
+        CreatePlayerTank();
         _artBlowSkill.Init(_data.Data.ArtilleryAmount);
         _repairKitSkill.Init(_data.Data.ToolsAmount);
         _damageCounter.Init(_unit.Health.Value, _currentLevelIndex);
+        _levelText.text = (_currentLevelIndex - 1).ToString();
+    }
 
+    public void CreatePlayerTank()
+    {
+        if (_isGameEnd)
+            return;
+
+        Vector3 instancePosition = Vector3.zero;
+
+        if (_playerTank != null)
+        {
+            instancePosition = _playerTank.transform.position;
+            Destroy(_playerTank.gameObject);
+        }
+
+        _playerTank = _playerTankFactory.CreateTank(_currentTankIndex, instancePosition);
+        _playerTank.Init((float)_unit.Speed.Value, (uint)_unit.Health.Value, (uint)_unit.Armor.Value, (uint)_unit.Damage.Value, _healthViewBehaviour, this, _artBlowSkill, _repairKitSkill);
         _virtualCamera.Follow = _playerTank.transform;
         _virtualCamera.LookAt = _playerTank.transform;
         _mobileInputUI.Init(_playerTank.UIInput);
-        _levelText.text = (_currentLevelIndex - 1).ToString();
     }
 
     public void LevelCompleted()

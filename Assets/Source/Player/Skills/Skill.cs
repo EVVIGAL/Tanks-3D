@@ -8,6 +8,7 @@ public abstract class Skill : MonoBehaviour, ISkill
     [SerializeField] private SkillView _view;
 
     private int _currentAmount;
+    private bool _reloading;
 
     private void Awake()
     {
@@ -23,7 +24,7 @@ public abstract class Skill : MonoBehaviour, ISkill
 
     public void Use()
     {
-        if (_currentAmount <= 0)
+        if (_currentAmount <= 0 || _reloading)
             return;
 
         OnUse();
@@ -38,6 +39,7 @@ public abstract class Skill : MonoBehaviour, ISkill
 
     private IEnumerator Reload()
     {
+        _reloading = true;
         float runningTime = 0f;
         while(runningTime < _reloadTime)
         {
@@ -45,5 +47,6 @@ public abstract class Skill : MonoBehaviour, ISkill
             _view.ShowReloadProgress(runningTime / _reloadTime);
             yield return null;
         }
+        _reloading = false;
     }
 }

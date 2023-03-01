@@ -20,11 +20,12 @@ public class PlayerTank : MonoBehaviour
         _playerInput = GetComponent<PlayerInput>();
     }
 
-    public void Init(float moveSpeed, uint maxHealth, uint armor, uint damage, MonoBehaviour healthViewBehaviour, Root root)
+    public void Init(float moveSpeed, uint maxHealth, uint armor, uint damage, MonoBehaviour healthViewBehaviour, Root root, Skill skillSlot1, Skill skillSlot2)
     {
         _movement.Init(moveSpeed);
         _health.Init(maxHealth, armor, root, healthViewBehaviour);
         _projectile.Init(damage);
+        _playerInput.Init(skillSlot1, skillSlot2);
     }
 
     public void Stop()

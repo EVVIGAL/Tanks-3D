@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 3709555481873275106, guid: 31b3f5f5b3c724f4cb2dc092ef5c52ba, type: 3}
+  _template: {fileID: 4857635146979268376, guid: 91bfc75024cb4d8448602d87edc8d99c, type: 3}
   _poolCapacity: 3
   <Damage>k__BackingField: 40
 --- !u!1 &8053624677503198900
@@ -810,7 +810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minAngle: -40
   _maxAngle: 20
-  _speed: 20
+  _speed: 70
 --- !u!4 &2354853489558205944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3500943718839276802, guid: 90d6127d5e5238a45874e01a1a531004, type: 3}

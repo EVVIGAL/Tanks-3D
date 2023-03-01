@@ -436,7 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 3709555481873275106, guid: f87fe9c8647742142b4101cdf2f5dfde, type: 3}
+  _template: {fileID: 2008960507608867205, guid: c0e94e12610768145a9ca68829819988, type: 3}
   _poolCapacity: 3
   <Damage>k__BackingField: 100
 --- !u!114 &4938882426652306245

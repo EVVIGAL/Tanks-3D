@@ -17,6 +17,7 @@ public class PlayerHealth : Health
         _damageCounter = _root.DamageCounter;
         _healthViewBehaviour = healthViewBehaviour;
         base.Init(maxHealth, armor);
+        _healthView.Show(Value, MaxValue);
     }
 
     protected override void OnTakeDamage()

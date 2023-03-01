@@ -2601,6 +2601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSpeed: 5
   _acceleration: 7
+  _braking: 0
 --- !u!114 &4637389807414689928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2719,7 +2720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <RateOfFire>k__BackingField: 1
-  <ReloadSpeed>k__BackingField: 4
+  <ReloadSpeed>k__BackingField: 3
   <MagazineSize>k__BackingField: 1
 --- !u!114 &6053220275786434996
 MonoBehaviour:
@@ -2733,7 +2734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 2602588992222275318, guid: 6c1d9a0bcbcd03d448df453ee2bfbbae, type: 3}
+  _template: {fileID: -8256553352563409902, guid: 6c1d9a0bcbcd03d448df453ee2bfbbae, type: 3}
   _poolCapacity: 1
   <Damage>k__BackingField: 50
 --- !u!1 &5591788863936091747

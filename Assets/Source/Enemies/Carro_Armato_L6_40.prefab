@@ -482,8 +482,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 3709555481873275106, guid: 31b3f5f5b3c724f4cb2dc092ef5c52ba, type: 3}
-  _poolCapacity: 3
+  _template: {fileID: 5952098374401979843, guid: e1d523fd547c3d2418a0355c386c1b48, type: 3}
+  _poolCapacity: 2
   <Damage>k__BackingField: 10
 --- !u!1 &1710285433939861033
 GameObject:
@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minAngle: -40
   _maxAngle: 20
-  _speed: 20
+  _speed: 50
 --- !u!1 &5361077155866543941
 GameObject:
   m_ObjectHideFlags: 0
