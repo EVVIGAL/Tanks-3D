@@ -35,6 +35,12 @@ public class UIInput : MonoBehaviour
         _barrel.Rotate(_barrelRotateInput.y);
     }
 
+    private void OnDisable()
+    {
+        _moveInput = Vector2.zero;
+        _barrelRotateInput = Vector2.zero;
+    }
+
     private void OnValidate()
     {
         if (_movementBehaviour && !(_movementBehaviour is IMovement))

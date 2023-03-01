@@ -30,6 +30,6 @@ public class PlayerTank : MonoBehaviour
 
     public void Stop()
     {
-        _playerInput.enabled= false;
+        _playerInput.enabled = false;
     }
 }

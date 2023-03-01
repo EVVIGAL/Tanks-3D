@@ -279,20 +279,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 0
+  _liveTime: 6
+  _pushForce: 50
+  _mesh: {fileID: 0}
+  _trailVfx: {fileID: 0}
+  _damageBehaviour: {fileID: 4732766576837236821}
   _castRadius: 0.5
   _castDistance: 0.5
   _hittableLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  _liveTime: 6
-  _pushForce: 50
-  _impactVfx: {fileID: 19801716, guid: 07bf9ced87963e24299c2c2a22bfeeb6, type: 3}
-  _mesh: {fileID: 0}
-  _trailVfx: {fileID: 0}
   _ricochetAngle: 100
   _ricochetMaterial: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
   _ricochetSound: {fileID: 8300000, guid: df81f28e29b1ea245adcda6ddd33e9b7, type: 3}
-  _damageBehaviour: {fileID: 4732766576837236821}
+  _explosionVfx: {fileID: 19801716, guid: 07bf9ced87963e24299c2c2a22bfeeb6, type: 3}
+  _dirtVfx: {fileID: 19801716, guid: 07bf9ced87963e24299c2c2a22bfeeb6, type: 3}
+  _dirt: {fileID: 13400000, guid: afc9d09cea44153409396b12a61943e6, type: 2}
 --- !u!1 &2362651133905134425
 GameObject:
   m_ObjectHideFlags: 0
