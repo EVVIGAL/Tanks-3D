@@ -48,31 +48,26 @@ public class Yandex : MonoBehaviour
     {
         if (PlayerAccount.IsAuthorized)
         {
-            Debug.Log("1111111111");
             string loadedString = "None";
 
             PlayerAccount.GetPlayerData((data) =>
             {
-                Debug.Log("222222");
                 loadedString = data;
             });
-            Debug.Log("333333");
+
             while (loadedString == "None")
             {
-                Debug.Log("4444444");
                 yield return null;
             }
-            Debug.Log("5555555");
-            if (string.IsNullOrEmpty(loadedString))
+
+            if (loadedString == "{}")
             {
-                Debug.Log("888888");
                 yield break;
             }
-            Debug.Log("6666666");
+
             DataHolder data = new DataHolder();
             data = JsonUtility.FromJson<DataHolder>(loadedString);
             SaveManager.Save(_saveKey, data);
-            Debug.Log("7777777");
         }
     }
 }
