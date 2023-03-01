@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _barrel: {fileID: 7549444536431237377}
+  _shootPointRange: 0
   _shootPoint: {fileID: 1390931718802217330}
   _shootFX: {fileID: 19896092, guid: 5c2bdcf6f0badc34f9f192b0995e4a79, type: 3}
 --- !u!114 &3643910778631984893
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 4857635146979268376, guid: 91bfc75024cb4d8448602d87edc8d99c, type: 3}
+  _template: {fileID: 5952098374401979843, guid: e1d523fd547c3d2418a0355c386c1b48, type: 3}
   _poolCapacity: 3
   <Damage>k__BackingField: 100
 --- !u!1 &1356370840226356079
