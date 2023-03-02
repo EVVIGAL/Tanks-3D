@@ -47,6 +47,9 @@ public class BattleButton : MonoBehaviour
 
     private void LoadScene()
     {
+        if (_lastLevelIndex > _data.Data.Levels.Length + 1)
+            _lastLevelIndex = _data.Data.Levels.Length + 1;
+
         _audioManager.Load();
         SceneManager.LoadScene(_lastLevelIndex);
     }
