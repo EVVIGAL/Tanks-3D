@@ -11,20 +11,20 @@ public class LevelButton : MonoBehaviour
     [SerializeField] private InterAd _ad;
     [SerializeField] private LoadPanel _loadPanel;
     [SerializeField] private TextMeshProUGUI _text;
-    [SerializeField] private int _levelToLoad;
 
     private Button _button;
+    private int _levelToLoad;
 
     private void OnDisable()
     {
         _button.onClick.RemoveListener(ShowAd);
     }
 
-    public void Init()
+    public void Init(int level)
     {
         _button = GetComponent<Button>();
         _button.onClick.AddListener(ShowAd);
-        _levelToLoad = GetComponentInParent<LevelView>().LevelToLoad;
+        _levelToLoad = level;
         _text.text = _levelToLoad.ToString();
     }
 
