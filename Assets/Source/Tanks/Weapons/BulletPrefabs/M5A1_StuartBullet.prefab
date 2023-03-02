@@ -64,8 +64,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2662851064994546197, guid: 755ab27424d00e14d97fbf393069470b, type: 3}
+      propertyPath: _liveTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662851064994546197, guid: 755ab27424d00e14d97fbf393069470b, type: 3}
       propertyPath: _ricochetAngle
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3034646893841556084, guid: 755ab27424d00e14d97fbf393069470b, type: 3}
       propertyPath: m_Name
