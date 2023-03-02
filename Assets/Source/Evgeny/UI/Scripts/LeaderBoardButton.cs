@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class LeaderBoardButton : MonoBehaviour
 {
+    [SerializeField] private GameObject _leaderboardButtonView;
+
     private void OnEnable()
     {
         if(!PlayerAccount.IsAuthorized)
-            gameObject.SetActive(false);
+            _leaderboardButtonView.SetActive(false);
     }
 }
