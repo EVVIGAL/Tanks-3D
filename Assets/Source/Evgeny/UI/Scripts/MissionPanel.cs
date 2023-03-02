@@ -1,12 +1,18 @@
+using Lean.Localization;
 using UnityEngine.Events;
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(OfflineIncome))]
 public class MissionPanel : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI _incomeText;
     [SerializeField] private SaveData _saveData;
     [SerializeField] private TakeButton _takeButton;
     [SerializeField] private TankFarm[] _farms;
+
+    private const string _incomeStr = "Income";
+    private const string _timeStr = "per hour";
 
     private OfflineIncome _offlineIncome;
 
@@ -54,6 +60,7 @@ public class MissionPanel : MonoBehaviour
         }
 
         _saveData.Data.TotalIncome = (int)TotalIncome;
+        _incomeText.text = LeanLocalization.GetTranslationText(_incomeStr) + TotalIncome.ToString() + "/" + LeanLocalization.GetTranslationText(_timeStr);
         _saveData.Save();
         IncomeChange?.Invoke();
     }
