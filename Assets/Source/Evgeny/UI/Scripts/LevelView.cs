@@ -12,8 +12,6 @@ public class LevelView : MonoBehaviour
     private SaveData _data;
     private Button _button;
 
-    public int LevelToLoad => _levelToLoad;
-
     private void Awake()
     {
         _data = GetComponentInParent<LevelsKeeper>().Data;    
@@ -22,7 +20,7 @@ public class LevelView : MonoBehaviour
 
     private void Start()
     {
-        _button.GetComponent<LevelButton>().Init();
+        _button.GetComponent<LevelButton>().Init(_levelToLoad);
 
         if (_levelToLoad <= LevelHolder.CurrentLevel)
         {

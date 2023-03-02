@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 4732766576837236821, guid: 40318e41da04e124799f679d1eba99c6, type: 3}
+  _template: {fileID: 6673691774895991505, guid: 40318e41da04e124799f679d1eba99c6, type: 3}
   _poolCapacity: 3
   <Damage>k__BackingField: 80
 --- !u!1 &2289970440176651073
