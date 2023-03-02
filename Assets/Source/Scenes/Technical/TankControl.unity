@@ -745,6 +745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carro_Armato_L6_40
       objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905514, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3477,6 +3481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data: {fileID: 0}
   _root: {fileID: 0}
+  _audioManager: {fileID: 0}
   _restart: {fileID: 0}
   _toHangar: {fileID: 0}
   _restore: {fileID: 0}
@@ -7407,7 +7412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926409073972466542, guid: a5f33be8b52627943b77bd58335abd78, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5f33be8b52627943b77bd58335abd78, type: 3}
@@ -8466,7 +8471,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8065701810350265108}
-  m_LocalRotation: {x: -1.222587e-22, y: 0.00000011219699, z: 1.3717058e-29, w: 1}
+  m_LocalRotation: {x: 1.222587e-22, y: 0.00000011219699, z: -1.3717058e-29, w: 1}
   m_LocalPosition: {x: 29.999996, y: 5, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9797,7 +9802,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8065701812109340062}
-  m_LocalRotation: {x: -1.222587e-22, y: 0.00000011219699, z: 1.3717058e-29, w: 1}
+  m_LocalRotation: {x: 1.222587e-22, y: 0.00000011219699, z: -1.3717058e-29, w: 1}
   m_LocalPosition: {x: 29.999996, y: 5, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

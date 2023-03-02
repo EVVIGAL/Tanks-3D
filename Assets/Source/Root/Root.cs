@@ -18,6 +18,7 @@ public class Root : MonoBehaviour
     [SerializeField] private GameOverWindow _gameOverWindow;
     [SerializeField] private LevelCompletedWindow _levelCompletedWindow;
     [SerializeField] private GameObject _inputPanel;
+    [SerializeField] private WeaponReloaderView _weaponReloaderView;
     [field: SerializeField] public Wallet PlayerWallet { get; private set; }
 
     private const float _waitTime = 2.5f;
@@ -67,7 +68,7 @@ public class Root : MonoBehaviour
         }
 
         _playerTank = _playerTankFactory.CreateTank(_currentTankIndex, instancePosition);
-        _playerTank.Init((float)_unit.Speed.Value, (uint)_unit.Health.Value, (uint)_unit.Armor.Value, (uint)_unit.Damage.Value, _healthViewBehaviour, this, _artBlowSkill, _repairKitSkill);
+        _playerTank.Init((float)_unit.Speed.Value, (uint)_unit.Health.Value, (uint)_unit.Armor.Value, (uint)_unit.Damage.Value, _healthViewBehaviour, this, _artBlowSkill, _repairKitSkill, _weaponReloaderView);
         _virtualCamera.Follow = _playerTank.transform;
         _virtualCamera.LookAt = _playerTank.transform;
         _mobileInputUI.Init(_playerTank.UIInput);
