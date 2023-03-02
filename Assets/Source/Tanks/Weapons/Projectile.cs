@@ -19,6 +19,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private LayerMask _hittableLayers = -1;
 
     [Header("Ricochet")]
+    [Range (0f, 90f)]
     [SerializeField] private float _ricochetAngle;
     [SerializeField] private PhysicMaterial _ricochetMaterial;
     [SerializeField] private AudioClip _ricochetSound;
