@@ -109,19 +109,3 @@ MonoBehaviour:
       m_YScaleBool: 1
       m_ZScaleBool: 1
     name: SM_Env_Rock_01
-  - gameObject: {fileID: 1264127105196670, guid: 1e3861f9ad1beae4eadd9ad081712f57, type: 3}
-    settings:
-      m_Strength: 31.281513
-      m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 360, y: 360, z: 360}
-      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
-      m_ScaleRangeMax: {x: 3, y: 3, z: 3}
-      m_UniformScale: {x: 1, y: 3}
-      m_UniformBool: 0
-      m_XRotationBool: 1
-      m_YRotationBool: 1
-      m_ZRotationBool: 1
-      m_XScaleBool: 1
-      m_YScaleBool: 1
-      m_ZScaleBool: 1
-    name: SM_Env_Rock_02
