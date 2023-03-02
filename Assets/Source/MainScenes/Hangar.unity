@@ -6549,7 +6549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +5000
+  m_text: +50000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -6889,7 +6889,7 @@ MonoBehaviour:
     - _currentMedals: 0
     Units:
     - _health:
-        _value: 200
+        _value: 150
         _maximumValue: 400
         _upgradeCost: 100
         _upgradeValue: 20
@@ -6921,7 +6921,7 @@ MonoBehaviour:
       _isAvailable: 1
       _name: Stuart
     - _health:
-        _value: 400
+        _value: 260
         _maximumValue: 600
         _upgradeCost: 200
         _upgradeValue: 20
@@ -6953,7 +6953,7 @@ MonoBehaviour:
       _isAvailable: 0
       _name: Matilda
     - _health:
-        _value: 600
+        _value: 320
         _maximumValue: 800
         _upgradeCost: 300
         _upgradeValue: 40
@@ -6985,7 +6985,7 @@ MonoBehaviour:
       _isAvailable: 0
       _name: T-34
     - _health:
-        _value: 800
+        _value: 400
         _maximumValue: 1000
         _upgradeCost: 400
         _upgradeValue: 40
@@ -7017,7 +7017,7 @@ MonoBehaviour:
       _isAvailable: 0
       _name: Sherman
     - _health:
-        _value: 1000
+        _value: 480
         _maximumValue: 1600
         _upgradeCost: 500
         _upgradeValue: 100
@@ -7050,7 +7050,7 @@ MonoBehaviour:
       _name: "\u041A\u0412-2"
     LastDailyReward: 
     IncomeTaked: 
-    Money: 9499
+    Money: 0
     Medals: 0
     TotalIncome: 0
     LastIncome: 0
@@ -16195,7 +16195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1698115294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19398,7 +19398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143401242112736183, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8662057173165867739, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_Pivot.x
