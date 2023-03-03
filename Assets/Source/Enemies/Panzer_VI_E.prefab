@@ -261,8 +261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MaxValue>k__BackingField: 500
-  <Armor>k__BackingField: 60
-  _reward: 300
+  <Armor>k__BackingField: 70
+  _reward: 150
   _deathLayer: 6
   _physicObjects:
   - {fileID: 7926409073972466542}
@@ -300,6 +300,7 @@ MonoBehaviour:
   <RateOfFire>k__BackingField: 1
   <ReloadSpeed>k__BackingField: 3
   <MagazineSize>k__BackingField: 1
+  _weaponReloaderView: {fileID: 0}
 --- !u!114 &744965871855842204
 MonoBehaviour:
   m_ObjectHideFlags: 0
