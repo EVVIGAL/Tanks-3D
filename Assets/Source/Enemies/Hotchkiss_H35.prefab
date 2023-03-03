@@ -521,9 +521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 500
-  <Armor>k__BackingField: 0
-  _reward: 100
+  <MaxValue>k__BackingField: 300
+  <Armor>k__BackingField: 40
+  _reward: 50
   _deathLayer: 6
   _physicObjects:
   - {fileID: 1845433352997786620}
@@ -558,9 +558,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59ebba1a56d81d44a17f82f6c75747b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <RateOfFire>k__BackingField: 1
-  <ReloadSpeed>k__BackingField: 1
-  <MagazineSize>k__BackingField: 1
+  <RateOfFire>k__BackingField: 0.3
+  <ReloadSpeed>k__BackingField: 2
+  <MagazineSize>k__BackingField: 2
+  _weaponReloaderView: {fileID: 0}
 --- !u!114 &8338375564585274371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,9 +574,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245e9267fc63cf24e873d1285eed5a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _template: {fileID: 1214855191852371733, guid: 222e4cac4315f9c48975b162059dd0eb, type: 3}
+  _template: {fileID: 1052416172867449998, guid: 2fb88b7e7a0fcd04daca42278d66c454, type: 3}
   _poolCapacity: 3
-  <Damage>k__BackingField: 100
+  <Damage>k__BackingField: 60
 --- !u!1 &2166894245924741507
 GameObject:
   m_ObjectHideFlags: 0
