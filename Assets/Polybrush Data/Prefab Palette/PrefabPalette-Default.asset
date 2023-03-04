@@ -15,12 +15,12 @@ MonoBehaviour:
   prefabs:
   - gameObject: {fileID: 4448362985734628954, guid: d787428d69841564d8e59f6858884468, type: 3}
     settings:
-      m_Strength: 29.201681
+      m_Strength: 50
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1, y: 2}
+      m_UniformScale: {x: 0.5, y: 1.5}
       m_UniformBool: 1
       m_XRotationBool: 0
       m_YRotationBool: 1
@@ -36,7 +36,7 @@ MonoBehaviour:
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1, y: 2}
+      m_UniformScale: {x: 0.5, y: 1.5}
       m_UniformBool: 1
       m_XRotationBool: 0
       m_YRotationBool: 1
@@ -52,7 +52,7 @@ MonoBehaviour:
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1, y: 2}
+      m_UniformScale: {x: 0.5, y: 1.5}
       m_UniformBool: 1
       m_XRotationBool: 0
       m_YRotationBool: 1
@@ -68,7 +68,7 @@ MonoBehaviour:
       m_RotationRangeMax: {x: 0, y: 360, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1, y: 2}
+      m_UniformScale: {x: 0.5, y: 1.5}
       m_UniformBool: 1
       m_XRotationBool: 0
       m_YRotationBool: 1
@@ -95,10 +95,10 @@ MonoBehaviour:
     name: tree12
   - gameObject: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
     settings:
-      m_Strength: 37.521008
+      m_Strength: 30
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 360, y: 360, z: 360}
-      m_ScaleRangeMin: {x: 2, y: 2, z: 2}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 3, y: 3, z: 3}
       m_UniformScale: {x: 1, y: 3}
       m_UniformBool: 0
