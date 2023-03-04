@@ -6953,28 +6953,48 @@ MonoBehaviour:
     - _currentMedals: 0
     - _currentMedals: 0
     - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
     Units:
     - _health:
-        _value: 150
+        _value: 120
         _maximumValue: 400
         _upgradeCost: 100
         _upgradeValue: 20
-        _increaseCost: 200
+        _increaseCost: 100
       _damage:
         _value: 10
-        _maximumValue: 30
+        _maximumValue: 100
         _upgradeCost: 100
-        _upgradeValue: 4
-        _increaseCost: 200
+        _upgradeValue: 6
+        _increaseCost: 100
       _armor:
         _value: 20
-        _maximumValue: 30
+        _maximumValue: 50
         _upgradeCost: 100
-        _upgradeValue: 2
-        _increaseCost: 200
+        _upgradeValue: 4
+        _increaseCost: 300
       _speed:
         _value: 4
-        _maximumValue: 8
+        _maximumValue: 10
         _upgradeCost: 100
         _upgradeValue: 1
         _increaseCost: 200
