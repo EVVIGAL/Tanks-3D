@@ -2653,7 +2653,6 @@ MonoBehaviour:
   <MaxValue>k__BackingField: 5
   <Armor>k__BackingField: 0
   _reward: 10
-  _deathLayer: 6
   _physicObjects:
   - {fileID: 5519786571723633980}
   - {fileID: 746088032494442363}
@@ -2667,6 +2666,7 @@ MonoBehaviour:
   - {fileID: 6173710015271698008}
   - {fileID: 2183561027598607920}
   - {fileID: 6974262116116372248}
+  <DeathLayer>k__BackingField: 6
   _weaponPhysic: {fileID: 0}
 --- !u!114 &4637389807414689921
 MonoBehaviour:
@@ -2722,6 +2722,7 @@ MonoBehaviour:
   <RateOfFire>k__BackingField: 1
   <ReloadSpeed>k__BackingField: 3
   <MagazineSize>k__BackingField: 1
+  _weaponReloaderView: {fileID: 0}
 --- !u!114 &6053220275786434996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2736,7 +2737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _template: {fileID: -8256553352563409902, guid: 6c1d9a0bcbcd03d448df453ee2bfbbae, type: 3}
   _poolCapacity: 1
-  <Damage>k__BackingField: 50
+  <Damage>k__BackingField: 40
 --- !u!1 &5591788863936091747
 GameObject:
   m_ObjectHideFlags: 0
