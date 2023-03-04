@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 400
+  <MaxValue>k__BackingField: 300
   <Armor>k__BackingField: 20
   _reward: 40
   _deathLayer: 6
@@ -269,6 +269,7 @@ MonoBehaviour:
   <RateOfFire>k__BackingField: 1
   <ReloadSpeed>k__BackingField: 1
   <MagazineSize>k__BackingField: 1
+  _weaponReloaderView: {fileID: 0}
 --- !u!114 &37753328253948741
 MonoBehaviour:
   m_ObjectHideFlags: 0
