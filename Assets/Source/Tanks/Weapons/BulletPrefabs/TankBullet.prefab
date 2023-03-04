@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 0
   _liveTime: 3
-  _pushForce: 20
+  _pushForce: 300
   _mesh: {fileID: 2543708714447491911}
   _trailVfx: {fileID: 8080529004905981978}
   _damageBehaviour: {fileID: 6706734941338622802}
@@ -158,7 +158,7 @@ MonoBehaviour:
   _castDistance: 0.5
   _hittableLayers:
     serializedVersion: 2
-    m_Bits: 1015
+    m_Bits: 1011
   _ricochetAngle: 40
   _ricochetMaterial: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
   _ricochetSound: {fileID: 8300000, guid: df81f28e29b1ea245adcda6ddd33e9b7, type: 3}
