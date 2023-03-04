@@ -27,6 +27,7 @@ public class BotSoldierHealth : BotHealth
         {
             _weaponPhysic.Enable();
             _weaponPhysic.transform.parent = null;
+            _weaponPhysic.gameObject.layer = DeathLayer;
         }
     }
 }
