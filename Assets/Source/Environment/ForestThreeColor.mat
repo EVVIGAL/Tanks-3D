@@ -11,6 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
   m_ValidKeywords:
   - DR_CEL_EXTRA_ON
+  - DR_RIM_ON
   - _CELPRIMARYMODE_SINGLE
   - _TEXTUREBLENDINGMODE_MULTIPLY
   - _UNITYSHADOWMODE_MULTIPLY
@@ -51,9 +52,9 @@ Material:
     - _CelPrimaryMode: 1
     - _Cull: 2
     - _DstBlend: 0
-    - _FlatRimEdgeSmoothness: 0.474
-    - _FlatRimLightAlign: 0
-    - _FlatRimSize: 0.101
+    - _FlatRimEdgeSmoothness: 0.222
+    - _FlatRimLightAlign: 0.107
+    - _FlatRimSize: 0.152
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
     - _Flatness: 1
@@ -68,7 +69,7 @@ Material:
     - _LightmapDirectionYaw: 0
     - _OverrideLightmapDir: 0
     - _QueueOffset: 0
-    - _RimEnabled: 0
+    - _RimEnabled: 1
     - _SelfShadingSize: 0.854
     - _SelfShadingSizeExtra: 0.818
     - _ShadowEdgeSize: 0.002
@@ -90,7 +91,7 @@ Material:
     - _ColorDimExtra: {r: 0.4245283, g: 0.29645535, b: 0.19023673, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _FlatRimColor: {r: 0.3467769, g: 0.3467769, b: 0.3467769, a: 1}
+    - _FlatRimColor: {r: 0.15225615, g: 0.2264151, b: 0.11854753, a: 1}
     - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}

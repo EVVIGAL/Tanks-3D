@@ -3784,7 +3784,7 @@ MonoBehaviour:
   <MaxValue>k__BackingField: 5
   <Armor>k__BackingField: 0
   _reward: 10
-  _deathLayer: 6
+  <DeathLayer>k__BackingField: 6
   _physicObjects:
   - {fileID: 3690612488656788675}
   - {fileID: 2105496443185513424}
@@ -3839,6 +3839,7 @@ MonoBehaviour:
   <RateOfFire>k__BackingField: 1
   <ReloadSpeed>k__BackingField: 3.2
   <MagazineSize>k__BackingField: 1
+  _weaponReloaderView: {fileID: 0}
 --- !u!114 &4352208790997327314
 MonoBehaviour:
   m_ObjectHideFlags: 0

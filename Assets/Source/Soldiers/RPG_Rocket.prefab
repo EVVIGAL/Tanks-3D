@@ -88,12 +88,21 @@ MonoBehaviour:
   _hittableLayers:
     serializedVersion: 2
     m_Bits: 1015
+<<<<<<< HEAD
   _ricochetAngle: 90
   _ricochetMaterial: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
   _ricochetSound: {fileID: 8300000, guid: df81f28e29b1ea245adcda6ddd33e9b7, type: 3}
   _explosionVfx: {fileID: 0}
   _dirtVfx: {fileID: 0}
   _dirt: {fileID: 0}
+=======
+  _ricochetAngle: 35
+  _ricochetMaterial: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
+  _ricochetSound: {fileID: 8300000, guid: df81f28e29b1ea245adcda6ddd33e9b7, type: 3}
+  _explosionVfx: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+  _dirtVfx: {fileID: 198146752706458318, guid: 5ed0a013702bd9f42847584f2fba7b21, type: 3}
+  _dirt: {fileID: 13400000, guid: afc9d09cea44153409396b12a61943e6, type: 2}
+>>>>>>> 4c7235afc434b5bf04daf0ee363d487b75a50fef
 --- !u!82 &7366165045599579789
 AudioSource:
   m_ObjectHideFlags: 0
