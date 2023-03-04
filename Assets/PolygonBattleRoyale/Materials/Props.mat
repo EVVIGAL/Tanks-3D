@@ -84,7 +84,7 @@ Material:
     - _FlatRimSize: 0.5
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
-    - _Flatness: 0.646
+    - _Flatness: 0.857
     - _FlatnessExtra: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.2
@@ -104,9 +104,9 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _RimEnabled: 0
-    - _SelfShadingSize: 0.79
+    - _SelfShadingSize: 0.672
     - _SelfShadingSizeExtra: 0.6
-    - _ShadowEdgeSize: 0.161
+    - _ShadowEdgeSize: 0.131
     - _ShadowEdgeSizeExtra: 0.05
     - _SmoothnessTextureChannel: 0
     - _SpecularEnabled: 0
