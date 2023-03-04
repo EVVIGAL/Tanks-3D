@@ -72,6 +72,7 @@ MonoBehaviour:
   <RateOfFire>k__BackingField: 1
   <ReloadSpeed>k__BackingField: 3
   <MagazineSize>k__BackingField: 1
+  _weaponReloaderView: {fileID: 0}
 --- !u!114 &2289970440079283961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _template: {fileID: 6673691774895991505, guid: 40318e41da04e124799f679d1eba99c6, type: 3}
   _poolCapacity: 3
-  <Damage>k__BackingField: 80
+  <Damage>k__BackingField: 60
 --- !u!1 &2289970440176651073
 GameObject:
   m_ObjectHideFlags: 0

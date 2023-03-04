@@ -255,9 +255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59ebba1a56d81d44a17f82f6c75747b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <RateOfFire>k__BackingField: 0.5
+  <RateOfFire>k__BackingField: 0.3
   <ReloadSpeed>k__BackingField: 2
   <MagazineSize>k__BackingField: 4
+  _weaponReloaderView: {fileID: 0}
 --- !u!1 &5509166443557935332
 GameObject:
   m_ObjectHideFlags: 0
