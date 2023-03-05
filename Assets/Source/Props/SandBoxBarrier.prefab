@@ -110,6 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc05516c49fee9c4b8eacecb0893636a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 200
+  <MaxValue>k__BackingField: 30
   <Armor>k__BackingField: 0
   _destroyVfx: {fileID: 198146752706458318, guid: 5ed0a013702bd9f42847584f2fba7b21, type: 3}
