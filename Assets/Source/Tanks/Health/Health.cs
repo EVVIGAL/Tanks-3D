@@ -19,6 +19,7 @@ public class Health : MonoBehaviour, IHealth
     {
         MaxValue = maxHealth;
         Armor = armor;
+        Value = MaxValue;
     }
 
     public uint TakeDamage(uint damage)
