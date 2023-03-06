@@ -27,8 +27,8 @@ public class AudioManager : MonoBehaviour
         _effectsValue = _data.Data.EffectsValue;
         _musicValue = _data.Data.MusicValue;
         _mixer.SetFloat(_masterStr, _isMute ? _zeroVolume : 0);
-        SetMusic(_effectsValue);
-        SetEffects(_musicValue);
+        SetMusic(_musicValue);
+        SetEffects(_effectsValue);      
     }
 
     public void OnOff()
@@ -44,6 +44,12 @@ public class AudioManager : MonoBehaviour
         _mixer.SetFloat(_musicStr, value);
         _data.Data.MusicValue = value;
         _data.Save();
+    }
+
+    public void SetMus(float value)
+    {
+        Debug.Log(value);
+        _mixer.SetFloat(_musicStr, value);
     }
 
     public void SetEffects(float value)
