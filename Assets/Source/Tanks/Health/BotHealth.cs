@@ -21,7 +21,7 @@ public class BotHealth : Health
             @object.layer = DeathLayer;
 
         if (_enemiesCounter)
-            _enemiesCounter.Decrease();
+            _enemiesCounter.Decrease(this);
         if (_playerWallet)
             _playerWallet.Add(_reward);
     }

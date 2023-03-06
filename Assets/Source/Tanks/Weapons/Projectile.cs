@@ -38,6 +38,7 @@ public class Projectile : MonoBehaviour
     {
         _damage = damage;
         _detectCollisions = detectCollision;
+        _lastPosition = transform.position;
         StartCoroutine(Disable());
 
         if (_trailVfx != null)
@@ -60,8 +61,8 @@ public class Projectile : MonoBehaviour
         if (_detectCollisions == false)
             return;
 
-        float castDistance = Vector3.Distance(_tip.position, _lastPosition);
-        if (Physics.SphereCast(transform.position, _castRadius, _rigidbody.velocity, out RaycastHit hitInfo, castDistance, _hittableLayers))
+        Vector3 direction = _tip.position - _lastPosition;
+        if (Physics.SphereCast(_lastPosition, _castRadius, _rigidbody.velocity.normalized, out RaycastHit hitInfo, direction.magnitude, _hittableLayers))
             if (hitInfo.transform != transform)
                 OnHit(hitInfo);
 
