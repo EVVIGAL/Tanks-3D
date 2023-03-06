@@ -15,8 +15,8 @@ public class Projectile : MonoBehaviour
 
     [Header("Collision")]
     [SerializeField] private float _castRadius;
-    [SerializeField] private float _castDistance = 1f;
     [SerializeField] private LayerMask _hittableLayers = -1;
+    [SerializeField] private Transform _tip;
 
     [Header("Ricochet")]
     [Range (0f, 90f)]
@@ -32,6 +32,7 @@ public class Projectile : MonoBehaviour
     private bool _detectCollisions;
     private Rigidbody _rigidbody;
     private AudioSource _audioSource;
+    private Vector3 _lastPosition;
 
     public void Init(uint damage, bool detectCollision = true)
     {
@@ -48,6 +49,7 @@ public class Projectile : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _audioSource = GetComponent<AudioSource>();
         _detectCollisions = true;
+        _lastPosition = transform.position;
     }
 
     private void Update()
@@ -58,9 +60,12 @@ public class Projectile : MonoBehaviour
         if (_detectCollisions == false)
             return;
 
-        if (Physics.SphereCast(transform.position, _castRadius, _rigidbody.velocity, out RaycastHit hitInfo, _castDistance, _hittableLayers))
+        float castDistance = Vector3.Distance(_tip.position, _lastPosition);
+        if (Physics.SphereCast(transform.position, _castRadius, _rigidbody.velocity, out RaycastHit hitInfo, castDistance, _hittableLayers))
             if (hitInfo.transform != transform)
                 OnHit(hitInfo);
+
+        _lastPosition = transform.position;
     }
 
     public void EnablePhysic()
@@ -160,5 +165,11 @@ public class Projectile : MonoBehaviour
             Debug.LogError(nameof(_damageBehaviour) + " is not implement " + nameof(IDamage));
             _damageBehaviour = null;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _castRadius);
     }
 }
