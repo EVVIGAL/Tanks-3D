@@ -10,7 +10,6 @@ public class EnemiesCounter : MonoBehaviour
     [SerializeField] private Root _root;
 
     private List<BotHealth> _enemies = new();
-    private int _aliveEnemyCount;
 
     private void Awake()
     {
@@ -18,31 +17,26 @@ public class EnemiesCounter : MonoBehaviour
         foreach (BotHealth enemy in _enemies)
             enemy.Init(this, _root.PlayerWallet);
 
-        Show();
+        _aliveEnemyCountText.SetText(_enemies.Count.ToString());
     }
 
     public void Add(BotHealth bot)
     {
         bot.Init(this, _root.PlayerWallet);
         _enemies.Add(bot);
-        Show();
+        _aliveEnemyCountText.SetText(_enemies.Count.ToString());
     }
 
-    public void Decrease()
+    public void Decrease(BotHealth bot)
     {
-        if (_aliveEnemyCount == 0)
+        if (_enemies.Contains(bot) == false)
             throw new InvalidOperationException();
 
-        _aliveEnemyCount--;
-        _aliveEnemyCountText.SetText(_aliveEnemyCount.ToString());
+        _enemies.Remove(bot);
 
-        if (_aliveEnemyCount == 0)
+        if (_enemies.Count == 0)
             _root.LevelCompleted();
-    }
 
-    private void Show()
-    {
-        _aliveEnemyCount = _enemies.Count;
-        _aliveEnemyCountText.SetText(_aliveEnemyCount.ToString());
+        _aliveEnemyCountText.SetText(_enemies.Count.ToString());
     }
 }
