@@ -15,6 +15,12 @@ public class LevelButton : MonoBehaviour
     private Button _button;
     private int _levelToLoad;
 
+    private void OnEnable()
+    {
+        _button = GetComponent<Button>();
+        _button.onClick.AddListener(ShowAd);
+    }
+
     private void OnDisable()
     {
         _button.onClick.RemoveListener(ShowAd);
@@ -22,8 +28,8 @@ public class LevelButton : MonoBehaviour
 
     public void Init(int level)
     {
-        _button = GetComponent<Button>();
-        _button.onClick.AddListener(ShowAd);
+        //_button = GetComponent<Button>();
+        //_button.onClick.AddListener(ShowAd);
         _levelToLoad = level;
         _text.text = _levelToLoad.ToString();
     }

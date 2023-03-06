@@ -3533,7 +3533,7 @@ MonoBehaviour:
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
   _price: 4000
-  _neededLevel: 5
+  _neededLevel: 12
 --- !u!114 &510200237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6953,31 +6953,51 @@ MonoBehaviour:
     - _currentMedals: 0
     - _currentMedals: 0
     - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
     Units:
     - _health:
-        _value: 150
+        _value: 120
         _maximumValue: 400
         _upgradeCost: 100
         _upgradeValue: 20
-        _increaseCost: 200
+        _increaseCost: 100
       _damage:
         _value: 10
-        _maximumValue: 30
+        _maximumValue: 100
         _upgradeCost: 100
-        _upgradeValue: 4
-        _increaseCost: 200
+        _upgradeValue: 6
+        _increaseCost: 100
       _armor:
         _value: 20
-        _maximumValue: 30
+        _maximumValue: 50
         _upgradeCost: 100
-        _upgradeValue: 2
-        _increaseCost: 200
+        _upgradeValue: 4
+        _increaseCost: 300
       _speed:
         _value: 4
-        _maximumValue: 8
+        _maximumValue: 10
         _upgradeCost: 100
         _upgradeValue: 1
-        _increaseCost: 200
+        _increaseCost: 100
       _farm:
         _value: 0
         _maximumValue: 12
@@ -6987,29 +7007,29 @@ MonoBehaviour:
       _isAvailable: 1
       _name: Stuart
     - _health:
-        _value: 260
+        _value: 300
         _maximumValue: 600
-        _upgradeCost: 200
-        _upgradeValue: 20
-        _increaseCost: 400
+        _upgradeCost: 150
+        _upgradeValue: 40
+        _increaseCost: 150
       _damage:
-        _value: 30
-        _maximumValue: 50
+        _value: 40
+        _maximumValue: 160
         _upgradeCost: 200
-        _upgradeValue: 5
-        _increaseCost: 40
+        _upgradeValue: 10
+        _increaseCost: 100
       _armor:
         _value: 40
         _maximumValue: 60
-        _upgradeCost: 200
+        _upgradeCost: 150
         _upgradeValue: 5
-        _increaseCost: 400
+        _increaseCost: 150
       _speed:
-        _value: 2
-        _maximumValue: 4
-        _upgradeCost: 200
+        _value: 3
+        _maximumValue: 8
+        _upgradeCost: 150
         _upgradeValue: 1
-        _increaseCost: 400
+        _increaseCost: 200
       _farm:
         _value: 0
         _maximumValue: 20
@@ -11090,7 +11110,7 @@ MonoBehaviour:
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
   _price: 1000
-  _neededLevel: 2
+  _neededLevel: 3
 --- !u!114 &1249670176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15535,7 +15555,7 @@ MonoBehaviour:
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
   _price: 3000
-  _neededLevel: 4
+  _neededLevel: 9
 --- !u!114 &1629235524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17696,7 +17716,7 @@ MonoBehaviour:
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
   _price: 2000
-  _neededLevel: 3
+  _neededLevel: 6
 --- !u!114 &1842073694
 MonoBehaviour:
   m_ObjectHideFlags: 0
