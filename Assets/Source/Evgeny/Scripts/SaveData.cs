@@ -20,8 +20,6 @@ public class SaveData : MonoBehaviour
         if (PlayerPrefs.HasKey(_saveKey))
             Load();
 
-        //LoadYandex();
-
         if (_choser != null)
             _choser.Init(_data.Units, _data.CurrentTankIndex);
 
@@ -67,29 +65,6 @@ public class SaveData : MonoBehaviour
 
         if (PlayerAccount.IsAuthorized)
             PlayerAccount.SetPlayerData(jsonDataString);
-
-        Debug.Log("Saved");
-#endif
-    }
-
-    private void LoadYandex()
-    {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        if (PlayerAccount.IsAuthorized)
-        {
-            string loadedString = "";
-
-            PlayerAccount.GetPlayerData((data) => 
-            {
-                Debug.Log("Loaded = " + data);
-                loadedString = data;
-
-                if (loadedString == "")
-                return;
-
-                _data = JsonUtility.FromJson<DataHolder>(loadedString);
-            });
-        }
 #endif
     }
 

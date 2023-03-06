@@ -3527,6 +3527,7 @@ MonoBehaviour:
     _name: KV-2
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _battleButton: {fileID: 1572062147}
   _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
@@ -11104,6 +11105,7 @@ MonoBehaviour:
     _name: Matilda
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _battleButton: {fileID: 1572062147}
   _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
@@ -15549,6 +15551,7 @@ MonoBehaviour:
     _name: Sherman
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _battleButton: {fileID: 1572062147}
   _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
@@ -15786,6 +15789,7 @@ MonoBehaviour:
     _name: Stuart
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _battleButton: {fileID: 1572062147}
   _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}
@@ -17710,6 +17714,7 @@ MonoBehaviour:
     _name: T-34-76
   _nameText: {fileID: 917525581}
   _priceText: {fileID: 1370330162}
+  _battleButton: {fileID: 1572062147}
   _choser: {fileID: 667585740}
   _refresher: {fileID: 1426541025}
   _button: {fileID: 1409909256}

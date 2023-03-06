@@ -7,6 +7,9 @@ public class OnDisableActivator : MonoBehaviour
     private void OnDisable()
     {
         foreach (GameObject obj in _objects)
-            obj.SetActive(true);
+        {
+            if(obj != null)
+                obj.SetActive(true);
+        }
     }
 }

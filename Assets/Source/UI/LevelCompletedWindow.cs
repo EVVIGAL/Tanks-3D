@@ -28,7 +28,9 @@ public class LevelCompletedWindow : MonoBehaviour
 
     private void OnDisable()
     {
+#if UNITY_WEBGL && !UNITY_EDITOR
         _data.SetLeaderboardScore();
+#endif
         _next.onClick.RemoveListener(OnNextButtonClick);
         _restart.onClick.RemoveListener(OnRestartButtonClick);
         _toHangar.onClick.RemoveListener(OnGoToHangarButtonClick);

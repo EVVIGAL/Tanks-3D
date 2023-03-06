@@ -12,6 +12,7 @@ public class Unit : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _priceText;
     [Space]
+    [SerializeField] private Button _battleButton;
     [SerializeField] private TankChoser _choser;
     [SerializeField] private StatsRefresher _refresher;
     [SerializeField] private Button _button;
@@ -69,6 +70,7 @@ public class Unit : MonoBehaviour
     {
         if (_unitStat.IsAvailable)
         {
+            _battleButton.interactable = true;
             _priceText.text = string.Empty;
             _button.gameObject.SetActive(false);
             _lockImage.gameObject.SetActive(false);
@@ -76,6 +78,7 @@ public class Unit : MonoBehaviour
             return;
         }
 
+        _battleButton.interactable = false;
         _button.gameObject.SetActive(true);
 
         if (LevelHolder.CurrentLevel > _neededLevel)

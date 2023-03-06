@@ -10,8 +10,10 @@ public class LeaderboardPanel : MonoBehaviour
     private int _competingPlayers = 1;
 
     private void OnEnable()
-    {       
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
         GetLeaderboardEntries();
+#endif
     }
 
     private void OnDisable()
@@ -27,7 +29,7 @@ public class LeaderboardPanel : MonoBehaviour
     {
         Leaderboard.GetEntries(_leaderboardTxt, (result) =>
         {
-            for(int i = 0; i < result.entries.Length; i++)
+            for (int i = 0; i < result.entries.Length; i++)
             {
                 string name = result.entries[i].player.publicName;
                 string rank = result.entries[i].rank.ToString();
