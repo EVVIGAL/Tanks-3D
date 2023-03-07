@@ -1,14 +1,16 @@
 using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(Button))]
 public class RewardButton : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private AudioManager _audioManager;
     [SerializeField] private Money _money;
 
-    private const int _lvlMultiplier = 20;
+    private const int _lvlMultiplier = 30;
 
     private int _reward = 50000;
     private Button _button;
@@ -17,6 +19,7 @@ public class RewardButton : MonoBehaviour
     {
         _button = GetComponent<Button>();
         _reward += LevelHolder.CurrentLevel * _lvlMultiplier;
+        _text.text = _reward.ToString();
     }
 
     private void OnEnable()
