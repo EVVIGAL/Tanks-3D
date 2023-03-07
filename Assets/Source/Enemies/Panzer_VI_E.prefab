@@ -231,6 +231,7 @@ MonoBehaviour:
   _smokeAppearanceHealth: 50
   _fire: {fileID: 8888976468770880845}
   _fireAppearanceHealth: 25
+  _delayBeforeStop: 5
 --- !u!114 &7926409073972466448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,6 +702,7 @@ MonoBehaviour:
   _radius: 5
   _upwardsModifier: 10
   _explosionFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+  _deathLayer: 6
 --- !u!4 &2470857657642220152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2032895855069556871, guid: 644ff4be0a0e21c449bab2fb278c1e98, type: 3}
