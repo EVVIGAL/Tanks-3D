@@ -18,8 +18,8 @@ public class GameOverWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        _data.Data.ArtilleryAmount = _root.ArtBlowSkill.CurrentAmount;
-        _data.Data.ToolsAmount = _root.RepairSkill.CurrentAmount;
+        _data.Data.ArtilleryAmount += _root.ArtBlowSkill.CurrentAmount;
+        _data.Data.ToolsAmount += _root.RepairSkill.CurrentAmount;
         _restart.onClick.AddListener(OnRestartButtonClick);
         _toHangar.onClick.AddListener(OnGoToHangarButtonClick);
         _restore.onClick.AddListener(OnRestoreButtonClick);

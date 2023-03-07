@@ -17,8 +17,8 @@ public class LevelCompletedWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        _data.Data.ArtilleryAmount = _root.ArtBlowSkill.CurrentAmount;
-        _data.Data.ToolsAmount = _root.RepairSkill.CurrentAmount;
+        _data.Data.ArtilleryAmount += _root.ArtBlowSkill.CurrentAmount;
+        _data.Data.ToolsAmount += _root.RepairSkill.CurrentAmount;
         _next.onClick.AddListener(OnNextButtonClick);
         _restart.onClick.AddListener(OnRestartButtonClick);
         _toHangar.onClick.AddListener(OnGoToHangarButtonClick);
