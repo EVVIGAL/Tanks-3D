@@ -8,8 +8,10 @@ public class EnemiesCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text _aliveEnemyCountText;
     [SerializeField] private Root _root;
+    [SerializeField] private SpawnComposite _spawnComposite;
 
     private List<BotHealth> _enemies = new();
+    private bool _spawn;
 
     private void Awake()
     {
@@ -35,8 +37,10 @@ public class EnemiesCounter : MonoBehaviour
         _enemies.Remove(bot);
 
         if (_enemies.Count == 0)
-            _root.LevelCompleted();
+            if (_spawnComposite == null || (_spawnComposite && _spawnComposite.IsStopped()))
+                _root.LevelCompleted();
 
         _aliveEnemyCountText.SetText(_enemies.Count.ToString());
     }
+
 }

@@ -456,8 +456,8 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 1
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_SlopeLimit: 10
+  m_StepOffset: 0.1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.08, z: 0}
@@ -524,11 +524,11 @@ MonoBehaviour:
   <MaxValue>k__BackingField: 300
   <Armor>k__BackingField: 40
   _reward: 50
-  _deathLayer: 6
   _physicObjects:
   - {fileID: 1845433352997786620}
   - {fileID: 8478330211263197757}
   - {fileID: 1470699672730194684}
+  <DeathLayer>k__BackingField: 6
   _turretExplosion: {fileID: 5952252007707053984}
 --- !u!114 &6498794208975887792
 MonoBehaviour:
