@@ -81,13 +81,13 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator Fade(float startValue, float endValue, float waitTime)
     {
-        _mixer.SetFloat(_musicStr, startValue);
+        _mixer.SetFloat(_masterStr, startValue);
         yield return new WaitForSeconds(waitTime);
 
         while (startValue != endValue)
         {
             startValue = Mathf.MoveTowards(startValue, endValue, Time.unscaledDeltaTime * _fadeSpeed);
-            _mixer.SetFloat(_musicStr, startValue);
+            _mixer.SetFloat(_masterStr, startValue);
             yield return null;
         }
 
