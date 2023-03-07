@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1630546490}
-  m_IndirectSpecularColor: {r: 0.6544515, g: 0.8569973, b: 0.8664588, a: 1}
+  m_IndirectSpecularColor: {r: 0.679512, g: 0.9522808, b: 0.99999946, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1640,6 +1640,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -4699,6 +4703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 191
@@ -5058,6 +5066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 131
@@ -5265,6 +5277,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -5766,6 +5782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 93
@@ -5834,6 +5854,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -6123,6 +6147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 85
@@ -6264,6 +6292,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -6696,6 +6728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 101
@@ -6764,6 +6800,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -7893,6 +7933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 185
@@ -8375,7 +8419,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1983868378, guid: c88bebc9f42262a4595175158008899e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c88bebc9f42262a4595175158008899e, type: 3}
 --- !u!4 &705610085 stripped
 Transform:
@@ -8823,6 +8868,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -9983,6 +10032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 150
@@ -10483,6 +10536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 104
@@ -10844,6 +10901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 113
@@ -10961,7 +11022,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1983868378, guid: c88bebc9f42262a4595175158008899e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c88bebc9f42262a4595175158008899e, type: 3}
 --- !u!4 &910423247 stripped
 Transform:
@@ -12758,6 +12820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 64
@@ -12965,6 +13031,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -14159,7 +14229,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1983868378, guid: c88bebc9f42262a4595175158008899e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c88bebc9f42262a4595175158008899e, type: 3}
 --- !u!4 &1262973703 stripped
 Transform:
@@ -15048,6 +15119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 78
@@ -15189,6 +15264,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -15763,6 +15842,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -16549,6 +16632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 192
@@ -16617,6 +16704,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -16832,6 +16923,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -17264,6 +17359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 87
@@ -17593,7 +17692,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.821
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1983868378, guid: c88bebc9f42262a4595175158008899e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c88bebc9f42262a4595175158008899e, type: 3}
 --- !u!4 &1582348014 stripped
 Transform:
@@ -17902,6 +18002,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -18577,6 +18681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -18645,6 +18753,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -19074,6 +19186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 215
@@ -19215,6 +19331,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -19795,6 +19915,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -20435,6 +20559,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -21409,7 +21537,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1983868378, guid: c88bebc9f42262a4595175158008899e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c88bebc9f42262a4595175158008899e, type: 3}
 --- !u!4 &1899162903 stripped
 Transform:
@@ -21844,6 +21973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
       value: 111
@@ -21985,6 +22118,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder
@@ -22924,6 +23061,10 @@ PrefabInstance:
     - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_01(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1405840485290130, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4094038117698566, guid: d7beb5687da9e074fbb0455868c345dd, type: 3}
       propertyPath: m_RootOrder

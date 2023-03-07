@@ -158,7 +158,7 @@ MonoBehaviour:
   _castRadius: 0.1
   _hittableLayers:
     serializedVersion: 2
-    m_Bits: 755
+    m_Bits: 691
   _tip: {fileID: 7729024838539086036}
   _ricochetAngle: 40
   _ricochetMaterial: {fileID: 13400000, guid: c54c4730d7870e04388171bdebc351a4, type: 2}
