@@ -12,7 +12,7 @@ public class DailyReward : MonoBehaviour
     [SerializeField] private Button _claimButton;
     [SerializeField] private int _rewardValue;
 
-    private const int _secondsInDay = 15;
+    private const int _secondsInDay = 300;
     private const int _rewardIncrease = 35;
 
     public int RewardValue => _rewardValue;
@@ -33,7 +33,7 @@ public class DailyReward : MonoBehaviour
 
         DateTime lastSaveTime = DateTime.Parse(_data.Data.LastDailyReward);
         TimeSpan timePassed = DateTime.UtcNow - lastSaveTime;
-        int secondPassed = timePassed.Seconds;
+        double secondPassed = timePassed.TotalSeconds;
 
         if (secondPassed == 0)
             return;
