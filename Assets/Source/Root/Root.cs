@@ -22,6 +22,7 @@ public class Root : MonoBehaviour
     [field: SerializeField] public Wallet PlayerWallet { get; private set; }
 
     private const float _waitTime = 2.5f;
+    private const uint _skillAmount = 3;
 
     private PlayerTankFactory _playerTankFactory;
     private PlayerTank _playerTank;
@@ -51,8 +52,10 @@ public class Root : MonoBehaviour
         if (!_isGameEnd)
             CreatePlayerTank();
 
-        _artBlowSkill.Init(_data.Data.ArtilleryAmount);
-        _repairKitSkill.Init(_data.Data.ToolsAmount);
+        _data.Data.ArtilleryAmount -= (int)SetSkillsAmount(_artBlowSkill, (uint)_data.Data.ArtilleryAmount);
+        _data.Data.ToolsAmount -= (int)SetSkillsAmount(_repairKitSkill, (uint)_data.Data.ToolsAmount);
+        //_artBlowSkill.Init(_data.Data.ArtilleryAmount);
+        //_repairKitSkill.Init(_data.Data.ToolsAmount);
         _damageCounter.Init(_unit.Health.Value, _currentLevelIndex);
         _levelText.text = (_currentLevelIndex - 1).ToString();
     }
@@ -96,6 +99,18 @@ public class Root : MonoBehaviour
     {
         _unit = unit;
         _currentTankIndex = index;
+    }
+
+    private uint SetSkillsAmount(Skill skill, uint amount)
+    {
+        if(_skillAmount > amount)
+        {
+            skill.Init((int)amount);
+            return amount;
+        }
+
+        skill.Init((int)_skillAmount);
+        return _skillAmount;
     }
 
     private void EndGame()
