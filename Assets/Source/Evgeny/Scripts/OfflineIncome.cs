@@ -18,14 +18,16 @@ public class OfflineIncome : MonoBehaviour
             return;
 
         float incomePerSecond = income / 60f;
+
         DateTime lastSaveTime = DateTime.Parse(_data.Data.IncomeTaked);
         TimeSpan timePassed = DateTime.UtcNow - lastSaveTime;
-        int secondPassed = timePassed.Seconds;
+
+        double secondPassed = timePassed.TotalSeconds;
 
         if (secondPassed == 0)
             return;
 
-        float finalIncome = incomePerSecond * secondPassed;
+        float finalIncome = incomePerSecond * (float)secondPassed;
         _income.Add((int)finalIncome);
     }
 }
