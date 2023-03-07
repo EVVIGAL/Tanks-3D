@@ -4,6 +4,7 @@ using System;
 
 public class SaveData : MonoBehaviour
 {
+    [SerializeField] private AudioManager _audioManager;
     [SerializeField] private DataHolder _data;
     [SerializeField] private TankChoser _choser;
     [SerializeField] private Root _root;
@@ -25,6 +26,8 @@ public class SaveData : MonoBehaviour
 
         if (_root != null)
             _root.Init(_data.Units[_data.CurrentTankIndex], (uint)_data.CurrentTankIndex);
+
+        _audioManager.Init();
 
         LevelHolder.SetLevel(_data.CurrentLevel);
     }

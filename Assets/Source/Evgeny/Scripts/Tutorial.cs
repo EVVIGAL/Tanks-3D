@@ -6,13 +6,13 @@ public class Tutorial : MonoBehaviour
 
     private void Start()
     {
-        _audioManager.Mute();
-        Time.timeScale = 0;
+        //_audioManager.Mute();
+        //Time.timeScale = 0;
     }
 
     private void OnDisable()
     {
-        Time.timeScale = 1;
-        _audioManager.Load();
+        //Time.timeScale = 1;
+        //_audioManager.Load();
     }
 }

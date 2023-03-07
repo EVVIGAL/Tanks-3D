@@ -6942,6 +6942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc9805401ef384478aaf99da627c321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 905694432}
   _data:
     Levels:
     - _currentMedals: 0
