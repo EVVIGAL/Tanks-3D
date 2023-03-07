@@ -42,7 +42,6 @@ public class DailyReward : MonoBehaviour
             gameObject.SetActive(false);      
     }
 
-
     private void OnDisable()
     {       
         _claimButton.onClick.RemoveListener(Claim);

@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff0928a15abb144ea1b3e209ec78c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _text: {fileID: 0}
+  _text: {fileID: 808561981}
   _audioManager: {fileID: 905694432}
   _money: {fileID: 1482989044}
 --- !u!114 &241956746 stripped
@@ -6752,7 +6752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +50000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -16660,7 +16660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buttonsToOnOff:
   - {fileID: 1572062147}
-  - {fileID: 0}
+  - {fileID: 7236429904106987504}
   - {fileID: 590459316}
   - {fileID: 1439092059}
   - {fileID: 1431003296}
@@ -16671,6 +16671,8 @@ MonoBehaviour:
   - {fileID: 2112148859}
   - {fileID: 241956746}
   - {fileID: 845594176}
+  - {fileID: 7236429904106987508}
+  - {fileID: 7236429904106987503}
 --- !u!1 &1698300891
 GameObject:
   m_ObjectHideFlags: 0
