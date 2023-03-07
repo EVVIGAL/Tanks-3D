@@ -13,6 +13,7 @@ public class GameOverWindow : MonoBehaviour
     [SerializeField] private Button _restore;
     [SerializeField] private LoadPanel _loadPanel;
     [SerializeField] private Wallet _wallet;
+    [SerializeField] private GameObject _inputPanel;
 
     private const int _hubSceneIndex = 1;
 
@@ -63,6 +64,7 @@ public class GameOverWindow : MonoBehaviour
     private void Restore()
     {
         _root.CreatePlayerTank();
+        _inputPanel.SetActive(true);
         gameObject.SetActive(false);
         _restore.gameObject.SetActive(false);
     }

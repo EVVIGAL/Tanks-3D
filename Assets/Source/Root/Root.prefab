@@ -278,6 +278,7 @@ MonoBehaviour:
   _restore: {fileID: 5147225766788741154}
   _loadPanel: {fileID: 2129770225961706989}
   _wallet: {fileID: 1357086680414000330}
+  _inputPanel: {fileID: 7097204676055473671}
 --- !u!1 &291348461
 GameObject:
   m_ObjectHideFlags: 0
@@ -9567,6 +9568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caea107db6beedb40896c8b0d558f067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _reward: {fileID: 991631994}
   _levelText: {fileID: 900927861}
   _damageCounter: {fileID: 804702016}
   _data: {fileID: 4547362579411169480}

@@ -7,6 +7,7 @@ using TMPro;
 [RequireComponent(typeof(PlayerTankFactory))]
 public class Root : MonoBehaviour
 {
+    [SerializeField] private FinalReward _reward;
     [SerializeField] private TextMeshProUGUI _levelText;
     [SerializeField] private DamageCounter _damageCounter;
     [SerializeField] private SaveData _data;
@@ -52,12 +53,11 @@ public class Root : MonoBehaviour
         if (!_isGameEnd)
             CreatePlayerTank();
 
-        _data.Data.ArtilleryAmount -= (int)SetSkillsAmount(_artBlowSkill, (uint)_data.Data.ArtilleryAmount);
-        _data.Data.ToolsAmount -= (int)SetSkillsAmount(_repairKitSkill, (uint)_data.Data.ToolsAmount);
-        //_artBlowSkill.Init(_data.Data.ArtilleryAmount);
-        //_repairKitSkill.Init(_data.Data.ToolsAmount);
+        _data.Data.ArtilleryAmount -= (int)SetSkillAmount(_artBlowSkill, (uint)_data.Data.ArtilleryAmount);
+        _data.Data.ToolsAmount -= (int)SetSkillAmount(_repairKitSkill, (uint)_data.Data.ToolsAmount);
         _damageCounter.Init(_unit.Health.Value, _currentLevelIndex);
         _levelText.text = (_currentLevelIndex - 1).ToString();
+        _reward.Init((int)_currentLevelIndex - 1, (int)_data.Data.Levels[_currentLevelIndex - 2].CurrentMedals);
     }
 
     public void CreatePlayerTank()
@@ -101,7 +101,7 @@ public class Root : MonoBehaviour
         _currentTankIndex = index;
     }
 
-    private uint SetSkillsAmount(Skill skill, uint amount)
+    private uint SetSkillAmount(Skill skill, uint amount)
     {
         if(_skillAmount > amount)
         {

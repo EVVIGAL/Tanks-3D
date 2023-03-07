@@ -661,6 +661,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5175172571259121542, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}
   m_PrefabInstance: {fileID: 1439722498}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1600454720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 991631994, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+  m_PrefabInstance: {fileID: 977693558739167273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ae210ec22a9f64ca540f371ba02647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1674919026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5175172571259121542, guid: a766a7c832a63fe4cbdf94bdca79da58, type: 3}
@@ -926,8 +937,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4547362579411169480, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _data.CurrentTankIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547362579411169480, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: _data.Units.Array.data[0]._health._value
       value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547362579411169480, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _data.Units.Array.data[2]._damage._value
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5158726823233600609, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1001,6 +1020,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7097204675419378053, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _reward
+      value: 
+      objectReference: {fileID: 1600454720}
     - target: {fileID: 8212277179396123282, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
