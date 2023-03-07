@@ -4,6 +4,7 @@ using System;
 
 public class SaveData : MonoBehaviour
 {
+    [SerializeField] private AudioManager _audioManager;
     [SerializeField] private DataHolder _data;
     [SerializeField] private TankChoser _choser;
     [SerializeField] private Root _root;
@@ -20,13 +21,13 @@ public class SaveData : MonoBehaviour
         if (PlayerPrefs.HasKey(_saveKey))
             Load();
 
-        //LoadYandex();
-
         if (_choser != null)
             _choser.Init(_data.Units, _data.CurrentTankIndex);
 
         if (_root != null)
             _root.Init(_data.Units[_data.CurrentTankIndex], (uint)_data.CurrentTankIndex);
+
+        _audioManager.Init();
 
         LevelHolder.SetLevel(_data.CurrentLevel);
     }
@@ -67,29 +68,6 @@ public class SaveData : MonoBehaviour
 
         if (PlayerAccount.IsAuthorized)
             PlayerAccount.SetPlayerData(jsonDataString);
-
-        Debug.Log("Saved");
-#endif
-    }
-
-    private void LoadYandex()
-    {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        if (PlayerAccount.IsAuthorized)
-        {
-            string loadedString = "";
-
-            PlayerAccount.GetPlayerData((data) => 
-            {
-                Debug.Log("Loaded = " + data);
-                loadedString = data;
-
-                if (loadedString == "")
-                return;
-
-                _data = JsonUtility.FromJson<DataHolder>(loadedString);
-            });
-        }
 #endif
     }
 

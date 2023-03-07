@@ -40,6 +40,11 @@ public class Yandex : MonoBehaviour
 
         yield return GetData();
 
+        InterstitialAd.Show(null, (bool _) => StartGame());
+    }
+
+    private void StartGame()
+    {
         if (YandexGamesSdk.IsInitialized)
             SceneManager.LoadScene(_startSceneIndex);
     }

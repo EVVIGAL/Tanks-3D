@@ -2,13 +2,18 @@ using System.Collections;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class LoadPanel : MonoBehaviour
 {
+    [SerializeField] private AudioManager _audioManager;
     [SerializeField] private GameObject _text;
     [SerializeField] private Image _panel;
     [SerializeField] private Image _image;
     [SerializeField] private float _fadeSpeed;
+
+    private const float _waitForFadeTime = 0.4f;
+    private const float _zeroVolume = -80f;
 
     private Coroutine _coroutine;
 
@@ -19,6 +24,12 @@ public class LoadPanel : MonoBehaviour
 
     public void Load(float alpha, UnityAction OnFadingDone)
     {
+        if (alpha == 1)
+            _audioManager.VolumeFade(_audioManager.MusicValue, _zeroVolume);
+
+        if (alpha == 0)
+            _audioManager.VolumeFade(_zeroVolume, _audioManager.MusicValue, _waitForFadeTime);
+
         if (_coroutine != null)
         {
             StopCoroutine(_coroutine);
@@ -33,7 +44,10 @@ public class LoadPanel : MonoBehaviour
     private IEnumerator Fade(float alpha, UnityAction OnFadingDone)
     {
         if (alpha == 0)
+        {
+            yield return new WaitForSeconds(_waitForFadeTime);
             _text.SetActive(false);
+        }
 
         if (alpha == 1)
             _text.SetActive(true);
@@ -49,7 +63,7 @@ public class LoadPanel : MonoBehaviour
 
         yield break;
     }
-    
+
     private void Deactivate()
     {
         gameObject.SetActive(false);

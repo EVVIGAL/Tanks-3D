@@ -7,7 +7,9 @@ public class LeaderBoardButton : MonoBehaviour
 
     private void OnEnable()
     {
+#if UNITY_WEBGL && !UNITY_EDITOR
         if(!PlayerAccount.IsAuthorized)
             _leaderboardButtonView.SetActive(false);
+#endif
     }
 }

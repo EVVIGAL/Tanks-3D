@@ -8,6 +8,9 @@ public class ButtonsOnOFF : MonoBehaviour
     public void OnOff(bool isOn)
     {
         for (int i = 0; i < _buttonsToOnOff.Length; i++)
-            _buttonsToOnOff[i].interactable = isOn;
+        {
+            if(_buttonsToOnOff[i] != null)
+                _buttonsToOnOff[i].interactable = isOn;
+        }
     }
 }

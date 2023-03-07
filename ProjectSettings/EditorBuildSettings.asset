@@ -43,10 +43,10 @@ EditorBuildSettings:
     guid: 30c44b3dd31065345ae2af9ca3f249fa
   - enabled: 1
     path: Assets/Source/MainScenes/Level 11.unity
-    guid: 91e9cb3a14b85b94a87d3f03f5cfba23
+    guid: b7d4f779055315f459f293cdb1cc6405
   - enabled: 1
     path: Assets/Source/MainScenes/Level 12.unity
-    guid: a03098a270682d6469fa8cb5c1c1cbc5
+    guid: c241598815a8554428715254b13b5ac8
   - enabled: 1
     path: Assets/Source/MainScenes/Level 13.unity
     guid: afafdc331e147d14f9553f348046bb0a
@@ -64,10 +64,10 @@ EditorBuildSettings:
     guid: a3a5f5c42a0a2b440803181c550b1e54
   - enabled: 1
     path: Assets/Source/MainScenes/Level 18.unity
-    guid: 2e4ab5b6a0509bd42bc39e941086786d
+    guid: f152185c0ca2d2048890d40a4ae82df6
   - enabled: 1
     path: Assets/Source/MainScenes/Level 19.unity
-    guid: b3fd191e224d86d42bbc323c737d70b4
+    guid: ef6b97177767f5b4fbffcf1adf7cf547
   - enabled: 1
     path: Assets/Source/MainScenes/Level 20.unity
     guid: 99fdbddd7648f6641b6785b62ec38748
@@ -98,6 +98,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Source/MainScenes/Level 29.unity
     guid: dd7966937187a6e419bd9f3a06a79cf7
+  - enabled: 1
+    path: Assets/Source/MainScenes/Level 30.unity
+    guid: a192099798a6a154e81d166b4991db46
   - enabled: 1
     path: Assets/Source/Scenes/Maps/Forest.unity
     guid: 7e05d6a9378c6f148b2fbbe98fbb1722

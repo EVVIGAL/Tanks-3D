@@ -1842,7 +1842,6 @@ GameObject:
   - component: {fileID: 952443117}
   - component: {fileID: 952443116}
   - component: {fileID: 93722027}
-  - component: {fileID: 5496472936978624615}
   m_Layer: 5
   m_Name: PausePanel
   m_TagString: Untagged
@@ -1912,21 +1911,6 @@ MonoBehaviour:
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!114 &93722027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 952443114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c37cfa9e42a9d241b786ffcc95ff55f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _restart: {fileID: 2002815114099652267}
-  _toHangar: {fileID: 6871261099058710497}
-  _loadPanel: {fileID: 2129770225961706989}
---- !u!114 &5496472936978624615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9639,6 +9623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cc9805401ef384478aaf99da627c321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManager: {fileID: 1108756729}
   _data:
     Levels:
     - _currentMedals: 0
@@ -11973,9 +11958,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 7097204676102337998}
     m_Modifications:
     - target: {fileID: 1870099039970575072, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
-      propertyPath: _fadeSpeed
-      value: 0.7
-      objectReference: {fileID: 0}
+      propertyPath: _audioManager
+      value: 
+      objectReference: {fileID: 1108756729}
     - target: {fileID: 1936125594423286407, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_text
       value: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430..."
@@ -11986,7 +11971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143401242112736183, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8662057173165867739, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_Pivot.x
