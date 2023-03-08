@@ -5111,6 +5111,7 @@ MonoBehaviour:
   _smokeAppearanceHealth: 50
   _fire: {fileID: 4094853943738298472}
   _fireAppearanceHealth: 25
+  _delayBeforeStop: 5
 --- !u!114 &3064823358987014025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5141,6 +5142,7 @@ MonoBehaviour:
   <RateOfFire>k__BackingField: 1
   <ReloadSpeed>k__BackingField: 1
   <MagazineSize>k__BackingField: 1
+  _weaponReloaderView: {fileID: 0}
 --- !u!114 &1152128327730312371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5457,6 +5459,7 @@ MonoBehaviour:
   _radius: 5
   _upwardsModifier: 10
   _explosionFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+  _deathLayer: 6
 --- !u!114 &8806717280596170443
 MonoBehaviour:
   m_ObjectHideFlags: 0

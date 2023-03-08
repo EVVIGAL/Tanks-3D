@@ -38,6 +38,7 @@ public class PlayerHealth : Health
     protected override void Die()
     {
         _turretExplosion.Explose();
+        _smokeDamageView.Stop();
 
         if (_root)
             _root.GameOver();

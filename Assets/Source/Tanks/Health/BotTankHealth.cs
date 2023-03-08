@@ -24,5 +24,6 @@ public class BotTankHealth : BotHealth
         base.Die();
         _turretExplosion.Explose();
         _getOutFromWay.GetOut();
+        _smokeDamageView.Stop();
     }
 }

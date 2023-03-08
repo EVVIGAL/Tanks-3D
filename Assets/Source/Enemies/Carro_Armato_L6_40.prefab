@@ -402,6 +402,7 @@ MonoBehaviour:
   _smokeAppearanceHealth: 50
   _fire: {fileID: 7767023596870158054}
   _fireAppearanceHealth: 25
+  _delayBeforeStop: 5
 --- !u!114 &1408639760334905556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1710,6 +1711,7 @@ MonoBehaviour:
   _radius: 5
   _upwardsModifier: 10
   _explosionFX: {fileID: 19849376, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
+  _deathLayer: 6
 --- !u!1 &8433824789666933586
 GameObject:
   m_ObjectHideFlags: 0

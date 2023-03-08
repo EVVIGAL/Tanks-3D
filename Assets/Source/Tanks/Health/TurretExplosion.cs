@@ -7,6 +7,7 @@ public class TurretExplosion : MonoBehaviour
     [SerializeField] private float _radius;
     [SerializeField] private float _upwardsModifier = 1f;
     [SerializeField] private ParticleSystem _explosionFX;
+    [SerializeField] private int _deathLayer = 6;
 
     private Rigidbody _rigidbody;
 
@@ -18,6 +19,7 @@ public class TurretExplosion : MonoBehaviour
 
     public void Explose()
     {
+        gameObject.layer = _deathLayer;
         transform.parent = null;
         _rigidbody.isKinematic = false;
         Vector2 randomOffset = Random.insideUnitCircle.normalized;

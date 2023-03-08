@@ -12,6 +12,7 @@ public class GrenadeThrower : MonoBehaviour, IWeapon
     private ProjectilePool _projectilePool;
     private Transform _target;
     private Projectile _projectile;
+    private Vector3 _targetPosition;
 
     public bool CanShoot => _weaponReloader.CanShoot;
 
@@ -29,6 +30,7 @@ public class GrenadeThrower : MonoBehaviour, IWeapon
 
         _characterAnimator.Shoot();
         _target = target;
+        _targetPosition = _target.position;
     }
 
     public void TakeUp()
@@ -39,7 +41,10 @@ public class GrenadeThrower : MonoBehaviour, IWeapon
 
     public void Throw()
     {
-        Vector3 force = CalculatePushForce(_shootPoint, _target.position, _angle);
+        if (_target)
+            _targetPosition = _target.position;
+
+        Vector3 force = CalculatePushForce(_shootPoint, _targetPosition, _angle);
         _projectile.Push(force);
         StartCoroutine(EnableProjectile());
     }
