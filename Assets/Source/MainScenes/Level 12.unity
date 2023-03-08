@@ -857,6 +857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aliveEnemyCountText: {fileID: 8118584031119942190}
   _root: {fileID: 1357086680414000329}
+  _spawnComposite: {fileID: 0}
 --- !u!1 &634145218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1632,10 @@ PrefabInstance:
     - target: {fileID: 309647186, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1357086680414000334, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _environmentSceneName
+      value: City
       objectReference: {fileID: 0}
     - target: {fileID: 2252961146632245651, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_SizeDelta.x
