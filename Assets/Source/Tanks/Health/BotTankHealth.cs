@@ -4,6 +4,7 @@ using UnityEngine;
 public class BotTankHealth : BotHealth
 {
     [SerializeField] private TurretExplosion _turretExplosion;
+    [SerializeField] private ParticleSystem[] _exhaustSmokes;
 
     private GetOutFromWay _getOutFromWay;
     private SmokeDamageView _smokeDamageView;
@@ -25,5 +26,8 @@ public class BotTankHealth : BotHealth
         _turretExplosion.Explose();
         _getOutFromWay.GetOut();
         _smokeDamageView.Stop();
+
+        foreach(ParticleSystem exhaustSmoke in _exhaustSmokes)
+            exhaustSmoke.Stop();
     }
 }

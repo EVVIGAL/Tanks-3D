@@ -219,6 +219,9 @@ MonoBehaviour:
   - {fileID: 8194618950435289322}
   <DeathLayer>k__BackingField: 6
   _turretExplosion: {fileID: 3311548777665261335}
+  _exhaustSmokes:
+  - {fileID: 201240034769853174}
+  - {fileID: 6530261241866520719}
 --- !u!114 &6179105953496860627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +380,11 @@ PrefabInstance:
 --- !u!4 &6530261241848157143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6083008677710743704, guid: 84f7b3d76751f4a4a9188468638b1118, type: 3}
+  m_PrefabInstance: {fileID: 1065970105949428559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6530261241866520719 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6083008677730161600, guid: 84f7b3d76751f4a4a9188468638b1118, type: 3}
   m_PrefabInstance: {fileID: 1065970105949428559}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1615817128219238454
@@ -1046,6 +1054,11 @@ PrefabInstance:
 --- !u!4 &201240034754658734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6083008677710743704, guid: 84f7b3d76751f4a4a9188468638b1118, type: 3}
+  m_PrefabInstance: {fileID: 6242484512755992886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &201240034769853174 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6083008677730161600, guid: 84f7b3d76751f4a4a9188468638b1118, type: 3}
   m_PrefabInstance: {fileID: 6242484512755992886}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6988319288145119086
