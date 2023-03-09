@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 2
-  _healthBehaviour: {fileID: 0}
+  _healthBehaviour: {fileID: 5158781666068081848}
 --- !u!114 &6132337747662525147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,7 +789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageMultiplier: 1
-  _healthBehaviour: {fileID: 0}
+  _healthBehaviour: {fileID: 5158781666068081848}
 --- !u!4 &4086589807383806016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 489212544376998591, guid: 644ff4be0a0e21c449bab2fb278c1e98, type: 3}
