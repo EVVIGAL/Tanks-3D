@@ -20,7 +20,7 @@ public class Localization : MonoBehaviour
         _localization = GetComponent<LeanLocalization>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         Set();
     }
