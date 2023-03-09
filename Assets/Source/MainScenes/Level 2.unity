@@ -176,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aliveEnemyCountText: {fileID: 8118584031119942190}
   _root: {fileID: 1357086680414000329}
+  _spawnComposite: {fileID: 0}
 --- !u!1001 &683165114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -393,6 +394,10 @@ PrefabInstance:
     - target: {fileID: 4466949527790869690, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547362579411169480, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _data.Levels.Array.size
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5158726823233600609, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_AnchorMax.y

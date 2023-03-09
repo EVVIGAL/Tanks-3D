@@ -772,6 +772,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4547362579411169480, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _data.Levels.Array.size
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5158726823233600608, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_Interactable
       value: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 public class SceneMerger : MonoBehaviour
 {
     [SerializeField] private string _environmentSceneName;
+    [SerializeField] private bool _mapSetAsActive;
 
     private const uint _maxLoadedScenes = 2;
 
@@ -15,6 +16,7 @@ public class SceneMerger : MonoBehaviour
 
     private void Start()
     {
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(_environmentSceneName));
+        if(_mapSetAsActive)
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(_environmentSceneName));
     }
 }

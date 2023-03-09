@@ -9767,6 +9767,26 @@ MonoBehaviour:
     - _currentMedals: 0
     - _currentMedals: 0
     - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
     Units:
     - _health:
         _value: 10
@@ -9957,6 +9977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _environmentSceneName: Forest
+  _mapSetAsActive: 1
 --- !u!1 &7097204676055473671
 GameObject:
   m_ObjectHideFlags: 0
