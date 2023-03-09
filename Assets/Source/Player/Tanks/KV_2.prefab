@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shootPoint: {fileID: 8796704293381060051}
-  _force: 15
+  _force: 20
   _shootFX: {fileID: 19891528, guid: d786954ea58ae6f45b3de29c31ec67f9, type: 3}
 --- !u!114 &6909645554711307040
 MonoBehaviour:

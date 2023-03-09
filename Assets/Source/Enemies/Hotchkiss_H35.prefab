@@ -523,9 +523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 300
-  <Armor>k__BackingField: 40
-  _reward: 50
+  <MaxValue>k__BackingField: 450
+  <Armor>k__BackingField: 50
+  _reward: 70
   _physicObjects:
   - {fileID: 1845433352997786620}
   - {fileID: 8478330211263197757}

@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152d6de0466dcfb489e75dc8b01c902f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 60
+  _damage: 50
   _liveTime: 6
   _pushForce: 50
   _mesh: {fileID: 0}

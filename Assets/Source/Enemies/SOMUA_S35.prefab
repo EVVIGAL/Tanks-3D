@@ -178,9 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 180
-  <Armor>k__BackingField: 40
-  _reward: 40
+  <MaxValue>k__BackingField: 470
+  <Armor>k__BackingField: 60
+  _reward: 80
   _physicObjects:
   - {fileID: 414494726114176522}
   - {fileID: 4513887068012893176}
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _template: {fileID: 5952098374401979843, guid: e1d523fd547c3d2418a0355c386c1b48, type: 3}
   _poolCapacity: 3
-  <Damage>k__BackingField: 20
+  <Damage>k__BackingField: 50
 --- !u!1 &1356370840226356079
 GameObject:
   m_ObjectHideFlags: 0
