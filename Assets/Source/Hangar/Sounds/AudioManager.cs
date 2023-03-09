@@ -11,9 +11,11 @@ public class AudioManager : MonoBehaviour
     private const string _musicStr = "Music";
     private const string _effectsStr = "Effects";
     private const float _zeroVolume = -80f;
-    private const float _fadeSpeed = 80f;
+    private const float _fadeSpeed = 60f;
+    private const float _waitTime = 0.4f;
 
-    private Coroutine _coroutine;
+    private Coroutine _musicCoroutine;
+    private Coroutine _effectsCoroutine;
     private float _effectsValue;
     private float _musicValue;
     private bool _isMute;
@@ -29,9 +31,6 @@ public class AudioManager : MonoBehaviour
         _isMute = _data.Data.IsMute;
         _effectsValue = _data.Data.EffectsValue;
         _musicValue = _data.Data.MusicValue;
-        _mixer.SetFloat(_masterStr, _isMute ? _zeroVolume : 0);
-        SetMusic(_musicValue);
-        SetEffects(_effectsValue);      
     }
 
     public void OnOff()
@@ -66,28 +65,41 @@ public class AudioManager : MonoBehaviour
         _mixer.SetFloat(_masterStr, _data.Data.IsMute ? _zeroVolume : 0);
     }
 
-    public void VolumeFade(float startValue, float endValue, float waitTime = 0f)
+    public void FadeIn()
     {
-        if (_coroutine != null)
+        VolumeFade(_musicValue, _zeroVolume, _musicStr, _musicCoroutine);
+        VolumeFade(_effectsValue, _zeroVolume, _effectsStr, _effectsCoroutine);
+    }
+
+    public void FadeOut()
+    {
+        _mixer.SetFloat(_masterStr, _isMute ? _zeroVolume : 0);
+        VolumeFade(_zeroVolume, _musicValue, _musicStr, _musicCoroutine, _waitTime);
+        VolumeFade(_zeroVolume, _effectsValue, _effectsStr, _effectsCoroutine, _waitTime);
+    }
+
+    private void VolumeFade(float startValue, float endValue, string audioType, Coroutine coroutine, float waitTime = 0f)
+    {       
+        if (coroutine != null)
         {
-            StopCoroutine(_coroutine);
-            _coroutine = StartCoroutine(Fade(startValue, endValue, waitTime));
+            StopCoroutine(coroutine);
+            coroutine = StartCoroutine(Fade(startValue, endValue, waitTime, audioType));
         }
         else
         {
-            _coroutine = StartCoroutine(Fade(startValue, endValue, waitTime));
+            coroutine = StartCoroutine(Fade(startValue, endValue, waitTime, audioType));
         }
     }
 
-    private IEnumerator Fade(float startValue, float endValue, float waitTime)
+    private IEnumerator Fade(float startValue, float endValue, float waitTime, string audioType)
     {
-        _mixer.SetFloat(_masterStr, startValue);
+        _mixer.SetFloat(audioType, startValue);
         yield return new WaitForSeconds(waitTime);
 
         while (startValue != endValue)
         {
             startValue = Mathf.MoveTowards(startValue, endValue, Time.unscaledDeltaTime * _fadeSpeed);
-            _mixer.SetFloat(_masterStr, startValue);
+            _mixer.SetFloat(audioType, startValue);
             yield return null;
         }
 

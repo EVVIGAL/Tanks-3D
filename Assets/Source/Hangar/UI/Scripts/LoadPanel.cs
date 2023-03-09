@@ -25,10 +25,10 @@ public class LoadPanel : MonoBehaviour
     public void Load(float alpha, UnityAction OnFadingDone)
     {
         if (alpha == 1)
-            _audioManager.VolumeFade(_audioManager.MusicValue, _zeroVolume);
+            _audioManager.FadeIn();
 
         if (alpha == 0)
-            _audioManager.VolumeFade(_zeroVolume, _audioManager.MusicValue, _waitForFadeTime);
+            _audioManager.FadeOut();
 
         if (_coroutine != null)
         {
