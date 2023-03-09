@@ -88,6 +88,7 @@ public class DataHolder
     public int Medals;
     public int TotalIncome;
     public int LastIncome;
+    public int MaxIncome;
     public int CurrentLevel;
     public int CurrentTankIndex;
     public int ArtilleryAmount;

@@ -34,12 +34,16 @@ public class Unit : MonoBehaviour
     public bool IsAvailable => _unitStat.IsAvailable;
 
     private void OnEnable()
-    {
-        _nameText.text = _unitStat.Name;
+    {       
         _refresher.SetUnit(_unitStat);
         Refresh();
         _money.ValueChanged += Refresh;
         _button.onClick.AddListener(Buy);
+    }
+
+    private void Start()
+    {
+        _nameText.text = LeanLocalization.GetTranslationText(_unitStat.Name);
     }
 
     private void OnDisable()
