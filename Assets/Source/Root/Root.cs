@@ -83,6 +83,7 @@ public class Root : MonoBehaviour
         if (_isGameEnd)
             return;
 
+        _isGameEnd = true;
         StartCoroutine(CompleteLevel());
     }
 
