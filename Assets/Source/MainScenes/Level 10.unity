@@ -664,6 +664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85af9bbe99a7f9241bae4c8bbdb224fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
   _target: {fileID: 0}
   _projectile: {fileID: 1417694088348940508, guid: 40318e41da04e124799f679d1eba99c6, type: 3}
   _minDelay: 2
