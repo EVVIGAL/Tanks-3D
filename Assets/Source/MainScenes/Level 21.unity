@@ -1343,7 +1343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1357086680414000334, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: _environmentSceneName
-      value: City
+      value: Winter
       objectReference: {fileID: 0}
     - target: {fileID: 2252961146632245651, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_SizeDelta.x
