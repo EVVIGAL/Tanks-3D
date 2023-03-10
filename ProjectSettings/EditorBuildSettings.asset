@@ -29,17 +29,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Source/MainScenes/Level 6.unity
     guid: 9305aea460052544490e999adddb5eb2
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Source/MainScenes/Level 7.unity
+    path: Assets/Source/MainScenes/Level 9.unity
     guid: 25bec46dcc470d349bc86e901b773e13
   - enabled: 1
-    path: Assets/Source/MainScenes/Level 8.unity
+    path: Assets/Source/MainScenes/Level 10.unity
     guid: 30c44b3dd31065345ae2af9ca3f249fa
   - enabled: 1
     path: Assets/Source/MainScenes/Level 11.unity
@@ -47,20 +41,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Source/MainScenes/Level 12.unity
     guid: c241598815a8554428715254b13b5ac8
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Source/MainScenes/Level 13.unity
-    guid: c8b7fa0beea9bf441a2e04f5e18c33d9
-  - enabled: 1
-    path: Assets/Source/MainScenes/Level 14.unity
-    guid: ddf254b962c6b3945a8aacc34433f7fe
   - enabled: 1
     path: Assets/Source/MainScenes/Level 15.unity
+    guid: c8b7fa0beea9bf441a2e04f5e18c33d9
+  - enabled: 1
+    path: Assets/Source/MainScenes/Level 16.unity
+    guid: ddf254b962c6b3945a8aacc34433f7fe
+  - enabled: 1
+    path: Assets/Source/MainScenes/Level 17.unity
     guid: a3a5f5c42a0a2b440803181c550b1e54
   - enabled: 1
     path: Assets/Source/MainScenes/Level 18.unity
