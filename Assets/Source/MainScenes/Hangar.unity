@@ -1349,7 +1349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &117980785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8650,8 +8650,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Clear SaveData
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
+  m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10771,8 +10771,8 @@ MonoBehaviour:
     CurrentTankIndex: 0
     ArtilleryAmount: 3
     ToolsAmount: 3
-    MusicValue: -12
-    EffectsValue: -12
+    MusicValue: -10
+    EffectsValue: -14
     IsMute: 0
     CurrentTankName: 
   _choser: {fileID: 667585740}
@@ -14982,7 +14982,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.6
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
