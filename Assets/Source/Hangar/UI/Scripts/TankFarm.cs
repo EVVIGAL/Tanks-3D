@@ -40,7 +40,8 @@ public class TankFarm : MonoBehaviour
             _upgradeButton.gameObject.SetActive(false);
 
         string leanText = LeanLocalization.GetTranslationText(_localizationKey);
-        _mainText.text = $"{_unit.Name} {_unit.UnitStat.Farm.Value}/{leanText}";
+        string name = LeanLocalization.GetTranslationText(_unit.Name);
+        _mainText.text = $"{name} {_unit.UnitStat.Farm.Value}/{leanText}";
         _upgradeText.text = _unit.UnitStat.Farm.UpgradeCost.ToString();
 
         if (_unit.UnitStat.Farm.UpgradeCost <= _money.Value)

@@ -24,6 +24,7 @@ public class Stat : MonoBehaviour
 
     private void OnEnable()
     {
+        UpdateButton();
         _money.ValueChanged += UpdateButton;
     }
 
