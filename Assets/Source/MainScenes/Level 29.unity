@@ -353,8 +353,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1274198657}
-  - {fileID: 229796049}
   - {fileID: 1114680559}
+  - {fileID: 229796049}
   - {fileID: 1931647767}
   - {fileID: 1489782068}
   m_Father: {fileID: 0}
@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _aliveEnemyCountText: {fileID: 8118584031119942190}
   _root: {fileID: 1357086680414000329}
+  _spawnComposite: {fileID: 0}
 --- !u!1001 &531943798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1551,6 +1552,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6938240540154597807, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dfc0a14a0467b5e46a9754261f3e6304, type: 3}
     - target: {fileID: 7097204674646537036, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0

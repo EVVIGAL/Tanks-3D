@@ -540,6 +540,7 @@ Transform:
   - {fileID: 2137450175}
   - {fileID: 286775310}
   - {fileID: 589142980}
+  - {fileID: 771453293}
   - {fileID: 60164373}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -715,7 +716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1821817621020774312, guid: 24814669d1a39844a864899b0a57fdd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 379.8
+      value: 429.7
       objectReference: {fileID: 0}
     - target: {fileID: 1821817621020774312, guid: 24814669d1a39844a864899b0a57fdd9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -983,6 +984,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24814669d1a39844a864899b0a57fdd9, type: 3}
+--- !u!1001 &771453292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 486971183}
+    m_Modifications:
+    - target: {fileID: 1408639760334905514, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_Name
+      value: Carro_Armato_L6_40 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905514, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 351.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+--- !u!4 &771453293 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1408639760334905564, guid: 74e02da9187dca94b913528b6d5cc50f, type: 3}
+  m_PrefabInstance: {fileID: 771453292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &828793478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6331851437774490781, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
@@ -1336,7 +1403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6312159898523007744, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6312159898523007744, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1396,7 +1463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6312159898952809326, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.6
+      value: 70.1
       objectReference: {fileID: 0}
     - target: {fileID: 6312159900264989426, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_IsActive
@@ -1404,7 +1471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6312159900264989427, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -118.6
+      value: -59
       objectReference: {fileID: 0}
     - target: {fileID: 6312159900433855546, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_IsActive
@@ -1412,27 +1479,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6312159900433855547, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7
+      value: 26.2
       objectReference: {fileID: 0}
     - target: {fileID: 6325906347476495485, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.5
+      value: -29.100006
       objectReference: {fileID: 0}
     - target: {fileID: 6325906347521590827, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.5
+      value: -29.1
       objectReference: {fileID: 0}
     - target: {fileID: 6325906347878622967, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.5
+      value: -29.100006
       objectReference: {fileID: 0}
     - target: {fileID: 6325906348457323710, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.5
+      value: -29.099998
       objectReference: {fileID: 0}
     - target: {fileID: 6325906348474742886, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -75.5
+      value: -29.100006
       objectReference: {fileID: 0}
     - target: {fileID: 6331851437089764048, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: m_IsActive
@@ -1493,9 +1560,17 @@ PrefabInstance:
         Torque","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null},"SharedVector3torque":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":null,"Vector3mValue":"(0,0,100)"},"ForceModeforceMode":"Impulse"},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.UnityAudioSource.Stop","NodeData":{"Offset":"(560,120)"},"ID":52,"Name":"Stop","Instant":true,"SharedGameObjecttargetGameObject":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":null}},{"Type":"BehaviorDesigner.Runtime.Tasks.Idle","NodeData":{"Offset":"(670,120)"},"ID":53,"Name":"Idle","Instant":true}]}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_flySpeed","IsShared":true,"SinglemValue":12},{"Type":"BehaviorDesigner.Runtime.SharedUInt","Name":"_bombDamage","IsShared":true,"UInt32mValue":60},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_rateOfFite","IsShared":true,"SinglemValue":1.2},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"_leftFlyPoint","IsShared":true,"GameObjectmValue":16},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"_rightFlyPoint","IsShared":true,"GameObjectmValue":17},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"_currentFlyPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedQuaternion","Name":"_direction","IsShared":true,"QuaternionmValue":"(0,0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"_bomb","IsShared":true,"GameObjectmValue":18},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"_shootPoint","IsShared":true,"TransformmValue":19},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"_landingPoint","IsShared":true,"GameObjectmValue":20},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"_tank","IsShared":true,"GameObjectmValue":21},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"_tankInstancePoint","IsShared":true,"GameObjectmValue":22},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"_tankSpawnPosition","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"SharedEnemyCounter","Name":"_enemyCounter","IsShared":true,"EnemiesCountermValue":23},{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"_newTank","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_deathPushForce","IsShared":true,"SinglemValue":15000}]}'
       objectReference: {fileID: 0}
     - target: {fileID: 8349409212652386608, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[12]
+      value: 
+      objectReference: {fileID: 1845433352997786620, guid: 312242b5a3ed4134ca0e9c8e3d502f52, type: 3}
+    - target: {fileID: 8349409212652386608, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[13]
       value: 
       objectReference: {fileID: 486971184}
+    - target: {fileID: 8349409212652386608, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[21]
+      value: 
+      objectReference: {fileID: 1845433352997786620, guid: 312242b5a3ed4134ca0e9c8e3d502f52, type: 3}
     - target: {fileID: 8349409212652386608, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[23]
       value: 

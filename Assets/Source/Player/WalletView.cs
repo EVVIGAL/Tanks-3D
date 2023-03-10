@@ -12,6 +12,12 @@ public class WalletView : MonoBehaviour
     private Coroutine _coroutine;
     private const string Prefix = "+";
 
+    public void Init(uint money)
+    {
+        _currentMoney = money;
+        _moneyText.SetText(_currentMoney.ToString());
+    }
+
     public void Show(uint money, uint addedMoney)
     {
         _currentMoney = money;

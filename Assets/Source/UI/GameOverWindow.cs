@@ -24,7 +24,7 @@ public class GameOverWindow : MonoBehaviour
         _restart.onClick.AddListener(OnRestartButtonClick);
         _toHangar.onClick.AddListener(OnGoToHangarButtonClick);
         _restore.onClick.AddListener(OnRestoreButtonClick);
-        int reward = (int)_wallet.Money;
+        int reward = (int)_wallet.Money - _data.Data.Money;
         _data.Data.Money += reward;
     }
 

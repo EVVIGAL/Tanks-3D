@@ -58,6 +58,7 @@ public class Root : MonoBehaviour
         _damageCounter.Init(_unit.Health.Value, _currentLevelIndex);
         _levelText.text = (_currentLevelIndex - 1).ToString();
         _reward.Init((int)_currentLevelIndex - 1, (int)_data.Data.Levels[_currentLevelIndex - 2].CurrentMedals);
+        PlayerWallet.Init((uint)_data.Data.Money);
     }
 
     public void CreatePlayerTank()

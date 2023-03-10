@@ -1629,8 +1629,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 18c453f15d5d0e9498cc45e2edf1924c, type: 2}
+  m_sharedMaterial: {fileID: 942589445191879500, guid: 18c453f15d5d0e9498cc45e2edf1924c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6954,7 +6954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aaa56520ddf86343b7a2f39e5adcc70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultKey: en
 --- !u!1 &3488561347247226391
 GameObject:
   m_ObjectHideFlags: 0
@@ -7606,6 +7605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data: {fileID: 4547362579411169480}
   _medalsView: {fileID: 804702015}
+  _reward: {fileID: 991631994}
 --- !u!1 &3977098283855008635
 GameObject:
   m_ObjectHideFlags: 0
@@ -7878,7 +7878,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6918384537006604395, guid: aae58fa53a45bc046bb77c079ff3a30a, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1da5d5c163228c047b56d6bf22ffb24e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0

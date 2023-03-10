@@ -10,30 +10,26 @@ public class FinalReward : MonoBehaviour
     [SerializeField] private Wallet _wallet;
 
     private const string _rewardKey = "Your reward";
-    private const int _levelRewardMultiplier = 50;
     private const int _bossRewardMultiplier = 5;
+    private const int _medalsRewardAdd = 5;
 
     private TextMeshProUGUI _text;
+    private int _levelRewardMultiplier = 35;
     private int _reward;
     private string _rewardStr;
     private bool _isBoss;
 
-    private void Awake()
+    public void Show(int medals)
     {
-        _text = GetComponent<TextMeshProUGUI>();
-        _rewardStr = LeanLocalization.GetTranslationText(_rewardKey);
-    }
-
-    private void OnEnable()
-    {
+        _levelRewardMultiplier += _medalsRewardAdd * medals;
         int levelReward = ((int)_root.CurrentLevelIndex - 1) * _levelRewardMultiplier; 
 
         if(_isBoss)
             levelReward *= _bossRewardMultiplier;
 
-        _reward = (int)_wallet.Money + levelReward;
+        _reward = levelReward;
         _text.text = _rewardStr + _reward;
-        _data.Data.Money += _reward;
+        _data.Data.Money += _reward + (int)_wallet.Money - _data.Data.Money;
     }
 
     public void Increase(int multiplier)
@@ -45,6 +41,9 @@ public class FinalReward : MonoBehaviour
 
     public void Init(int level, int medals)
     {
+        _text = GetComponent<TextMeshProUGUI>();
+        _rewardStr = LeanLocalization.GetTranslationText(_rewardKey);
+
         int bossLevelFactor = 10;
 
         if (level % bossLevelFactor == 0 && medals == 0)

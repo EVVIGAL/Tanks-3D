@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <RateOfFire>k__BackingField: 0.3
-  <ReloadSpeed>k__BackingField: 2
+  <ReloadSpeed>k__BackingField: 1.8
   <MagazineSize>k__BackingField: 4
   _weaponReloaderView: {fileID: 0}
 --- !u!1 &5509166443557935332

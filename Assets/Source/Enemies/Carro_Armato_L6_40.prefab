@@ -432,9 +432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab7040bc98b195643981d733d1fb9d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MaxValue>k__BackingField: 100
+  <MaxValue>k__BackingField: 120
   <Armor>k__BackingField: 20
-  _reward: 20
+  _reward: 25
   _physicObjects:
   - {fileID: 1408639760334905514}
   - {fileID: 1740603913412697081}
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <RateOfFire>k__BackingField: 0.8
-  <ReloadSpeed>k__BackingField: 2
+  <ReloadSpeed>k__BackingField: 1.8
   <MagazineSize>k__BackingField: 2
   _weaponReloaderView: {fileID: 0}
 --- !u!114 &331827519556778841
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _template: {fileID: 5952098374401979843, guid: e1d523fd547c3d2418a0355c386c1b48, type: 3}
   _poolCapacity: 2
-  <Damage>k__BackingField: 10
+  <Damage>k__BackingField: 12
 --- !u!1 &1710285433939861033
 GameObject:
   m_ObjectHideFlags: 0

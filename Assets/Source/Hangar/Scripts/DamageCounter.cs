@@ -5,6 +5,7 @@ public class DamageCounter : MonoBehaviour
 {
     [SerializeField] private SaveData _data;
     [SerializeField] private MedalsView _medalsView;
+    [SerializeField] private FinalReward _reward;
 
     private const float _excellentPercent = 0.7f;
     private const float _goodPercent = 0.3f;
@@ -23,6 +24,7 @@ public class DamageCounter : MonoBehaviour
     private void OnEnable()
     {
         _medalsView.Show(_medals);
+        _reward.Show((int)_medals);
 
         if(_data.Data.Levels[_level - _reduceLevelIndexBy].CurrentMedals < _medals)
             _data.Data.Levels[_level - _reduceLevelIndexBy].Set(_medals);

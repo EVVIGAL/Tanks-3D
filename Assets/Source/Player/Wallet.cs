@@ -6,6 +6,12 @@ public class Wallet : MonoBehaviour
 
     public uint Money { get;private set; }
 
+    public void Init(uint money)
+    {
+        Money = money;
+        _walletView.Init(money);
+    }
+
     public void Add(uint amount)
     {
         Money += amount;

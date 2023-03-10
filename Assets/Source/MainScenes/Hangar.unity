@@ -2718,13 +2718,13 @@ MonoBehaviour:
   data: 0
   entries:
   - Language: English
-    Text: Missions
+    Text: Tank sharing
     Object: {fileID: 0}
   - Language: Russian
-    Text: "\u041C\u0438\u0441\u0441\u0438\u0438"
+    Text: "\u0410\u0440\u0435\u043D\u0434\u0430 \u0442\u0430\u043D\u043A\u043E\u0432"
     Object: {fileID: 0}
   - Language: Turkish
-    Text: "G\xF6revler"
+    Text: "Tank payla\u015F\u0131m\u0131"
     Object: {fileID: 0}
 --- !u!1 &268992974
 GameObject:
@@ -5929,7 +5929,7 @@ MonoBehaviour:
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _price: 4000
+  _price: 3000
   _neededLevel: 12
 --- !u!114 &510200237
 MonoBehaviour:
@@ -8858,7 +8858,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 0
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 235864627}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 679776638}
@@ -10208,7 +10208,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 1
+  m_overflowMode: 3
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
@@ -10595,163 +10595,163 @@ MonoBehaviour:
     - _currentMedals: 0
     Units:
     - _health:
-        _value: 120
-        _maximumValue: 600
-        _upgradeCost: 100
+        _value: 140
+        _maximumValue: 400
+        _upgradeCost: 150
         _upgradeValue: 20
         _increaseCost: 300
       _damage:
         _value: 12
-        _maximumValue: 300
-        _upgradeCost: 100
-        _upgradeValue: 6
+        _maximumValue: 100
+        _upgradeCost: 120
+        _upgradeValue: 4
         _increaseCost: 200
       _armor:
         _value: 20
         _maximumValue: 50
-        _upgradeCost: 100
+        _upgradeCost: 150
         _upgradeValue: 4
         _increaseCost: 300
       _speed:
-        _value: 4
+        _value: 5
         _maximumValue: 10
-        _upgradeCost: 100
-        _upgradeValue: 1
-        _increaseCost: 100
-      _farm:
-        _value: 0
-        _maximumValue: 12
-        _upgradeCost: 100
-        _upgradeValue: 4
-        _increaseCost: 300
-      _isAvailable: 1
-      _name: Stuart
-    - _health:
-        _value: 300
-        _maximumValue: 900
-        _upgradeCost: 100
-        _upgradeValue: 40
-        _increaseCost: 200
-      _damage:
-        _value: 40
-        _maximumValue: 160
-        _upgradeCost: 200
-        _upgradeValue: 10
-        _increaseCost: 200
-      _armor:
-        _value: 40
-        _maximumValue: 60
-        _upgradeCost: 150
-        _upgradeValue: 5
-        _increaseCost: 100
-      _speed:
-        _value: 3
-        _maximumValue: 8
         _upgradeCost: 150
         _upgradeValue: 1
-        _increaseCost: 300
+        _increaseCost: 150
       _farm:
         _value: 0
         _maximumValue: 20
+        _upgradeCost: 100
+        _upgradeValue: 5
+        _increaseCost: 100
+      _isAvailable: 1
+      _name: Stuart
+    - _health:
+        _value: 240
+        _maximumValue: 500
+        _upgradeCost: 100
+        _upgradeValue: 20
+        _increaseCost: 200
+      _damage:
+        _value: 20
+        _maximumValue: 160
+        _upgradeCost: 150
+        _upgradeValue: 6
+        _increaseCost: 150
+      _armor:
+        _value: 40
+        _maximumValue: 70
+        _upgradeCost: 100
+        _upgradeValue: 5
+        _increaseCost: 150
+      _speed:
+        _value: 3
+        _maximumValue: 8
         _upgradeCost: 200
-        _upgradeValue: 4
-        _increaseCost: 500
+        _upgradeValue: 1
+        _increaseCost: 200
+      _farm:
+        _value: 0
+        _maximumValue: 30
+        _upgradeCost: 100
+        _upgradeValue: 5
+        _increaseCost: 150
       _isAvailable: 0
       _name: Matilda
     - _health:
         _value: 320
-        _maximumValue: 1200
+        _maximumValue: 600
         _upgradeCost: 200
-        _upgradeValue: 40
-        _increaseCost: 300
+        _upgradeValue: 20
+        _increaseCost: 200
       _damage:
-        _value: 40
-        _maximumValue: 400
-        _upgradeCost: 200
+        _value: 30
+        _maximumValue: 200
+        _upgradeCost: 150
         _upgradeValue: 5
         _increaseCost: 200
       _armor:
         _value: 30
-        _maximumValue: 75
-        _upgradeCost: 300
+        _maximumValue: 70
+        _upgradeCost: 250
         _upgradeValue: 5
-        _increaseCost: 400
+        _increaseCost: 350
       _speed:
         _value: 4
         _maximumValue: 10
-        _upgradeCost: 300
+        _upgradeCost: 250
         _upgradeValue: 1
-        _increaseCost: 400
+        _increaseCost: 250
       _farm:
         _value: 0
-        _maximumValue: 32
-        _upgradeCost: 200
-        _upgradeValue: 4
+        _maximumValue: 40
+        _upgradeCost: 100
+        _upgradeValue: 5
         _increaseCost: 200
       _isAvailable: 0
       _name: T-34
     - _health:
-        _value: 450
-        _maximumValue: 1500
-        _upgradeCost: 300
-        _upgradeValue: 50
-        _increaseCost: 400
+        _value: 400
+        _maximumValue: 700
+        _upgradeCost: 250
+        _upgradeValue: 20
+        _increaseCost: 250
       _damage:
-        _value: 70
-        _maximumValue: 400
-        _upgradeCost: 350
-        _upgradeValue: 10
-        _increaseCost: 450
-      _armor:
-        _value: 40
-        _maximumValue: 90
+        _value: 60
+        _maximumValue: 200
         _upgradeCost: 200
         _upgradeValue: 5
-        _increaseCost: 500
+        _increaseCost: 200
+      _armor:
+        _value: 40
+        _maximumValue: 80
+        _upgradeCost: 200
+        _upgradeValue: 5
+        _increaseCost: 300
       _speed:
         _value: 3
-        _maximumValue: 9
+        _maximumValue: 8
         _upgradeCost: 300
         _upgradeValue: 1
-        _increaseCost: 600
+        _increaseCost: 500
       _farm:
         _value: 0
-        _maximumValue: 40
-        _upgradeCost: 400
-        _upgradeValue: 10
-        _increaseCost: 700
+        _maximumValue: 50
+        _upgradeCost: 100
+        _upgradeValue: 5
+        _increaseCost: 250
       _isAvailable: 0
       _name: Sherman
     - _health:
         _value: 500
-        _maximumValue: 2000
-        _upgradeCost: 400
-        _upgradeValue: 100
-        _increaseCost: 800
+        _maximumValue: 900
+        _upgradeCost: 300
+        _upgradeValue: 40
+        _increaseCost: 300
       _damage:
-        _value: 200
-        _maximumValue: 800
-        _upgradeCost: 400
-        _upgradeValue: 100
-        _increaseCost: 800
+        _value: 100
+        _maximumValue: 300
+        _upgradeCost: 150
+        _upgradeValue: 10
+        _increaseCost: 150
       _armor:
-        _value: 70
-        _maximumValue: 95
-        _upgradeCost: 400
+        _value: 60
+        _maximumValue: 90
+        _upgradeCost: 200
         _upgradeValue: 5
-        _increaseCost: 1000
+        _increaseCost: 300
       _speed:
         _value: 3
         _maximumValue: 8
-        _upgradeCost: 500
+        _upgradeCost: 400
         _upgradeValue: 1
-        _increaseCost: 1000
+        _increaseCost: 300
       _farm:
         _value: 0
-        _maximumValue: 100
-        _upgradeCost: 400
-        _upgradeValue: 20
-        _increaseCost: 600
+        _maximumValue: 60
+        _upgradeCost: 200
+        _upgradeValue: 10
+        _increaseCost: 200
       _isAvailable: 0
       _name: KV-2
     Income:
@@ -10771,8 +10771,8 @@ MonoBehaviour:
     CurrentTankIndex: 0
     ArtilleryAmount: 3
     ToolsAmount: 3
-    MusicValue: 0
-    EffectsValue: 0
+    MusicValue: -12
+    EffectsValue: -12
     IsMute: 0
     CurrentTankName: 
   _choser: {fileID: 667585740}
@@ -14926,6 +14926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1201589668}
+  - component: {fileID: 1201589669}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -14967,6 +14968,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1201589669
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201589667}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6918384537006604395, guid: aae58fa53a45bc046bb77c079ff3a30a, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 1ebf641d662d0a94e882210de841f6b5, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1208739154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15450,7 +15547,7 @@ MonoBehaviour:
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _price: 1000
+  _price: 800
   _neededLevel: 3
 --- !u!114 &1249670176
 MonoBehaviour:
@@ -18744,7 +18841,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 1
+  m_overflowMode: 3
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
@@ -20467,7 +20564,7 @@ MonoBehaviour:
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _price: 3000
+  _price: 2400
   _neededLevel: 9
 --- !u!114 &1629235524
 MonoBehaviour:
@@ -21053,7 +21150,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 300, y: 100}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1643769141
 MonoBehaviour:
@@ -21652,7 +21749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1698115294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23761,7 +23858,7 @@ MonoBehaviour:
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _price: 2000
+  _price: 1600
   _neededLevel: 6
 --- !u!114 &1842073694
 MonoBehaviour:
@@ -26966,7 +27063,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041C\u0438\u0441\u0441\u0438\u0438"
+  m_text: "\u0410\u0440\u0435\u043D\u0434\u0430 \u0442\u0430\u043D\u043A\u043E\u0432"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -27133,7 +27230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143401242112736183, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8662057173165867739, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_Pivot.x
