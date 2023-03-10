@@ -5,9 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(LeanLocalization))]
 public class Localization : MonoBehaviour
 {
-    [SerializeField] private string _defaultKey = "en";
     private LeanLocalization _localization;
-    //private const string _defaultKey = "en";
+    private const string _defaultKey = "ru";
 
     private Dictionary<string, string> _languageISO639_1Codes = new()
     {
