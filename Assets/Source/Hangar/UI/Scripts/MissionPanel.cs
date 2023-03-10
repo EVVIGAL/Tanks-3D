@@ -8,7 +8,6 @@ public class MissionPanel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _incomeText;
     [SerializeField] private SaveData _saveData;
-    [SerializeField] private TakeButton _takeButton;
     [SerializeField] private TankFarm[] _farms;
 
     private const string _incomeStr = "Income";
@@ -39,7 +38,6 @@ public class MissionPanel : MonoBehaviour
         }
 
         SetTotalIncome();
-        _takeButton.Init(_saveData.Data.LastIncome);
         _offlineIncome.Calculate(_saveData.Data.TotalIncome);
     }
 

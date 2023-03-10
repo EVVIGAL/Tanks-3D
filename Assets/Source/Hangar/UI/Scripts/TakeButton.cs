@@ -8,7 +8,6 @@ public class TakeButton : MonoBehaviour
 {
     [SerializeField] private SaveData _data;
     [SerializeField] private AudioManager _audioManager;
-    [SerializeField] private InterAd _ad;
     [SerializeField] private MissionPanel _missionPanel;
     [Space]
     [SerializeField] private Button _upgradeButton;
@@ -16,11 +15,7 @@ public class TakeButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private TextMeshProUGUI _upgradeText;
     [Space]
-    [SerializeField] private int _edgeValue;
-    [SerializeField] private int _maximumValue;
-    [SerializeField] private int _increaseMaxValue;
-    [SerializeField] private int _upgradeCost;
-    [SerializeField] private int _upgradeCostIncrease;
+    [SerializeField] private IncomeData _incomeData;
 
     private Color _upgradeColor = new Color(1, 0.5f, 0, 1);
 
@@ -37,15 +32,17 @@ public class TakeButton : MonoBehaviour
 
     private void OnEnable()
     {       
-        _text.text = _currentValue.ToString("f0") + " / " + _maximumValue;
+        _text.text = _currentValue.ToString("f0") + " / " + _incomeData.MaximumValue;
+        UpdateButton();
         _button.onClick.AddListener(TakeReward);
         _upgradeButton.onClick.AddListener(Upgrade);
         _missionPanel.IncomeChange += OnIncomeChange;
         _money.ValueChanged += UpdateButton;
     }
 
-    public void Init(int value)
+    public void Init(int value, IncomeData data)
     {
+        _incomeData = data;
         OnIncomeChange();
         UpdateButton();
         _currentValue = value;
@@ -53,10 +50,10 @@ public class TakeButton : MonoBehaviour
 
     private void Update()
     {
-        if (_currentValue < _maximumValue)
+        if (_currentValue < _incomeData.MaximumValue)
         {
             _currentValue += Time.deltaTime * _income;
-            _text.text = _currentValue.ToString("f0") + " / " + _maximumValue;
+            _text.text = _currentValue.ToString("f0") + " / " + _incomeData.MaximumValue;
         }
     }
 
@@ -72,41 +69,34 @@ public class TakeButton : MonoBehaviour
     public void Add(int value)
     {
         _currentValue += value;
-        _currentValue = Mathf.Clamp(_currentValue, _currentValue, _maximumValue);
-    }
-
-    private void ShowAD()
-    {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        InterstitialAd.Show(() => _audioManager.Mute(), (temp) => _audioManager.Load(), null, null);
-#endif
+        _currentValue = Mathf.Clamp(_currentValue, _currentValue, _incomeData.MaximumValue);
     }
 
     private void TakeReward()
     {
         _money.Add((int)_currentValue);
         _currentValue = 0;
-        ShowAD();
     }
 
     private void Upgrade()
     {
-        if (_money.TrySpend(_upgradeCost))
+        if (_money.TrySpend(_incomeData.UpgradeCost))
         {
-            _maximumValue += _increaseMaxValue;
-            _upgradeCost += _upgradeCostIncrease;
+            _incomeData.MaximumValue += _incomeData.IncreaseMaxValue;
+            _incomeData.UpgradeCost += _incomeData.UpgradeCostIncrease;
+            _data.Data.MaxIncome = _incomeData.MaximumValue;
             UpdateButton();
         }
     }
 
     private void UpdateButton()
     {
-        if (_maximumValue >= _edgeValue)
+        if (_incomeData.MaximumValue >= _incomeData.EdgeValue)
             _upgradeButton.gameObject.SetActive(false);
 
-        _upgradeText.text = _upgradeCost.ToString();
+        _upgradeText.text = _incomeData.UpgradeCost.ToString();
 
-        if (_upgradeCost <= _money.Value)
+        if (_incomeData.UpgradeCost <= _money.Value)
             _upgradeButton.GetComponent<Image>().color = Color.green;
         else
             _upgradeButton.GetComponent<Image>().color = _upgradeColor;

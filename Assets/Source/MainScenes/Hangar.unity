@@ -5047,7 +5047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Daily reward
+  m_text: "\u041F\u0430\u0435\u043A"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -10235,6 +10235,76 @@ MonoBehaviour:
     - _currentMedals: 0
     - _currentMedals: 0
     - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
+    - _currentMedals: 0
     Units:
     - _health:
         _value: 120
@@ -10396,6 +10466,12 @@ MonoBehaviour:
         _increaseCost: 800
       _isAvailable: 0
       _name: KV-2
+    Income:
+      EdgeValue: 5000
+      MaximumValue: 500
+      IncreaseMaxValue: 500
+      UpgradeCost: 300
+      UpgradeCostIncrease: 300
     LastDailyReward: 
     IncomeTaked: 
     Money: 0
@@ -10413,6 +10489,7 @@ MonoBehaviour:
     CurrentTankName: 
   _choser: {fileID: 667585740}
   _root: {fileID: 0}
+  _takeButton: {fileID: 1437453354}
 --- !u!82 &820633390
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12805,7 +12882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Battle!
+  m_text: "\u0412 \u0431\u043E\u0439!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
@@ -17323,17 +17400,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data: {fileID: 820633389}
   _audioManager: {fileID: 905694432}
-  _ad: {fileID: 0}
   _missionPanel: {fileID: 2087713309}
   _upgradeButton: {fileID: 629846207}
   _money: {fileID: 1482989044}
   _text: {fileID: 1861051091}
   _upgradeText: {fileID: 1168042247}
-  _edgeValue: 2500
-  _maximumValue: 500
-  _increaseMaxValue: 500
-  _upgradeCost: 300
-  _upgradeCostIncrease: 300
+  _incomeData:
+    EdgeValue: 0
+    MaximumValue: 0
+    IncreaseMaxValue: 0
+    UpgradeCost: 0
+    UpgradeCostIncrease: 0
 --- !u!114 &1437453355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21749,7 +21826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806f0696300aeac44a0e17efee222854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLanguage: English
+  currentLanguage: Russian
   detectLanguage: 2
   defaultLanguage: Russian
   saveLoad: 2
@@ -25728,7 +25805,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _incomeText: {fileID: 1537299824}
   _saveData: {fileID: 820633389}
-  _takeButton: {fileID: 1437453354}
   _farms:
   - {fileID: 1317286590}
   - {fileID: 1774144882}
@@ -25814,10 +25890,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Here you are! This is your daily ration.
-
-    Air Strike +1 Repair kit
-    +1'
+  m_text: "\u041F\u043E\u043B\u0443\u0447\u0438 \u0435\u0436\u0435\u0434\u043D\u0435\u0432\u043D\u044B\u0439
+    \u043F\u0430\u0435\u043A \u0431\u043E\u0435\u0446!\n\u0410\u0440\u0442\u0423\u0434\u0430\u0440
+    +1 \u0420\u0435\u043C\u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0442 +1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}
   m_sharedMaterial: {fileID: 942589445191879500, guid: 02fea1fb776e0ad43a5e684a1ab0ce9e, type: 2}

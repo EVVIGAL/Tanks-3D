@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BossArtBlow : MonoBehaviour
 {
+    [SerializeField] private Quaternion _rotation;
     [SerializeField] private Transform _target;
     [SerializeField] private GameObject _projectile;
     [SerializeField] private float _minDelay;
@@ -13,7 +14,7 @@ public class BossArtBlow : MonoBehaviour
     private void OnEnable()
     {
         _delay = GetRandomDelay();       
-        Instantiate(_projectile);
+        Instantiate(_projectile, transform.position, _rotation);
     }
 
     private void Update()
@@ -22,7 +23,7 @@ public class BossArtBlow : MonoBehaviour
 
         if (_timePassed >= _delay)
         {
-            Instantiate(_projectile, transform.position, Quaternion.identity);
+            Instantiate(_projectile, transform.position, _rotation);
             _delay = GetRandomDelay();
             _timePassed = 0;
         }

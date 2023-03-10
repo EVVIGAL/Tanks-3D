@@ -8,6 +8,7 @@ public class SaveData : MonoBehaviour
     [SerializeField] private DataHolder _data;
     [SerializeField] private TankChoser _choser;
     [SerializeField] private Root _root;
+    [SerializeField] private TakeButton _takeButton;
 
     public DataHolder Data => _data;
 
@@ -26,6 +27,9 @@ public class SaveData : MonoBehaviour
 
         if (_root != null)
             _root.Init(_data.Units[_data.CurrentTankIndex], (uint)_data.CurrentTankIndex);
+
+        if (_takeButton != null)
+            _takeButton.Init(_data.LastIncome, _data.Income);
 
         _audioManager.Init();
 
@@ -82,6 +86,7 @@ public class DataHolder
 {
     public LevelData[] Levels;
     public UnitStat[] Units;
+    public IncomeData Income;
     public string LastDailyReward;
     public string IncomeTaked;
     public int Money;
