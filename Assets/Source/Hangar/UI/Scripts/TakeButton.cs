@@ -1,4 +1,3 @@
-using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
@@ -17,6 +16,8 @@ public class TakeButton : MonoBehaviour
     [Space]
     [SerializeField] private IncomeData _incomeData;
 
+    private const float _secondsInMin = 60;
+
     private Color _upgradeColor = new Color(1, 0.5f, 0, 1);
 
     private Button _button;
@@ -31,7 +32,7 @@ public class TakeButton : MonoBehaviour
     }
 
     private void OnEnable()
-    {       
+    {
         _text.text = _currentValue.ToString("f0") + " / " + _incomeData.MaximumValue;
         UpdateButton();
         _button.onClick.AddListener(TakeReward);
@@ -46,6 +47,7 @@ public class TakeButton : MonoBehaviour
         OnIncomeChange();
         UpdateButton();
         _currentValue = value;
+        _income = _data.Data.TotalIncome / _secondsInMin;
     }
 
     private void Update()
@@ -104,7 +106,6 @@ public class TakeButton : MonoBehaviour
 
     private void OnIncomeChange()
     {
-        float secondsInMin = 60;
-        _income = _missionPanel.TotalIncome/secondsInMin;
+        _income = _missionPanel.TotalIncome / _secondsInMin;
     }
 }

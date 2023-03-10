@@ -802,8 +802,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6938240540154597807, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6938240540154597807, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1ebf641d662d0a94e882210de841f6b5, type: 3}
     - target: {fileID: 7097204674646537036, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -860,6 +864,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7097204675419378053, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _walletView
+      value: 
+      objectReference: {fileID: 977693558739167277}
+    - target: {fileID: 7097204675419378053, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: _currentMoney
+      value: 
+      objectReference: {fileID: 977693558739167276}
     - target: {fileID: 8118584032658266052, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -932,6 +944,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7097204676102337998, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
   m_PrefabInstance: {fileID: 977693558739167273}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &977693558739167276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1606228076, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+  m_PrefabInstance: {fileID: 977693558739167273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &977693558739167277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 309647189, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+  m_PrefabInstance: {fileID: 977693558739167273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754f02b5bb67c2a4dba9b901f2e4ad75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &977693558739167278 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 741931894, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
