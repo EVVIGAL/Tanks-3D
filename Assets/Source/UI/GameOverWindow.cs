@@ -14,6 +14,7 @@ public class GameOverWindow : MonoBehaviour
     [SerializeField] private LoadPanel _loadPanel;
     [SerializeField] private Wallet _wallet;
     [SerializeField] private GameObject _inputPanel;
+    [SerializeField] private EnemiesCounter _counter;
 
     private const int _hubSceneIndex = 1;
 
@@ -26,6 +27,12 @@ public class GameOverWindow : MonoBehaviour
         _restore.onClick.AddListener(OnRestoreButtonClick);
         int reward = (int)_wallet.Money - _data.Data.Money;
         _data.Data.Money += reward;
+    }
+
+    private void Start()
+    {
+        if(_counter.GetEnemies() <= 0)
+            _restore.gameObject.SetActive(false);
     }
 
     private void OnDisable()

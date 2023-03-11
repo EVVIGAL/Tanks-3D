@@ -43,4 +43,8 @@ public class EnemiesCounter : MonoBehaviour
         _aliveEnemyCountText.SetText(_enemies.Count.ToString());
     }
 
+    public int GetEnemies()
+    {
+        return _enemies.Count;
+    }
 }
