@@ -6,6 +6,7 @@ public class GrenadeThrower : MonoBehaviour, IWeapon
 {
     [SerializeField] private float _angle;
     [SerializeField] private Transform _shootPoint;
+    [SerializeField] private float _activateDelay = 0.3f;
 
     private CharacterAnimator _characterAnimator;
     private WeaponReloader _weaponReloader;
@@ -51,7 +52,7 @@ public class GrenadeThrower : MonoBehaviour, IWeapon
 
     private IEnumerator EnableProjectile()
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(_activateDelay);
         _projectile.EnablePhysic();
     }
 
