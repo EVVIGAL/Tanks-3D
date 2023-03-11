@@ -10582,6 +10582,7 @@ GameObject:
   - component: {fileID: 820633390}
   - component: {fileID: 820633392}
   - component: {fileID: 820633391}
+  - component: {fileID: 820633393}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -10808,29 +10809,29 @@ MonoBehaviour:
     - _currentMedals: 0
     Units:
     - _health:
-        _value: 140
+        _value: 160
         _maximumValue: 400
-        _upgradeCost: 150
+        _upgradeCost: 100
         _upgradeValue: 20
-        _increaseCost: 300
+        _increaseCost: 200
       _damage:
-        _value: 12
+        _value: 14
         _maximumValue: 100
         _upgradeCost: 120
         _upgradeValue: 4
-        _increaseCost: 200
+        _increaseCost: 120
       _armor:
         _value: 20
         _maximumValue: 50
         _upgradeCost: 150
-        _upgradeValue: 4
-        _increaseCost: 300
+        _upgradeValue: 5
+        _increaseCost: 200
       _speed:
         _value: 5
         _maximumValue: 10
-        _upgradeCost: 150
+        _upgradeCost: 100
         _upgradeValue: 1
-        _increaseCost: 150
+        _increaseCost: 100
       _farm:
         _value: 0
         _maximumValue: 20
@@ -10840,13 +10841,13 @@ MonoBehaviour:
       _isAvailable: 1
       _name: Stuart
     - _health:
-        _value: 240
+        _value: 260
         _maximumValue: 500
         _upgradeCost: 100
         _upgradeValue: 20
         _increaseCost: 200
       _damage:
-        _value: 20
+        _value: 24
         _maximumValue: 160
         _upgradeCost: 150
         _upgradeValue: 6
@@ -10872,13 +10873,13 @@ MonoBehaviour:
       _isAvailable: 0
       _name: Matilda
     - _health:
-        _value: 320
+        _value: 360
         _maximumValue: 600
         _upgradeCost: 200
         _upgradeValue: 20
         _increaseCost: 200
       _damage:
-        _value: 30
+        _value: 36
         _maximumValue: 200
         _upgradeCost: 150
         _upgradeValue: 5
@@ -10924,9 +10925,9 @@ MonoBehaviour:
       _speed:
         _value: 3
         _maximumValue: 8
-        _upgradeCost: 300
+        _upgradeCost: 200
         _upgradeValue: 1
-        _increaseCost: 500
+        _increaseCost: 400
       _farm:
         _value: 0
         _maximumValue: 50
@@ -10942,7 +10943,7 @@ MonoBehaviour:
         _upgradeValue: 40
         _increaseCost: 300
       _damage:
-        _value: 100
+        _value: 140
         _maximumValue: 300
         _upgradeCost: 150
         _upgradeValue: 10
@@ -10956,7 +10957,7 @@ MonoBehaviour:
       _speed:
         _value: 3
         _maximumValue: 8
-        _upgradeCost: 400
+        _upgradeCost: 200
         _upgradeValue: 1
         _increaseCost: 300
       _farm:
@@ -11145,6 +11146,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &820633393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820633384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b783307247c83546be77b8593486450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &829774754
 PrefabInstance:
   m_ObjectHideFlags: 0

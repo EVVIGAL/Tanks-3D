@@ -16,6 +16,7 @@ public class Root : MonoBehaviour
     [SerializeField] private Skill _artBlowSkill;
     [SerializeField] private Skill _repairKitSkill;
     [SerializeField] private MobileInputUI _mobileInputUI;
+    [SerializeField] private GamePausedWindow _gamePauseWindow;
     [SerializeField] private GameOverWindow _gameOverWindow;
     [SerializeField] private LevelCompletedWindow _levelCompletedWindow;
     [SerializeField] private GameObject _inputPanel;
@@ -53,8 +54,8 @@ public class Root : MonoBehaviour
         if (!_isGameEnd)
             CreatePlayerTank();
 
-        _data.Data.ArtilleryAmount -= (int)SetSkillAmount(_artBlowSkill, (uint)_data.Data.ArtilleryAmount);
-        _data.Data.ToolsAmount -= (int)SetSkillAmount(_repairKitSkill, (uint)_data.Data.ToolsAmount);
+        _data.Data.ArtilleryAmount -= _gamePauseWindow.SetArtilleryAmount((int)SetSkillAmount(_artBlowSkill, (uint)_data.Data.ArtilleryAmount));
+        _data.Data.ToolsAmount -= _gamePauseWindow.SetToolsAmount((int)SetSkillAmount(_repairKitSkill, (uint)_data.Data.ToolsAmount));
         _damageCounter.Init(_unit.Health.Value, _currentLevelIndex);
         _levelText.text = (_currentLevelIndex - 1).ToString();
         _reward.Init((int)_currentLevelIndex - 1, (int)_data.Data.Levels[_currentLevelIndex - 2].CurrentMedals);

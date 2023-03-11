@@ -11,13 +11,20 @@ public class BattleButton : MonoBehaviour
     [SerializeField] private InterAd _ad;
     [SerializeField] private LoadPanel _loadPanel;
 
+    private const int _mapScenesAmount = 3;
+
     private Button _button;
     private int _lastLevelIndex;
+    private int _endLevelIndex;
 
     private void Awake()
     {
         _button = GetComponent<Button>();
         _lastLevelIndex = _data.Data.CurrentLevel + 1;
+        _endLevelIndex = SceneManager.sceneCountInBuildSettings - _mapScenesAmount;
+
+        if (_lastLevelIndex >= _endLevelIndex)
+            _lastLevelIndex = _endLevelIndex;
     }
 
     private void OnEnable()

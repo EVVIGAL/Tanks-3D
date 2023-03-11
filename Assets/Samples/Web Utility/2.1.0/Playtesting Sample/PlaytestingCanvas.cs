@@ -5,8 +5,8 @@ namespace Agava.WebUtility.Samples
 {
     public class PlaytestingCanvas : MonoBehaviour
     {
-        [SerializeField]
-        private Text _adBlockStatusText;
+        //[SerializeField]
+        //private Text _adBlockStatusText;
 
         private void OnEnable()
         {
@@ -18,11 +18,11 @@ namespace Agava.WebUtility.Samples
             WebApplication.InBackgroundChangeEvent -= OnInBackgroundChange;
         }
 
-        private void Update()
-        {
-            _adBlockStatusText.color = AdBlock.Enabled ? Color.red : Color.green;
-            _adBlockStatusText.text = $"{nameof(AdBlock)}.{nameof(AdBlock.Enabled)} = {AdBlock.Enabled}";
-        }
+        //private void Update()
+        //{
+        //    _adBlockStatusText.color = AdBlock.Enabled ? Color.red : Color.green;
+        //    _adBlockStatusText.text = $"{nameof(AdBlock)}.{nameof(AdBlock.Enabled)} = {AdBlock.Enabled}";
+        //}
 
         private void OnInBackgroundChange(bool inBackground)
         {
