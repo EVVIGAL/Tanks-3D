@@ -1,6 +1,7 @@
 using Agava.YandexGames;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class SaveData : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SaveData : MonoBehaviour
     [SerializeField] private TankChoser _choser;
     [SerializeField] private Root _root;
     [SerializeField] private TakeButton _takeButton;
+    [SerializeField] private TextMeshProUGUI _medalsText;
 
     public DataHolder Data => _data;
 
@@ -32,7 +34,8 @@ public class SaveData : MonoBehaviour
             _takeButton.Init(_data.LastIncome, _data.Income);
 
         _audioManager.Init();
-
+        _data.SetMedals();
+        SetLeaderboardScore();
         LevelHolder.SetLevel(_data.CurrentLevel);
     }
 
@@ -58,11 +61,16 @@ public class SaveData : MonoBehaviour
     {
         int current = _data.Medals;
 
+        if(_medalsText != null)
+            _medalsText.text = current.ToString();
+
+#if UNITY_WEBGL && !UNITY_EDITOR
         Leaderboard.GetPlayerEntry(_leaderboardTxt, (result) =>
         {
             if (current >= result.score)
                 SaveBestScore(current);
         });
+#endif
     }
 
     private void SaveYandex()

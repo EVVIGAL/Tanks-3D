@@ -85,7 +85,7 @@ public class Root : MonoBehaviour
             return;
 
         _isGameEnd = true;
-        StartCoroutine(CompleteLevel());
+        StartCoroutine(CompleteLevel(_levelCompletedWindow.gameObject));
     }
 
     public void GameOver()
@@ -93,7 +93,7 @@ public class Root : MonoBehaviour
         if (_isGameEnd)
             return;
 
-        _gameOverWindow.gameObject.SetActive(true);
+        StartCoroutine(CompleteLevel(_gameOverWindow.gameObject));
         EndGame();
     }
 
@@ -122,10 +122,10 @@ public class Root : MonoBehaviour
         _isGameEnd = true;
     }
 
-    private IEnumerator CompleteLevel()
+    private IEnumerator CompleteLevel(GameObject endPanel)
     {
         yield return new WaitForSeconds(_waitTime);
-        _levelCompletedWindow.gameObject.SetActive(true);
+        endPanel.SetActive(true);
         EndGame();
         yield break;
     }
