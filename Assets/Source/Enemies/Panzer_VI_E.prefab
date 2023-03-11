@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _template: {fileID: 1052416172867449998, guid: 2fb88b7e7a0fcd04daca42278d66c454, type: 3}
   _poolCapacity: 3
-  <Damage>k__BackingField: 100
+  <Damage>k__BackingField: 70
 --- !u!114 &5158781666068081848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <MaxValue>k__BackingField: 500
-  <Armor>k__BackingField: 70
+  <Armor>k__BackingField: 60
   _reward: 150
   _physicObjects:
   - {fileID: 7926409073972466542}

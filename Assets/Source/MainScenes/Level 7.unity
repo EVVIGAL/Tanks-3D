@@ -323,6 +323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hotchkiss_H35
       objectReference: {fileID: 0}
+    - target: {fileID: 9194147869987103530, guid: 312242b5a3ed4134ca0e9c8e3d502f52, type: 3}
+      propertyPath: <MaxValue>k__BackingField
+      value: 320
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 312242b5a3ed4134ca0e9c8e3d502f52, type: 3}
 --- !u!4 &531589285 stripped
@@ -398,6 +402,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 486971183}
     m_Modifications:
+    - target: {fileID: 4606696708302350245, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
+      propertyPath: <MaxValue>k__BackingField
+      value: 260
+      objectReference: {fileID: 0}
     - target: {fileID: 6479027446971307777, guid: e75e629ce35158f4583c59751d87f2a0, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
       value: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(430.5,40)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(0.5,100)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(0.5,100)"},"ID":2,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Self","Children":[{"Type":"IsAlive","NodeData":{"Offset":"(-70,100)"},"ID":3,"Name":"Is

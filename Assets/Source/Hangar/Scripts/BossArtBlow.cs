@@ -14,7 +14,6 @@ public class BossArtBlow : MonoBehaviour
     private void OnEnable()
     {
         _delay = GetRandomDelay();       
-        Instantiate(_projectile, transform.position, _rotation);
     }
 
     private void Update()
