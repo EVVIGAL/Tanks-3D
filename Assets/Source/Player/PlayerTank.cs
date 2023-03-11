@@ -34,5 +34,6 @@ public class PlayerTank : MonoBehaviour
     public void Stop()
     {
         _playerInput.enabled = false;
+        UIInput.enabled = false;
     }
 }
