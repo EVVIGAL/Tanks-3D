@@ -25,7 +25,9 @@ public class GAManager : MonoBehaviour
 
     public void BattleButton()
     {
+        GameAnalytics.NewResourceEvent(GAResourceFlowType.Source, "Start", 1f, "Button", "12");
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "Start button clicked");
+        Debug.Log("Start button clicked");
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "Start button clicked");
-        Debug.Log("BattleButton");
     }
 }

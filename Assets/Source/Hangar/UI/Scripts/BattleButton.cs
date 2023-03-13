@@ -22,14 +22,12 @@ public class BattleButton : MonoBehaviour
         _button = GetComponent<Button>();
         _lastLevelIndex = _data.Data.CurrentLevel + 1;
         _endLevelIndex = SceneManager.sceneCountInBuildSettings - _notPlayableScenesAmount;
-        Debug.Log(SceneManager.sceneCountInBuildSettings);
     }
 
     private void Start()
     {
         if (_lastLevelIndex >= _endLevelIndex)
-            _lastLevelIndex = _endLevelIndex;
-        
+            _lastLevelIndex = _endLevelIndex;        
     }
 
     private void OnEnable()
