@@ -9599,8 +9599,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7097204674850694672}
-  - component: {fileID: 7097204674850694679}
-  - component: {fileID: 7097204674850694673}
+  - component: {fileID: 4970750264248215642}
+  - component: {fileID: 6855039773886143925}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -9623,7 +9623,7 @@ Transform:
   m_Father: {fileID: 7097204675419378043}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7097204674850694679
+--- !u!114 &4970750264248215642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9632,13 +9632,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7097204674850694677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Script: {fileID: 11500000, guid: de51f584e1be9254f95bc51361277e07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!114 &7097204674850694673
+--- !u!114 &6855039773886143925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
