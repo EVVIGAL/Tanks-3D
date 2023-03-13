@@ -93,7 +93,7 @@ public class Root : MonoBehaviour
             return;
 
         _isGameEnd = true;
-        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, (_currentLevelIndex - 1).ToString() + " - level win");
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, (_currentLevelIndex - 1).ToString() + " - level complete");
         StartCoroutine(CompleteLevel(_levelCompletedWindow.gameObject));
     }
 
@@ -104,7 +104,7 @@ public class Root : MonoBehaviour
         if (_isGameEnd)
             return;
 
-        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, (_currentLevelIndex - 1).ToString() + " - level lose");
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, (_currentLevelIndex - 1).ToString() + " - level fail");
         StartCoroutine(CompleteLevel(_gameOverWindow.gameObject));
         EndGame();
     }
