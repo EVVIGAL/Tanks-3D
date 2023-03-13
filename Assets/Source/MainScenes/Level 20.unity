@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.5
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4770574, g: 0.6359377, b: 0.55384827, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.4770574, g: 0.6359377, b: 0.5538483, a: 0.5}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1529,6 +1529,10 @@ PrefabInstance:
       propertyPath: _healthViewBehaviour
       value: 
       objectReference: {fileID: 389281217}
+    - target: {fileID: 6680527430830799815, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
+      propertyPath: <MaxValue>k__BackingField
+      value: 2200
+      objectReference: {fileID: 0}
     - target: {fileID: 8349409212652386608, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: mBehaviorSource.mTaskData.JSONSerialization
       value: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(422.7143,30)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(-3,100)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(2.017622,96.56905)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-1273.80847,136.315765)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Self","Children":[{"Type":"IsAlive","NodeData":{"Offset":"(-368.055634,121.627907)"},"ID":4,"Name":"Is
@@ -1562,7 +1566,7 @@ PrefabInstance:
     - target: {fileID: 8349409212652386608, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[12]
       value: 
-      objectReference: {fileID: 1845433352997786620, guid: 312242b5a3ed4134ca0e9c8e3d502f52, type: 3}
+      objectReference: {fileID: 1615817126581782943, guid: f0860169edd2f3646896608d0494f11b, type: 3}
     - target: {fileID: 8349409212652386608, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[13]
       value: 
@@ -1570,7 +1574,7 @@ PrefabInstance:
     - target: {fileID: 8349409212652386608, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[21]
       value: 
-      objectReference: {fileID: 1845433352997786620, guid: 312242b5a3ed4134ca0e9c8e3d502f52, type: 3}
+      objectReference: {fileID: 1615817126581782943, guid: f0860169edd2f3646896608d0494f11b, type: 3}
     - target: {fileID: 8349409212652386608, guid: d6fc39b91a5f5144a8cfc99d51bf70cb, type: 3}
       propertyPath: mBehaviorSource.mTaskData.fieldSerializationData.unityObjects.Array.data[23]
       value: 

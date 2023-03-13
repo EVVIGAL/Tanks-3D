@@ -4550,7 +4550,7 @@ PrefabInstance:
       objectReference: {fileID: 1482989044}
     - target: {fileID: 3927104939822465791, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
       propertyPath: _maxValue
-      value: 400
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3927104939887710329, guid: 07a0ce6b2c1112a4d8e10c334039f12d, type: 3}
       propertyPath: m_text
@@ -10664,7 +10664,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 991678476}
+  - {fileID: 1251915392}
   - {fileID: 1572062146}
   - {fileID: 1426541024}
   - {fileID: 418303015}
@@ -10810,25 +10810,25 @@ MonoBehaviour:
     - _currentMedals: 0
     Units:
     - _health:
-        _value: 160
+        _value: 200
         _maximumValue: 400
         _upgradeCost: 100
         _upgradeValue: 20
         _increaseCost: 200
       _damage:
-        _value: 14
+        _value: 16
         _maximumValue: 100
         _upgradeCost: 120
         _upgradeValue: 4
         _increaseCost: 120
       _armor:
-        _value: 20
+        _value: 30
         _maximumValue: 50
         _upgradeCost: 150
         _upgradeValue: 5
         _increaseCost: 200
       _speed:
-        _value: 5
+        _value: 6
         _maximumValue: 10
         _upgradeCost: 100
         _upgradeValue: 1
@@ -10842,19 +10842,19 @@ MonoBehaviour:
       _isAvailable: 1
       _name: Stuart
     - _health:
-        _value: 260
+        _value: 320
         _maximumValue: 500
         _upgradeCost: 100
         _upgradeValue: 20
         _increaseCost: 200
       _damage:
-        _value: 24
+        _value: 28
         _maximumValue: 160
         _upgradeCost: 150
         _upgradeValue: 6
         _increaseCost: 150
       _armor:
-        _value: 40
+        _value: 50
         _maximumValue: 70
         _upgradeCost: 100
         _upgradeValue: 5
@@ -10874,13 +10874,13 @@ MonoBehaviour:
       _isAvailable: 0
       _name: Matilda
     - _health:
-        _value: 360
+        _value: 440
         _maximumValue: 600
         _upgradeCost: 200
         _upgradeValue: 20
         _increaseCost: 200
       _damage:
-        _value: 36
+        _value: 40
         _maximumValue: 200
         _upgradeCost: 150
         _upgradeValue: 5
@@ -10892,7 +10892,7 @@ MonoBehaviour:
         _upgradeValue: 5
         _increaseCost: 350
       _speed:
-        _value: 4
+        _value: 5
         _maximumValue: 10
         _upgradeCost: 250
         _upgradeValue: 1
@@ -10906,25 +10906,25 @@ MonoBehaviour:
       _isAvailable: 0
       _name: T-34
     - _health:
-        _value: 400
+        _value: 600
         _maximumValue: 700
         _upgradeCost: 250
         _upgradeValue: 20
         _increaseCost: 250
       _damage:
-        _value: 60
-        _maximumValue: 200
+        _value: 100
+        _maximumValue: 300
         _upgradeCost: 200
-        _upgradeValue: 5
+        _upgradeValue: 10
         _increaseCost: 200
       _armor:
-        _value: 40
+        _value: 50
         _maximumValue: 80
         _upgradeCost: 200
         _upgradeValue: 5
         _increaseCost: 300
       _speed:
-        _value: 3
+        _value: 4
         _maximumValue: 8
         _upgradeCost: 200
         _upgradeValue: 1
@@ -10938,19 +10938,19 @@ MonoBehaviour:
       _isAvailable: 0
       _name: Sherman
     - _health:
-        _value: 500
-        _maximumValue: 900
+        _value: 800
+        _maximumValue: 1200
         _upgradeCost: 300
         _upgradeValue: 40
         _increaseCost: 300
       _damage:
-        _value: 140
-        _maximumValue: 300
+        _value: 180
+        _maximumValue: 400
         _upgradeCost: 150
-        _upgradeValue: 10
+        _upgradeValue: 20
         _increaseCost: 150
       _armor:
-        _value: 60
+        _value: 70
         _maximumValue: 90
         _upgradeCost: 200
         _upgradeValue: 5
@@ -12846,84 +12846,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986055664}
   m_CullTransparentMesh: 1
---- !u!1 &991678475
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 991678476}
-  - component: {fileID: 991678478}
-  - component: {fileID: 991678479}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &991678476
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991678475}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -616, y: -309, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 820633388}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &991678478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991678475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!114 &991678479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991678475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_MoveRepeatDelay: 0.5
-  m_MoveRepeatRate: 0.1
-  m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
 --- !u!1 &992812846
 GameObject:
   m_ObjectHideFlags: 0
@@ -15903,6 +15825,84 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1251915391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251915392}
+  - component: {fileID: 1251915394}
+  - component: {fileID: 1251915393}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1251915392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251915391}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -616, y: -309, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 820633388}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1251915393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251915391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+--- !u!114 &1251915394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251915391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de51f584e1be9254f95bc51361277e07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1001 &1275591642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20462,19 +20462,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1572062148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GAManager, Assembly-CSharp
-        m_MethodName: BattleButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1572062148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27703,7 +27691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8662057173165867739, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 8662057173165867739, guid: 079921c96a16ada47b36ea002a208f1f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -27908,7 +27896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2477022713085560477, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2477022713085560477, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
       propertyPath: m_AnchorMax.x
@@ -28885,7 +28873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7236429904303105772, guid: 87a59af710f2abb42b122c547b7ac355, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7236429904303105772, guid: 87a59af710f2abb42b122c547b7ac355, type: 3}
       propertyPath: m_AnchorMax.x

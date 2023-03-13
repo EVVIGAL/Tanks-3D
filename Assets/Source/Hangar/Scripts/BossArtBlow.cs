@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BossArtBlow : MonoBehaviour
 {
+    [SerializeField] private EnemiesCounter _counter;
     [SerializeField] private Quaternion _rotation;
     [SerializeField] private Transform _target;
     [SerializeField] private GameObject _projectile;
@@ -18,6 +19,9 @@ public class BossArtBlow : MonoBehaviour
 
     private void Update()
     {
+        if (_counter.GetEnemies() <= 0)
+            return;
+
         _timePassed += Time.deltaTime;
 
         if (_timePassed >= _delay)
