@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent (typeof(SmokeDamageView))]
+[RequireComponent (typeof(SmokeDamageView), typeof(Collider))]
 public class PlaneHealth : BotHealth
 {
     [SerializeField] private MonoBehaviour _healthViewBehaviour;
@@ -14,6 +14,13 @@ public class PlaneHealth : BotHealth
     [SerializeField] private float _explosionDelay = 1f;
     [SerializeField] private uint _explosionCount = 3;
     [SerializeField] private ParticleSystem _explosionVfx;
+
+    private Collider _collider;
+
+    private void Start()
+    {
+        _collider = GetComponent<Collider>();
+    }
 
     protected override void OnTakeDamage()
     {
@@ -49,5 +56,7 @@ public class PlaneHealth : BotHealth
             Instantiate(_explosionVfx, explosionPosition, Quaternion.identity);
             yield return new WaitForSeconds(_explosionDelay);
         }
+
+        _collider.enabled = false;
     }
 }
