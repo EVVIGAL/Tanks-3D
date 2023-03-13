@@ -53,6 +53,7 @@ public class BattleButton : MonoBehaviour
 
     private void ActivateLoadPanel()
     {
+        GAManager.Instance.BattleButton();
         _loadPanel.gameObject.SetActive(true);
         _loadPanel.Load(1, () => LoadScene());
     }
