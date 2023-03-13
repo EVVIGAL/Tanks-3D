@@ -1,9 +1,10 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
+using GameAnalyticsSDK;
+using UnityEngine.UI;
 using Cinemachine;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerTankFactory))]
 public class Root : MonoBehaviour
@@ -56,6 +57,7 @@ public class Root : MonoBehaviour
         if (!_isGameEnd)
             CreatePlayerTank();
 
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, (_currentLevelIndex - 1).ToString() + " - level started");
         _data.Data.ArtilleryAmount -= _gamePauseWindow.SetArtilleryAmount((int)SetSkillAmount(_artBlowSkill, (uint)_data.Data.ArtilleryAmount));
         _data.Data.ToolsAmount -= _gamePauseWindow.SetToolsAmount((int)SetSkillAmount(_repairKitSkill, (uint)_data.Data.ToolsAmount));
         _damageCounter.Init(_unit.Health.Value, _currentLevelIndex);
@@ -91,6 +93,7 @@ public class Root : MonoBehaviour
             return;
 
         _isGameEnd = true;
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, (_currentLevelIndex - 1).ToString() + " - level win");
         StartCoroutine(CompleteLevel(_levelCompletedWindow.gameObject));
     }
 
@@ -101,6 +104,7 @@ public class Root : MonoBehaviour
         if (_isGameEnd)
             return;
 
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, (_currentLevelIndex - 1).ToString() + " - level lose");
         StartCoroutine(CompleteLevel(_gameOverWindow.gameObject));
         EndGame();
     }

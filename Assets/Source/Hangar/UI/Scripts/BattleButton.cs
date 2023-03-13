@@ -52,7 +52,6 @@ public class BattleButton : MonoBehaviour
 
     private void ActivateLoadPanel()
     {
-        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "BattleClicked");
         _loadPanel.gameObject.SetActive(true);
         _loadPanel.Load(1, () => LoadScene());
     }
