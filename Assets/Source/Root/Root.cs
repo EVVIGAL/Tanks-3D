@@ -62,11 +62,11 @@ public class Root : MonoBehaviour
         _levelText.text = (_currentLevelIndex - 1).ToString();
         _reward.Init((int)_currentLevelIndex - 1, (int)_data.Data.Levels[_currentLevelIndex - 2].CurrentMedals);
         PlayerWallet.Init((uint)_data.Data.Money);
-        _pauseButton.interactable = true;
     }
 
     public void CreatePlayerTank()
     {
+        _pauseButton.interactable = true;
         Vector3 instancePosition = Vector3.zero;
 
         if (_playerTank != null)
