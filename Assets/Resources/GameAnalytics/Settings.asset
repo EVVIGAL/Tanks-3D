@@ -26,9 +26,9 @@ MonoBehaviour:
   UserMessagesFailed: 0
   CustomArea: 
   gameKey:
-  - 9dece174bd8dc3a4f7470c609806587d
+  - 9a996c3702af2d26f37f72453ca995ca
   secretKey:
-  - 12c92c4dbd3cc7cf5b23ece1dffd6e5c030ac28e
+  - 20eb9892ba00e2234b61865ec6ce5416ca77e282
   Build:
   - 0.1
   SelectedPlatformOrganization:
@@ -36,16 +36,16 @@ MonoBehaviour:
   SelectedPlatformStudio:
   - Crazygames
   SelectedPlatformGame:
-  - Tanks 3D
-  SelectedPlatformGameID: e6b10300
+  - Tanks_3D
+  SelectedPlatformGameID: 3cb30300
   SelectedOrganization: 01000000
   SelectedStudio: 01000000
-  SelectedGame: 01000000
+  SelectedGame: 04000000
   NewVersion: 
   Changes: 
   SignUpOpen: 0
   StudioName: 
-  GameName: 
+  GameName: Tanks_3D
   OrganizationName: 
   OrganizationIdentifier: 
   EmailGA: vizuleugene@gmail.com
@@ -62,7 +62,7 @@ MonoBehaviour:
   ResourceItemTypes: []
   ResourceCurrencies: []
   LastCreatedGamePlatform: -1
-  Platforms: 0b000000
+  Platforms: 11000000
   CurrentInspectorState: 1
   ClosedHints: 
   DisplayHints: 0

@@ -2,6 +2,7 @@ using UnityEngine.SceneManagement;
 using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
+using GameAnalyticsSDK;
 
 [RequireComponent(typeof(Button))]
 public class BattleButton : MonoBehaviour
@@ -51,7 +52,7 @@ public class BattleButton : MonoBehaviour
 
     private void ActivateLoadPanel()
     {
-        GAManager.Instance.BattleButton();
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "BattleClicked");
         _loadPanel.gameObject.SetActive(true);
         _loadPanel.Load(1, () => LoadScene());
     }

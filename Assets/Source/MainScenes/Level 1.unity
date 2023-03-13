@@ -472,6 +472,18 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1606228076, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: m_text
+      value: 999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606228076, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: m_margin.x
+      value: -21.27887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606228076, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
+      propertyPath: m_margin.z
+      value: -60.037567
+      objectReference: {fileID: 0}
     - target: {fileID: 1604637283300223871, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_Interactable
       value: 1
@@ -770,7 +782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4466949527790869690, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5158726823233600608, guid: 6df34a80eb3e4de439dad13b3a42442e, type: 3}
       propertyPath: m_Interactable
