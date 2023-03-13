@@ -10,11 +10,11 @@ public class FinalReward : MonoBehaviour
     [SerializeField] private Wallet _wallet;
 
     private const string _rewardKey = "Your reward";
-    private const int _bossRewardMultiplier = 8;
+    private const int _bossRewardMultiplier = 5;
     private const int _medalsRewardAdd = 5;
 
     private TextMeshProUGUI _text;
-    private int _levelRewardMultiplier = 65;
+    private int _levelRewardMultiplier = 55;
     private int _reward;
     private string _rewardStr;
     private bool _isBoss;

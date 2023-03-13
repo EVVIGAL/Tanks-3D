@@ -9,6 +9,7 @@ public class Skills : MonoBehaviour
     [SerializeField] private Money _money;
     [SerializeField] private int _skillPrice;
 
+    private const int _adAmount = 3;
     private const int _amount = 1; 
 
     public void OnArtilleryBuyClick()
@@ -39,7 +40,7 @@ public class Skills : MonoBehaviour
 
     private void Reward()
     {
-        _artillery.Add(_amount);
-        _tools.Add(_amount);
+        _artillery.Add(_adAmount);
+        _tools.Add(_adAmount);
     }
 }

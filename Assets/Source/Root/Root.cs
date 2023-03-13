@@ -3,10 +3,12 @@ using System.Collections;
 using Cinemachine;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerTankFactory))]
 public class Root : MonoBehaviour
 {
+    [SerializeField] private Button _pauseButton;
     [SerializeField] private FinalReward _reward;
     [SerializeField] private TextMeshProUGUI _levelText;
     [SerializeField] private DamageCounter _damageCounter;
@@ -60,6 +62,7 @@ public class Root : MonoBehaviour
         _levelText.text = (_currentLevelIndex - 1).ToString();
         _reward.Init((int)_currentLevelIndex - 1, (int)_data.Data.Levels[_currentLevelIndex - 2].CurrentMedals);
         PlayerWallet.Init((uint)_data.Data.Money);
+        _pauseButton.interactable = true;
     }
 
     public void CreatePlayerTank()
@@ -82,6 +85,8 @@ public class Root : MonoBehaviour
 
     public void LevelCompleted()
     {
+        _pauseButton.interactable = false;
+
         if (_isGameEnd)
             return;
 
@@ -91,6 +96,8 @@ public class Root : MonoBehaviour
 
     public void GameOver()
     {
+        _pauseButton.interactable = false;
+
         if (_isGameEnd)
             return;
 
