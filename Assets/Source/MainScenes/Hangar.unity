@@ -10653,7 +10653,7 @@ MonoBehaviour:
       _isAvailable: 0
       _name: Sherman
     - _health:
-        _value: 600
+        _value: 700
         _maximumValue: 1200
         _upgradeCost: 400
         _upgradeValue: 50
