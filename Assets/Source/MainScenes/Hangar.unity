@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -5917,7 +5917,7 @@ MonoBehaviour:
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _price: 3000
+  _price: 3300
   _neededLevel: 12
 --- !u!114 &510200237
 MonoBehaviour:
@@ -6664,7 +6664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184.3, y: 299}
+  m_AnchoredPosition: {x: -194, y: 299}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &580635703
@@ -10621,20 +10621,20 @@ MonoBehaviour:
       _isAvailable: 0
       _name: T-34
     - _health:
-        _value: 600
+        _value: 500
         _maximumValue: 700
         _upgradeCost: 250
         _upgradeValue: 40
-        _increaseCost: 250
+        _increaseCost: 350
       _damage:
         _value: 100
         _maximumValue: 300
         _upgradeCost: 200
         _upgradeValue: 10
-        _increaseCost: 200
+        _increaseCost: 300
       _armor:
         _value: 50
-        _maximumValue: 80
+        _maximumValue: 70
         _upgradeCost: 200
         _upgradeValue: 5
         _increaseCost: 300
@@ -10643,7 +10643,7 @@ MonoBehaviour:
         _maximumValue: 8
         _upgradeCost: 200
         _upgradeValue: 1
-        _increaseCost: 400
+        _increaseCost: 500
       _farm:
         _value: 0
         _maximumValue: 50
@@ -10653,29 +10653,29 @@ MonoBehaviour:
       _isAvailable: 0
       _name: Sherman
     - _health:
-        _value: 800
+        _value: 700
         _maximumValue: 1200
-        _upgradeCost: 300
+        _upgradeCost: 400
         _upgradeValue: 50
-        _increaseCost: 300
+        _increaseCost: 400
       _damage:
         _value: 180
         _maximumValue: 400
-        _upgradeCost: 150
+        _upgradeCost: 300
         _upgradeValue: 20
-        _increaseCost: 150
+        _increaseCost: 400
       _armor:
-        _value: 70
-        _maximumValue: 90
+        _value: 60
+        _maximumValue: 80
         _upgradeCost: 200
         _upgradeValue: 5
-        _increaseCost: 300
+        _increaseCost: 400
       _speed:
         _value: 3
         _maximumValue: 8
-        _upgradeCost: 200
+        _upgradeCost: 400
         _upgradeValue: 1
-        _increaseCost: 300
+        _increaseCost: 400
       _farm:
         _value: 0
         _maximumValue: 60
@@ -18164,6 +18164,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 145496689}
     m_Modifications:
+    - target: {fileID: 1803944973644380609, guid: 18e80563ea107b4479bd823253c89109, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803944973644380609, guid: 18e80563ea107b4479bd823253c89109, type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4380301917536936727, guid: 18e80563ea107b4479bd823253c89109, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -18255,6 +18263,10 @@ PrefabInstance:
     - target: {fileID: 4420740854710822050, guid: 18e80563ea107b4479bd823253c89109, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285815619482116453, guid: 18e80563ea107b4479bd823253c89109, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18e80563ea107b4479bd823253c89109, type: 3}
@@ -20605,7 +20617,7 @@ MonoBehaviour:
   _button: {fileID: 1409909256}
   _lockImage: {fileID: 1089925138}
   _money: {fileID: 1482989044}
-  _price: 2400
+  _price: 2800
   _neededLevel: 9
 --- !u!114 &1629235524
 MonoBehaviour:
@@ -21845,7 +21857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1698115294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28755,6 +28767,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 145496689}
     m_Modifications:
+    - target: {fileID: 1803944973644380609, guid: 18e80563ea107b4479bd823253c89109, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803944973644380609, guid: 18e80563ea107b4479bd823253c89109, type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4380301917536936727, guid: 18e80563ea107b4479bd823253c89109, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -28846,6 +28866,10 @@ PrefabInstance:
     - target: {fileID: 4420740854710822050, guid: 18e80563ea107b4479bd823253c89109, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285815619482116453, guid: 18e80563ea107b4479bd823253c89109, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18e80563ea107b4479bd823253c89109, type: 3}

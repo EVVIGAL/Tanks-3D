@@ -2223,7 +2223,7 @@ PrefabInstance:
     - target: {fileID: 736055311352798919, guid: 3d23973c67defb54899eb25af389047b, type: 3}
       propertyPath: _enemies.Array.data[4]
       value: 
-      objectReference: {fileID: 8734242093041060669, guid: 1ba7b9dd40ee37243a33417f25ad9849, type: 3}
+      objectReference: {fileID: 8099985616127654217, guid: f0860169edd2f3646896608d0494f11b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d23973c67defb54899eb25af389047b, type: 3}
 --- !u!114 &1675803325 stripped
