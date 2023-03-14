@@ -33,7 +33,7 @@ public class GameOverWindow : MonoBehaviour
     {
         if(_counter.GetEnemies() <= 0)
             _restore.gameObject.SetActive(false);
-    }
+    }   
 
     private void OnDisable()
     {
