@@ -65,7 +65,19 @@ public class GameOverWindow : MonoBehaviour
 
     private void ShowAd()
     {
-        VideoAd.Show(() => _audioManager.Mute(), () => Restore(), () => _audioManager.Load(), null);
+        VideoAd.Show(() => Pause(), () => Restore(), () => Unpause(), (string _) => Unpause());
+    }
+
+    private void Pause()
+    {
+        _audioManager.Mute();
+        Time.timeScale = 0;
+    }
+
+    private void Unpause()
+    {
+        _audioManager.Load();
+        Time.timeScale = 1;
     }
 
     private void Restore()
