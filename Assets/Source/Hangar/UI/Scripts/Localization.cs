@@ -6,7 +6,7 @@ using UnityEngine;
 public class Localization : MonoBehaviour
 {
     private LeanLocalization _localization;
-    private const string _defaultKey = "ru";
+    private const string _defaultKey = "en";
 
     private Dictionary<string, string> _languageISO639_1Codes = new()
     {
@@ -33,7 +33,10 @@ public class Localization : MonoBehaviour
         if (Yandex.Instance == null)
             return;
 
-        _localization.SetCurrentLanguage(_languageISO639_1Codes[Yandex.Instance.CurrentLanguage]);
+        if (_languageISO639_1Codes.ContainsKey(Yandex.Instance.CurrentLanguage))
+            _localization.SetCurrentLanguage(_languageISO639_1Codes[Yandex.Instance.CurrentLanguage]);
+        else
+            _localization.SetCurrentLanguage(_languageISO639_1Codes[_defaultKey]);
 #endif
     }
 }
