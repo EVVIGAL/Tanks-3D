@@ -20227,6 +20227,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 849353034}
     - target: {fileID: 2477022712806281503, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Target
+      value: 
+      objectReference: {fileID: 281334703}
+    - target: {fileID: 2477022712806281503, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[9].m_Target
       value: 
       objectReference: {fileID: 31937344}
@@ -20250,6 +20254,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[14].m_Target
       value: 
       objectReference: {fileID: 4217148499982636420}
+    - target: {fileID: 2477022712806281503, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 2477022712877598711, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -22133,7 +22141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1698115294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27758,6 +27766,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 849353034}
     - target: {fileID: 2477022712806281503, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_Target
+      value: 
+      objectReference: {fileID: 281334703}
+    - target: {fileID: 2477022712806281503, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[9].m_Target
       value: 
       objectReference: {fileID: 31937344}
@@ -27781,6 +27793,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[14].m_Target
       value: 
       objectReference: {fileID: 4217148499982636420}
+    - target: {fileID: 2477022712806281503, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 2477022712877598711, guid: c732ce0fe22c440488374d87f9fe0143, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
