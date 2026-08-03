@@ -1,7 +1,7 @@
 using UnityEngine.SceneManagement;
-using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
+using YG;
 
 public class LevelCompletedWindow : MonoBehaviour
 {
@@ -17,6 +17,8 @@ public class LevelCompletedWindow : MonoBehaviour
 
     private void OnEnable()
     {
+        YG2.onCloseInterAdv += OnCloseInterAdv;
+        YG2.onErrorInterAdv += OnErrorInterAdv;
         _data.Data.ArtilleryAmount += _root.ArtBlowSkill.CurrentAmount;
         _data.Data.ToolsAmount += _root.RepairSkill.CurrentAmount;
         _next.onClick.AddListener(OnNextButtonClick);
@@ -28,9 +30,9 @@ public class LevelCompletedWindow : MonoBehaviour
 
     private void OnDisable()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
+        YG2.onCloseInterAdv -= OnCloseInterAdv;
+        YG2.onErrorInterAdv -= OnErrorInterAdv;
         _data.SetLeaderboardScore();
-#endif
         _next.onClick.RemoveListener(OnNextButtonClick);
         _restart.onClick.RemoveListener(OnRestartButtonClick);
         _toHangar.onClick.RemoveListener(OnGoToHangarButtonClick);
@@ -38,11 +40,7 @@ public class LevelCompletedWindow : MonoBehaviour
 
     public void OnNextButtonClick()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        InterstitialAd.Show(() => _audioManager.Mute(), (bool _) => LoadNext(), null, null);
-#else
-        LoadNext();
-#endif
+        YG2.InterstitialAdvShow();
     }
 
     public void OnRestartButtonClick()
@@ -63,10 +61,20 @@ public class LevelCompletedWindow : MonoBehaviour
             _data.Data.CurrentLevel = (int)_root.CurrentLevelIndex;
     }
 
-    private void LoadNext()
+    private void LoadNextLevel()
     {
         _audioManager.Load();
         _loadPanel.gameObject.SetActive(true);
         _loadPanel.Load(1, () => SceneManager.LoadScene((int)_root.CurrentLevelIndex + 1));
+    }
+
+    private void OnCloseInterAdv()
+    {
+        LoadNextLevel();
+    }
+
+    private void OnErrorInterAdv()
+    {
+        LoadNextLevel();
     }
 }

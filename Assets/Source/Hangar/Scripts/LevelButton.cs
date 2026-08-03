@@ -1,8 +1,8 @@
 using UnityEngine.SceneManagement;
-using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using YG;
 
 [RequireComponent(typeof(Button))]
 public class LevelButton : MonoBehaviour
@@ -17,12 +17,16 @@ public class LevelButton : MonoBehaviour
 
     private void OnEnable()
     {
+        YG2.onCloseInterAdv += OnCloseInterAdv;
+        YG2.onErrorInterAdv += OnErrorInterAdv;
         _button = GetComponent<Button>();
         _button.onClick.AddListener(ShowAd);
     }
 
     private void OnDisable()
     {
+        YG2.onCloseInterAdv -= OnCloseInterAdv;
+        YG2.onErrorInterAdv -= OnErrorInterAdv;
         _button.onClick.RemoveListener(ShowAd);
     }
 
@@ -36,11 +40,7 @@ public class LevelButton : MonoBehaviour
 
     private void ShowAd()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        InterstitialAd.Show(() => _audioManager.Mute(), (bool _) => ActivateLoadPanel(), (string error) => ActivateLoadPanel(), () => ActivateLoadPanel());
-#else
-        ActivateLoadPanel();
-#endif
+        YG2.InterstitialAdvShow();
     }
 
     private void ActivateLoadPanel()
@@ -53,5 +53,15 @@ public class LevelButton : MonoBehaviour
     {
         _audioManager.Load();
         SceneManager.LoadScene(_levelToLoad + 1);
+    }
+
+    private void OnErrorInterAdv()
+    {
+        ActivateLoadPanel();
+    }
+
+    private void OnCloseInterAdv()
+    {
+        ActivateLoadPanel();
     }
 }

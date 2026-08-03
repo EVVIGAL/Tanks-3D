@@ -1,5 +1,5 @@
-using Agava.YandexGames;
 using UnityEngine;
+using YG;
 
 public class Skills : MonoBehaviour
 {
@@ -35,7 +35,7 @@ public class Skills : MonoBehaviour
 
     private void ShowAd()
     {
-        VideoAd.Show(() => _audioManager.Mute(), Reward, () => _audioManager.Load(), null);
+        YG2.RewardedAdvShow(string.Empty, Reward);
     }
 
     private void Reward()

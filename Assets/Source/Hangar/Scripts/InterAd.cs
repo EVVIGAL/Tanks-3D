@@ -1,21 +1,38 @@
 using UnityEngine.Events;
-using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
+using YG;
 
 [RequireComponent(typeof(Button))]
 public class InterAd : MonoBehaviour
 {
-    [SerializeField] private AudioManager _audioManager;
+    private UnityAction _onCloseAdvCallback;
+
+    private void OnEnable()
+    {
+        YG2.onCloseInterAdv += OnCloseInterAdv;
+        YG2.onErrorInterAdv += OnErrorInterAdv;
+    }
+
+    private void OnDisable()
+    {
+        YG2.onCloseInterAdv -= OnCloseInterAdv;
+        YG2.onErrorInterAdv -= OnErrorInterAdv;
+    }
 
     public void ShowAD(UnityAction action)
     {
-        InterstitialAd.Show(() => _audioManager.Mute(),(bool _) => OnAdEnd(action), null, () => OnAdEnd(action));
+        _onCloseAdvCallback = action;
+        YG2.InterstitialAdvShow();
     }
 
-    private void OnAdEnd(UnityAction action)
+    private void OnErrorInterAdv()
     {
-        _audioManager.Load();
-        action();
+        _onCloseAdvCallback?.Invoke();
+    }
+
+    private void OnCloseInterAdv()
+    {
+        _onCloseAdvCallback?.Invoke();
     }
 }

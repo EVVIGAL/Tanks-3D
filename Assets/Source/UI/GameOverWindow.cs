@@ -1,7 +1,7 @@
 using UnityEngine.SceneManagement;
-using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
+using YG;
 
 public class GameOverWindow : MonoBehaviour
 {
@@ -56,28 +56,7 @@ public class GameOverWindow : MonoBehaviour
 
     public void OnRestoreButtonClick()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        ShowAd();
-#else
-        Restore();
-#endif
-    }
-
-    private void ShowAd()
-    {
-        VideoAd.Show(() => Pause(), () => Restore(), () => Unpause(), (string _) => Unpause());
-    }
-
-    private void Pause()
-    {
-        _audioManager.Mute();
-        Time.timeScale = 0;
-    }
-
-    private void Unpause()
-    {
-        _audioManager.Load();
-        Time.timeScale = 1;
+        YG2.RewardedAdvShow(string.Empty, Restore);
     }
 
     private void Restore()

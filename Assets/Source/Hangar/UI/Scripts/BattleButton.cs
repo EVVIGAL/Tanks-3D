@@ -1,7 +1,7 @@
 using UnityEngine.SceneManagement;
-using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
+using YG;
 
 [RequireComponent(typeof(Button))]
 public class BattleButton : MonoBehaviour
@@ -32,21 +32,21 @@ public class BattleButton : MonoBehaviour
 
     private void OnEnable()
     {
+        YG2.onCloseInterAdv += OnCloseInterAdv;
+        YG2.onErrorInterAdv += OnErrorInterAdv;
         _button.onClick.AddListener(ShowAd);
     }
 
     private void OnDisable()
     {
+        YG2.onCloseInterAdv -= OnCloseInterAdv;
+        YG2.onErrorInterAdv -= OnErrorInterAdv;
         _button.onClick.RemoveListener(ShowAd);
     }
 
     private void ShowAd()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        InterstitialAd.Show(() => _audioManager.Mute(), (bool _) => ActivateLoadPanel(), (string error) => ActivateLoadPanel(), () => ActivateLoadPanel());
-#else
-        ActivateLoadPanel();
-#endif
+        YG2.InterstitialAdvShow();
     }
 
     private void ActivateLoadPanel()
@@ -62,5 +62,15 @@ public class BattleButton : MonoBehaviour
 
         _audioManager.Load();
         SceneManager.LoadScene(_lastLevelIndex);
+    }
+
+    private void OnErrorInterAdv()
+    {
+        ActivateLoadPanel();
+    }
+
+    private void OnCloseInterAdv()
+    {
+        ActivateLoadPanel();
     }
 }

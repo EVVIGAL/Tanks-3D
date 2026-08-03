@@ -1,5 +1,5 @@
-using Agava.YandexGames;
 using UnityEngine;
+using YG;
 
 public class MobileDetector : MonoBehaviour
 {
@@ -7,12 +7,8 @@ public class MobileDetector : MonoBehaviour
 
     private void Start()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        if (Device.Type == Agava.YandexGames.DeviceType.Desktop)
+        if (YG2.envir.device == YG2.Device.Desktop)
             Deactivate();
-#else
-        Deactivate();
-#endif
     }
 
     private void Deactivate()

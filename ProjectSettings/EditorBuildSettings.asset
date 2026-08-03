@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Source/MainScenes/Yandex.unity
+    path: Assets/Source/MainScenes/Bootstrap.unity
     guid: 330445431a03bea478f438e0b03157b0
   - enabled: 1
     path: Assets/Source/MainScenes/Hangar.unity

@@ -1,7 +1,7 @@
-using Agava.YandexGames;
 using UnityEngine;
 using System;
 using TMPro;
+using YG;
 
 public class SaveData : MonoBehaviour
 {
@@ -15,14 +15,13 @@ public class SaveData : MonoBehaviour
     public DataHolder Data => _data;
 
     private const string _leaderboardTxt = "Leaderboard";
-    private const string _saveKey = "SaveData";
 
     private void Awake()
     {
         Time.timeScale = 1;
 
-        if (PlayerPrefs.HasKey(_saveKey))
-            Load();
+        if (YG2.saves.DataHolder != null)
+            _data = YG2.saves.DataHolder;
 
         if (_choser != null)
             _choser.Init(_data.Units, _data.CurrentTankIndex);
@@ -41,20 +40,13 @@ public class SaveData : MonoBehaviour
 
     private void OnDisable()
     {
-        SaveYandex();
-        Save();
+        //Save();
     }
 
     public void Save()
     {
-        _data.SetMedals();
-        SaveManager.Save(_saveKey, _data);
-    }
-
-    public void Load()
-    {
-        var data = SaveManager.Load<DataHolder>(_saveKey);
-        _data = data;
+        YG2.saves.DataHolder = _data;
+        YG2.SaveProgress();
     }
 
     public void SetLeaderboardScore()
@@ -73,19 +65,9 @@ public class SaveData : MonoBehaviour
 #endif
     }
 
-    private void SaveYandex()
-    {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        string jsonDataString = JsonUtility.ToJson(_data, true);
-
-        if (PlayerAccount.IsAuthorized)
-            PlayerAccount.SetPlayerData(jsonDataString);
-#endif
-    }
-
     private void SaveBestScore(int bestScore)
     {
-        Leaderboard.SetScore(_leaderboardTxt, bestScore);
+        //Leaderboard.SetScore(_leaderboardTxt, bestScore);
     }
 }
 

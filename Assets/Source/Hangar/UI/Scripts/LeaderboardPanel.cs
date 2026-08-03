@@ -1,4 +1,3 @@
-using Agava.YandexGames;
 using UnityEngine;
 
 public class LeaderboardPanel : MonoBehaviour
@@ -27,20 +26,20 @@ public class LeaderboardPanel : MonoBehaviour
 
     public void GetLeaderboardEntries()
     {
-        Leaderboard.GetEntries(_leaderboardTxt, (result) =>
-        {
-            for (int i = 0; i < result.entries.Length; i++)
-            {
-                string name = result.entries[i].player.publicName;
-                string rank = result.entries[i].rank.ToString();
-                string score = result.entries[i].score.ToString();
+        //Leaderboard.GetEntries(_leaderboardTxt, (result) =>
+        //{
+        //    for (int i = 0; i < result.entries.Length; i++)
+        //    {
+        //        string name = result.entries[i].player.publicName;
+        //        string rank = result.entries[i].rank.ToString();
+        //        string score = result.entries[i].score.ToString();
 
-                if (string.IsNullOrEmpty(name))
-                    name = "Anonymous";
+        //        if (string.IsNullOrEmpty(name))
+        //            name = "Anonymous";
 
-                _players[i].gameObject.SetActive(true);
-                _players[i].SetView(rank, name, score);
-            }
-        }, null, _topPlayersCount, _competingPlayers);
+        //        _players[i].gameObject.SetActive(true);
+        //        _players[i].SetView(rank, name, score);
+        //    }
+        //}, null, _topPlayersCount, _competingPlayers);
     }
 }

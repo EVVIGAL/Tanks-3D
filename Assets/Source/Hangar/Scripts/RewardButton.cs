@@ -1,7 +1,7 @@
-using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using YG;
 
 [RequireComponent(typeof(Button))]
 public class RewardButton : MonoBehaviour
@@ -38,7 +38,7 @@ public class RewardButton : MonoBehaviour
 
     private void ShowAd()
     {
-        VideoAd.Show(() => _audioManager.Mute(), Reward, () => _audioManager.Load(), null);
+        YG2.RewardedAdvShow(string.Empty, Reward);
     }
 
     private void Reward()

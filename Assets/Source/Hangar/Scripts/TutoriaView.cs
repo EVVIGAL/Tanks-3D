@@ -1,5 +1,5 @@
-using Agava.YandexGames;
 using UnityEngine;
+using YG;
 
 public class TutoriaView : MonoBehaviour
 {
@@ -8,19 +8,7 @@ public class TutoriaView : MonoBehaviour
 
     private void Start()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        if (Device.Type == Agava.YandexGames.DeviceType.Desktop)
-        {
-            _tutorialPC.SetActive(true);
-            _tutorialMob.SetActive(false);
-            return;
-        }
-
-        _tutorialPC.SetActive(false);
-        _tutorialMob.SetActive(true);
-#else
-        _tutorialPC.SetActive(true);
-        _tutorialMob.SetActive(false);
-#endif
+        _tutorialPC.SetActive(YG2.envir.device == YG2.Device.Desktop);
+        _tutorialMob.SetActive(YG2.envir.device == YG2.Device.Tablet || YG2.envir.device == YG2.Device.Mobile);
     }
 }

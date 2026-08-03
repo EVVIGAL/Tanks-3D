@@ -1,8 +1,8 @@
-using Agava.YandexGames;
 using Lean.Localization;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+using YG;
 
 [RequireComponent(typeof(Button))]
 public class TakeMultipliedReward : MonoBehaviour
@@ -35,7 +35,7 @@ public class TakeMultipliedReward : MonoBehaviour
 
     private void ShowAd(int multiplier)
     {
-        VideoAd.Show(() => _audioManager.Mute(), () => Reward(multiplier), () => _audioManager.Load(), null);
+        YG2.RewardedAdvShow(string.Empty, () => Reward(multiplier));
     }
 
     private void Reward(int multiplier)

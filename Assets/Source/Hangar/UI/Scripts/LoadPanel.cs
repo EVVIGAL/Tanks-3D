@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class LoadPanel : MonoBehaviour
 {
@@ -13,7 +12,6 @@ public class LoadPanel : MonoBehaviour
     [SerializeField] private float _fadeSpeed;
 
     private const float _waitForFadeTime = 0.4f;
-    private const float _zeroVolume = -80f;
 
     private Coroutine _coroutine;
 
