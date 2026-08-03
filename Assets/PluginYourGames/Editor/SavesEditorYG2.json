@@ -7,222 +7,12 @@
         false,
         false
     ],
-    "idSave": 3,
+    "idSave": 60,
     "Language": "",
     "DataHolder": {
         "Levels": [
             {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
-            },
-            {
-                "_currentMedals": 0
+                "_currentMedals": 3
             },
             {
                 "_currentMedals": 0
@@ -231,22 +21,22 @@
                 "_currentMedals": 0
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 3
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 3
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 2
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 1
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 2
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 1
             },
             {
                 "_currentMedals": 0
@@ -388,7 +178,7 @@
                     "_upgradeValue": 5,
                     "_increaseCost": 150
                 },
-                "_isAvailable": false,
+                "_isAvailable": true,
                 "_name": "Matilda"
             },
             {
@@ -427,7 +217,7 @@
                     "_upgradeValue": 5,
                     "_increaseCost": 200
                 },
-                "_isAvailable": false,
+                "_isAvailable": true,
                 "_name": "T-34"
             },
             {
@@ -517,19 +307,19 @@
             "UpgradeCostIncrease": 300
         },
         "LastDailyReward": "",
-        "IncomeTaked": "",
-        "Money": 200,
-        "Medals": 0,
+        "IncomeTaked": "03.08.2026 11:53:27",
+        "Money": 2835,
+        "Medals": 15,
         "TotalIncome": 0,
         "LastIncome": 0,
         "MaxIncome": 0,
-        "CurrentLevel": 1,
-        "CurrentTankIndex": 0,
-        "ArtilleryAmount": 3,
-        "ToolsAmount": 3,
+        "CurrentLevel": 11,
+        "CurrentTankIndex": 2,
+        "ArtilleryAmount": 11,
+        "ToolsAmount": 11,
         "MusicValue": -10.0,
         "EffectsValue": -14.0,
         "IsMute": false,
-        "CurrentTankName": "Stuart"
+        "CurrentTankName": "T-34"
     }
 }

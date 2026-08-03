@@ -25,12 +25,12 @@ public class TakeMultipliedReward : MonoBehaviour
 
     private void OnEnable()
     {
-        _button.onClick.AddListener(() => ShowAd(_winReward.Take()));
+        _button.onClick.AddListener(() => ShowAd(2));
     }
 
     private void OnDisable()
     {
-        _button.onClick.RemoveListener(() => ShowAd(_winReward.Take()));
+        _button.onClick.RemoveListener(() => ShowAd(2));
     }
 
     private void ShowAd(int multiplier)

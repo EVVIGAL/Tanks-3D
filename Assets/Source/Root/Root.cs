@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using Cinemachine;
 using UnityEngine;
 using TMPro;
+using YG;
 
 [RequireComponent(typeof(PlayerTankFactory))]
 public class Root : MonoBehaviour
@@ -63,6 +64,7 @@ public class Root : MonoBehaviour
         _levelText.text = (_currentLevelIndex - 1).ToString();
         _reward.Init((int)_currentLevelIndex - 1, (int)_data.Data.Levels[_currentLevelIndex - 2].CurrentMedals);
         PlayerWallet.Init((uint)_data.Data.Money);
+        YG2.GameplayStart();
     }
 
     public void CreatePlayerTank()
@@ -131,6 +133,7 @@ public class Root : MonoBehaviour
         _playerTank.Stop();
         _inputPanel.SetActive(false);
         _isGameEnd = true;
+        YG2.GameplayStop();
     }
 
     private IEnumerator CompleteLevel(GameObject endPanel)

@@ -146,10 +146,14 @@ public class Projectile : MonoBehaviour
         return false;
     }
 
-    private void OnDisable()
+    private void OnEnable()
     {
         _rigidbody.linearVelocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
+    }
+
+    private void OnDisable()
+    {
         StopAllCoroutines();
     }
 

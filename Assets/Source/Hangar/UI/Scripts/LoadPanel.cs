@@ -15,6 +15,11 @@ public class LoadPanel : MonoBehaviour
 
     private Coroutine _coroutine;
 
+    private void Awake()
+    {
+        _panel.enabled = true;
+    }
+
     private void Start()
     {
         Load(0, Deactivate);

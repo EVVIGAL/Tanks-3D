@@ -51,18 +51,18 @@ public class SaveData : MonoBehaviour
 
     public void SetLeaderboardScore()
     {
-        int current = _data.Medals;
+//        int current = _data.Medals;
 
-        if(_medalsText != null)
-            _medalsText.text = current.ToString();
+//        if(_medalsText != null)
+//            _medalsText.text = current.ToString();
 
-#if UNITY_WEBGL && !UNITY_EDITOR
-        Leaderboard.GetPlayerEntry(_leaderboardTxt, (result) =>
-        {
-            if (current >= result.score)
-                SaveBestScore(current);
-        });
-#endif
+//#if UNITY_WEBGL && !UNITY_EDITOR
+//        Leaderboard.GetPlayerEntry(_leaderboardTxt, (result) =>
+//        {
+//            if (current >= result.score)
+//                SaveBestScore(current);
+//        });
+//#endif
     }
 
     private void SaveBestScore(int bestScore)
