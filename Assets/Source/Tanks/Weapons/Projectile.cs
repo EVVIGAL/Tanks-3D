@@ -21,13 +21,13 @@ public class Projectile : MonoBehaviour
     [Header("Ricochet")]
     [Range (0f, 90f)]
     [SerializeField] private float _ricochetAngle;
-    [SerializeField] private PhysicMaterial _ricochetMaterial;
+    [SerializeField] private PhysicsMaterial _ricochetMaterial;
     [SerializeField] private AudioClip _ricochetSound;
 
     [Header("Impact Vfx")]
     [SerializeField] private ParticleSystem _explosionVfx;
     [SerializeField] private ParticleSystem _dirtVfx;
-    [SerializeField] private PhysicMaterial _dirt;
+    [SerializeField] private PhysicsMaterial _dirt;
 
     private bool _detectCollisions;
     private Rigidbody _rigidbody;
@@ -55,14 +55,14 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        if (_mesh && _rigidbody.velocity != Vector3.zero)
-            _mesh.rotation = Quaternion.LookRotation(_rigidbody.velocity);
+        if (_mesh && _rigidbody.linearVelocity != Vector3.zero)
+            _mesh.rotation = Quaternion.LookRotation(_rigidbody.linearVelocity);
 
         if (_detectCollisions == false)
             return;
 
         Vector3 direction = _tip.position - _lastPosition;
-        if (Physics.SphereCast(_lastPosition, _castRadius, _rigidbody.velocity.normalized, out RaycastHit hitInfo, direction.magnitude, _hittableLayers))
+        if (Physics.SphereCast(_lastPosition, _castRadius, _rigidbody.linearVelocity.normalized, out RaycastHit hitInfo, direction.magnitude, _hittableLayers))
             if (hitInfo.transform != transform)
                 OnHit(hitInfo);
 
@@ -104,7 +104,7 @@ public class Projectile : MonoBehaviour
         CreateImpactVfx(hitInfo);
 
         if (hitInfo.rigidbody)
-            hitInfo.rigidbody.AddForce(_rigidbody.velocity.normalized * _pushForce, ForceMode.Impulse);
+            hitInfo.rigidbody.AddForce(_rigidbody.linearVelocity.normalized * _pushForce, ForceMode.Impulse);
 
         gameObject.SetActive(false);
     }
@@ -132,7 +132,7 @@ public class Projectile : MonoBehaviour
             Vector3 invertDirection = hitInfo.point - transform.position;
             Vector3 ricochetDirection = Vector3.Reflect(invertDirection, hitInfo.normal);
             ricochetDirection.Normalize();
-            _rigidbody.velocity = ricochetDirection * _rigidbody.velocity.magnitude;
+            _rigidbody.linearVelocity = ricochetDirection * _rigidbody.linearVelocity.magnitude;
             _detectCollisions = false;
 
             if (_trailVfx != null)
@@ -148,7 +148,7 @@ public class Projectile : MonoBehaviour
 
     private void OnDisable()
     {
-        _rigidbody.velocity = Vector3.zero;
+        _rigidbody.linearVelocity = Vector3.zero;
         _rigidbody.angularVelocity = Vector3.zero;
         StopAllCoroutines();
     }

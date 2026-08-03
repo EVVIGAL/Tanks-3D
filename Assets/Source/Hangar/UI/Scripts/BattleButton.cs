@@ -2,7 +2,6 @@ using UnityEngine.SceneManagement;
 using Agava.YandexGames;
 using UnityEngine.UI;
 using UnityEngine;
-using GameAnalyticsSDK;
 
 [RequireComponent(typeof(Button))]
 public class BattleButton : MonoBehaviour
