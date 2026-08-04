@@ -14,11 +14,9 @@ public class SaveData : MonoBehaviour
 
     public DataHolder Data => _data;
 
-    private const string _leaderboardTxt = "Leaderboard";
-
     private void Awake()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1f;
 
         if (YG2.saves.DataHolder != null)
             _data = YG2.saves.DataHolder;
@@ -36,11 +34,6 @@ public class SaveData : MonoBehaviour
         _data.SetMedals();
         SetLeaderboardScore();
         LevelHolder.SetLevel(_data.CurrentLevel);
-    }
-
-    private void OnDisable()
-    {
-        //Save();
     }
 
     public void Save()
@@ -77,7 +70,7 @@ public class DataHolder
     public LevelData[] Levels;
     public UnitStat[] Units;
     public IncomeData Income;
-    public string LastDailyReward;
+    public long LastDailyReward;
     public string IncomeTaked;
     public int Money;
     public int Medals;

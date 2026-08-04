@@ -1,7 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
-using YG;
 
 [RequireComponent(typeof(Button))]
 public class BattleButton : MonoBehaviour
@@ -32,21 +31,17 @@ public class BattleButton : MonoBehaviour
 
     private void OnEnable()
     {
-        YG2.onCloseInterAdv += OnCloseInterAdv;
-        YG2.onErrorInterAdv += OnErrorInterAdv;
-        _button.onClick.AddListener(ShowAd);
+        _button.onClick.AddListener(OnStartBattleButtonClick);
     }
 
     private void OnDisable()
     {
-        YG2.onCloseInterAdv -= OnCloseInterAdv;
-        YG2.onErrorInterAdv -= OnErrorInterAdv;
-        _button.onClick.RemoveListener(ShowAd);
+        _button.onClick.RemoveListener(OnStartBattleButtonClick);
     }
 
-    private void ShowAd()
+    private void OnStartBattleButtonClick()
     {
-        YG2.InterstitialAdvShow();
+        Advertising.ShowAd(ActivateLoadPanel);
     }
 
     private void ActivateLoadPanel()
@@ -62,15 +57,5 @@ public class BattleButton : MonoBehaviour
 
         _audioManager.Load();
         SceneManager.LoadScene(_lastLevelIndex);
-    }
-
-    private void OnErrorInterAdv()
-    {
-        ActivateLoadPanel();
-    }
-
-    private void OnCloseInterAdv()
-    {
-        ActivateLoadPanel();
     }
 }

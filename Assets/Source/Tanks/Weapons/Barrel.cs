@@ -10,7 +10,6 @@ public class Barrel : MonoBehaviour
 
     private void Update()
     {
-        _input = Mathf.Clamp(_input, -1f, 1f);
         float speed = Mathf.Approximately(_input, 0f) ? 0 : _speed * _input * -1f * Time.deltaTime;
         float angle = ClampAngle(transform.localEulerAngles.x + speed, _minAngle, _maxAngle);
         var targetAngle = new Vector3(angle, 0f, 0f);

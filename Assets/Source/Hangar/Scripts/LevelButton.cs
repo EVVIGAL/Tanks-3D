@@ -2,7 +2,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
-using YG;
 
 [RequireComponent(typeof(Button))]
 public class LevelButton : MonoBehaviour
@@ -17,30 +16,24 @@ public class LevelButton : MonoBehaviour
 
     private void OnEnable()
     {
-        YG2.onCloseInterAdv += OnCloseInterAdv;
-        YG2.onErrorInterAdv += OnErrorInterAdv;
         _button = GetComponent<Button>();
-        _button.onClick.AddListener(ShowAd);
+        _button.onClick.AddListener(OnSelectLevelButtonClick);
     }
 
     private void OnDisable()
     {
-        YG2.onCloseInterAdv -= OnCloseInterAdv;
-        YG2.onErrorInterAdv -= OnErrorInterAdv;
-        _button.onClick.RemoveListener(ShowAd);
+        _button.onClick.RemoveListener(OnSelectLevelButtonClick);
     }
 
     public void Init(int level)
     {
-        //_button = GetComponent<Button>();
-        //_button.onClick.AddListener(ShowAd);
         _levelToLoad = level;
         _text.text = _levelToLoad.ToString();
     }
 
-    private void ShowAd()
+    private void OnSelectLevelButtonClick()
     {
-        YG2.InterstitialAdvShow();
+        Advertising.ShowAd(ActivateLoadPanel);
     }
 
     private void ActivateLoadPanel()
@@ -53,15 +46,5 @@ public class LevelButton : MonoBehaviour
     {
         _audioManager.Load();
         SceneManager.LoadScene(_levelToLoad + 1);
-    }
-
-    private void OnErrorInterAdv()
-    {
-        ActivateLoadPanel();
-    }
-
-    private void OnCloseInterAdv()
-    {
-        ActivateLoadPanel();
     }
 }

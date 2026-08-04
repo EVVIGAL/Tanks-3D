@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "Input",
     "maps": [
         {
@@ -12,7 +13,8 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": true,
+                    "priority": 0
                 },
                 {
                     "name": "Shoot",
@@ -21,7 +23,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "SkillSlot1",
@@ -30,7 +33,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 },
                 {
                     "name": "SkillSlot2",
@@ -39,7 +43,8 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -159,6 +164,17 @@
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f31fd57-70ac-45df-9dfc-2f3204d524f3",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "ScaleVector2(y=10)",
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,

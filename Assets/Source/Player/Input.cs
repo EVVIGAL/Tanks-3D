@@ -259,6 +259,17 @@ namespace Tank
                 },
                 {
                     ""name"": """",
+                    ""id"": ""2f31fd57-70ac-45df-9dfc-2f3204d524f3"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": ""ScaleVector2(y=10)"",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""238480cd-5781-4248-81ab-571fe629355c"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",

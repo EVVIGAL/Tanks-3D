@@ -1,7 +1,6 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
-using YG;
 
 public class LevelCompletedWindow : MonoBehaviour
 {
@@ -17,8 +16,6 @@ public class LevelCompletedWindow : MonoBehaviour
 
     private void OnEnable()
     {
-        YG2.onCloseInterAdv += OnCloseInterAdv;
-        YG2.onErrorInterAdv += OnErrorInterAdv;
         _data.Data.ArtilleryAmount += _root.ArtBlowSkill.CurrentAmount;
         _data.Data.ToolsAmount += _root.RepairSkill.CurrentAmount;
         _next.onClick.AddListener(OnNextButtonClick);
@@ -30,8 +27,6 @@ public class LevelCompletedWindow : MonoBehaviour
 
     private void OnDisable()
     {
-        YG2.onCloseInterAdv -= OnCloseInterAdv;
-        YG2.onErrorInterAdv -= OnErrorInterAdv;
         _data.SetLeaderboardScore();
         _next.onClick.RemoveListener(OnNextButtonClick);
         _restart.onClick.RemoveListener(OnRestartButtonClick);
@@ -40,7 +35,7 @@ public class LevelCompletedWindow : MonoBehaviour
 
     public void OnNextButtonClick()
     {
-        YG2.InterstitialAdvShow();
+        Advertising.ShowAd(LoadNextLevel);
     }
 
     public void OnRestartButtonClick()
@@ -66,15 +61,5 @@ public class LevelCompletedWindow : MonoBehaviour
         _audioManager.Load();
         _loadPanel.gameObject.SetActive(true);
         _loadPanel.Load(1, () => SceneManager.LoadScene((int)_root.CurrentLevelIndex + 1));
-    }
-
-    private void OnCloseInterAdv()
-    {
-        LoadNextLevel();
-    }
-
-    private void OnErrorInterAdv()
-    {
-        LoadNextLevel();
     }
 }

@@ -19,12 +19,6 @@ namespace CrazyGames.Tanks3D
 
         private void StartGame()
         {
-            string languageCode = string.IsNullOrEmpty(YG2.saves.Language) ? YG2.envir.language : YG2.saves.Language;
-            if (RuntimeConstants.Language.ISO639_1Codes.TryGetValue(languageCode, out string language) == false)
-                language = "English";
-
-            LeanLocalization.SetCurrentLanguageAll(language);
-
             if (YG2.player.auth == false)
                 YG2.player.name = LeanLocalization.GetTranslationText("Guest", "Guest");
 

@@ -2,6 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using System;
 using TMPro;
+using YG;
 
 public class DailyReward : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class DailyReward : MonoBehaviour
     [SerializeField] private Button _claimButton;
     [SerializeField] private int _rewardValue;
 
-    private const int _secondsInDay = 86400;
     private const int _rewardIncrease = 35;
 
     public int RewardValue => _rewardValue;
@@ -24,32 +24,35 @@ public class DailyReward : MonoBehaviour
         _text.text = "+ " + _rewardValue.ToString();
     }
 
+    private void OnDisable()
+    {
+        _claimButton.onClick.RemoveListener(Claim);
+        _buttons.OnOff(true);
+    }
+
     private void Start()
     {
         _buttons.OnOff(false);
 
-        if (string.IsNullOrEmpty(_data.Data.LastDailyReward))
-            return;
+        long startMs = _data.Data.LastDailyReward; // Example timestamp 1
+        long endMs = YG2.ServerTime();   // Example timestamp 2
 
-        DateTime lastSaveTime = DateTime.Parse(_data.Data.LastDailyReward);
-        TimeSpan timePassed = DateTime.UtcNow - lastSaveTime;
-        double secondPassed = timePassed.TotalSeconds;
+        // Subtract the raw milliseconds
+        long differenceMs = endMs - startMs;
 
-        if (secondPassed == 0)
-            return;
+        // Convert the millisecond difference into a TimeSpan object
+        TimeSpan timeSpan = TimeSpan.FromMilliseconds(differenceMs);
 
-        if (secondPassed < _secondsInDay)
-            gameObject.SetActive(false);      
+        // Get whole days dropped down (e.g., 2 days)
+        int wholeDays = timeSpan.Days;
+
+        if (wholeDays <= 0)
+            gameObject.SetActive(false);
     }
 
-    private void OnDisable()
-    {       
-        _claimButton.onClick.RemoveListener(Claim);
-        _buttons.OnOff(true);
-    }
     private void Claim()
     {
-        _data.Data.LastDailyReward = DateTime.UtcNow.ToString();       
+        _data.Data.LastDailyReward = YG2.ServerTime();       
         _money.Add(_rewardValue);
         _data.Data.ToolsAmount++;
         _data.Data.ArtilleryAmount++;

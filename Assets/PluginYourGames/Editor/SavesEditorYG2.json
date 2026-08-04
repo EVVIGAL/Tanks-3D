@@ -7,7 +7,7 @@
         false,
         false
     ],
-    "idSave": 60,
+    "idSave": 251,
     "Language": "",
     "DataHolder": {
         "Levels": [
@@ -42,19 +42,19 @@
                 "_currentMedals": 0
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 2
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 1
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 2
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 2
             },
             {
-                "_currentMedals": 0
+                "_currentMedals": 2
             },
             {
                 "_currentMedals": 0
@@ -133,9 +133,9 @@
                     "_increaseCost": 100
                 },
                 "_farm": {
-                    "_value": 0.0,
+                    "_value": 10.0,
                     "_maximumValue": 20,
-                    "_upgradeCost": 100,
+                    "_upgradeCost": 300,
                     "_upgradeValue": 5,
                     "_increaseCost": 100
                 },
@@ -172,9 +172,9 @@
                     "_increaseCost": 200
                 },
                 "_farm": {
-                    "_value": 0.0,
+                    "_value": 5.0,
                     "_maximumValue": 30,
-                    "_upgradeCost": 100,
+                    "_upgradeCost": 250,
                     "_upgradeValue": 5,
                     "_increaseCost": 150
                 },
@@ -211,9 +211,9 @@
                     "_increaseCost": 250
                 },
                 "_farm": {
-                    "_value": 0.0,
+                    "_value": 5.0,
                     "_maximumValue": 40,
-                    "_upgradeCost": 100,
+                    "_upgradeCost": 300,
                     "_upgradeValue": 5,
                     "_increaseCost": 200
                 },
@@ -222,41 +222,41 @@
             },
             {
                 "_health": {
-                    "_value": 500.0,
+                    "_value": 660.0,
                     "_maximumValue": 700,
-                    "_upgradeCost": 250,
+                    "_upgradeCost": 1650,
                     "_upgradeValue": 40,
                     "_increaseCost": 350
                 },
                 "_damage": {
-                    "_value": 100.0,
+                    "_value": 120.0,
                     "_maximumValue": 300,
-                    "_upgradeCost": 200,
+                    "_upgradeCost": 800,
                     "_upgradeValue": 10,
                     "_increaseCost": 300
                 },
                 "_armor": {
-                    "_value": 50.0,
+                    "_value": 55.0,
                     "_maximumValue": 70,
-                    "_upgradeCost": 200,
+                    "_upgradeCost": 500,
                     "_upgradeValue": 5,
                     "_increaseCost": 300
                 },
                 "_speed": {
-                    "_value": 4.0,
+                    "_value": 5.0,
                     "_maximumValue": 8,
-                    "_upgradeCost": 200,
+                    "_upgradeCost": 700,
                     "_upgradeValue": 1,
                     "_increaseCost": 500
                 },
                 "_farm": {
-                    "_value": 0.0,
+                    "_value": 10.0,
                     "_maximumValue": 50,
-                    "_upgradeCost": 100,
+                    "_upgradeCost": 600,
                     "_upgradeValue": 5,
                     "_increaseCost": 250
                 },
-                "_isAvailable": false,
+                "_isAvailable": true,
                 "_name": "Sherman"
             },
             {
@@ -306,20 +306,30 @@
             "UpgradeCost": 300,
             "UpgradeCostIncrease": 300
         },
-        "LastDailyReward": "",
-        "IncomeTaked": "03.08.2026 11:53:27",
-        "Money": 2835,
-        "Medals": 15,
-        "TotalIncome": 0,
-        "LastIncome": 0,
+        "LastDailyReward": 1785915030000,
+        "IncomeTaked": "04.08.2026 8:10:19",
+        "Money": 6940,
+        "Medals": 24,
+        "TotalIncome": 30,
+        "LastIncome": 500,
         "MaxIncome": 0,
-        "CurrentLevel": 11,
-        "CurrentTankIndex": 2,
-        "ArtilleryAmount": 11,
-        "ToolsAmount": 11,
+        "CurrentLevel": 30,
+        "CurrentTankIndex": 3,
+        "ArtilleryAmount": 41,
+        "ToolsAmount": 38,
         "MusicValue": -10.0,
         "EffectsValue": -14.0,
         "IsMute": false,
-        "CurrentTankName": "T-34"
-    }
+        "CurrentTankName": "Sherman"
+    },
+    "RewardReciveDataTimes": [
+        {
+            "Id": "SkillReward",
+            "DataTime": 1785828281885
+        },
+        {
+            "Id": "SoftMoneyReward",
+            "DataTime": 1785828277126
+        }
+    ]
 }

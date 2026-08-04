@@ -1,5 +1,6 @@
 using UnityEngine.UI;
 using UnityEngine;
+using YG;
 
 [RequireComponent(typeof(Button))]
 public class PauseButton : MonoBehaviour
@@ -24,6 +25,11 @@ public class PauseButton : MonoBehaviour
 
     private void Pause()
     {
-        Time.timeScale = Time.timeScale == 1 ? 0 : 1;
+        Time.timeScale = Time.timeScale == 1f ? 0f : 1f;
+
+        if (Time.timeScale == 1f)
+            YG2.GameplayStart();
+        else
+            YG2.GameplayStop();
     }
 }
